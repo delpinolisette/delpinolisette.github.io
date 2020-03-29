@@ -2,7 +2,7 @@
 Today i wanted to figure out how to get fast at LaTeXing - which I hear requires creative use of key bindings. It turned out to be an exciting way to spend a lazy Saturday. 
 
 Log:
-1. Read an article on the internet called: “How to Get Fast at Latex” over at https://traviscj.com/blog/getting_really_fast_at_latex.html
+1. Read an article on the internet called: “How to Get Fast at Latex” over [here](https://traviscj.com/blog/getting_really_fast_at_latex.html)
 1. Rabbit hole begins. Began typing up some notes on Sublime for a Web Development course I’m taking (on Many-to Many Association)
 1. Installed package control to be able to use LaTeX Tools, a very nice package from what I read. 
 1. Oh man, I’ve been using OverLeaf forever and never installed TeX on my laptop, so I began the installation of TeXLive which took over 3 hours!!!!!!! In the meantime I drank coffee in the backyard and spoke with some people. It’s a Saturday. 
