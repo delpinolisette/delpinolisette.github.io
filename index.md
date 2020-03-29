@@ -4,8 +4,9 @@ layout: default
 
 ===============================================================
 
-![My Journal](journal.md)
-![My Reading Log](reading.md)
+[My Journal](journal.md)
+
+[My Reading Log](reading.md)
 
 # List of All Topics - grouped by subjects:
 ## this is a h2 tag 
