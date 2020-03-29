@@ -34,4 +34,6 @@ layout: default
 <p>Bayes's Formula</p>
 <p>Definition of Odds of an Event</p>
 <p>Independent Events</p>
-[Link](/ruby.html)
+
+<a href="delpinolisette.github.io/ruby.html">Ruby</a>
+
