@@ -1,6 +1,6 @@
 reading.md
 
-Here I keep track of what I'm reading:
+## What am I reading?
 
 1. Linear Algebra Done Wrong by Sergei Treil
 
@@ -13,10 +13,22 @@ Chapter 8 + exericses | na
 2. Linear ALgebra Done Right by Sheldon Axler 
 3. Linear Algebra by Hoffman and Kunze 
 4. Linear Algebra Lecture Notes 
-5. Elementary Classical Analysis by Jerold MArsden
+
+Chapter | progress 
+--------|---------
+L1-2 | 100%
+L3-4 | 95%
+L5-6 | na
+L7-8 | na
+L9-11| na
+L12-13 | na
+L14-15 | na
+
+5. Elementary Classical Analysis by Jerold Marsden
 6. Analysis Lecture Notes 
 
-Here I keep track of problems I'm working on 
+## What problems am I working on?
+
 1. Analysis - difficult limits
 2. Mean of Order limit as s -> 0, s -> +/-infinity
 3. relations between elements of a sequence using integration by parts
