@@ -1,4 +1,4 @@
-###### 3.28.2020
+### 3.28.2020
 Today i wanted to figure out how to get fast at LaTeXing - which I hear requires creative use of key bindings. It turned out to be an exciting way to spend a lazy Saturday. 
 
 Log:
@@ -10,7 +10,7 @@ Log:
 
  Side thoughts: I should keep an updated reading list on a website to remind me of everything I have learned/ all exercises I’ve done. It might even help me be more careful about what I read (I should probably stop living in reddit threads in my spare time)
 
-###### 3.29.2020
+### 3.29.2020
 Today’s goal is to get ready for the week by finishing (and starting) some problem sets due soon. 
 Log. 
 1. Gonna put pencil to paper with my Analysis problem set, this should be interesting. 
