@@ -14,6 +14,8 @@ Log:
 Today’s goal is to get ready for the week by finishing (and starting) some problem sets due soon. 
 Log. 
 1. Gonna put pencil to paper with my Analysis problem set, this should be interesting. 
+	* Trying to crack the problem set leads me to revisit Taylor's Formula, Little o notation, and Jensen's Rule. Notes coming soon. 
+2. The Analysis problem set is taking much longer than expected. At night I switched gears and read for Linear Algebra. Those notes are coming soon as well. There's something intoxicating about reading a math textbook at a calm pace, making sure you understand every line, and slowly building up to a bigger picture. I'll continue in the morning. 
  
  
 
