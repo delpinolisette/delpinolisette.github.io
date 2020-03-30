@@ -1,3 +1,5 @@
+Journal
+
 ### 3.28.2020
 Today i wanted to figure out how to get fast at LaTeXing - which I hear requires creative use of key bindings. It turned out to be an exciting way to spend a lazy Saturday. 
 
