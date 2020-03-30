@@ -1,6 +1,23 @@
 Journal
 =============================================
 
+
+### 3.30.2020
+
+Today's goal is to finish some problems I started last week and do lots of reading for Math. I'd also like to run today (indoors of course!). 
+
+Log:
+1. Trying not to think about how bad the Coronavirus is getting. I've been doing my part by staying home, cleaning everything with bleach, and washing my hands with fervor. It's been a surprisingly peaceful time. 
+
+
+### 3.29.2020
+Today’s goal is to get ready for the week by finishing (and starting) some problem sets due soon. 
+
+Log. 
+1. Gonna put pencil to paper with my Analysis problem set, this should be interesting. 
+	* Trying to crack the problem set leads me to revisit Taylor's Formula, Little o notation, and Jensen's Rule. Notes coming soon. 
+2. The Analysis problem set is taking much longer than expected. At night I switched gears and read for Linear Algebra. Those notes are coming soon as well. There's something intoxicating about reading a math textbook at a calm pace, making sure you understand every line, and slowly building up to a bigger picture. I'll continue in the morning. 
+
 ### 3.28.2020
 Today i wanted to figure out how to get fast at LaTeXing - which I hear requires creative use of key bindings. It turned out to be an exciting way to spend a lazy Saturday. 
 
@@ -13,12 +30,7 @@ Log:
 
  Side thoughts: I should keep an updated reading list on a website to remind me of everything I have learned/ all exercises I’ve done. It might even help me be more careful about what I read (I should probably stop living in reddit threads in my spare time)
 
-### 3.29.2020
-Today’s goal is to get ready for the week by finishing (and starting) some problem sets due soon. 
-Log. 
-1. Gonna put pencil to paper with my Analysis problem set, this should be interesting. 
-	* Trying to crack the problem set leads me to revisit Taylor's Formula, Little o notation, and Jensen's Rule. Notes coming soon. 
-2. The Analysis problem set is taking much longer than expected. At night I switched gears and read for Linear Algebra. Those notes are coming soon as well. There's something intoxicating about reading a math textbook at a calm pace, making sure you understand every line, and slowly building up to a bigger picture. I'll continue in the morning. 
+
  
  
 
