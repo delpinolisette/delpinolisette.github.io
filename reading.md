@@ -7,7 +7,7 @@ reading.md
 Chapter | progress 
 --------|---------
 Chapter 1 + exercises | na
-Chapter 2 + exercises | na
+Chapter 2 + exercises | need 2.3, 2.4 + ex
 Chapter 8 + exericses | na
 
 2. Linear ALgebra Done Right by Sheldon Axler 
@@ -32,3 +32,4 @@ L14-15 | na
 1. Analysis - difficult limits
 2. Mean of Order limit as s -> 0, s -> +/-infinity
 3. relations between elements of a sequence using integration by parts
+4. Dual Spaces and Dual Transformations, Natural Isomorphisms

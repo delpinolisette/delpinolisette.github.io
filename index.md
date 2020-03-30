@@ -8,21 +8,31 @@ layout: default
 
 [My Reading Log](reading.md)
 
-# List of All Topics - grouped by subjects:
-## this is a h2 tag 
-  * Reading list
-  * Journal day by day
+Hi! My name is L and I'm a student in university passionate about the intersection of Mathematics and Computation. I'm also passionate about coffee, science fiction (reading Isaac Asimov as a child in part led me to love math and science), and creating novel systems using tech (I have a dream of setting up an automated garden using Arduino). 
+
+# List of All Topics that I'm learning/interested in- grouped by subjects:
 
 ### Advanced Linear Algebra
 
-* Exciting stuff by day - TODO link this to separate section (Jour)
 * Vector Spaces: Examples and Proofs
 * Subspaces : Examples and Proofs
 * Linear Combinations and Span
 * Dual Spaces
 
 ### Mathematical Cryptography
+
+* Prime numbers, unique factorization, finite fields 
+* Discrete Log Problem 
+* Diffie-Hellman key exhcange 
+* Theory of Groups
+* Chinese Remainder Theorem and its proof 
+* Rings, quotients, polynomials, and finite fields
+* Euler's formula
+* Pseudoprimes 
+* RSA cryptosystem 
+* Primality Testing 
+
 ### Analysis
 ### Ruby on Rails
-### Stuff I worked on today:
+
 
