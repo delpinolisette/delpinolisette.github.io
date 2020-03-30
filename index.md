@@ -8,7 +8,7 @@ layout: default
 
 [My Reading Log](reading.md)
 
-Hi! My name is L and I'm a student in university passionate about the intersection of Mathematics and Computation. I'm also passionate about coffee, science fiction (reading Isaac Asimov as a child in part led me to love math and science), and creating novel systems using tech (I have a dream of setting up an automated garden using Arduino). 
+Hi! My name is Lisette and I'm a student in university passionate about the intersection of Math and Computation. I'm also passionate about coffee, science fiction, and creating novel systems using tech. 
 
 # List of All Topics that I'm learning/interested in- grouped by subjects:
 
