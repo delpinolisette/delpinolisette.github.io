@@ -1,6 +1,14 @@
 Journal
 =============================================
 
+### 4.1.2020
+
+Today I finished a long problem set for Analysis. While investigating answers on Desmos and Wolfram, I found some subtleties that were hard to see through algebraic manipulations alone.
+
+Notice that $\lim_{x \to +\infty} f(x)$, where f(x) is the mean of order s, where a and b are constatns, depends on the values of a and b:
+
+[mof](/img/mean_of_order.png)
+
 
 ### 3.30.2020
 
