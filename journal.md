@@ -7,7 +7,7 @@ Today I finished a long problem set for Analysis. While investigating answers on
 
 Notice that $\lim_{x \to +\infty} f(x)$, where f(x) is the mean of order s, where a and b are constatns, depends on the values of a and b:
 
-[mof](/img/mean_of_order.png)
+[mof](/img/mean_of_order.PNG)
 
 
 ### 3.30.2020
