@@ -133,3 +133,48 @@ Post.where(view_count: >20).limit(5).order(id :desc)
       </ul>
 <% end %>
 ```
+
+**Defining Custom Validations**
+* Step 1: Define a method in the model file with this logic:
+    - Step 1a: Check if the desired validation passes 
+    - Step 1b: if it doesn't pass, 
+        + add the column name as a symbol
+        + add the error message to the errors object
+* Step 2: Pass the method as a symbol to `validate`  ex:
+```ruby
+class User < ActiveRecord::Base
+    validate :penn_email
+    def penn_email
+        unless email.include? 'upenn.edu'
+            errors.add(:email, 'it is not a Penn email')
+        end
+    end
+end
+```
+
+**Association: Lvl 1- One to Many**
+* _One to Many Association_: when one model_A may logically have many model_B's, but the reverse is not true:
+    - ex: a `Post` has many `Comments`, but not the other way around
+    - ex: a `Book` has many `Chapters`, but not the other way around
+* counterexamples:
+    - ex: a `Teacher` has many `Students`, but the reverse is also true
+    - ex: a `Shop` has many `Customers`, but the reverse is also true
+    
+**Implementation in Database**
+* Step 1: Initialize `Posts` table and `Comments` table
+* Step 2: Declare the association: 
+    - `Comments` table has columnn that says which `Post` record the `Comment` redord belongs to
+        + _foreign key_: reference to _primary key_ in different table
+            * ex: the column in `Comments` that connects the post record and comment record
+* new CRUD available:
+    - create a comment for a post
+    - find all comments belonging to a post
+    - find the post a comment belongs to
+
+**Dual Implementation in Ruby/Rails**
+* through ActiveRecord ORM
+    * Step 1: use generator for `Post` model (in previous ex)
+    * Step 2: use generator for `Comments` model 
+    * Step 3:
+    * Step 4:
+    * Step 5: 
