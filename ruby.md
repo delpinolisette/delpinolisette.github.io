@@ -189,5 +189,12 @@ end
 @new_comment.save 
 
 #alternative comment creation:
+@new_comment = @post.comments.create({body: 'Comment for post 1'})
 
+# find all comments belonging to a post:
+@post = Post.find(1)
+@comments = @post.comments
+
+#find the post that a comment belongs to:
 ```
+okokok
