@@ -181,6 +181,7 @@ end
     * Step 5: in `Post.rb` model file under class declaration add `has_many :comments, dependent: destroy`
         - why add `dependent: destroy`?
 * new CRUD available: 
+
 ```ruby
 @post = Post.find(1) 
 #=>get post with id 1
