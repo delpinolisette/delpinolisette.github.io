@@ -17,7 +17,7 @@ Diffie Hellman introduces public key cryptosystems and therefore:
 * Public key cryptosystem = asymmetric cryptosystem
     * consists of: 
     * a private key $$k_{priv}$$
-        - sometimes called "trapdoor information", without it very hard to compute inverse to $e_{k_{pub}}$
+        - sometimes called "trapdoor information", without it very hard to compute inverse to $$e_{k_{pub}}$$
     * a public key $$k_{pub}$$
         * often created by applying a key creation algorithm to $$k_{priv}$$ 
    *  for every pair ($$k_{priv}, k_{pub}$$) there exists a 
@@ -35,7 +35,9 @@ Diffie Hellman introduces public key cryptosystems and therefore:
     
 **Primitive Root Theorem**
     * Let p be prime. 
-    * Then there is an element $$g /in /mathbb{F}_{p}^{*}$$
+    * Then there is an element $$g \in \mathbb{F}_{p}^{*}$$
+        - what is the difference between $$\mathbb{F}_{p}$$ and $$\mathbb{F}_{p}^{*}$$? 
+        - TODO - one might be a multiplicativ group?
 
  
  
