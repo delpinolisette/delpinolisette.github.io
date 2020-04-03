@@ -10,6 +10,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
 ### **Lecture 7 :**
 * Outline:
     * Deep Dive ActiveRecords
+
 **Web Framekwork Pipeline:**
 - Routes -> Parsing -> Controller -> View
     - Step 1: define routes inside `config/routes.rb`
@@ -88,5 +89,34 @@ User.order(id :desc)
 ```
 * you can also chain commands, the order matters!:
 ```ruby
-Post.where()
+Post.where(view_count: >20).limit(5).order(id :desc)
+#=> select from post table
+#=> where view_count is greater than 20
+#=> 5 users
+#=> in order from last to first
 ```
+
+**Validations: "Check before you commit!**
+* what are the differences between Client-side and Server-side validations?
+    - validations guard against invalid data commiting to database
+        + ex: blank fields, incoreect format, making sure there isnt another identical entry (uniqueness)
+    - _Client-side validation_ : enforced by client program
+        + server isn't sure who client is
+        + what if client is malicious? (a hack trying to commit to db)?
+    - _Server-side val_ done by Rails is useful because it is invariant with respect to the client 
+    - validation code in model files:
+    - donde??? no los veo!
+
+**Simple Validations**
+* validations run right before save to db happens
+* `validates :column_name, criteria`
+* ex1: `presence` : field empty?
+* ex2: `uniqueness` : is this value unique- is there another like it in db
+* ex3: `length` : content length
+
+**Errors Method**
+* every model instance has `errors` method
+* if model did not pass a validation, `error` object added to model
+    - model with non-empty (there's something in it!) `errors` field is invalid to the database
+    - validations decide whether to add an `error` object to the `errors` field
+* view uses `errors` method and displays the `error.full_messages` for each `error`
