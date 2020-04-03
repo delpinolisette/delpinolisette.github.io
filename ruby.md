@@ -175,6 +175,19 @@ end
 * through ActiveRecord ORM
     * Step 1: use generator for `Post` model (in previous ex)
     * Step 2: use generator for `Comments` model 
-    * Step 3:
-    * Step 4:
-    * Step 5: 
+        - add `post:references` as a column
+    * Step 3: `rails db:migrate`
+    * Step 4: in `Comment.rb` model file, add `belong_to :user`
+    * Step 5: in `Post.rb` model file under class declaration add `has_many :comments, dependent: destroy`
+        - why add `dependent: destroy`?
+* new CRUD available: see code:
+```ruby
+@post = Post.find(1) #get post with id 1
+
+@new_comment = @post.comments.build #equiv to post.new?
+@new_comment.body = 'Comment for post 1'
+@new_comment.save 
+
+#alternative comment creation:
+
+```
