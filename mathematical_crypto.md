@@ -6,5 +6,12 @@ Diffie Hellman introduces public key cryptosystems and therefore:
  
  * trapdoor information
   * a peice of trapdoor info is auxiliary info that lets you compute the inverse easily (Public key cryptsystems are built using one way functions that have a trapdoor) 
+
+* Public key cryptosystem = asymmetric cryptosystem
+  * consists of 
+  * a private key $$k_{priv}$$
+  * a public key $$k_{pub}$$
+   * often created by applying a key creation algorithm to $$k_{priv}$$ 
+   *  
  
  

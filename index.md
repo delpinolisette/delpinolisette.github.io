@@ -19,7 +19,7 @@ Hi! My name is Lisette and I'm a student in university passionate about the inte
 * Linear Combinations and Span
 * Dual Spaces
 
-### Mathematical Cryptography
+### [Mathematical Cryptography](mathematical_crypto.md)
 
 * Prime numbers, unique factorization, finite fields 
 * Discrete Log Problem 
