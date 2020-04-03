@@ -32,7 +32,10 @@ Diffie Hellman introduces public key cryptosystems and therefore:
 ## The Discrete Logarithm Problem:
 * first construction is based on the DLP (Discrete Logarithm Problem) in $$\mathbb{F}_{p}$$ 
     * (the finite field with p elements, where p is prime!)
-* 
+    
+**Primitive Root Theorem**
+    * Let p be prime. 
+    * Then there is an element $$g /in /mathbb{F}_{p}^{*}$$
 
  
  
