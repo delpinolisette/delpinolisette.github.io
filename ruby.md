@@ -14,15 +14,15 @@ Notice: These are personal notes for a course at my university on Web Developmen
 
 * Web Framekwork Pipeline:
     - Routes -> Parsing -> Controller -> View
-    - Step 1: define routes inside `config/routes.rb`
-    - create the `controller` file, with class and methods 
-        + has access to **`params` hash** [params hash](https://gorails.com/episodes/the-params-hash) + definition:
-            * params hash is the collection of data that comes through with the http request
-            * forms, get request parameters, urls, gets data into the params hash
-        + controller methods provide data
-    - Step 3: Create the view folder and file
-        + differences between `<%= >` and `<% %>`
-        + TODO - when you find out difference )i think one is embedded html
+        - Step 1: define routes inside `config/routes.rb`
+        - Step 2:create the `controller` file, with class and methods 
+            + has access to **`params` hash** [params hash](https://gorails.com/episodes/the-params-hash) + definition:
+                * params hash is the collection of data that comes through with the http request
+                * forms, get request parameters, urls, gets data into the params hash
+            + controller methods provide data
+        - Step 3: Create the view folder and file
+            + differences between `<%= >` and `<% %>`
+            + TODO - when you find out difference )i think one is embedded html
 
 
 * The CRUD Pipeline:
