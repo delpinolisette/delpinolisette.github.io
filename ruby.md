@@ -120,3 +120,16 @@ Post.where(view_count: >20).limit(5).order(id :desc)
     - model with non-empty (there's something in it!) `errors` field is invalid to the database
     - validations decide whether to add an `error` object to the `errors` field
 * view uses `errors` method and displays the `error.full_messages` for each `error`
+```ruby
+<% if @user.errors.any?%>
+    <div id= "error_explanation">
+      <h2>
+        <%=@user.errors.count%> errors prohibited this from...
+      </h2>
+      <ul>
+        <& @user.errors.full_messages.each do |msg|%>
+            <li><%= msg &></li>
+        <% end %>
+      </ul>
+<% end %>
+```
