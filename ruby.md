@@ -180,7 +180,7 @@ end
     * Step 4: in `Comment.rb` model file, add `belong_to :user`
     * Step 5: in `Post.rb` model file under class declaration add `has_many :comments, dependent: destroy`
         - why add `dependent: destroy`?
-new CRUD available: 
+* new CRUD available: 
 ```ruby
 @post = Post.find(1) 
 #=>get post with id 1
@@ -192,8 +192,7 @@ new CRUD available:
 
 #=>alternative comment creation:
 @new_comment = @post.comments.create({body: 'Comment for post 1'})
-```
-``` ruby
+
 #=>find all comments belonging to a post:
 @post = Post.find(1)
 @comments = @post.comments
@@ -201,3 +200,6 @@ new CRUD available:
 #=>find the post that a comment belongs to:
 ```
 okosd new one
+* jfkdljfdslkfjldskf
+* fsdkjfhkdjsf
+* dsfjsdkf
