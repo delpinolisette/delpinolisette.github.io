@@ -77,10 +77,10 @@ Notice: These are personal notes for a course at my university on Web Developmen
   
 **Common Arels (Relational Algebra)**
 ```ruby
-User.where(name: 'Benjamin')
-#=> sends out query for all users names Benjamin
-User.find_by(name: 'Benjamin')
-#=> sends out query for ONE user named Benjamin
+User.where(name: 'Patrick')
+#=> sends out query for all users names Patrick
+User.find_by(name: 'Patrick')
+#=> sends out query for ONE user named Patrick
 User.limit(2)
 #=> returns first two users, the order is ascending by id by default- first to last
 User.order(id :desc)
