@@ -5,9 +5,12 @@ layout: default
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+Notice: These are personal notes for a course at my university on Web Development. I do not own any of this intellectual property, this is only used for personal education. 
+
 ### **Lecture 7 :**
 * Outline:
     * Deep Dive ActiveRecords
+
 
 * Web Framekwork Pipeline:
     - Routes -> Parsing -> Controller -> View
@@ -32,4 +35,36 @@ layout: default
     - *Migrations* modify database schema
         + stored in `db/migrate`
         + [looks like this](delpinolisette.github.io/img/migration_file_peek.PNG)
-        + 
+        + creates tables
+        + adds and removes columns
+        + generates/updates a schema.rb file, ![schema.rb](delpinolisette.github.io/img/schema_peek.PNG)
+        + type `rails db:migrate` to start, can only be done once
+
+
+* Generating a Model 
+    + To generate a Mode, run in root folder:
+        * `rails g model ModelName attr_name:attr_type`
+        * ex: `rails g model Post tilte:string body:text`
+    + to destroy, 
+        * `rails destroy`
+
+
+* Generators for Migration 
+    - migration generators crete migration files which alter database record
+    - `CreateXXXs` creates a table with table name `XXX` and specified columns
+    - `AddXXXToYYYs` adds specified columns to table `YYY`
+    - `RemoveXXXFromYYs` will remove specified columns from `YYY` table
+    - ex1: `rails g migration CreatAuthors name:string bio:text`
+        + makes table with Authors, which has a name and bio column
+    - ex2: `rails g migration AddCategoryToPosts category:string` 
+        + adds Category column to Posts table
+
+
+* Commonly Used Data Types for models
+*   string 
+*   text
+*   integer, float, decimal
+*   datetime, timestamp, time, date
+*   boolean
+*   references
+    + creates reference to another table  
