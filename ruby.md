@@ -31,4 +31,4 @@ layout: default
         + provides CRUD API - TODO- what is the CRUD API?
     - *Migrations* modify database schema
         + stored in `db/migrate`
-        + 
+        + looks like this (https://github.com/delpinolisette/delpinolisette.github.io/tree/master/img/migration_file_peek.PNG)
