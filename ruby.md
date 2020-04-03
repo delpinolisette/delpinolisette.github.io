@@ -10,8 +10,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
 ### **Lecture 7 :**
 * Outline:
     * Deep Dive ActiveRecords
-
-
+ 
 * Web Framekwork Pipeline:
     - Routes -> Parsing -> Controller -> View
         - Step 1: define routes inside `config/routes.rb`
@@ -24,7 +23,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
             + differences between `<%= >` and `<% %>`
             + TODO - when you find out difference )i think one is embedded html
 
-
+ 
 * The CRUD Pipeline:
     - There is a dual representation of the site/data: Ruby vs. Database
     - *Models* are ruby representation of databse records 
@@ -40,7 +39,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
         + generates/updates a schema.rb file, ![schema.rb](delpinolisette.github.io/img/schema_peek.PNG)
         + type `rails db:migrate` to start, can only be done once
 
-
+ 
 * Generating a Model 
     + To generate a Mode, run in root folder:
         * `rails g model ModelName attr_name:attr_type`
@@ -48,7 +47,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
     + to destroy, 
         * `rails destroy`
 
-
+ 
 * Generators for Migration 
     - migration generators crete migration files which alter database record
     - `CreateXXXs` creates a table with table name `XXX` and specified columns
@@ -59,7 +58,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
     - ex2: `rails g migration AddCategoryToPosts category:string` 
         + adds Category column to Posts table
 
-
+ 
 * Commonly Used Data Types for models
 *   string 
 *   text
