@@ -1,4 +1,6 @@
-reading.md
+---
+layout: default
+---
 
 ## What am I reading?
 

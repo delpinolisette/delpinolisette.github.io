@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 Section 2.2
 Diffie Hellman introduces public key cryptosystems and therefore:
 * one-way function: 
