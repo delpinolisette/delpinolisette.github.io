@@ -182,19 +182,19 @@ end
         - why add `dependent: destroy`?
 * new CRUD available: see code:
 ```ruby
-@post = Post.find(1) #get post with id 1
+@post = Post.find(1) #=>get post with id 1
 
-@new_comment = @post.comments.build #equiv to post.new?
+@new_comment = @post.comments.build #=>equiv to post.new?
 @new_comment.body = 'Comment for post 1'
 @new_comment.save 
 
-#alternative comment creation:
+#=>alternative comment creation:
 @new_comment = @post.comments.create({body: 'Comment for post 1'})
 
-# find all comments belonging to a post:
+#=>find all comments belonging to a post:
 @post = Post.find(1)
 @comments = @post.comments
 
-#find the post that a comment belongs to:
+#=>find the post that a comment belongs to:
 ```
-okokok
+okokok new
