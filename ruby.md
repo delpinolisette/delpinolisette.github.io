@@ -182,9 +182,11 @@ end
         - why add `dependent: destroy`?
 * new CRUD available: see code:
 ```ruby
-@post = Post.find(1) #=>get post with id 1
+@post = Post.find(1) 
+#=>get post with id 1
 
-@new_comment = @post.comments.build #=>equiv to post.new?
+@new_comment = @post.comments.build 
+#=>equiv to post.new?
 @new_comment.body = 'Comment for post 1'
 @new_comment.save 
 
@@ -197,4 +199,4 @@ end
 
 #=>find the post that a comment belongs to:
 ```
-okokok new
+okokok new newwww
