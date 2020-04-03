@@ -32,7 +32,16 @@ Diffie Hellman introduces public key cryptosystems and therefore:
 ## The Discrete Logarithm Problem:
 * first construction is based on the DLP (Discrete Logarithm Problem) in $$\mathbb{F}_{p}$$ 
     * (the finite field with p elements, where p is prime!)
-    
+
+first some definitions and an important theorem:
+
+**Ring of Integers Mod m**:= $$\mathbb{Z}/m\mathbb{Z}$$={$$0,1,2,......,m-1$$}, 
+    * Notice $$\mathbb{Z}/m\mathbb{Z}$$ is the quotient ring of $$\mathbb{Z}$$ by the _principal ideal_ $$/m\mathbb{Z}$$
+    * then $$0,1,2,......,m-1$$ are _coset representatives_ for the congruence classes that make up the elements of $$\mathbb{Z}/m\mathbb{Z}$$
+
+**Set of all units**
+    * numbers that have inverses modulo m ()
+
 **Primitive Root Theorem**
     * Let p be prime. 
     * Then there is an element $$g \in \mathbb{F}_{p}^{*}$$
