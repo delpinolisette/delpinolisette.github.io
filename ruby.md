@@ -10,7 +10,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
 ### **Lecture 7 :**
 * Outline:
     * Deep Dive ActiveRecords
-##### Web Framekwork Pipeline:
+**Web Framekwork Pipeline:**
 - Routes -> Parsing -> Controller -> View
     - Step 1: define routes inside `config/routes.rb`
     - Step 2:create the `controller` file, with class and methods 
@@ -22,7 +22,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
         + differences between `<%= >` and `<% %>`
         + TODO - when you find out difference )i think one is embedded html
   
-##### The CRUD Pipeline:
+**The CRUD Pipeline:**
 - There is a dual representation of the site/data: Ruby vs. Database
 - *Models* are ruby representation of databse records 
     + children classes of `ActiveRecord::Base`
@@ -38,7 +38,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
     + type `rails db:migrate` to start, can only be done once
 
  
-##### Generating a Model 
+**Generating a Model**
 + To generate a Mode, run in root folder:
     * `rails g model ModelName attr_name:attr_type`
     * ex: `rails g model Post tilte:string body:text`
@@ -46,7 +46,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
     * `rails destroy`
 
  
-##### Generators for Migration 
+**Generators for Migration**
 - migration generators crete migration files which alter database record
 - `CreateXXXs` creates a table with table name `XXX` and specified columns
 - `AddXXXToYYYs` adds specified columns to table `YYY`
@@ -57,7 +57,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
     + adds Category column to Posts table
 
  
-##### Commonly Used Data Types for models
+**Commonly Used Data Types for models**
 * string 
 * text
 * integer, float, decimal
@@ -67,7 +67,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
     + creates reference to another table
 
   
-#### Arel : Complex Query Methods for models
+**Arel : Complex Query Methods for models**
 * SQL is powerful
 * ActiveRecord ORM is Ruby's method of writing SQL
 * ActiveRecord is built on top of Arel
@@ -75,4 +75,18 @@ Notice: These are personal notes for a course at my university on Web Developmen
     - SQL Abstract Syntax Tree manager (AST)
 
   
-* 
+**Common Arels (Relational Algebra)**
+```ruby
+User.where(name: 'Benjamin')
+#=> sends out query for all users names Benjamin
+User.find_by(name: 'Benjamin')
+#=> sends out query for ONE user named Benjamin
+User.limit(2)
+#=> returns first two users, the order is ascending by id by default- first to last
+User.order(id :desc)
+#=> returns all users last to first
+```
+* you can also chain commands, the order matters!:
+```ruby
+Post.where()
+```
