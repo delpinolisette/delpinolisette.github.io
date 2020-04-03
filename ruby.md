@@ -10,7 +10,6 @@ Notice: These are personal notes for a course at my university on Web Developmen
 ### **Lecture 7 :**
 * Outline:
     * Deep Dive ActiveRecords
- 
 * Web Framekwork Pipeline:
     - Routes -> Parsing -> Controller -> View
         - Step 1: define routes inside `config/routes.rb`
@@ -22,8 +21,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
         - Step 3: Create the view folder and file
             + differences between `<%= >` and `<% %>`
             + TODO - when you find out difference )i think one is embedded html
-
- 
+  
 * The CRUD Pipeline:
     - There is a dual representation of the site/data: Ruby vs. Database
     - *Models* are ruby representation of databse records 
@@ -60,10 +58,10 @@ Notice: These are personal notes for a course at my university on Web Developmen
 
  
 * Commonly Used Data Types for models
-*   string 
-*   text
-*   integer, float, decimal
-*   datetime, timestamp, time, date
-*   boolean
-*   references
-    + creates reference to another table  
+    * string 
+    * text
+    * integer, float, decimal
+    * datetime, timestamp, time, date
+    * boolean
+    * references
+        + creates reference to another table  
