@@ -60,14 +60,19 @@ first some definitions and an important theorem:
 * $$Log_{a}b = x$$ <=> $$a^{x}=b$$
 
 * What is D.L.P?
-  - Given a group $$G$$ and elements $$g,h \in$ G$$,
+  - Given a group $$G$$ and elements $$g,h \in G$$,
   - find an exponent $$x$$ such that 
   -   $$g^{x}=h$$ , or ($$log_{g}h=x$$)
 
 * A way to 'measure hardness': how many operations do we need to solve this with the fastes method known?? Different methods:
   - Trial and error : $$g^{x}=h$$, try x = 1, 2, 3,.... until we get $$h$$
     + def: **order of group**
-      * smallest possible element such that 
+      * smallest possible element n such that $$g^{n}=e$$, where e is the identity element in the group. 
+      * [more info on order](https://en.wikipedia.org/wiki/Order_(group_theory)
+      
+  - if $$g$$ has order $$n$$ (so we multiply $$g$$ by itself $$n$$ times to get $$e$$)
+  - then we are guaranteed using trial and error to find the solution in at most $$n$$ steps/operations 
+    + if n is very large (ex: $$n \geq 2^{80}$$) - unfeasable
 
 
  
