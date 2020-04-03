@@ -8,7 +8,7 @@ Diffie Hellman introduces public key cryptosystems and therefore:
  * an invertible function that is easy to compute but whose inverse is difficult to compute
  * meaning of "difficult to compute": if any algorithm tries to compute the inverse in a reasonable amount of time, it will fail - (the age of the universe is an example of an unreasonable time). 
  
- * trapdoor information
+* trapdoor information
   * a peice of trapdoor info is auxiliary info that lets you compute the inverse easily (Public key cryptsystems are built using one way functions that have a trapdoor) 
 
 * Public key cryptosystem = asymmetric cryptosystem
