@@ -36,19 +36,20 @@ Diffie Hellman introduces public key cryptosystems and therefore:
 
 first some definitions and an important theorem:
 
-**Ring of Integers Mod m**  :=   $$\mathbb{Z}/m\mathbb{Z}$$={$$0,1,2,......,m-1$$}
+###Ring of Integers Mod m
+*  :=   $$\mathbb{Z}/m\mathbb{Z}$$={$$0,1,2,......,m-1$$}
     * Notice $$\mathbb{Z}/m\mathbb{Z}$$ is the quotient ring of $$\mathbb{Z}$$ by the _principal ideal_ $$/m\mathbb{Z}$$
     * then $$0,1,2,......,m-1$$ are _coset representatives_ for the congruence classes that make up the elements of $$\mathbb{Z}/m\mathbb{Z}$$
 
-**Set of all units**
-    * numbers that have inverses modulo m ($$a$$ has inverse mod $$m$$ iff gcd(a,m)=1) are units. 
+###Set of all units
+* numbers that have inverses modulo m ($$a$$ has inverse mod $$m$$ iff gcd(a,m)=1) are units. 
     * EXERCISE: Prove that the inverse of a mod m exists iff gcd(a,m) = 1
     * 
 
-**Primitive Root Theorem**
-    * Let p be prime. 
-    * Then there is an element $$g \in \mathbb{F}_{p}^{*}$$
-        - what is the difference between $$\mathbb{F}_{p}$$ and $$\mathbb{F}_{p}^{*}$$? 
+###Primitive Root Theorem
+* Let p be prime. 
+* Then there is an element $$g \in \mathbb{F}_{p}^{*}$$
+    - what is the difference between $$\mathbb{F}_{p}$$ and $$\mathbb{F}_{p}^{*}$$? 
         - 
 
  
