@@ -61,8 +61,13 @@ first some definitions and an important theorem:
 
 * What is D.L.P?
   - Given a group $$G$$ and elements $$g,h \in$ G$$,
-  - find an exponent $$x$$ such that $$g^{x}=h$$ ($$log_{g}h=x$$)
-* A way to 'measure hardness': how many operations do we need to solve this with the fastes method known??
+  - find an exponent $$x$$ such that 
+  -   $$g^{x}=h$$ , or ($$log_{g}h=x$$)
+
+* A way to 'measure hardness': how many operations do we need to solve this with the fastes method known?? Different methods:
+  - Trial and error : $$g^{x}=h$$, try x = 1, 2, 3,.... until we get $$h$$
+    + def: **order of group**
+      * smallest possible element such that 
 
 
  
