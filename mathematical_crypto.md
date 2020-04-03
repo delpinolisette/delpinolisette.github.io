@@ -68,13 +68,15 @@ first some definitions and an important theorem:
   - Trial and error : $$g^{x}=h$$, try x = 1, 2, 3,.... until we get $$h$$
     + def: **order of group**
       * smallest possible element n such that $$g^{n}=e$$, where e is the identity element in the group. 
-      * [more info on order](https://en.wikipedia.org/wiki/Order_(group_theory)
+      * [more info on order](https://en.wikipedia.org/wiki/Order_(group_theory))
       
   - if $$g$$ has order $$n$$ (so we multiply $$g$$ by itself $$n$$ times to get $$e$$)
   - then we are guaranteed using trial and error to find the solution in at most $$n$$ steps/operations 
     + if n is very large (ex: $$n \geq 2^{80}$$) - unfeasible
 
+
   - Fast exponentiation method: [method](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/fast-modular-exponentiation)
+  - 
 
 
 
