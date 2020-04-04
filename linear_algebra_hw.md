@@ -11,7 +11,7 @@ Read:
 - Sec 1.4
 - Sec 8.1
 
-1. Let V be the $$\mathbb{R}$$- vector space of real valued continuous functions on the interval [$$-1,1$$]. Which functionals are linear? Which are not and why? (Functionals just send a vector from the vector space to a value in the scalar field)
+1. Let V be the $$\mathbb{R}$$- vector space of real valued continuous functions on the interval $$[-1,1]$$. Which functionals are linear? Which are not and why? (Functionals just send a vector from the vector space to a value in the scalar field)
     - a. $$\int_{-1}^{1} f(x)dx$$
     - b. $$\int_{-1}^{1} f(x)^{2}dx$$
     - c. $$f \mapsto f(0)dx$$
@@ -29,4 +29,18 @@ Read:
         - $$\int_{-1}^{1} f(x)dx + \int_{-1}^{1} g(x)dx $$
     * S3: check homogeneity: aT(v) = T(av)
         - $$a$$ is a scalar. $$f$$ is a vector in vector space. 
-        - $$a * T(f)$$ = a \int_{-1}^{1} (f)(x)dx = \int_{-1}^{1} a(f)(x)dx $$
+        - $$a * T(f) = a \int_{-1}^{1} f(x)dx = \int_{-1}^{1} af(x)dx $$
+
+
+
+
+**Hw8**
+- Read Chapters 2 and 3 
+1. (a) write the system as a matrix and also vector equations
+    * (b) Solve the system
+    * (c) write answers in vector form 
+\begin{bmatrix} [ccc|c]
+x_{1} & 2x_{2} & -x_{3}  &  -1\\
+2x_{1} & 2x_{2} & x_{3}  & 1\\
+3x_{1} + 5x_{2} - 2x_{3} & -1
+\end{bmatrix}   
