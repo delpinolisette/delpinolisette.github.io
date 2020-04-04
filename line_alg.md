@@ -29,12 +29,12 @@ layout: default
             * the sum of its complex eigenvalues
             * invariant with respect to change of basis
             * trace with this def applies to linear operators in general
-            * is a linear mapping: $$tr(T + S) = tr(T) + tr(S)$$ and $$ tr(cT)= c*tr(T) $$
-            * notice inside L(V,V) (:= linear maps from V to V) we have a natural collection of linear operators, from each one we can get a scalar back. 
+            * is a linear mapping: $$ tr(T + S) = tr(T) + tr(S)$$ and $$ tr(cT)= c * tr(T) $$
+            - notice inside L(V,V) (linear maps from V to V) we have a natural collection of linear operators, from each one we can get a scalar back. 
                 * how can we get this scalar? 
                 * given any pair (f,v) where 
                     * $$v \in V$$ is a vector
-                    * $$f \in V^{v}$$ is a linear functional in the dual space (the space of all linear functionals from V to the scalar field)
+                    * $$f \in V^{v}$$ is a linear functional in the dual space = the space of all linear functionals from V to the scalar field
                 * we can construct a linear operator:
                     - $$s_{f,v}: V \mapsto V, x \mapsto f(x)v $$ QUESTION: doesnt this give me a vector back?
                 * but given (f,v) we can also get a natural scalar: 
@@ -52,7 +52,7 @@ layout: default
                     - Let $$\mathbb{B} = \{b_{1}.......b_{n} \} \subset V $$ be any basis of V
                     - Let $$\mathbb{B}^{v} = \{b_{1}^{v}.......b_{n}^{v} \} \subset V $$ be its dual basis
                     - Then we can say that the collection of operators 
-                        + $$\mathbb{S} = \{ s_{b_{1}^{v},b_{1}.......s_{b_{n}^{v},b_{n}} \} $$ is a basis of $$L(V,V)$$ the set of all linear functions from V to V
+                        - $$ \mathbb{S} = \{ s_{{b_{1}}^{v},b_{1}}.......s_{{b_{n}}^{v},b_{n}} \} $$ is a basis of $$L(V,V)$$ the set of all linear functions from V to V
                             * basis = spanning + linearly independent. 
 
 ### Lecture 14: Row Reduction
@@ -67,3 +67,22 @@ Outline
 *  using row and column operations we can convert every linear system into a system in which all variables separate
     -  _row operation_: 
     -  _column operation_:
+
+
+
+
+
+### Extra notes/defs to categorize later
+**Dual Spaces and Dual Basis**
+* The dual space of V is the set of all linear functionals from V to $$\mathbb{F}$$ , so : $$V^{v} = T: V \mapsto \mathbb{F} $$ 
+    - all such elements of dual space are linear functionals
+- if dim(V) < $$\infty$$ => $$V$$ and $$V^{v}$$ are isomorphic
+    + to show this is true, show that they have the same dimension
+    + another way to show the isomorphism is to use the dual basis
+        * linear extension theorem: says if you know what T does on basis vectos, you know what T does on every vector
+        * Let $$\mathbb{B} = $$
+        * enough to know what $$f(v_{1}),.....,f(v_{n})$$ is 
+
+
+**Isomorphism**
+* mapppings that are injective and surjective (1:1 and onto) 
