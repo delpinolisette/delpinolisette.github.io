@@ -79,9 +79,10 @@ Outline
 - if dim(V) < $$\infty$$ => $$V$$ and $$V^{v}$$ are isomorphic
     + to show this is true, show that they have the same dimension
     + another way to show the isomorphism is to use the dual basis
-        * linear extension theorem: says if you know what T does on basis vectos, you know what T does on every vector
-        * Let $$\mathbb{B} = $$
-        * enough to know what $$f(v_{1}),.....,f(v_{n})$$ is 
+        * linear extension theorem: says if you know what T does on basis vectos, you know what T does on every vector:
+            * Let $$\mathbb{B} = \{ v_{1}....v_{n} \}$$
+            * enough to know what $$f(v_{1}),.....,f(v_{n})$$ is 
+            * usually hard to graphically represent linear transformations, but since the codoamin of all such linear functions are scalars, $$f: V \mapsto \mathbb{F}$$, you can draw a graph of your linear functionals (where your inputs end up.)
 
 
 **Isomorphism**
