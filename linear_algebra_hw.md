@@ -39,7 +39,7 @@ Read:
 1. (a) write the system as a matrix and also vector equations
     * (b) Solve the system
     * (c) write answers in vector form 
-\begin{bmatrix} [ccc|c]
+\begin{bmatrix}
 x_{1} & 2x_{2} & -x_{3}  &  -1\\
 2x_{1} & 2x_{2} & x_{3}  & 1\\
 3x_{1} + 5x_{2} - 2x_{3} & -1
