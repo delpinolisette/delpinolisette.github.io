@@ -262,4 +262,6 @@ end
 <& end &> 
 ```
 * why bother making the distinction?
-    - _body params_ 
+    - _body params_ need to be `permitted` to prevent mass assignment attacks
+        + `form_with model` 
+    - _url params_ not so

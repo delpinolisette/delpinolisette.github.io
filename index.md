@@ -18,6 +18,7 @@ Hi! My name is Lisette and I'm a student in university passionate about the inte
 * Subspaces : Examples and Proofs
 * Linear Combinations and Span
 * Dual Spaces
+* [problems](linear_algebra_hw.md)
 
 ### [Mathematical Cryptography](mathematical_crypto.md)
 
