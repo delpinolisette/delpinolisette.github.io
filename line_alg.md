@@ -38,7 +38,7 @@ layout: default
                 * we can construct a linear operator:
                     - $$s_{f,v}: V \mapsto V, x \mapsto f(x)v $$ QUESTION: doesnt this give me a vector back?
                 * but given (f,v) we can also get a natural scalar: 
-                    - $$ f(v)\in \mathbb{F} $$
+                    - $$ f(v)\in \mathbb{F} $$ 
                 * with this in mind we can form and prove the existence statement:
                 * **_Lemma_**: 
                     * Suppose V is finite dim vector space over $$\mathbb{F}$$
@@ -46,6 +46,9 @@ layout: default
                         - $$tr: L(V,V) \mapsto \mathbb{F}$$
                         - such that for all $$v \in V$$ and $$f \in V^{v}$$
                         - $$tr(s_{f,v}) = f(v)$$
+                * proof of lemma: 
+                    - fundamental fact: every linear function (any linear transformation) is uniquely determined by what it does to a basis (by its values on a basis)
+                    - from this fact, it suffices to constrct a basis of all linear functions from V to V, $$L(V,V)$$ that consists of operators of the form $$s_{f,v}$$
 
 ### Lecture 14: Row Reduction
 
