@@ -17,13 +17,23 @@ layout: default
                 * **_Theorem_**: The nullspace N(A) is a subspace of the vector space $$\mathbb{R^{n}}$$
                 * proof: WTS: N(A) is nonempty, closed under addition, closed under scalar multiplication:
                 * S1: the trivial solution is always in N(A)- so it's nonempty. $$\vec{x}=\vec{0}$$
-                * S2: WTS: $$ x,y \in N(A) => x+y \in N(A)
-                    Ax = 0, Ay = 0, A(x+y) = A(x) + A(y) = 0 + 0 = 0
-                    $$
-                * S3: $$c \in \mathbb{R}, x \in N(A) => cx \in N(A)
-                dfs
-                sdf$$
+                * S2: WTS: $$ x,y \in N(A) => x+y \in N(A)$$
+                    * Well, $$ Ax = 0, Ay = 0, A(x+y) = A(x) + A(y) = 0 + 0 = 0 $$
+                *S3: $$c \in \mathbb{R}, x \in N(A) => cx \in N(A)$$
+                    * Well, $$A(cx)=c*A(x) = c * 0 = 0$$
+                * QED
         + **rank of T**: dim image(T)
+    - turns out that for linear operators $$T: V \mapsto V$$ we also have refined invariants which are scalars of the field $$\mathbb{F}$$ 
+        + ex: **Trace**: $$tr: L(V,V) \mapsto \mathbb{F}$$
+            * the sum of elements on the main diagonal of a square matrix A
+            * the sum of its complex eigenvalues
+            * invariant with respect to change of basis
+            * trace with this def applies to linear operators in general
+            * is a linear mapping: $$tr(T + S) = tr(T) + tr(S)$$ and $$ ts(cT)= c*tr(T) $$
+            * notice inside L(V,V) (:= linear maps from V to V) we have a natural collection of linear operators, from each one we can get a scalar back. 
+                * how can we get this scalar? 
+                * given any pair (f,v) where 
+                    * $$v \in V$$ is a vector 
 
 ### Lecture 14: Row Reduction
 
