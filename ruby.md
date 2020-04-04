@@ -199,8 +199,41 @@ end
 @comments = @post.comments
 
 #=>find the post that a comment belongs to:
+@comment = Comment.find(20)
+@post = @comment.post
+
+# recall that :
+@post.comment.post == @post
 ```
-okosd new one
-* jfkdljfdslkfjldskf
-* fsdkjfhkdjsf
-* dsfjsdkf
+
+**Association Lvl2: Many to Many**
+* happens when two models can be associated with multiple instances of each other
+    - `Students` and `Courses`
+    - `Houses` and `Owners`
+* A model can have many to many association with iteself!:
+    - `Users` can have many `Users` as friends
+
+**Wrong Implementation in Database:**
+* Add _foreign keys_ to both tables
+    - you run into a duplicate _primary key_ issue
+    - you can fix with RID (ref id?), but still redundant !
+    - [example](delpinolisette.github.io/img/wrong_many_to_many.PNG)
+**Correct Implementation in Database**
+* Use three tables, the third one is to keep records
+* [example](delpinolisette.github.io/img/right_many_to_many.PNG)
+
+**Implementation of Many to Many in Ruby/Rails**
+* Step 1: generate `Course` and `Student` models like above examples
+    - no `reference` column this time!
+* Step 2: `rails g Model Registration Course:references Student:references`
+* Step 3: in `Course.rb` model file, write 
+    - `has_many :registrations, dependent: :destroy` #why do we write this?
+    - `has_many :students, through: registrations`
+* Step 4: do the same for the `Student.rb` model file
+* Step 5: and in the `Registration.rb` model file
+    - `belongs_to :student`
+    - `belongs_to :course`
+
+**Forms: Making POST Requests**
+* `<form>`s are html elements that make POST requests for a bundle of data
+* Rails erb `form_with`
