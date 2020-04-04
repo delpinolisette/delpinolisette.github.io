@@ -48,7 +48,9 @@ layout: default
                         - $$tr(s_{f,v}) = f(v)$$
                 * proof of lemma: 
                     - fundamental fact: every linear function (any linear transformation) is uniquely determined by what it does to a basis (by its values on a basis)
-                    - from this fact, it suffices to constrct a basis of all linear functions from V to V, $$L(V,V)$$ that consists of operators of the form $$s_{f,v}$$
+                    - from this fact, it suffices to constrct a basis of all linear functions from V to V, $$L(V,V)$$ that consists of operators of the form $$s_{f,v}$$ for the chosen f's and v's
+                    - Let $$\mathbb{B} = \{b_{1}.......b_{n} \} \subset V $$ be any basis of V
+                    - Let $$\mathbb{B}^{v} = \{b_{1}^{v}.......b_{n}^{v} \} \subset V $$ be its dual basis
 
 ### Lecture 14: Row Reduction
 
