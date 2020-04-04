@@ -13,11 +13,11 @@ layout: default
     - for every linear map $$T: V \mapsto W$$
     - we have two integers cpaturing information about T (transformation)
         + **nullity of T:** = dim Kernel(T) = dim Nullspace(T) = dim of the solution set to $$Ax=0$$
-            + Nullspace (T): set of all n-dimensional column vectors such that $$Ax=0$$, the solution set of the homogenous linear system. 
-                * _Theorem_: The nullspace N(A) is a subspace of the vector space $$\mathbb{R^{n}}$$
+            + **Nullspace (T)**: set of all n-dimensional column vectors such that $$Ax=0$$, the solution set of the homogenous linear system. 
+                * **_Theorem_**: The nullspace N(A) is a subspace of the vector space $$\mathbb{R^{n}}$$
                 * proof: WTS N(A) is nonempty, closed under addition, closed under scalar multiplication:
-                * S1: the trivial solution is always in N(A)- so it's nonempty
-        + ****
+                * S1: the trivial solution is always in N(A)- so it's nonempty. $$\vec{x}=\vec{0}$$
+        + **rank of T**: dim image(T)
 
 ### Lecture 14: Row Reduction
 
