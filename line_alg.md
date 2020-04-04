@@ -51,6 +51,9 @@ layout: default
                     - from this fact, it suffices to constrct a basis of all linear functions from V to V, $$L(V,V)$$ that consists of operators of the form $$s_{f,v}$$ for the chosen f's and v's
                     - Let $$\mathbb{B} = \{b_{1}.......b_{n} \} \subset V $$ be any basis of V
                     - Let $$\mathbb{B}^{v} = \{b_{1}^{v}.......b_{n}^{v} \} \subset V $$ be its dual basis
+                    - Then we can say that the collection of operators 
+                        + $$\mathbb{S} = \{ s_{b_{1}^{v},b_{1}.......s_{b_{n}^{v},b_{n}} \} $$ is a basis of $$L(V,V)$$ the set of all linear functions from V to V
+                            * basis = spanning + linearly independent. 
 
 ### Lecture 14: Row Reduction
 
