@@ -12,7 +12,7 @@ Read:
 - Sec 8.1
 
 1. Let V be the $$\mathbb{R}$$- vector space of real valued continuous functions on the interval [$$-1,1$$]. Which functionals are linear? Which are not and why? (Functionals just send a vector from the vector space to a value in the scalar field)
-    - a. $\int_{-1}^{1} f(x)dx$
+    - a. $$\int_{-1}^{1} f(x)dx$$
     - b. $$\int_{-1}^{1} f(x)^{2}dx$$
     - c. $$f \mapsto f(0)dx$$
     - d. $$\int_{-1}^{1} f(x)dx$$
@@ -26,4 +26,7 @@ Read:
         - QUESTION: is an indef integral a linear functional?
     * S2: check additivity: f,g, in Vector space. what is f+g
         - $$f+g = \int_{-1}^{1} (f+g)(x)dx = \int_{-1}^{1} f(x) + g(x) dx$$
-        - $$\int_{-1}^{1} f(x)dx + \int_{-1}^{1} f(x)dx $$
+        - $$\int_{-1}^{1} f(x)dx + \int_{-1}^{1} g(x)dx $$
+    * S3: check homogeneity: aT(v) = T(av)
+        - $$a$$ is a scalar. $$f$$ is a vector in vector space. 
+        - $$a * T(f)$$ = a \int_{-1}^{1} (f)(x)dx = \int_{-1}^{1} a(f)(x)dx $$
