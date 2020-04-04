@@ -17,6 +17,10 @@ layout: default
                 * **_Theorem_**: The nullspace N(A) is a subspace of the vector space $$\mathbb{R^{n}}$$
                 * proof: WTS N(A) is nonempty, closed under addition, closed under scalar multiplication:
                 * S1: the trivial solution is always in N(A)- so it's nonempty. $$\vec{x}=\vec{0}$$
+                * S2: [/ x,y \in N(a) => x+y \in N(A)$$?
+                    * Ax = 0, Ay = 0 
+                    /]
+                * S3: $$c \in \mathbb{R}, x$$
         + **rank of T**: dim image(T)
 
 ### Lecture 14: Row Reduction
