@@ -12,13 +12,12 @@ Hi! My name is Lisette and I'm a student in university passionate about the inte
 
 # List of All Topics that I'm learning/interested in- grouped by subjects:
 
-### Advanced Linear Algebra
+### [Advanced Linear Algebra](line_alg.md)
 
 * Vector Spaces: Examples and Proofs
 * Subspaces : Examples and Proofs
 * Linear Combinations and Span
 * Dual Spaces
-* [problems](linear_algebra_hw.md)
 
 ### [Mathematical Cryptography](mathematical_crypto.md)
 
