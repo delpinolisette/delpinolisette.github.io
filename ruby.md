@@ -217,10 +217,11 @@ end
 * Add _foreign keys_ to both tables
     - you run into a duplicate _primary key_ issue
     - you can fix with RID (ref id?), but still redundant !
-    - [example](delpinolisette.github.io/img/wrong_many_to_many.PNG)
+    - ![example](delpinolisette.github.io/img/wrong_many_to_many.PNG)
+
 **Correct Implementation in Database**
 * Use three tables, the third one is to keep records
-* [example](delpinolisette.github.io/img/right_many_to_many.PNG)
+* ![example](delpinolisette.github.io/img/right_many_to_many.PNG)
 
 **Implementation of Many to Many in Ruby/Rails**
 * Step 1: generate `Course` and `Student` models like above examples
@@ -236,4 +237,29 @@ end
 
 **Forms: Making POST Requests**
 * `<form>`s are html elements that make POST requests for a bundle of data
-* Rails erb `form_with`
+* Rails erb use `form_with` to create the HTML forms: make sure to include:
+    - destination url 
+    - whether the data is associated with a model
+    - field names
+    - field input type
+    - display name of fields
+- (field name, value) become key-val pairs
+* URL vs Model (form_with):
+* with a url becomes _url params_
+``` ruby
+<%= form_with url: '/login' do |form| &>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+    <%= form.submit%>
+<& end &> 
+```
+* with a model becomes _body params_
+* ``` ruby
+<%= form_with model: @user do |form| &>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+    <%= form.submit%>
+<& end &> 
+```
+* why bother making the distinction?
+    - _body params_ 
