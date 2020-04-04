@@ -12,11 +12,16 @@ Read:
 - Sec 8.1
 
 1. Let V be the $$\mathbb{R}$$- vector space of real valued continuous functions on the interval [$$-1,1$$]. Which functionals are linear? Which are not and why? (Functionals just send a )
-    a. $$\int_{-1}^{1} f(x)dx$$
-    b. $$\int_{-1}^{1} f(x)^{2}dx$$
-    c. $$f \mapsto f(0)dx$$
-    d. $$\int_{-1}^{1} f(x)dx$$
+    - a. $$\int_{-1}^{1} f(x)dx$$
+    - b. $$\int_{-1}^{1} f(x)^{2}dx$$
+    - c. $$f \mapsto f(0)dx$$
+    - d. $$\int_{-1}^{1} f(x)dx$$
 
     - solutions:
-    - **linear transformation:** $$T(ax+by) = aT(x) + bT(y)$$ for all $$x,y \in V$$ (vector space) and $$\forall a,b \in$$ scalar field
-    - **affine** f(x) = ax + b is _affine_ - not linear, it's a translation of something linear. 
+    - **linear transformation def:** $$T(ax+by) = aT(x) + bT(y)$$ for all $$x,y \in V$$ (vector space) and $$\forall a,b \in$$ scalar field
+    - **affine def** f(x) = ax + b is _affine_ - not linear, it's a translation of something linear. 
+    **1a**
+    * S1: notice that this would be a linear functional because it sends a vector from the vector space ($$f \in $$) set of all continuous functions in [-1,1] to a _definite integral_ , which is a scalar value in $$\mathbb{R}$$
+        - if it were not a definite integral we would run into problems. 
+        - QUESTION: is an indef integral a linear functional?
+    * S2: check additivity: 
