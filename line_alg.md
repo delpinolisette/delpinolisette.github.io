@@ -30,6 +30,37 @@ layout: default
     + => the natural operations on linear maps that produce new linear maps just become the natural operations of matrices (that produce new matrices?)
     + **_Theorem_**: Let U, V, W, be \\( \mathbb{F} \\) -vector spaces with bases:
         * \\( \mathbb{E} = \{ e_{1},.......,e_{n} \} \subset U \\)
+        * \\( \mathbb{F} = \{ f_{1},.......,f_{n} \} \subset V \\)
+        * \\( \mathbb{G} = \{ g_{1},.......,g_{n} \} \subset W \\)
+    * (1) : If \\( T_{1}: U \mapsto V, T_{2}: U \mapsto V  \\) are linear mappings, \\( c \in \mathbb{F} \\)
+        - and \\( A_{1}, A_{2} \in Mat_{mxn}\mathbb{F}\\) are matrices of \\( T\_{1}, T_{2} \\) in the bases \\( \mathbb{E}, \mathbb{F} \\)
+        - then matrices of :
+            + \\( T_{1} + T_{2}: U \mapsto V \\) == \\( A_{1} + A_{2} \\)
+            + \\( cT_{1}: U \mapsto V \\) == \\( cA_{1} \\)
+        - in our bases \\( \mathbb{E} \\) and \\( \mathbb{F} \\)  
+    * (2) :  (Linear mapping composition corresponds to matrix multiplcation): if \\( T: U \mapsto V \\) and \\( S: V \mapsto W \\) are linear mappings and 
+        - T has an (m x n) matrix A with bases E (from U) and F (from V) [bases from domain and codomain]
+        - S has a (k x m) matrix B with bases F (from V) and G (from W) [bases from domain and codomain]
+    * Then \\( S \circ T \\) has an (k x n) matrix B*A in the bases E (from domain U) and G (from codomain W)
+    * _proof_: 
+        * (1) follows from the definition of the matrix of a linear map
+        * (2) Consider the linear map \\( f:= S \circ T: U \mapsto W \\) and let C be the matrix of of that operator \\( S \circ T \\) in the bases E (from domain U) and G (from codomain W)
+            - every entry of C \\( c_{pq} \\) is given by:
+            - \\( c_{qp} = \\) the q-th coordinate of the vector \\( f\_{e_{p}} \\)
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
 
 
 
