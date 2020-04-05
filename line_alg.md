@@ -13,7 +13,8 @@ layout: default
 
 - Recall that if X,Y,Z are all sets, and \\( f: X \mapsto Y \\) and \\( g: Y \mapsto Z \\) _if we have a mapping f from X to Y and a mapping g from Y to Z_
 - we can form a composite map:
-    + \\( g \circ f : X \mapsto Z\\) that is defined by \\( x \\)
+    + \\( g \circ f : X \mapsto Z\\) that is defined by \\( g \circ f = g(f(x)) \\) for all \\( x \in X\\)
+
 
 
 
