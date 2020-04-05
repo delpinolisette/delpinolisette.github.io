@@ -51,16 +51,17 @@ layout: default
             * proof of lemma: 
                 - fundamental fact: every linear function (any linear transformation) is uniquely determined by what it does to a basis (by its values on a basis)
                 - from this fact, it suffices to constrct a basis of all linear functions from V to V, \\(L(V,V)\\) that consists of operators of the form \\(s_{f,v}\\) for the chosen f's and v's
-                - Let \\(\mathbb{B} = \{b_{1}.......b_{n} \} \subset V \\) be any basis of V
-                - Let \\(\mathbb{B}^{v} = \{b_{1}^{v}.......b_{n}^{v} \} \subset V \\) be its dual basis
+                    - [more here](https://math.stackexchange.com/questions/2619275/whats-a-basis-for-mathcal-lv-w) 
+                - Let \\( \mathbb{B} = \{ b_{1}.......b_{n} \} \subset V \\) be any basis of V
+                - Let \\( \mathbb{B}^{v} = \{b_{1}^{v}.......b_{n}^{v} \} \subset V \\) be its dual basis
                 - Then we can say that the collection of operators 
                     - \\( \mathbb{S} = \{ s_{{b_{1}}^{v},b_{1}}.......s_{{b_{n}}^{v},b_{n}} \} \\) is a basis of \\(L(V,V)\\) the set of all linear functions from V to V
                         * basis = spanning + linearly independent. 
                     - proof: 
                         * S1: \\( T: V \mapsto V \\) is a linear map.  
                             - Let \\( A \in Mat_{nxn}\mathbb{R} \\) be the matrix of T in the basis \\( \mathbb{B} \\)
-                        * S2: Then \\( T =  \\)
-                        * S3:    
+                        * S2: Then \\( T =  \sum_{i,j=1}^{n} a_{ij}s_{{b_{ji}^{v}, b_{i}} \\)
+                        * S3: 
 
 ### Lecture 14: Row Reduction
 
