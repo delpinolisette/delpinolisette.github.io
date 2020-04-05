@@ -5,14 +5,29 @@ layout: default
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+### Lectures 9-11   
+
+\\( x \\)
+
+**Composition of Linear Maps**   
+
+- Recall that if X,Y,Z are all sets, and \\( f: X \mapsto Y \\) and \\( g: Y \mapsto Z \\) _if we have a mapping f from X to Y and a mapping g from Y to Z_
+- we can form a composite map:
+    + \\( g \circ f : X \mapsto Z\\) that is defined by \\( x \\)
+
+
+
+
+
+
 ### Lectures 12-13
 
 **Traces**  
 * It is useful to have numerical invariants measuring the complexity of linear maps  
 * we already have some discrete (= integer invariants)  
-    - for every linear map \\( T: V \mapsto W \\)  
-    - we have two integers cpaturing information about T (transformation)  
-        + **nullity of T:** = dim Kernel(T) = dim Nullspace(T) = dim of the solution set to \\(Ax=0\\)  
+    * for every linear map \\( T: V \mapsto W \\)  
+    * we have two integers cpaturing information about T (transformation)  
+        * **nullity of T:** = dim Kernel(T) = dim Nullspace(T) = dim of the solution set to \\(Ax=0\\)  
             + **Nullspace (T)**: set of all n-dimensional column vectors such that \\(Ax=0\\), the solution set of the homog linear system.  
                 * **_Theorem_**: The nullspace N(A) is a subspace of the vector space \\(\mathbb{R^{n}}\\)  
                 * proof: WTS: N(A) is nonempty, closed under addition, closed under scalar multiplication:  
@@ -55,13 +70,27 @@ layout: default
                 - Let \\( \mathbb{B} = \{ b_{1}.......b_{n} \} \subset V \\) be any basis of V
                 - Let \\( \mathbb{B}^{v} = \{b_{1}^{v}.......b_{n}^{v} \} \subset V \\) be its dual basis
                 - Then we can say that the collection of operators 
-                    - \\( \mathbb{S} = \{ s_{b_{1}}^{v},b_{1}.......s_{b_{n}}^{v},b_{n} \} \\) is a basis of \\(L(V,V)\\) the set of all linear functions from V to V
+                    - \\( \mathbb{S} = \{ s_{{b_{1}}^{v},b_{1}}.......s_{{b_{n}}^{v},b_{n}} \} \\) is a basis of \\(L(V,V)\\) the set of all linear functions from V to V
                         * basis = spanning + linearly independent. 
-                    - proof: 
+                        * here, each \\({b_{i}}^{v}\\) is a linear functional from the dual basis, and each \\(b_{i}\\) is a vector from the basis of V. Each gets plugged into the linear operator s and spits out a and spits out a \\( {b_{i}}^{v} * b_{i} \\), which is QUESTION: a vector in V?
+                    - proof that \\( \mathbb{S} \\) is a basis for L(V,V): 
                         * S1: \\( T: V \mapsto V \\) is a linear map.  
                             - Let \\( A \in Mat_{nxn}\mathbb{F} \\) be the matrix of T in the basis \\( \mathbb{B} \\)
-                        * S2: Then \\( T =  \sum_{i,j=1}^{n} a_{ij}s_{{b_{ji}^{v}, b_{i}} \\)
-                        * S3: 
+                                + note: we can always represent a linear transformation/mapping by a matrix in its
+                        * S2: Then \\( T =  \sum_{i,j=1}^{n} a_{ij} * s_({ b_{{ji}^{v}}, b_{i}}) \\) 
+                            * for every \\( k = 1,....,n \\), we have
+                            * \\( T(b_{k}) =  \sum_{i=1}^{n} a_{ik} * b_{i} \\)
+                            * and we also have:
+                            * \\( (\sum_{ij} a_{ij}*s_{{b_{ji}}^{v}b_{i}} )(b_{k}) \\) 
+                            * \\( =  \sum_{ij} a_{ij}*s_{{b_{ji}}^{v}b_{i}}  (b_{k}) \\)
+                            * \\( =  \sum_{ij} a_{ij} {b_{j}}^{v}(b_{k})b_{i} \\)
+                            * \\( = \sum_{i=1}^{n} a_{ik} * b_{i} \\)
+                        * S3: Thus, \\( T = \sum_{ij}a_{ij}s_{{b_{j}}^{v}, b_{i}} \\)
+                        * This representation is unique since the matrix of T in the basis \\( \mathbb{B} \\) is uniquely determined by T and \\( \mathbb{B} \\) 
+                            *("linear extension theorem" - a linear transformation is uniqely determined by what it does to a basis.) ?
+                        * by the characterization of linear maps (the one descirbed above?) we then have a unique linear function, trace:
+                            - \\( tr: L(V,V) \mapsto \mathbb{F} \\)
+                            - ENDED PG 7 REVISIT AFTER LEC 9-11
 
 ### Lecture 14: Row Reduction
 
