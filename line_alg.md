@@ -13,8 +13,8 @@ layout: default
 
 - Recall that if X,Y,Z are all sets, and \\( f: X \mapsto Y \\) and \\( g: Y \mapsto Z \\) _if we have a mapping f from X to Y and a mapping g from Y to Z_
 - we can form a composite map:
-    + \\( g \circ f : X \mapsto Z\\) that is defined by \\( g \circ f = g(f(x)) \\) for all \\( x \in X\\)
-- we already used  
+    + \\( g \circ f : X \mapsto Z\\) that is defined by \\( g \circ f = g(f(x)) \\) for all \\( x \in X \\)
+- we already used the 
 
 
 
@@ -79,7 +79,7 @@ layout: default
                         * S1: \\( T: V \mapsto V \\) is a linear map.  
                             - Let \\( A \in Mat_{nxn}\mathbb{F} \\) be the matrix of T in the basis \\( \mathbb{B} \\)
                                 + note: we can always represent a linear transformation/mapping by a matrix in its
-                        * S2: Then \\( T =  \sum_{i,j=1}^{n} a_{ij} * s_({ b_{{ji}^{v}}, b_{i}}) \\) 
+                        * S2: Then \\( T =  \sum_{i,j=1}^{n} a_{ij} * s_({{b_{ji}}^{v}, b_{i}}) \\) 
                             * for every \\( k = 1,....,n \\), we have
                             * \\( T(b_{k}) =  \sum_{i=1}^{n} a_{ik} * b_{i} \\)
                             * and we also have:
