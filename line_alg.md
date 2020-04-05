@@ -55,11 +55,11 @@ layout: default
                 - Let \\( \mathbb{B} = \{ b_{1}.......b_{n} \} \subset V \\) be any basis of V
                 - Let \\( \mathbb{B}^{v} = \{b_{1}^{v}.......b_{n}^{v} \} \subset V \\) be its dual basis
                 - Then we can say that the collection of operators 
-                    - \\( \mathbb{S} = \{ s_{{b_{1}}^{v},b_{1}}.......s_{{b_{n}}^{v},b_{n}} \} \\) is a basis of \\(L(V,V)\\) the set of all linear functions from V to V
+                    - \\( \mathbb{S} = \{ s_{b_{1}}^{v},b_{1}.......s_{b_{n}}^{v},b_{n} \} \\) is a basis of \\(L(V,V)\\) the set of all linear functions from V to V
                         * basis = spanning + linearly independent. 
                     - proof: 
                         * S1: \\( T: V \mapsto V \\) is a linear map.  
-                            - Let \\( A \in Mat_{nxn}\mathbb{R} \\) be the matrix of T in the basis \\( \mathbb{B} \\)
+                            - Let \\( A \in Mat_{nxn}\mathbb{F} \\) be the matrix of T in the basis \\( \mathbb{B} \\)
                         * S2: Then \\( T =  \sum_{i,j=1}^{n} a_{ij}s_{{b_{ji}^{v}, b_{i}} \\)
                         * S3: 
 
