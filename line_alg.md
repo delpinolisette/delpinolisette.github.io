@@ -84,7 +84,7 @@ layout: default
                             * \\( T(b_{k}) =  \sum_{i=1}^{n} a_{ik} * b_{i} \\)
                             * and we also have:
                             * \\( (\sum_{ij} a_{ij}*s_{{b_{ji}}^{v}b_{i}} )(b_{k}) \\) 
-                            * \\( =  \sum_{ij} a_{ij}*s_{{b_{ji}}^{v}b_{i}}  (b_{k}) \\)
+                            * \\( =  {\sum_{ij}} a_{ij}*s_{{b_{ji}}^{v}b_{i}}  (b_{k}) \\)
                             * \\( =  \sum_{ij} a_{ij} {b_{j}}^{v}(b_{k})b_{i} \\)
                             * \\( = \sum_{i=1}^{n} a_{ik} * b_{i} \\)
                         * S3: Thus, \\( T = \sum_{ij}a_{ij}s_{{b_{j}}^{v}, b_{i}} \\)
