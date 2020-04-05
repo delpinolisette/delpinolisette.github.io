@@ -122,7 +122,7 @@ Outline
             * Let \\(\mathbb{B} = \{ v_{1}....v_{n} \}\\(
             * enough to know what \\(f(v_{1}),.....,f(v_{n})\\( is 
             * usually hard to graphically represent linear transformations, but since the codoamin of all such linear functions are scalars, \\(f: V \mapsto \mathbb{F}\\(, you can draw a graph of your linear functionals (where your inputs end up.)
-            * 
+            
 
 
 **Isomorphism**
