@@ -14,7 +14,32 @@ layout: default
 - Recall that if X,Y,Z are all sets, and \\( f: X \mapsto Y \\) and \\( g: Y \mapsto Z \\) _if we have a mapping f from X to Y and a mapping g from Y to Z_
 - we can form a composite map:
     + \\( g \circ f : X \mapsto Z\\) that is defined by \\( g \circ f = g(f(x)) \\) for all \\( x \in X \\)
-- we already used the 
+- we already used the notion of composition to define invertible/bijective maps of sets. 
+- composition also preserves the property of maps being linear!! _verycool_ we state it formally and prove it:
+- **_Claim_**: The composition of two linear maps is also linear. Let U, V, W be \\( \mathbb{F} \\) vector spaces. 
+    + Let these be linear maps:
+    + \\( T: U \mapsto V \\) and \\( S: V \mapsto W \\)
+    + the compositon of these is also linear:
+    + \\( S \circ T : U \mapsto W \\)
+- _proof_: Let \\( x,y \in V \\), \\( c \in K \\). Then:
+    + \\( S \circ T(x+y) = S(T(x+y)) = S(T(x) + T(y)) = S(T(y)) + S(T(y)) = S \circ T(x) + S \circ T(y) \\)
+    + also, \\( S \circ T(cx) = S(T(cx)) = S(cT(x)) = cS(T(x)) = cS \circ T(x) \\)
+    + QED
+- Thus the operation of compositions gives yet another way of constructing new linear maps out of known ones.   
+- Under our dictionary that uses bases to convert linear maps to matrices and matrices back to linear maps (QUESTION: lets see an example)
+    + => the natural operations on linear maps that produce new linear maps just become the natural operations of matrices (that produce new matrices?)
+    + **_Theorem_**: Let U, V, W, be \\( \mathbb{F} \\) -vector spaces with bases:
+        * \\( \mathbb{E} = \{ e_{1},.......,e_{n} \} \subset U \\)
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25,11 +50,11 @@ layout: default
 ### Lectures 12-13
 
 **Traces**  
-* It is useful to have numerical invariants measuring the complexity of linear maps  
-* we already have some discrete (= integer invariants)  
-    * for every linear map \\( T: V \mapsto W \\)  
-    * we have two integers cpaturing information about T (transformation)  
-        * **nullity of T:** = dim Kernel(T) = dim Nullspace(T) = dim of the solution set to \\(Ax=0\\)  
+- It is useful to have numerical invariants measuring the complexity of linear maps  
+- we already have some discrete (= integer invariants)  
+    + for every linear map \\( T: V \mapsto W \\)  
+    + we have two integers cpaturing information about T (transformation)  
+        + **nullity of T:** = dim Kernel(T) = dim Nullspace(T) = dim of the solution set to \\(Ax=0\\)  
             + **Nullspace (T)**: set of all n-dimensional column vectors such that \\(Ax=0\\), the solution set of the homog linear system.  
                 * **_Theorem_**: The nullspace N(A) is a subspace of the vector space \\(\mathbb{R^{n}}\\)  
                 * proof: WTS: N(A) is nonempty, closed under addition, closed under scalar multiplication:  
