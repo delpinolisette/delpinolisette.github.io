@@ -165,7 +165,7 @@ layout: default
 * _further notes on example 1_: note that the isomorphism [-] depends on your choice of a basis. 
     - different bases will give rise to different isomophism. 
     - another way to descrube \\([-]\_{\mathbb{B}} : V \mapsto \mathbb{F} ^{n}\\) is to say that it is the unique linear map that sends the basis B of V to the standard basis \\(E = \\{e\_{1},...,e\_{n}\\} \\) of \\(\mathbb{F} ^{n}\\). 
-        + so the mapping \\([-]\_{\mathbb{B}}\\) is the unique linear map for which \\([-]\_{\mathbb{B}} = e\_{i}\\) for i = 1,...,n
+        + so the mapping \\([-]\_{\mathbb{B}}\\) is the unique linear map for which \\( [b\_{i}]\_{\mathbb{B}} = e\_{i}\\) for i = 1,...,n
         + in vector notation : \\( [\mathbb{B}]\_{\mathbb{B}} = E \\)
 * (2): Let V,W be vector spaces over \\(\mathbb{F}\\) with bases 
     - \\(E = \\{ e\_{1},...,e\_{n} \\} \subset V\\)
@@ -175,7 +175,7 @@ layout: default
         + this follows from part (1) of the first theorem above. 
     - And \\(A\_{(-)}\\) is also an isomorphism. (it's bijective)
             * _check_: 
-                * first, by definition, \\( A\_{T} \\) is the unique matrix such that \\(T(E)\\) 
+                * first, by definition, \\( A\_{T} \\) is the unique matrix such that \\( T(E) =  \\) 
 
 ### Lectures 12-13
 
