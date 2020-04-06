@@ -7,8 +7,6 @@ layout: default
 
 ### Lectures 9-11   
 
-\\( x \\)
-
 **Composition of Linear Maps**   
 
 - Recall that if X,Y,Z are all sets, and \\( f: X \mapsto Y \\) and \\( g: Y \mapsto Z \\) _if we have a mapping f from X to Y and a mapping g from Y to Z_
@@ -151,12 +149,33 @@ layout: default
     - note: as with sets we will not distinguish isomorphic (vector) spaces. 
         + the rational is tht using the isomorphism and its inverse we can transport any property of V to W and back again
         + these preperties and feauees that only involce teh addition and scaling of vectors are matched in V and W via the isomorphism and its inverse. 
-* **examples of isomorphisms and isomorphic spaces**:
-* (1): If V is a finite dimensional vector space over \\(\mathbb{F}\\) 
-    * then every choice of a basis ddfjlkdfljk  
-
-
-
+* **Examples of Isomorphisms and Isomorphic Spaces**:
+* [more examples](https://en.wikibooks.org/wiki/Linear_Algebra/Definition_and_Examples_of_Isomorphisms)
+* Example (1): (iso that sends linear combination vector to its coordinates and back)If V is a finite dimensional vector space over \\(\mathbb{F}\\) 
+    * then every choice of a basis \\(\mathbb{B} = \\{ b\_{1},..,b\_{n} \\}\\) gives you an isomorphism, namely: \\( [-]\_{\mathbb{B}} : V \mapsto \mathbb{F} ^{n}\\) between V and coordinate n space
+    * so what does this map do?
+    * \\([-]\_{\mathbb{B}}\\) assigns to each \\( v \in V\\) _the column vector of its coordinates_ in the basis \\(\mathbb{B}\\)
+    * what this means is that each \\( v \in V\\) has a unique representation as \\(v = \sum\_{i=1}^{n} x\_{i}b\_{i}\\) with \\( (x\_{1},..,x\_{n}) \in V, b\_{1}...b\_{n} \in \mathbb{B} \\) (in the vector space V!!)
+    * this vector gets sent to a column vector of the coordinates from the field. \\( [v]\_{B} := (x\_{1}...x\_{n})^{T} \\)
+    * conversely, the inverse map \\([-]^{-1} : \mathbb{F} ^{n} \mapsto V\\) is also easy to write explicitly. Sends a column vector of coordinates from the scalar field to the linear combination representation of the vector v. 
+* _Notation:_ we can write and see the linear combination \\(\sum\_{i}^{n} x\_{i}b\_{i}\\) as a formal matrix product \\(\mathbb{B} \cdot x\\) where
+    - \\(\mathbb{B} = (b\_{1},...,b\_{n})\\) == the row vector of vectors (in the basis)
+    - \\(x = (x\_{1},...,x\_{n})^{t}\\) is the column vector of coordinates in \\(\mathbb{F} ^{n}\\)
+    - with this new notation, new view, we can look at the inverse map of \\([-]\_{B}: V \mapsto F^{n}\\) as the "matrix multiplication by B map": \\(B \cdot (-) : \mathbb{F} ^{n} \mapsto V\\)
+* _further notes on example 1_: note that the isomorphism [-] depends on your choice of a basis. 
+    - different bases will give rise to different isomophism. 
+    - another way to descrube \\([-]\_{\mathbb{B}} : V \mapsto \mathbb{F} ^{n}\\) is to say that it is the unique linear map that sends the basis B of V to the standard basis \\(E = \\{e\_{1},...,e\_{n}\\} \\) of \\(\mathbb{F} ^{n}\\). 
+        + so the mapping \\([-]\_{\mathbb{B}}\\) is the unique linear map for which \\([-]\_{\mathbb{B}} = e\_{i}\\) for i = 1,...,n
+        + in vector notation : \\( [\mathbb{B}]\_{\mathbb{B}} = E \\)
+* (2): Let V,W be vector spaces over \\(\mathbb{F}\\) with bases 
+    - \\(E = \\{ e\_{1},...,e\_{n} \\} \subset V\\)
+    - \\(F = \\{ f\_{1},...,f\_{n} \\} \subset W\\)
+    - now given a linear map \\(T: V \mapsto W\\) let \\(A\_{T} \in Mat(mxn)(\mathbb{F})\\) be its matrix (T's matrix) in the bases E and F. 
+    - Then the assignment \\(A\_{(-)}: L(V,W) \mapsto  Mat(mxn)(\mathbb{F}) :: T \mapsto A\_{T}\\) is a linear map. 
+        + this follows from part (1) of the first theorem above. 
+    - And \\(A\_{(-)}\\) is also an isomorphism. (it's bijective)
+            * _check_: 
+                * first, by definition, \\( A\_{T} \\) is the unique matrix such that \\(T(E)\\) 
 
 ### Lectures 12-13
 
@@ -247,11 +266,11 @@ Outline
 
 
 
-### Extra notes/defs to categorize later
-**Dual Spaces and Dual Basis**
+### Extra notes/defs to categorize later   
+**Dual Spaces and Dual Basis**  
 * The dual space of V is the set of all linear functionals from V to \\(\mathbb{F}\\( , so : \\(V^{v} = T: V \mapsto \mathbb{F} \\( 
     - all such elements of dual space are linear functionals
-- if dim(V) < \\(\infty\\( => \\(V\\( and \\(V^{v}\\( are isomorphic
+- if dim(V) < \\(\infty\\) => \\(V\\) and \\(V^{v}\\) are isomorphic
     + to show this is true, show that they have the same dimension
     + another way to show the isomorphism is to use the dual basis
         * linear extension theorem: says if you know what T does on basis vectos, you know what T does on every vector:
@@ -263,3 +282,11 @@ Outline
 
 **Isomorphism**
 * mapppings that are injective and surjective (1:1 and onto) 
+* [watch this](https://www.youtube.com/watch?time_continue=6&v=-Iww3p1-_bA&feature=emb_logo)
+* **How to check if a mapping is an isomorphism between two vector spaces:** 
+    - a linear transformation \\(T: V \mapsto W\\) is one-to-one if:
+        + \\(T\\) maps distinct vectors in V to distinct vectors in W
+        + check if two distinct vectors in the domain give you two different vectors in the codomain when you apply the linear transformation to it.
+    - it is onto if:
+        * range(T) = W
+        * so take any vector in W and you can find some vector in V that maps to it
