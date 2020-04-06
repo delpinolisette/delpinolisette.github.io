@@ -175,7 +175,16 @@ layout: default
         + this follows from part (1) of the first theorem above. 
     - And \\(A\_{(-)}\\) is also an isomorphism. (it's bijective)
             * _check_: 
-                * first, by definition, \\( A\_{T} \\) is the unique matrix such that \\( T(E) =  \\) 
+                * first, by definition, \\( A\_{T} \\) is the unique matrix such that \\( T(E) = T(e\_{1} + .. + T(e\_{n})) = F \cdot A\_{T} \\) 
+                    * QUESTION: why is this true? are \\(T(e\_{1}, ...)\\) are column vectors?
+                * This fact guides us on how to compute values of T in terms of \\(A\_{T}\\): (Here's how):
+                    - if \\(v \in V\\) and we have \\(x \in F^{n}\\) := vector of coordinates of v in the basis E, 
+                    - then \\(v = Ex\\)
+                    - by linearity of T we have: 
+                    - \\( T(v) = T(Ex) = T(E) \cdot x = F \cot A\_{T}x\\)
+                    - recalling that \\(x = [v]\_{E} \in F^{n}\\) is the vector of the cordinates of v in the basis E, we now have a formula for T in terms of A\_{T}, its matrix:
+                        + \\(T(v) = F A\_{T}[v]\_{E}\\)
+                    - this derivation also gives us the inverse of the map \\(A\_{(-)} : \\) 
 
 ### Lectures 12-13
 
