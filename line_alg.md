@@ -46,35 +46,20 @@ layout: default
         * (1) follows from the definition of the matrix of a linear map
         * (2) Consider the linear map \\( f:= S \circ T: U \mapsto W \\) and let C be the matrix of of that operator \\( S \circ T \\) in the bases E (from domain U) and G (from codomain W)
             - every entry of C \\( c_{pq} \\) is given by:
-            - \\( c_{qp} = \\) the q-th coordinate of the vector \\( f\_{e_{p}} \\)
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            - \\( c_{qp} = \\) the q-th coordinate of the vector \\( f\_{e_{p}} \\) in the basis \\( \mathbb{G} = (g\_{1}...g\_{n}) \\)
+            - we can actually compute each entry \\( c_{qp} = f\_{e\_{p}} \\) directly: 
+            -  \\( f\_{e\_{p}} = S \circ T(e\_{p})  \\)
+            -  = \\( S(T(e\_{p})) \\)
+            -   = \\( S(A\_{1p}f\_{1} +...+ A\_{mp}f\_{m}) \\) QUESTION: where does m come from?
+            -  = \\( \sum_{r=1}^{m} A\_{rp} (S\_{f\_{r}}) \\)
+            -  = \\( \sum_{r=1}^{m} A\_{rp} (\sum\_{q=1}^{k} B\_{qr} g\_{q})\\)
+            -  = \\( \sum \_{1}^{m} (\sum\_{1}^{m} B\_{qr}A\_{rp}) g\_q{} \\)
+            -  so we have \\( c\_{qp} = \sum\_{1}^{m} B\_{qr}A\_{rp} \\)
+            -   = (row q of B)(column p of A) = \\( (BA)\_{qp} \\)   
+    * Example 1 : (General Reflections)
+        - Let \\( L \in \mathbb(R)^{2}\\) be any line through the origin and let the transformaition \\(s\_{L} : R^{2} \mapsto R^{2}\\) be the reflection across L
+        - so \\(s\_{L}\\) send a point in R^{2} to its mirrror image, where them mirror is L
+        - **_Claim_** : \\(s\_{L}\\) is a linear map. 
 
 
 
