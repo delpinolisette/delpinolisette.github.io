@@ -65,6 +65,68 @@ layout: default
             + \\(s = s\_{x-axis} : \mathbb{R^{2} \mapsto \mathbb{R^{2}}}\\)
             + \\s(x, y)^{t} = (x -y)^{t}\\) for all vectors x,y
             + ![reflection over x axis](delpinolisette.github.io/img/reflectx.png)
+            + reflection over x axis matrix == 
+            + A = \\(
+                        \begin{bmatrix}
+                        1 & 0  \\\
+                        0 & -1  \\\
+                        \end{bmatrix}  
+                        \\)
+        - S2: notice that reflection across L can be viewed as a composition of three linear maps:
+            + 1. rotate the plane so that L becomes the x-axis
+            + 2. reflect the plane across the x axis 
+            + 3. rotate the plane so that x-axis becomes L
+        - each of these is linear, so \\(s\_{L}\\) is linear.
+        - S3: in concrete terms, \\(\theta : measured in radians, counter closckwise direction\\), Then, 
+            + \\(s\_{L} = rot\_{\theta} \circ s \circ rot\_{-\theta}\\)
+            + use the previous theorem, and we can get matrices for these transformations:
+            + \\(A\_{rot\_{\theta}}\\) = \\(
+                        \begin{bmatrix}
+                        cos(\theta) & -sin(\theta)  \\\
+                        sin(\theta) & cos(\theta)  \\\
+                        \end{bmatrix}  
+                        \\)
+            + \\(A\_{rot\_{\theta}}\\) = \\(
+                        \begin{bmatrix}
+                        cos(\theta) & sin(\theta)  \\\
+                        -sin(\theta) & cos(\theta)  \\\
+                        \end{bmatrix}  
+                        \\)
+            + \\(A\_{s}\\) = reflection over x axis matrix 
+            + EXERCISE: derive these matrices 
+            + and so \\(A\_{s\_{L}}\\) = multiplication/composition of the three: = \\(
+                        \begin{bmatrix}
+                        cos(2\theta) & sin(2\theta)  \\\
+                        sin(2\theta) & -cos(2\theta)  \\\
+                        \end{bmatrix}  
+                        \\)
+    * EXERCISE: Compute the matrix of the reflection over the line L with respect to the line L: y =7x in the standard basis of \\(\mathbb^{R}^{2}\\)
+
+**Properties of the Composition of Linear Maps:**   
+
+* (1): if 
+    - \\( T \in L(V,W)\\)
+    - \\( S \in L(U,V)\\)
+    - then \\(T \circ S \in L(U,W)\\)
+* (2) Composition is a linear map in each argument. if
+    - \\(S \in L(U,V)\\ 
+    - then the map \\( S \circ (-): L(V,W) \mapsto L(U,W) \\) (no entiendo? QUESTION) is a linear map between the two vector spaces L(V,W), L(U,V)
+    - _example_: if \\(a, b \in \mathbb{F}\\), \\(T\_{1}, T\_{2} \in L(V,W)\\)
+    - then \\(S \circ (aT\_{a} + b\_{T\_{2}})\\)
+    - = \\( aS \circ T\_{1} + bS \circ T\_{2} \\). 
+    - _check_: we can check this directly! just check both sides are equal to the same thing when evaluated on any vect \\(u \in U\\) (because U is domain of S? That's where we start)
+    - from the definition of addition and scaling in the vector space of linear maps, [here it is!](https://math.stackexchange.com/questions/2381942/the-set-of-all-linear-maps-tv-w-is-a-vector-space/2381955)
+    - = \\(S \circ (aT\_{1}+bT\_{2})(u)\\)
+    - = \\(S \circ ((aT\_{1}+bT\_{2})(u))\\)
+    - = \\(S \circ (aT\_{1}(u) + bT\_{2}(u))\\)
+    - = \\( aS(T\_{1}(u)) + bS(T\_{2}(u))) \\)
+    -  = \\( a S \circ T\_{1}(u) + b S \circ T\_{2}(u)\\)
+    -  QED
+    -  QUESTION:  CHECK WHETHER LINEAR MAPS IN QUESTION ARE CORRECT: THEY MIGHT BE FLIPPED IN THE NOTES! for this next one too
+    -  similarly: \\(T \in L(V,W)\\), check directly that \\((-) \circ T : L(U,V) \mapsto L(U,W)\\) is linear 
+        +  because \\((aS\_{1} + bS\_{2}) \circ T = aS\_{1} \circ T + b S\_{2} \circ T\\) for all a,b scalars and \\(S\_{1}, S\_{2} \in L(U,V)\\)
+*   
+
 
 
 
