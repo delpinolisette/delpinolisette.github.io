@@ -139,7 +139,21 @@ layout: default
         + = \\( a\_{1}y\_{1} + a\_{2}y\_{2} \\)
         + Thus, \\(T(a\_{1}x\_{1} + a\_{2}x\_{2}) = a\_{1}y\_{1} + a\_{2}y\_{2}\\)
         + Now let's evaluate \\(T^{-1}\\) on both sides of this identity. Literally just: 
-        + 
+        + \\(T^{-1} \circ T(a\_{1}x\_{1} + a\_{2}x\_{2})\\) = \\( T^{-1} (a\_{1}y\_{1} + a\_{2}y\_{2})\\)
+        + => \\( a\_{1}x\_{1} + a\_{2}x\_{2}\\) = \\( T^{-1} (a\_{1}y\_{1} + a\_{2}y\_{2})\\)
+        + \\( a\_{1}T^{-1}(y\_{1}) + a\_{2}T^{-1}(y\_{2})\\) = \\( T^{-1} (a\_{1}y\_{1} + a\_{2}y\_{2})\\)
+        + we have shown the linearity of the inverse map \\(T^{-1}\\)
+* **isomorphism** (def): the linear map \\(T : V \mapsto W\\) is an _isomorphism_ if there exists a linear map \\(S: W \mapsto V\\) s.t \\(S \circ T = id\_{v}\\) and \\(T \circ S = id\_{v}\\) (also think about corresponding definition in terms of matrices)[more info](https://math.stackexchange.com/questions/441758/what-does-isomorphic-mean-in-linear-algebra)
+    - note: we checked above that a linear map is an isomorphism iff it is a bijection 
+    - note: we also checked that the inverse linear map is simply the inverse set theoretic map.
+* **isomorphism** (def): two vector spaces V,W over \\(\mathbb{F}\\) are isomorphic if there exists a linear map \\(T: V \mapsto W\\) which is an isomorphism (so if it is bijective). 
+    - isomorphic means "has same shape". useful for turning undamiliar algebraic objects into familiar ones, making them easier to work with. 
+    - note: as with sets we will not distinguish isomorphic (vector) spaces. 
+        + the rational is tht using the isomorphism and its inverse we can transport any property of V to W and back again
+        + these preperties and feauees that only involce teh addition and scaling of vectors are matched in V and W via the isomorphism and its inverse. 
+* **examples of isomorphisms and isomorphic spaces**:
+* (1): If V is a finite dimensional vector space over \\(\mathbb{F}\\) 
+    * then every choice of a basis ddfjlkdfljk  
 
 
 
