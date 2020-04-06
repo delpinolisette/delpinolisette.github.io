@@ -60,6 +60,11 @@ layout: default
         - Let \\( L \in \mathbb(R)^{2}\\) be any line through the origin and let the transformaition \\(s\_{L} : R^{2} \mapsto R^{2}\\) be the reflection across L
         - so \\(s\_{L}\\) send a point in R^{2} to its mirrror image, where them mirror is L
         - **_Claim_** : \\(s\_{L}\\) is a linear map. 
+        - _proof_: you can prove this directly using difficult geometric constructions, or you can use the fact that compositions of linear maps are linear:
+        - S1: show that the reflection across the x-axis is linear:
+            + \\(s = s\_{x-axis} : \mathbb{R^{2} \mapsto \mathbb{R^{2}}}\\)
+            + \\s(x, y)^{t} = (x -y)^{t}\\) for all vectors x,y
+            + ![reflection over x axis](delpinolisette.github.io/img/reflectx.png)
 
 
 
