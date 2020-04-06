@@ -77,7 +77,7 @@ layout: default
             + 2. reflect the plane across the x axis 
             + 3. rotate the plane so that x-axis becomes L
         - each of these is linear, so \\(s\_{L}\\) is linear.
-        - S3: in concrete terms, \\(\theta : measured in radians, counter closckwise direction\\), Then, 
+        - S3: in concrete terms, \\(\theta : \\) measured in radians, counter closckwise direction, Then, 
             + \\(s\_{L} = rot\_{\theta} \circ s \circ rot\_{-\theta}\\)
             + use the previous theorem, and we can get matrices for these transformations:
             + \\(A\_{rot\_{\theta}}\\) = \\(
@@ -100,7 +100,7 @@ layout: default
                         sin(2\theta) & -cos(2\theta)  \\\
                         \end{bmatrix}  
                         \\)
-    * EXERCISE: Compute the matrix of the reflection over the line L with respect to the line L: y =7x in the standard basis of \\(\mathbb^{R}^{2}\\)
+    * EXERCISE: Compute the matrix of the reflection over the line L with respect to the line L: y =7x in the standard basis of \\(R^{2}\\)
 
 **Properties of the Composition of Linear Maps:**   
 
@@ -109,7 +109,7 @@ layout: default
     - \\( S \in L(U,V)\\)
     - then \\(T \circ S \in L(U,W)\\)
 * (2) Composition is a linear map in each argument. if
-    - \\(S \in L(U,V)\\ 
+    - \\( S \in L(U,V) \\) 
     - then the map \\( S \circ (-): L(V,W) \mapsto L(U,W) \\) (no entiendo? QUESTION) is a linear map between the two vector spaces L(V,W), L(U,V)
     - _example_: if \\(a, b \in \mathbb{F}\\), \\(T\_{1}, T\_{2} \in L(V,W)\\)
     - then \\(S \circ (aT\_{a} + b\_{T\_{2}})\\)
@@ -125,7 +125,21 @@ layout: default
     -  QUESTION:  CHECK WHETHER LINEAR MAPS IN QUESTION ARE CORRECT: THEY MIGHT BE FLIPPED IN THE NOTES! for this next one too
     -  similarly: \\(T \in L(V,W)\\), check directly that \\((-) \circ T : L(U,V) \mapsto L(U,W)\\) is linear 
         +  because \\((aS\_{1} + bS\_{2}) \circ T = aS\_{1} \circ T + b S\_{2} \circ T\\) for all a,b scalars and \\(S\_{1}, S\_{2} \in L(U,V)\\)
-*   
+* (3): Inverse maps of linear maps are linear. 
+    - Suppose \\(T: V \mapsto W\\) is al inear map which is bijective (is invertible as a map of sets + is injective and surjective + is one to one and onto)
+    - consider the inverse map \\(T\_{-1}: W \mapsto V\\), 
+    - then \\(T\_{-1}\\) is also linear. 
+    - _proof_: let \\(y\_{1}, y\_{2} \in W\\) - the domain of inverse map, let \\(a\_{1}, a\_{2} be two scalars in \mathbb{F}\\)
+        + WTS: \\( T\_{-1}(a\_{1}y\_{1} + a\_{2}y\_{2}) = a\_{1}T^{-1}(y\_{1}) + a\_{2}T^{-1}(y\_{2}) \\)
+        + assign some names: \\( x\_{1} = T^{-1}(y\_{1}) \in V \\) and \\(x\_{2} = T^{-1}(y\_{2}) \in V \\) - V =codomain of \\(T^{-1}\\)  
+        + then the RHS \\( a\_{1}T^{-1}(y\_{1}) + a\_{2}T^{-1}(y\_{2}) \\) is equal to \\(a\_{1}x\_{1} + a\_{2}x\_{2} \in V\\)
+        + Let's evaluate the original map T on this vector. Remember T is linear and we get:
+        + \\( T(a\_{1}x\_{1} + a\_{2}x\_{2}) = a\_{1}T(x\_{1}) + a\_{2}T(x\_{2}) \\)
+        + = \\( a\_{1}T \circ T^{-1}(y\_{1}) + a\_{2}T \circ T^{-1}(y\_{2})\\)
+        + = \\( a\_{1}y\_{1} + a\_{2}y\_{2} \\)
+        + Thus, \\(T(a\_{1}x\_{1} + a\_{2}x\_{2}) = a\_{1}y\_{1} + a\_{2}y\_{2}\\)
+        + Now let's evaluate \\(T^{-1}\\) on both sides of this identity. Literally just: 
+        + 
 
 
 
