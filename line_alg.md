@@ -174,17 +174,45 @@ layout: default
     - Then the assignment \\(A\_{(-)}: L(V,W) \mapsto  Mat(mxn)(\mathbb{F}) :: T \mapsto A\_{T}\\) is a linear map. 
         + this follows from part (1) of the first theorem above. 
     - And \\(A\_{(-)}\\) is also an isomorphism. (it's bijective)
-            * _check_: 
-                * first, by definition, \\( A\_{T} \\) is the unique matrix such that \\( T(E) = T(e\_{1} + .. + T(e\_{n})) = F \cdot A\_{T} \\) 
-                    * QUESTION: why is this true? are \\(T(e\_{1}, ...)\\) are column vectors?
-                * This fact guides us on how to compute values of T in terms of \\(A\_{T}\\): (Here's how):
-                    - if \\(v \in V\\) and we have \\(x \in F^{n}\\) := vector of coordinates of v in the basis E, 
-                    - then \\(v = Ex\\)
-                    - by linearity of T we have: 
-                    - \\( T(v) = T(Ex) = T(E) \cdot x = F \cot A\_{T}x\\)
-                    - recalling that \\(x = [v]\_{E} \in F^{n}\\) is the vector of the cordinates of v in the basis E, we now have a formula for T in terms of A\_{T}, its matrix:
-                        + \\(T(v) = F A\_{T}[v]\_{E}\\)
-                    - this derivation also gives us the inverse of the map \\(A\_{(-)} : \\) 
+        * _check_: 
+            * first, by definition, \\( A\_{T} \\) is the unique matrix such that \\( T(E) = T(e\_{1} + .. + T(e\_{n})) = F \cdot A\_{T} \\) 
+                * QUESTION: why is this true? are \\(T(e\_{1}, ...)\\) are column vectors?
+            * This fact guides us on how to compute values of T in terms of \\(A\_{T}\\): (Here's how):
+                - if \\(v \in V\\) and we have \\(x \in F^{n}\\) := vector of coordinates of v in the basis E, 
+                - then \\(v = Ex\\)
+                - by linearity of T we have: 
+                - \\( T(v) = T(Ex) = T(E) \cdot x = F \cot A\_{T}x\\)
+                - recalling that \\(x = [v]\_{E} \in F^{n}\\) is the vector of the cordinates of v in the basis E, we now have a formula for T in terms of A\_{T}, its matrix:
+                    + \\(T(v) = F A\_{T}[v]\_{E}\\)
+                - this derivation also gives us the inverse of the map \\(A\_{(-)} : T \mapsto A\_{T}\\),
+                    + \\(A\_{(-)} ^{-1} : Mat(mxn)(\mathbb{F}) \mapsto L(V,W) :: A \mapsto FA[-]\_{\mathbb{E}}\\) 
+                    + QUESTION: so what does this actually look like? need examples
+* Example (3): variant of example 1 (T that sends bases to bases is an iso)
+* Let V,W be vector spaces over \\(\mathbb{F}\\) with the bases:
+    + \\(E = \\{ e\_{1},...,e\_{n} \\} \subset V \\) 
+    + \\(F = \\{ f\_{1},...,f\_{n} \\} \subset W \\)
+* Then the unique linear map \\(T: V \mapsto W\\) which sends the basis E to the basis F is an isomorphism!
+* _Proof_: Let T be as defined above with bases E and F, for which \\(T(E) = F\\)
+* and let \\(S: W \mapsto V\\) be another such that \\(S(F) = E\\)
+* both T and S exist and are unique thanks to the theorem we proved above and lectures 7,8. 
+* Then \\(S \circ T : V \mapsto V\\) is a linear map such that 
+    - \\(S \circ T(E) = S(T(E)) = S(F) = E\\)
+* But we already have such a map that maps from V to V and sends E to E. It's the identity map! \\(id\_{v}\\)
+* by the uniqueness part of the above theorem and the last lecture, we get that this \\(S \circ T = id\_{v}\\), they are one and the same. 
+* the same argument applies to \\(T \circ S\\) on F, it equals \\(id\_{w}\\) 
+* **Corollary**: Let V,W be finite dimensional vector spaces over F. Then 
+    - (V and W are isomorphic) iff (dim V = dim W) _nice_
+    - _proof_: => follows from isomorphism. 
+        + (<=): If \\(T: V \mapsto W\\) is an isomorphism then for any basis B of V the vectors \\(T(B) \subset W\\) form the basis of W (important point!)
+        + We can check this directly: 
+            * if \\(w \in W\\) then we can consider \\(v = T^{-1}(w) \in V\\)
+            * by definition, \\(T(v) = T(T^{-1})(w) = w\\). 
+            * but, \\(v \in (V = span(B))\\) 
+            * So by the linearity of T we have
+                - \\(w = (T(v) \in span(T(B)))\\) QUESTION: is spanT(B) = W? oh wait thats the conclusion we are trying to reach. 
+            * This shows that T(B) is a generating set of W
+            * But if \\(B = \\{ b\_{1}...b\_{n} \\} \\) and \\( \\{c\_{1},..,c\_{n}\\} \\) are scalars in the field such that the linear combination of these with the bases vectors is in W and equals 0, or \\( c\_{1}b\_{1}+...+c\_{n}b\_{n} = \vec{0} \in W\\)
+            * then we can apply \\(T^{-1}\\) to both sides and get: 
 
 ### Lectures 12-13
 
