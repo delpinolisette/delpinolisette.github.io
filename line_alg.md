@@ -202,8 +202,8 @@ layout: default
 * the same argument applies to \\(T \circ S\\) on F, it equals \\(id\_{w}\\) 
 * **Corollary**: Let V,W be finite dimensional vector spaces over F. Then 
     - (V and W are isomorphic) iff (dim V = dim W) _nice_
-    - _proof_: => follows from isomorphism. 
-        + (<=): If \\(T: V \mapsto W\\) is an isomorphism then for any basis B of V the vectors \\(T(B) \subset W\\) form the basis of W (important point!)
+    - _proof_: => follows from isomorphism. look: 
+        + If \\(T: V \mapsto W\\) is an isomorphism then for any basis B of V the vectors \\(T(B) \subset W\\) form the basis of W (important point!)
         + We can check this directly: 
             * if \\(w \in W\\) then we can consider \\(v = T^{-1}(w) \in V\\)
             * by definition, \\(T(v) = T(T^{-1})(w) = w\\). 
@@ -211,9 +211,69 @@ layout: default
             * So by the linearity of T we have
                 - \\(w = (T(v) \in span(T(B)))\\) QUESTION: is spanT(B) = W? oh wait thats the conclusion we are trying to reach. 
             * This shows that T(B) is a generating set of W
-            * But if \\(B = \\{ b\_{1}...b\_{n} \\} \\) and \\( \\{c\_{1},..,c\_{n}\\} \\) are scalars in the field such that the linear combination of these with the bases vectors is in W and equals 0, or \\( c\_{1}b\_{1}+...+c\_{n}b\_{n} = \vec{0} \in W\\)
+            * But if \\(B = \\{ b\_{1}...b\_{n} \\} \\) and \\( \\{c\_{1},..,c\_{n}\\} \\) are scalars in the field such that the linear combination of these with the bases vectors is in W and equals 0, or \\( c\_{1}T(b\_{1})+...+c\_{n}T(b\_{n}) = \vec{0} \in W\\)
             * then we can apply \\(T^{-1}\\) to both sides and get: 
+            * \\( T^{-1}(\vec{0}) = T^{-1}(\sum\_{i=1}^{n} c\_{i}T(b\_{i})) \\)
+            * = \\( \sum\_{i=1}^{n} c\_{i}T^{-1}T(b\_{i}) \\) (linearity of T)
+            * = \\( \sum\_{i=1}^{n}c\_{i}b\_{i} \\) 
+            * since B is a basis, this implies that \\(c\_{1}=...=c\_{n} = 0\\) and hence that T(B) is a linearly independent set of W
+            * Since it is both spanning and linearly in dependent, 
+            * T(B) is a basis of W and thus...
+            * dim V = number of vectors in B = number of vectors in T(B) = dim W
+        - (<=): WTS: dim V = dim W => V and W and isomorphic 
+            + supposed dim V = dim W = n (so there's n vectors in the basis)
+            + and let 
+                - \\( E = {\\ e\_{1},..,e\_{n} }\\ \subset V\\)
+                - \\( F = {\\ f\_{1},..,f\_{n} }\\ \subset W\\) be bases
+            + Then by the previous claim(what is it!) the unique linear map \\(T: V ]mapsto W\\) such that T(E) = F (sends one basis to another) is an isomorphism. nice. 
+* _notation_: two isomorphic spaces over the same field:= \\(V \simeq W\\)
+* _caution_: the previous claim just says if dim V = dim W there exists an isomorphism between them. It is not the case that any linear map between the two spaces is an isomorphism. 
+    - ex: \\(0 : v \mapsto W\\) is a linear map between the two that is not an isomorphism. Not bijective when dim V is greater than 0. 
+    - the size of the Kernel helps tell if a mapping is an iso. 
+*  **Kernel** (definition) : the subspace of the domain of a linear mapping \\(T : v \mapsto W\\) between two vector spaces
+    -  ker(T) = \\( \\{ v \in V s.t. T(v) = 0 \\} \\)
+* **Theorem** ( equal dimensions and kernel has zero vector implies iso ):
+    - given a linear map T between V and W, F vector spaces, that have the same finite dimension, 
+    - T is an iso iff <=> Ker(T) = {\\( \vec{0} \\)}
+    - _proof_: 
+        + S1: ( => ) T is an isomorphism / bijective, so from the "onto" criteria we have 
+            * there exists (for sure) a vector v in V that maps to 0 in W. This is because W needs to have the 0 vector to be a vector space. 
+            * there exists \\(v \in V\\) s.t. \\(T(v) = \vec{0} \in W\\)
+        + S2: But T is linear, so \\(T(0) = T(0v) = 0 T(v) = 0\\)
+        + S3: This shows that \\(\vec{0} \in V\\) is the uniqe vector in V that is mapped to 0 in W by T. 
+            * This proves that \\(Ker(T) = 0\\) 
+            * -(QUESTION: does this mean that the solution set has only the trivial solutin in an isomorphism?) - the id matrix is an iso, and when set = 0 its only solution is 0, think about this, so it seems to be the case, at least for the id matrix
+        + S1: (<=) "kernel only contains 0 implies T is an iso" (harder!)
+            * suppose \\(Ker(T) = \\{\vec{0}\\}\\)
+            * Let \\(\\{ e\_{1},...,e\_{n} \\}\\) be a basis of V
+            * S2: so the vectors \\(\\{ f\_{1} = T(e\_{1} ... f\_{n} = T(e\_{n})) \\} \in W\\) are linearly independent. (how do we know this?)
+                - well, if we have scalars \\(a\_{n} \in \mathbb{F}\\) s.t. \\(a\_{1}f\_{1},...,a\_{n}f\_{n} = \vec{0} \in W\\) then we get
+                - \\(\vec{0} = \sum\_{i=1}^{n}a\_{i}f\_{i}\\)
+                - \\(= \sum\_{i=1}^{n}a\_{i}T(e\_{i}) \\)
+                - = \\( \sum\_{i=1}^{n}T(a\_{i}e\_{i})\\) (linearity of T)
+                - = \\( T(\sum\_{a=1}^{n}a\_{i}e\_{i}) \\) = \\(\vec{0}\\), (linearity of T)
+            * S3: but since we have that \\(Ker(T) = \\{\vec{0}\\}\\), 
+                - \\(Ker(T) = \\{ \sum\_{a=1}^{n}a\_{i}e\_{i} = \vec{0}\\}\\), and kernel is a subspace of the domain T, V, so \\(\sum\_{a=1}^{n}a\_{i}e\_{i} \in V \\)
+            * S4: since {e}'s were a basis of V, we have \\(a\_{2} = ...= a\_{n} = 0\\) 
+            * S5: we have now shows that S2 is true. 
+                - This face, that the {f} are linearly independent + dim V = dim W = n (bases of V and W have the same number of vectors) shows that \\(f\_{1},...,f\_{n}\\) is a basis of W. 
+            * S6: Since T sends the basis of V to the basis of W, it is an isomorphism. 
+            * QED
+* **Image of T**(definition): For a linear mapping \\(T: V \mapsto W\\),
+    - im(T) = \\(\\{w \in W | \exists v \in V s.t. T(v) = w\\} \\)
+    - EXERCISE: check that im(T) is always a subspace of W. 
+* **Theorem**: V,W, F-vector spaces with equal finite dimension. dim V = dim W < \\(\infty\\). Then a linear map \\(T: V \mapsto W\\) is an iso <=> (iff) im(T) = W 
+* QUESTION: is this any different than the def of iso? being onto => range(T) = W? oh i see this only works for the first direction. 
+    * _proof_ : ( => )If T is an isomorphism, then 
+        + T is bijective (in particular onto/surjective:). Thus image(T) = W.
+    + (<=) "if im(T) = W then T is an isomorphism."
+    + Suppose image(T) = W, 
+    + let \\(\\{ f\_{1},...,f\_{n}\\}\\) is a basis of W. 
+    + since im(T) = W we can find vectors \\(e\_{1},..,e\_{n} \in V\\) such that \\(T(e\_{i}= f\_{i})\\) , \\(i = 1,...,n\\)
+    + Then the vectors \\(\\{e\_{1},...,e\_{n}\\}\\) are linerly independent in V. how so? well :
+        - suppose we have scalars    
 
+ 
 ### Lectures 12-13
 
 **Traces**  
