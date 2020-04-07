@@ -271,8 +271,21 @@ layout: default
     + let \\(\\{ f\_{1},...,f\_{n}\\}\\) is a basis of W. 
     + since im(T) = W we can find vectors \\(e\_{1},..,e\_{n} \in V\\) such that \\(T(e\_{i}= f\_{i})\\) , \\(i = 1,...,n\\)
     + Then the vectors \\(\\{e\_{1},...,e\_{n}\\}\\) are linerly independent in V. how so? well :
-        - suppose we have scalars    
-
+        - suppose we have scalars \\(a_{1},...,a_{n} \in K\\) 
+        - so that \\( a_{1}e_{1} + .. + a_{n}e_{n} = \vec{0} \\)
+        - then, \\( T(\sum_{i=1}^{n} a_{i}e_{i}) = T(\vec{0})\\)
+        - \\( \sum_{i=1}^{n} a_{i}T(e_{i}) = T(\vec{0})\\) 
+        - \\( \sum_{i=1}^{n} a_{i}f_{i} = T(\vec{0})\\)
+        - since \\( \\{ f_{1},...,f_{n} \\} \\) is a basis in V, then we can conclude that the scalars \\( a_{1}=...=a_{n} = 0\\)
+        - thus, \\( \\{e_{1},...,e_{n}\\} \\) is linearly independent. 
+    + Since we have dim V = dim W = n, this implies that \\( \\{ e_{1},...,e_{n} \\} \\) is a basis of V
+    + and because we have a linear mapping T that sends a basis to another it is an isomorphism. 
+    + QED
+* The argument we used to prove the previous two theorems can be refined to show that Ker(T) and im(T) always have complementary dimensions. 
+* **Theorem**: Let V,W be F-vector spaces. \\( T:V \mapsto W\\) is a linear map. Dimension V < infinity (it's finite). _note that this only talks about the dimentison of the domain_ Then:
+    - (a): dim Ker(T), dim Im(T) finite. 
+    - (a): dim Ker(T), dim Im(T) = dim V
+* _proof_: for part (a), note that 
  
 ### Lectures 12-13
 
