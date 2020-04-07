@@ -281,11 +281,20 @@ layout: default
     + Since we have dim V = dim W = n, this implies that \\( \\{ e_{1},...,e_{n} \\} \\) is a basis of V
     + and because we have a linear mapping T that sends a basis to another it is an isomorphism. 
     + QED
-* The argument we used to prove the previous two theorems can be refined to show that Ker(T) and im(T) always have complementary dimensions. 
-* **Theorem**: Let V,W be F-vector spaces. \\( T:V \mapsto W\\) is a linear map. Dimension V < infinity (it's finite). _note that this only talks about the dimentison of the domain_ Then:
+* The argument we used to prove the previous two theorems can be refined to show that Ker(T) and im(T) always have complementary dimensions.    
+
+* **Theorem**: (Rank-Nullity?) Let V,W be F-vector spaces. \\( T:V \mapsto W\\) is a linear map. Dimension V < infinity (it's finite). _note that this only talks about the dimentison of the domain_ Then:
     - (a): dim Ker(T), dim Im(T) finite. 
     - (a): dim Ker(T), dim Im(T) = dim V
-* _proof_: for part (a), note that 
+* _proof_: for part (a), note that \\(Ker(T) \subset V\\) is a subspace of V and by the monotonicity of dimension of spaces we get that 
+    - \\( dim(Ker(T) \leq dim(V) \leq \infty)\\) (both finite, dim ker is less)
+* Also if \\( \\{ e\_{1},...,e\_{n} \\} \\) is a basis of V
+    - then V = span\\(\\{e\_{i}\\}\\) 
+* so then the image of T, which is all of T applied to every vector in V, is the span of T applied to every basis vector, by linearity of T:
+    - \\(Im(T) = T(V) = span(T(e\_{1}),...,T(e\_{n})) \\) 
+* from this fact it follows that \\(im(T)\\) is spanned by finitely many vectors, and so the dim \\(im(T) \leq \infty\\). 
+* For part (b) : 
+    - choose a basis of the Ker(T), \\(\\{ e\_{1},...,e\_{k} \\}\\)
  
 ### Lectures 12-13
 
