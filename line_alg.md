@@ -260,8 +260,8 @@ layout: default
             * S6: Since T sends the basis of V to the basis of W, it is an isomorphism. 
             * QED
 * **Image of T**(definition): For a linear mapping \\(T: V \mapsto W\\),
-    - im(T) = \\(\\{w \in W | \exists v \in V s.t. T(v) = w\\} \\)
-    - EXERCISE: check that im(T) is always a subspace of W. 
+    - im(T) = \\( \\{w \in W : \exists v \in V s.t. T(v) = w\\} \\)
+    - EXERCISE: check that im(T) is always a subspace of W.   
 * **Theorem**: V,W, F-vector spaces with equal finite dimension. dim V = dim W < \\(\infty\\). Then a linear map \\(T: V \mapsto W\\) is an iso <=> (iff) im(T) = W 
 * QUESTION: is this any different than the def of iso? being onto => range(T) = W? oh i see this only works for the first direction. 
     * _proof_ : ( => )If T is an isomorphism, then 
