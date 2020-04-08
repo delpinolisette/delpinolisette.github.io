@@ -285,7 +285,7 @@ layout: default
 
 * **Theorem**: (Rank-Nullity?) Let V,W be F-vector spaces. \\( T:V \mapsto W\\) is a linear map. Dimension V < infinity (it's finite). _note that this only talks about the dimentison of the domain_ Then:
     - (a): dim Ker(T), dim Im(T) finite. 
-    - (a): dim Ker(T), dim Im(T) = dim V
+    - (b): dim Ker(T), dim Im(T) = dim V
 * _proof_: for part (a), note that \\(Ker(T) \subset V\\) is a subspace of V and by the monotonicity of dimension of spaces we get that 
     - \\( dim(Ker(T) \leq dim(V) \leq \infty)\\) (both finite, dim ker is less)
 * Also if \\( \\{ e\_{1},...,e\_{n} \\} \\) is a basis of V
@@ -294,8 +294,63 @@ layout: default
     - \\(Im(T) = T(V) = span(T(e\_{1}),...,T(e\_{n})) \\) 
 * from this fact it follows that \\(im(T)\\) is spanned by finitely many vectors, and so the dim \\(im(T) \leq \infty\\). 
 * For part (b) : 
-    - choose a basis of the Ker(T), \\(\\{ e\_{1},...,e\_{k} \\}\\)
- 
+    - choose a basis of the Ker(T), \\(\\{ e\_{1},...,e\_{k} \\}\\).  
+    - now choose a completion to a basis of V to a basis of V : \\( \\{ e\_{1},...,e\_{k},e\_{k+1},...,e\_{n} \\} \\)
+    - QUESTION: get an explicit example of doing this!
+    - Then we get that \\(T(e\_{1}),...,T(e\_{n})\\) span im(T)! QUESTION: why? from part a!
+    - But \\(T(e\_{1}) = ...= T(e\_{k}) = 0\\), from the basis of Ker(T)
+    - so we get that really, \\(T(e\_{k+1}), ..., T(e\_{n})\\) will span im(T)
+    - but the vectors \\(T(e\_{k+1}), ... , T(e\_{n})\\) will be linearly independent in \\(im(T) \subset W\\) (_how so_)? :
+        + well, if we have \\(a\_{k+1},...,a\_{n} \in \mathbb{F}\\) s.t. 
+        + \\(\sum\_{i=k+1}^{n} a\_{i}T(e\_{i}) = \vec{0}\\) 
+        + then \\( T(\sum\_{i = k+1}^{n}a\_{i}e\_{i}) = \vec{0}\\) (by linearity of T)
+        + and so \\( \sum\_{i = k+1}^{n}a\_{i}e\_{i} \in Ker(T) \\)
+            * because its the argument in T(0) = 0, do you see it?
+        + so \\(\sum\_{i = k+1}^{n}a\_{i}e\_{i} = \sum \_{j=1}^{k}b\_{j}e\_{j}\\)
+        + since\\(\\{e\_{1},...,e\_{n}\\}\\) is a basis of V it follows that 
+            * all coefficients must be equal to zero, \\(a\_{k+1},...,a\_{n} = 0\\), (which implies linear independence?)
+        + Thus \\(T(e\_{k+1}),...,T(e\_{n})\\) is a basis of im(T). 
+        + This shows that dim im(T) = \\(n-k\\) = dim V - dim ker(T). 
+        + QED
+
+**Dual Spaces and isomorphisms:**   
+
+* We can use the criteria for isomorphic spaces to uncover more truths about the relationship between \\(V \\) and \\(V^{v}\\)  
+* **Claim**: if V is a finite dimensional vector space over F, 
+    - then (=>) \\(dimV^{v} = dim V\\)
+* _proof_: Let \\(E = \\{e\_{1},...,e\_{n}\\} \\) be a basis of V. 
+* Then for all \\(i\\) consider this unique linear operator / function:
+    - \\({e\_{i}}^{v}: V \mapsto \mathbb{F}\\) (from the vector space to the field) s.t.
+    - \\({e\_{i}}^{v}{e\_{j}}\\) = 
+    $$ \begin{cases} 
+    0 & j \neq 1 \\\
+    1 & j = i 
+    \end{cases} $$
+* we claim that the functions: \\(e\_{1}^{v},...,e\_{n}^{v} \in V^{v}\\) form a basis of the dual space \\(V^{v}\\) of \\(V\\) _how so you ask!_
+* well, let \\(f \in V^{v}\\) be any element in the dual space, so it is a linear functional that sends vectors in v to the field. 
+* the function \\(f: V \mapsto \mathbb{F}\\) is unqiely determined by its values on the spanning set E of V. 
+    - QUESTION: so the lemma works for spanning sets, not just bases?????
+* these values are: \\( f(e\_{1}),...,f(e\_{n}) \in \mathbb{F} \\). (recall they send vectors in v, in this case e, to a scalar in the field)
+* consider the linear function: 
+    - g = \\( f(e\_{1})e\_{1}^{v},...,f(e\_{n})e\_{n}^{v}\\) 
+    - \\(g(e\_{j}) = f(e\_{1})e\_{1}^{v}(e\_{j}) + ... + f(e\_{n})e\_{n}^{v}(e\_{j})\\) = \\(f(e\_{j})\\), because it becomes \\( f(1*e\_{j})\\) for all j. 
+    - Thus, \\(f : V \maps F\\) and \\(g : V \mapsto F\\), take the same values on the basis \\(e\_{1},...,e\_{n}\\)
+    - since linear transformations are characterized by what they do to a generating set, then \\(f = g\\) (remeber E is a spanning set of V)
+* This shows that \\(V^{v} =\\) span\\( (e\_{1}^{v}, ..., e\_{n}^{v}) \\)
+* Next, let scalars \\(c\_{1},...,c\_{n}\\) are such that \\(c\_{1}e\_{1}^{v},...,c\_{n}e\_{n}^{v} = 0 \in V^{v}\\)
+* so this \\(c\_{1}e\_{1}^{v},...,c\_{n}e\_{n}^{v} : V \mapsto F\\) is the zero function. 
+* Evaluate the function on \\( (e\_{j})\\), gives \\( c\_{1}e\_{1}^{v}(e\_{j}),...,c\_{n}e\_{n}^{v}(e\_{j}) \\)
+* but value of zero mapping on any vector just gives you zero back, so 
+    - \\( c\_{1} = ... = c\_{n} =0\\)
+* Hence, \\( \\{ e\_{1}^{v},...,e\_{n}^{v} \\}\\) is linearly independent, thus they form a basis, since they are also spanning, of the dual space. 
+* Hence, \\(dim V^{v} = n = dim V\\)  
+* **dual basis** (def) : \\(E^{v}= e\_{1}^{v},...,e\_{n}^{v} \\), as defined above, is the dual bases of E (of V)
+* _note_: dual spaces allow us (only when V is finite dimensional!) to define an isomorphism \\(T: V \mapsto V^{v}\\). 
+    - T is defined as the unique linear map sending the basis E of V to the dual basis \\(E^{v} of V^{v}\\). 
+* also works in opposite direction:
+* **Claim**: V is a finite dime
+
+
 ### Lectures 12-13
 
 **Traces**  
@@ -389,7 +444,7 @@ Outline
 **Dual Spaces and Dual Basis**  
 * The dual space of V is the set of all linear functionals from V to \\(\mathbb{F}\\( , so : \\(V^{v} = T: V \mapsto \mathbb{F} \\( 
     - all such elements of dual space are linear functionals
-- if dim(V) < \\(\infty\\) => \\(V\\) and \\(V^{v}\\) are isomorphic
+- if dim(V) < \\( \infty\\) => \\( V \\) and \\( V^{v} \\) are isomorphic
     + to show this is true, show that they have the same dimension
     + another way to show the isomorphism is to use the dual basis
         * linear extension theorem: says if you know what T does on basis vectos, you know what T does on every vector:
