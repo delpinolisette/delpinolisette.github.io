@@ -494,18 +494,28 @@ layout: default
                             - \\( tr: L(V,V) \mapsto \mathbb{F} \\)
                             - ENDED PG 7 REVISIT AFTER LEC 9-11
 
-### Lecture 14: Row Reduction
+### Lecture 14: Row Reduction: 
 
-Outline
-1. Simplifying Linear Systems
-2. Row Reduction and Echelon Forms
-3. Solving Systems with Row Reduction
-4. Corollaries
+* Simplifying Linear Systems
+* Row Reduction and Echelon Forms
+* Solving Systems with Row Reduction
+* Corollaries  
 
-** Solving a Linear System **
-*  using row and column operations we can convert every linear system into a system in which all variables separate
+* **Solving a Linear System**  
+* using row and column operations we can convert every linear system into a system in which all variables separate
     -  _row operation_: 
     -  _column operation_:
+* \\(Ax=b\\) where 
+    - \\(A \in Math(mxn)(F)\\) is a given coefficient matrix. 
+    - \\(b \in F^{m}\\) is a given vector of right hand sides. 
+    - \\(x \in F^{n}\\) is an unknown vector. 
+* we proved (QUESTION: where b?) that we can find invertible matrices
+    - \\( R \in Mat(mxm)(F) \\)   
+    - \\( C \in Mat(nxn)(F) \\)
+    - such that after performing on A the row operation corresponding to R, and then the column operation corresponding to C we get the simplest possible matrix:
+    - \\( \tilde{A} =  RAC =\\) ![block matrix](delpinolisette.github.io/img/blockmat1.png)
+        + where r = rank of matrix
+    - 
 
 
 
