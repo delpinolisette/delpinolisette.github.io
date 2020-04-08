@@ -554,11 +554,15 @@ layout: default
 * **Elementary Row Operations**:  
     * note tjat Ax=b is the matrix equation for our equation \\(F(v) = b\\), once we choose a basis in the vector space V. 
     * If A is (mxn), the augmented matrix is (m x n+1). 
-    * elemetary row operations are our previous row operations. 
+    * Elemtary Row Operations are just left multiplication by a specific elementary matrix. We called it R above. 
         - they just replace rows in the matrix with linear combinations of rows, in an invertible way (you can always work backwards).
+        - The important question is - why is it that these row operatiors don't change the solution set?? Because they are all invertible, reversible. 
         - the inverses of ERO's are just ERO's of the same type. 
         - ![ERO's and inverses:](delpinolisette.github.io/img/ERO.png)
-        - 
+        - What are these special elementary matrices? Well, they are just obtained by doing the corresponding row operation to the identity matrix. 
+            + Row operation 1: switch two rows: ![type 1](delpinolisette.github.io/img/type1.png)
+            + Row operation 2: multiply a row by a scalar multiple: ![type 2](delpinolisette.github.io/img/type2.png)
+            + Row operation 2: add a scalar multiple of a row to another row: ![type 3](delpinolisette.github.io/img/type3.png)
 
 
 
