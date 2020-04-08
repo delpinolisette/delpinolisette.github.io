@@ -348,7 +348,29 @@ layout: default
 * _note_: dual spaces allow us (only when V is finite dimensional!) to define an isomorphism \\(T: V \mapsto V^{v}\\). 
     - T is defined as the unique linear map sending the basis E of V to the dual basis \\(E^{v} of V^{v}\\). 
 * also works in opposite direction:
-* **Claim**: V is a finite dime
+* **Claim**: V is a finite dim vector space over F, let
+    - \\( F = \\{ f\_{1},...,f\_{n} \\} \\) be a basis of \\(V^{v}\\)
+    - Then there exists a unique basis \\(E = \\{ e\_{1},...,e\_{n} \\}\\) of V s.t.\\(E^{v} = F\\) 
+    - (a basis for the dual space is always constructed from a basis for the space)
+    - _proof_: 
+        + note that each vector \\( x \in V \\) defines a linear function 
+            * \\(ev\_{x}: V^{v} \mapsto \mathbb{F}\\) alt: \\(f \mapsto f(x)\\) (the evaluation map! kirillov was talking about this!)
+        + This gives a map: 
+            * \\(ev : V \mapsto V^{vv}\\) alt: \\( x \mapsto ev\_{x} \\)
+        * this map is linear:
+            - if \\(x\_{1},x\_{2} \in V\\), \\(a\_{1}, a\_{2} \in F\\)
+            - then for every \\( f \in V^{v}\\) we have: 
+            - \\(ev\_{a\_{1}x\_{1} + a\_{2}x\_{2}}(f) = f(a\_{1}x\_{1}+a\_{2}x\_{2}) = a\_{1}f(x\_{1}) + a\_{2}f(x\_{2}) = a\_{1}ev\_{x1}(f) + a\_{2}ev\_{x2}(f)\\)
+        * By the previous claim on \\(dim V^{vv} = dim V^{v} = n\\),
+        * so \\(ev: V \mapsto V^{vv}\\) is a linear map between vector spaces of the same dimension. (dont get how this proved it but ok!)
+* **Lemma:** (the evaluation map is an isomorphism)
+    + For a finite dimensional vector space V over F the map \\( ev: v \mapsto V^{vv} \\) is an isomorphism. 
+    + _proof_: \\(\\)
+
+
+
+
+
 
 
 ### Lectures 12-13
