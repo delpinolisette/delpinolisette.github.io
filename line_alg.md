@@ -5,6 +5,9 @@ layout: default
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+Navigation:
+[Lectures 9-11](#Lectures 9-11)
+
 ### Lectures 9-11   
 
 **Composition of Linear Maps**   
@@ -563,6 +566,9 @@ layout: default
             + Row operation 1: switch two rows: ![type 1](delpinolisette.github.io/img/type1.png)
             + Row operation 2: multiply a row by a scalar multiple: ![type 2](delpinolisette.github.io/img/type2.png)
             + Row operation 2: add a scalar multiple of a row to another row: ![type 3](delpinolisette.github.io/img/type3.png)
+        - another way of showing that a row operation does not change the solution set of a system, matrix equation style :)
+            + 
+
 
 
 
