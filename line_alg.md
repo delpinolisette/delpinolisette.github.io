@@ -292,7 +292,7 @@ layout: default
     - then V = span\\(\\{e\_{i}\\}\\) 
 * so then the image of T, which is all of T applied to every vector in V, is the span of T applied to every basis vector, by linearity of T:
     - \\(Im(T) = T(V) = span(T(e\_{1}),...,T(e\_{n})) \\) 
-* from this fact it follows that \\(im(T)\\) is spanned by finitely many vectors, and so the dim \\(im(T) \leq \infty\\). 
+* from this fact it follows that \\(im(T)\\) is spanned by finitely many vectors, and so the dim \\(im(T) \leq \infty\\)
 * For part (b) : 
     - choose a basis of the Ker(T), \\(\\{ e\_{1},...,e\_{k} \\}\\).  
     - now choose a completion to a basis of V to a basis of V : \\( \\{ e\_{1},...,e\_{k},e\_{k+1},...,e\_{n} \\} \\)
@@ -400,10 +400,24 @@ layout: default
     * \\(f\_{1},..,f\_{n}\\) is the dual basis of \\( e\_{1},...,e\_{n} \\) and this proves our claim. 
     * QED   
 
-* _Remark_: 
-
-
-
+* _Remark_: If \\(V\\) is an n-dimensional space over F, we now know that 
+    - \\(V \simeq V^{v}\\) 
+    - \\(V \simeq V^{vv}\\)
+* However, the first one is a isomorphism that depends on the choice of the basis, the second is a _canonical_ isomorphism.
+* To construct the first, we need to find a basis of V. 
+* To construct the second, there is a canonical isomorphism \\(ev: V \mapsto V^{vv}\\) which is deinfed only in terms of V and doesn't depend on a basis. 
+**Exercises:**
+* (Duality for Linear Maps): Let U, V, W be vector spaces over F
+    - (1) Show that if \\(T: V \mapsto W\\) is a linear map, then the map \\(T^{v}: W^{v} \mapsto V^{v}\\) defined by \\(T^{v}(f) = f \circ T\\), for any linear function \\(f: W \mapsto F\\) is also linear. 
+    - (2) Show that if \\(S: U \mapsto V\\), \\(T: V \mapsto W\\) are linear maps, then \\( (T \circ S)^{v}: S^{v} \circ T^{v}\\)
+    - (3) Suppose that V,W are finite dimensional and let 
+        + \\( E = \\{ e\_{1},...,e\_{n} \\} \subset V \\)
+        + \\( F = \\{ f\_{1},...,f\_{n} \\} \subset W \\) 
+    - be bases of V and W. 
+    - Let \\(S \in Mat(mxn)(F)\\) be the matrix of T in the bases \\(E \subset V\\) and \\( F \subset W \\). 
+    - Show that the matrix of \\(T^{v}: W^{v} \mapsto V^{v}\\) in the dual bases \\( F^{v} \subset W^{v} \\) and \\( E^{v} \subset V^{v} \\) is the matrix \\( A^{T} \in Mat(nxm)(F) \\)
+    - (4) Prove that if \\(A \in Mat(nxm)(F)\\) and \\(B \in Mat(mxk)(F)\\)
+        + then \\((AB)^{T} = B^{T}A^{T}\\). 
 
 
 
