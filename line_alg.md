@@ -334,7 +334,7 @@ layout: default
 * consider the linear function: 
     - g = \\( f(e\_{1})e\_{1}^{v},...,f(e\_{n})e\_{n}^{v}\\) 
     - \\(g(e\_{j}) = f(e\_{1})e\_{1}^{v}(e\_{j}) + ... + f(e\_{n})e\_{n}^{v}(e\_{j})\\) = \\(f(e\_{j})\\), because it becomes \\( f(1*e\_{j})\\) for all j. 
-    - Thus, \\(f : V \maps F\\) and \\(g : V \mapsto F\\), take the same values on the basis \\(e\_{1},...,e\_{n}\\)
+    - Thus, \\(f : V \mapsto F\\) and \\(g : V \mapsto F\\), take the same values on the basis \\(e\_{1},...,e\_{n}\\)
     - since linear transformations are characterized by what they do to a generating set, then \\(f = g\\) (remeber E is a spanning set of V)
 * This shows that \\(V^{v} =\\) span\\( (e\_{1}^{v}, ..., e\_{n}^{v}) \\)
 * Next, let scalars \\(c\_{1},...,c\_{n}\\) are such that \\(c\_{1}e\_{1}^{v},...,c\_{n}e\_{n}^{v} = 0 \in V^{v}\\)
@@ -346,12 +346,12 @@ layout: default
 * Hence, \\(dim V^{v} = n = dim V\\)  
 * **dual basis** (def) : \\(E^{v}= e\_{1}^{v},...,e\_{n}^{v} \\), as defined above, is the dual bases of E (of V)
 * _note_: dual spaces allow us (only when V is finite dimensional!) to define an isomorphism \\(T: V \mapsto V^{v}\\). 
-    - T is defined as the unique linear map sending the basis E of V to the dual basis \\(E^{v} of V^{v}\\). 
-* also works in opposite direction:
+    - T is defined as the unique linear map sending the basis E of V to the dual basis \\(E^{v} of V^{v}\\).
+* also works in opposite direction ... 
 * **Claim**: V is a finite dim vector space over F, let
     - \\( F = \\{ f\_{1},...,f\_{n} \\} \\) be a basis of \\(V^{v}\\)
     - Then there exists a unique basis \\(E = \\{ e\_{1},...,e\_{n} \\}\\) of V s.t.\\(E^{v} = F\\) 
-    - (a basis for the dual space is always constructed from a basis for the space)
+    - (a basis for the dual space can always constructed from a basis for the space, so we can find the "origin" basis for any basis in \\(V^{v}\\))
     - _proof_: 
         + note that each vector \\( x \in V \\) defines a linear function 
             * \\(ev\_{x}: V^{v} \mapsto \mathbb{F}\\) alt: \\(f \mapsto f(x)\\) (the evaluation map! kirillov was talking about this!)
@@ -360,12 +360,47 @@ layout: default
         * this map is linear:
             - if \\(x\_{1},x\_{2} \in V\\), \\(a\_{1}, a\_{2} \in F\\)
             - then for every \\( f \in V^{v}\\) we have: 
-            - \\(ev\_{a\_{1}x\_{1} + a\_{2}x\_{2}}(f) = f(a\_{1}x\_{1}+a\_{2}x\_{2}) = a\_{1}f(x\_{1}) + a\_{2}f(x\_{2}) = a\_{1}ev\_{x1}(f) + a\_{2}ev\_{x2}(f)\\)
+            - \\(ev\_{a\_{1}x\_{1} + a\_{2}x\_{2}}(f) =V s\mapsto F f(a\_{1}x\_{1}+a\_{2}x\_{2}) = a\_{1}f(x\_{1}) + a\_{2}f(x\_{2}) = a\_{1}ev\_{x1}(f) + a\_{2}ev\_{x2}(f)\\)
         * By the previous claim on \\(dim V^{vv} = dim V^{v} = n\\),
-        * so \\(ev: V \mapsto V^{vv}\\) is a linear map between vector spaces of the same dimension. (dont get how this proved it but ok!)
-* **Lemma:** (the evaluation map is an isomorphism)
-    + For a finite dimensional vector space V over F the map \\( ev: v \mapsto V^{vv} \\) is an isomorphism. 
-    + _proof_: \\(\\)
+        * so \\(ev: V \mapsto V^{vv}\\) is a linear map between vector spaces of the same dimension. 
+        * _now a brief interruption for a lemma we need to prove to finish proving this claim_:
+    * **Lemma:** (the evaluation map is an isomorphism)
+        + For a finite dimensional vector space V over F the map \\( ev: V \mapsto V^{vv} \\) is an isomorphism. (a natural one!)
+        + _proof_: Let \\(\\{ b\_{1},..,b\_{n} \\}\\) be a basis of \\(V\\). 
+            * let \\(\\{b\_{1}^{v},...,b\_{n}^{v}\\}\\) be a basis \\(V^{v}\\). 
+            * let \\( \\{ b\_{1}^{vv},...,b\_{n}^{vv} \\} \subset V^{vv}\\) be a basis dual to the dual basis. 
+            * Compute \\(ev\_{b\_{i}}(b\_{j}^{v})\\). 
+            * By definition, we have 
+            * \\( ev\_{b\_{i}}(b\_{j}^{v}) = b\_{j}^{v}(b\_{i}) =  \\)
+            $$ \begin{cases} 
+            0 & j \neq 1 \\\
+            1 & j = i 
+            \end{cases} $$
+            * Thus, we can see that \\( ev\_{bi} \\) and \\( b^{vv} \\) take on the same values on the dual basis \\( \\{ b\_{1}^{v},...,b\_{n}^{v} \\} \\) 
+            * since every linear map,function is uniquely detemined by its values on a spanning set, it follows that:
+                - \\( ev\_{bi} = b\_{i}^{vv}\\) for i =1,..,n
+            * Conclusion: \\(ev\\) sends a basis of V toa basis of \\(V^{vv}\\) and so it is an isomorphism. 
+    * back to the proof.... 
+    * Now let us start wuth the basis
+        - \\( F = \\{ f\_{1},...,f\_{n}\\} \\) of \\(V^{v}\\)
+    * Let \\(F^{v} = \\{ f\_{1}^{v},...,f\_{n}^{v} \\}\\) be the dual basis of \\(v^{vv}\\)
+    * Since we have \\(ev: V \mapsto V^{vv}\\) is an isomorphism (proved above)
+    * for each \\(i = 1,...,n\\) we have a unique vector \\(e\_{i} \in V\\) s.t.
+        - \\(ev\_{e\_{i}} = f\_{i}^{v}\\) (because an iso sends a basis to a basis?)
+    * But then, \\(f\_{i}(e\_{j}) = ev\_{ej}(f\_{i}) = f\_{j}^{v}(f\_{i}) = \begin{cases} 
+            0 & j \neq 1 \\\
+            1 & j = i 
+            \end{cases} \\)
+    * Now consider the collection of vectors \\( \\{ e\_{1},...,e\_{n} \\} \subset V\\)
+        - It is a basis of V since it is the image of the basis of the double dual: \\(\\{ f\_{1}^{v},..,f\_{n}^{v} \\}\\) of \\(V^{vv}\\) under the isomorphism: \\(ev^{-1}: V^{vv} \mapsto V\\)
+    * The formula \\( f\_{i}(e\_{j}) = \begin{cases} 
+            0 & j \neq 1 \\\
+            1 & j = i 
+            \end{cases} \\) implies that ..
+    * \\(f\_{1},..,f\_{n}\\) is the dual basis of \\( e\_{1},...,e\_{n} \\) and this proves our claim. 
+    * QED   
+
+* _Remark_: 
 
 
 
