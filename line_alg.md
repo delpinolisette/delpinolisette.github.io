@@ -548,7 +548,17 @@ layout: default
             \tilde{x}\_{r+1} \\\
             ... \\\
             \tilde{x}\_{n}  \\)
-            - with \\( \tilde{x}\_{r+1},...,\tilde{x}\_{n} \in \mathbb{F} \\) being free variables
+            - with \\( \tilde{x}\_{r+1},...,\tilde{x}\_{n} \in \mathbb{F} \\) being free variables.\, and the whole column vector of solutions is multiplied by \\(C\\).
+        + but this method is not constructive, we had to pick bases in \\(F^{n}, F^{m}\\) to fit with A. Row reduction algorithm solves the issue. 
+            + the algo simplifies the system systematically, uses only row ops, done in simple steps, and allows us to get close enough to solve the system.  
+* **Elementary Row Operations**:  
+    * note tjat Ax=b is the matrix equation for our equation \\(F(v) = b\\), once we choose a basis in the vector space V. 
+    * If A is (mxn), the augmented matrix is (m x n+1). 
+    * elemetary row operations are our previous row operations. 
+        - they just replace rows in the matrix with linear combinations of rows, in an invertible way (you can always work backwards).
+        - the inverses of ERO's are just ERO's of the same type. 
+        - ![ERO's and inverses:](delpinolisette.github.io/img/ERO.png)
+        - 
 
 
 
