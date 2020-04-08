@@ -5,8 +5,10 @@ layout: default
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-Navigation:
-[Lectures 9-11](#Lectures 9-11)
+#### Navigation:
+* [Lectures 9-11](#Lectures 9-11)
+* [Lectures 12-13](#Lectures 12-13)
+* [Lecture 14](#Lecture 14)
 
 ### Lectures 9-11   
 
@@ -497,13 +499,14 @@ Navigation:
                             - \\( tr: L(V,V) \mapsto \mathbb{F} \\)
                             - ENDED PG 7 REVISIT AFTER LEC 9-11
 
-### Lecture 14: Row Reduction: 
+### Lecture 14
+
+**Row Reduction:**
 
 * Simplifying Linear Systems
 * Row Reduction and Echelon Forms
 * Solving Systems with Row Reduction
 * Corollaries
-
 * **Solving a Linear System**  
 * using row and column operations we can convert every linear system into a system in which all variables separate
     -  _row operation_: 
