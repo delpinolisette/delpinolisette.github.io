@@ -499,7 +499,7 @@ layout: default
 * Simplifying Linear Systems
 * Row Reduction and Echelon Forms
 * Solving Systems with Row Reduction
-* Corollaries  
+* Corollaries
 
 * **Solving a Linear System**  
 * using row and column operations we can convert every linear system into a system in which all variables separate
@@ -515,7 +515,40 @@ layout: default
     - such that after performing on A the row operation corresponding to R, and then the column operation corresponding to C we get the simplest possible matrix:
     - \\( \tilde{A} =  RAC =\\) ![block matrix](delpinolisette.github.io/img/blockmat1.png)
         + where r = rank of matrix
-    - 
+    - Using R and C we can simplify the system Ax=b. 
+    - Left multiplying (Ax=b) by R gives an equivalient system 
+        + \\(RAx = Rb <=> RACC^{-1}=Rb\\)
+        + given the notation: 
+            * \\(\tilde{A} = RAC \in Mat(mxn)F\\)
+            * \\(\tilde{b} = Rb \in (F^{m})\\)
+            * \\(\tilde{x} = C^{-1}x \in F^{n} \\)
+        + write system as \\(\tilde{A}\tilde{x}=\tilde{b}\\)
+        + so it becomes : 
+        \\[ \tilde{x}\_{1} = \tilde{b}\_{1} \\\
+        ... \\\
+        \tilde{x}\_{r} = \tilde{b}\_{r} \\\
+        0 = \tilde{b}\_{r+1}\\\
+        ...\\\
+        0 = \tilde{b}\_{m}
+        \\]
+        + So we conclude that we can get the solutions of Ax=b through \\(\tilde{A}\tilde{x}=\tilde{b}\\)
+            - _proof_: 
+            - S1: The tilde system and Ax = b are both consistent iff \\(\tilde{b}\_{r+!}=...=\tilde{b}\_{m}=0\\)
+            - S2: If \\(\tilde{b}\_{r+!}=...=\tilde{b}\_{m}=0\\) then the solutions of \\(\tilde{A}\tilde{x}=\tilde{b}\\) are vectors of the form: \\( \tilde{b}\_{1} \\\
+             ... \\\
+            \tilde{b}\_{r} \\\
+            \tilde{x}\_{r+1} \\\
+            ... \\\
+            \tilde{x}\_{n}  \\)
+            - with \\( \tilde{x}\_{r+1},...,\tilde{x}\_{n} \in \mathbb{F} \\) being free variables
+            - S3: If \\(\tilde{b}\_{r+!}=...=\tilde{b}\_{m}=0\\) then the solutions of \\(Ax=b\\) are of the form: x = 
+            \\( \tilde{b}\_{1} \\\
+             ... \\\
+            \tilde{b}\_{r} \\\
+            \tilde{x}\_{r+1} \\\
+            ... \\\
+            \tilde{x}\_{n}  \\)
+            - with \\( \tilde{x}\_{r+1},...,\tilde{x}\_{n} \in \mathbb{F} \\) being free variables
 
 
 
