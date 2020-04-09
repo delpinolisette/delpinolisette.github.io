@@ -581,9 +581,15 @@ layout: default
     + recall that left multiplication by an mxn matrix \\(A\\) defines a linear map: 
         - \\(T : \mathbb{F}^{n} \mapsto \mathbb{F}^{m}\\) :: \\(v \mapsto Av\\)
     + the rank of the matrix A is then the rank of T. 
-        - rank(T) = dimension of the subspace \\(im(T) \subset \mathbb{F}^{m\\) of the codomain. 
-    * def: rank (A) = rank(T) = dim im(T)
-    *    
+        - rank(T) = dimension of the subspace \\( im(T) \subset \mathbb{F}^{m}\\) of the codomain. 
+    * **rank (A)** (def): rank (A) = rank(T) = dim im(T)
+    * **im(T)** (def): im(T) = \\(y \in F^{m} : y = T(v) = Av\\) for some \\(v \in F^{n}\\). 
+        - now note that: 
+        - \\(F^{n}\\), the domain of the linear map, which is a coordinate n space, is spanned by the vectors of the cardinal basis \\(e\_{1},...,e\_{n}\\) and therefore \\(im(T)\\) is spanned by the vectors \\(Ae\_{1},...,Ae\_{n} \in F^{m}\\)
+        - we know that image of a linear map is gneerated by the image of the generators of the source space (QUESTION: - when did we discuss this?)
+        - recall that each \\(e\_{i}\\) has a 1 in the ith spot, 0 everywhere else, so by definition of matrix multiplication, 
+            + \\(Ae\_{i}\\) = i-th column of A
+    
 
 
 
