@@ -5,11 +5,10 @@ layout: default
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-_Note_: I wrote these notes with inspiration from "Elementary Classical Analysis" by Marsden as well as several Lab lectures and classroom lectures at UPenn. 
 
 **Table of Contents:**
 
-[Ch. 5 : Uniform Convergence](#chapter-5-uniform-convergence)
+[Uniform Convergence](#chapter-5-uniform-convergence)
 
 
 
@@ -50,5 +49,6 @@ Outline:
         + so the "point" f is the point of convergence of the sequence of "points" \\(f\_{k}(x)\\). 
         + When does pointwise conv not help?
             * f, the function the sequence converges to, does not need to be contunuous, even if the \\(f\_{k}\\) are cont. 
-                - ex: 
+                - ex: consider this function:
                 - ![example function](/gif/function1.gif)
+                - even though the limit function f
