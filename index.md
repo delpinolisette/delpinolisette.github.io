@@ -8,16 +8,9 @@ layout: default
 
 [My Reading Log](reading.md)
 
-Hi! My name is Lisette and I'm a student in university passionate about the intersection of Math and Computation. I'm also passionate about coffee, science fiction, and creating novel systems using tech. 
+Hi! My name is Lisette and I'm a student at the University of Pennsylvania passionate about the intersection of Math and Computation. Some of my hobbies include coffee, space documentaries, and investigating new technologies.  
 
 # List of All Topics that I'm learning/interested in- grouped by subjects:
-
-### [Advanced Linear Algebra](line_alg.md)
-
-* Vector Spaces: Examples and Proofs
-* Subspaces : Examples and Proofs
-* Linear Combinations and Span
-* Dual Spaces
 
 ### [Mathematical Cryptography](mathematical_crypto.md)
 
@@ -31,6 +24,13 @@ Hi! My name is Lisette and I'm a student in university passionate about the inte
 * Pseudoprimes 
 * RSA cryptosystem 
 * Primality Testing 
+
+### [Advanced Linear Algebra](line_alg.md)
+
+* Vector Spaces: Examples and Proofs
+* Subspaces : Examples and Proofs
+* Linear Combinations and Span
+* Dual Spaces
 
 ### [Analysis](analysis.md)
 

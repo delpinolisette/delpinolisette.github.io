@@ -41,4 +41,8 @@ Outline:
 
 * **Pointwise and Uniform Convergence:**
     - pointwise is the most natural way to think about convergence. 
-        + (why?) because we only ask       
+        + (why?) because we only ask for each point \\(x\\) in the domain the sequence \\(f\_{k}(x)\\) converges. 
+    - **pointwise convergence** (def) : 
+        + \\(N\\) is a metric space. A is a set. \\(f\_{k} : A \mapsto N\\) for \\(k = 1,2,3.....\\)
+        + then the sequence of functions \\(f\_{k}\\) is said to converge pointwise/ converge simply to a function \\(f : A \mapsto N\\) if...
+            * for each \\(x \in A\\) 
