@@ -524,11 +524,13 @@ layout: default
     - Using R and C we can simplify the system Ax=b. 
     - Left multiplying (Ax=b) by R gives an equivalient system 
         + \\(RAx = Rb <=> RACC^{-1}=Rb\\)
+            * so the id matrix is written in the form \\(CC^{-1}\\) which doesnt change anything, but we have our simple matrix RAC to work with. 
         + given the notation: 
             * \\(\tilde{A} = RAC \in Mat(mxn)F\\)
             * \\(\tilde{b} = Rb \in (F^{m})\\)
-            * \\(\tilde{x} = C^{-1}x \in F^{n} \\)
-        + write system as \\(\tilde{A}\tilde{x}=\tilde{b}\\)
+            * \\(\tilde{x} = C^{-1}x \in F^{n} \\) = column vector with n entries. 
+        + write system as \\(\tilde{A}\tilde{x}=\tilde{b}\\), but since we used only invertible operations to get this new system, we can answer quesetions about the old system with this one. 
+        + in terms of the new variables \\(\tilde{x} = (\tilde{x}\_{1},...,\tilder{x}\_{n})^{T}\\) = \\(C^{-1}x\\)
         + so it becomes : 
         \\[ \tilde{x}\_{1} = \tilde{b}\_{1} \\\
         ... \\\
@@ -537,10 +539,11 @@ layout: default
         ...\\\
         0 = \tilde{b}\_{m}
         \\]
+        + note that it is m equations. we got this very simple system we alluded to using the block matrix previously. 
         + So we conclude that we can get the solutions of Ax=b through \\(\tilde{A}\tilde{x}=\tilde{b}\\)
             - _proof_: 
             - S1: The tilde system and Ax = b are both consistent iff \\(\tilde{b}\_{r+!}=...=\tilde{b}\_{m}=0\\)
-            - S2: If \\(\tilde{b}\_{r+!}=...=\tilde{b}\_{m}=0\\) then the solutions of \\(\tilde{A}\tilde{x}=\tilde{b}\\) are vectors of the form: \\( \tilde{b}\_{1} \\\
+            - S2: If \\(\tilde{b}\_{r+!}=...=\tilde{b}\_{m}=0\\) then the solutions of \\(\tilde{A}\tilde{x}=\tilde{b}\\) are vectors of the form: \\[ \tilde{b}\_{1} \\\
              ... \\\
             \tilde{b}\_{r} \\\
             \tilde{x}\_{r+1} \\\
@@ -553,13 +556,13 @@ layout: default
             \tilde{b}\_{r} \\\
             \tilde{x}\_{r+1} \\\
             ... \\\
-            \tilde{x}\_{n}  \\)
+            \tilde{x}\_{n}  \\]
             - with \\( \tilde{x}\_{r+1},...,\tilde{x}\_{n} \in \mathbb{F} \\) being free variables.\, and the whole column vector of solutions is multiplied by \\(C\\).
         + but this method is not constructive, we had to pick bases in \\(F^{n}, F^{m}\\) to fit with A. Row reduction algorithm solves the issue. 
             + the algo simplifies the system systematically, uses only row ops, done in simple steps, and allows us to get close enough to solve the system.  
             + also they solve the systm in _finitely_ many steps!
 * **Elementary Row Operations**:  
-    * note tjat Ax=b is the matrix equation for our equation \\(F(v) = b\\), once we choose a basis in the vector space V. 
+    * note that Ax=b is the matrix equation for our equation \\(F(v) = b\\), once we choose a basis in the vector space V. 
     * If A is (mxn), the augmented matrix is (m x n+1). 
     * Elemtary Row Operations are just left multiplication by a specific elementary matrix. We called it R above. 
         - they just replace rows in the matrix with linear combinations of rows, in an invertible way (you can always work backwards).
@@ -582,13 +585,16 @@ layout: default
         - \\(T : \mathbb{F}^{n} \mapsto \mathbb{F}^{m}\\) :: \\(v \mapsto Av\\)
     + the rank of the matrix A is then the rank of T. 
         - rank(T) = dimension of the subspace \\( im(T) \subset \mathbb{F}^{m}\\) of the codomain. 
-    * **rank (A)** (def): rank (A) = rank(T) = dim im(T)
-    * **im(T)** (def): im(T) = \\(y \in F^{m} : y = T(v) = Av\\) for some \\(v \in F^{n}\\). 
+    * **rank (A)** (def): rank (A) = rank(T) = dim im(T) = dim (column space of A) = maximal number of linearly independent vectors in col space A = max number of linearly independent columns of A. 
+    * **im(T)** (def): im(T) = \\(y \in F^{m} : y = T(v) = Av\\) for some \\(v \in F^{n}\\) = span(columns of A) 
+        -   (we show the last part now), that im(T) = span of columns of A.
         - now note that: 
-        - \\(F^{n}\\), the domain of the linear map, which is a coordinate n space, is spanned by the vectors of the cardinal basis \\(e\_{1},...,e\_{n}\\) and therefore \\(im(T)\\) is spanned by the vectors \\(Ae\_{1},...,Ae\_{n} \in F^{m}\\)
-        - we know that image of a linear map is gneerated by the image of the generators of the source space (QUESTION: - when did we discuss this?)
-        - recall that each \\(e\_{i}\\) has a 1 in the ith spot, 0 everywhere else, so by definition of matrix multiplication, 
-            + \\(Ae\_{i}\\) = i-th column of A
+        - \\(F^{n}\\), the domain of the linear map, which is a coordinate n space, is spanned by the vectors of the cardinal basis \\(e\_{1},...,e\_{n}\\) and therefore \\(im(T)\\) is spanned by the vectors \\(Ae\_{1},...,Ae\_{n} \in F^{m}\\), which as we now discuss are just the columns of A
+            - we know that image of a linear map is gneerated by the image of the generators of the source space (QUESTION: - when did we discuss this?)
+            - recall that each \\(e\_{i}\\) has a 1 in the ith spot, 0 everywhere else, so by definition of matrix multiplication (row by column), 
+                + \\(Ae\_{i}\\) = i-th column of A. 
+        - Thus, im(T) = span(columns of A)
+    *  
     
 
 
