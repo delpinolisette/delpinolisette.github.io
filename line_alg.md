@@ -530,7 +530,7 @@ layout: default
             * \\(\tilde{b} = Rb \in (F^{m})\\)
             * \\(\tilde{x} = C^{-1}x \in F^{n} \\) = column vector with n entries. 
         + write system as \\(\tilde{A}\tilde{x}=\tilde{b}\\), but since we used only invertible operations to get this new system, we can answer quesetions about the old system with this one. 
-        + in terms of the new variables \\(\tilde{x} = (\tilde{x}\_{1},...,\tilder{x}\_{n})^{T}\\) = \\(C^{-1}x\\)
+        + in terms of the new variables \\(\tilde{x} = (\tilde{x}\_{1},...,\tilde{x}\_{n})^{T}\\) = \\(C^{-1}x\\)
         + so it becomes : 
         \\[ \tilde{x}\_{1} = \tilde{b}\_{1} \\\
         ... \\\
@@ -542,23 +542,23 @@ layout: default
         + note that it is m equations. we got this very simple system we alluded to using the block matrix previously. 
         + So we conclude that we can get the solutions of Ax=b through \\(\tilde{A}\tilde{x}=\tilde{b}\\)
             - _proof_: 
-            - S1: The tilde system and Ax = b are both consistent iff \\(\tilde{b}\_{r+!}=...=\tilde{b}\_{m}=0\\)
-            - S2: If \\(\tilde{b}\_{r+!}=...=\tilde{b}\_{m}=0\\) then the solutions of \\(\tilde{A}\tilde{x}=\tilde{b}\\) are vectors of the form: \\[ \tilde{b}\_{1} \\\
-             ... \\\
-            \tilde{b}\_{r} \\\
-            \tilde{x}\_{r+1} \\\
-            ... \\\
-            \tilde{x}\_{n}  \\)
-            - with \\( \tilde{x}\_{r+1},...,\tilde{x}\_{n} \in \mathbb{F} \\) being free variables
-            - S3: If \\(\tilde{b}\_{r+!}=...=\tilde{b}\_{m}=0\\) then the solutions of \\(Ax=b\\) are of the form: x = 
-            \\( \tilde{b}\_{1} \\\
+            - S1: The tilde system and Ax = b are both consistent iff \\(\tilde{b}\_{r+1}= ... = \tilde{b}\_{m}=0\\)
+            - S2: If \\( \tilde{b}\_{r+1}=...=\tilde{b}\_{m}=0\\) then the solutions of \\( \tilde{A}\tilde{x}=\tilde{b} \\) are vectors of the form: \\[ \tilde{b}\_{1} \\\
              ... \\\
             \tilde{b}\_{r} \\\
             \tilde{x}\_{r+1} \\\
             ... \\\
             \tilde{x}\_{n}  \\]
-            - with \\( \tilde{x}\_{r+1},...,\tilde{x}\_{n} \in \mathbb{F} \\) being free variables.\, and the whole column vector of solutions is multiplied by \\(C\\).
-        + but this method is not constructive, we had to pick bases in \\(F^{n}, F^{m}\\) to fit with A. Row reduction algorithm solves the issue. 
+            - with \\( \tilde{x}\_{r+1},...,\tilde{x}\_{n} \in \mathbb{F} \\) being free variables
+            - S3: If \\(\tilde{b}\_{r+1}= ... =\tilde{b}\_{m}=0\\) then the solutions of \\(Ax=b\\) are of the form: x = 
+            \\[ \tilde{b}\_{1} \\\
+             ... \\\
+            \tilde{b}\_{r} \\\
+            \tilde{x}\_{r+1} \\\
+            ... \\\
+            \tilde{x}\_{n}  \\]
+            - with \\( \tilde{x}\_{r+1},...,\tilde{x}\_{n} \in \mathbb{F} \\) being free variables.\, and the whole column vector of solutions is multiplied by \\(C\\). (why? because solutions \\(\tilde{x} were our solutions x multiplied by C^{-1}\\) !)
+        + but this method is not constructive, we had to pick bases in \\(F^{n}, F^{m}\\) to fit with A. We had actually construct R and C by choosing these bases, adopted to map T, or matrix of map A. Row reduction algorithm solves the issue. 
             + the algo simplifies the system systematically, uses only row ops, done in simple steps, and allows us to get close enough to solve the system.  
             + also they solve the systm in _finitely_ many steps!
 * **Elementary Row Operations**:  
@@ -594,8 +594,7 @@ layout: default
             - recall that each \\(e\_{i}\\) has a 1 in the ith spot, 0 everywhere else, so by definition of matrix multiplication (row by column), 
                 + \\(Ae\_{i}\\) = i-th column of A. 
         - Thus, im(T) = span(columns of A)
-    *  
-    
+    * 
 
 
 
