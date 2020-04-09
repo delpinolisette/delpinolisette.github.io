@@ -5,10 +5,10 @@ layout: default
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-#### Navigation:
-* [Lectures 9-11](#Lectures 9-11)
-* [Lectures 12-13](#Lectures 12-13)
-* [Lecture 14](#Lecture 14)
+#### Table of Contents:
+* [Lectures 9-11](#lectures-9-11)
+* [Lectures 12-13](#lectures-12-13)
+* [Lecture 14](#lecture-14)
 
 ### Lectures 9-11   
 
@@ -444,7 +444,7 @@ layout: default
                 * S3: \\(c \in \mathbb{R}, x \in N(A) => cx \in N(A)\\)  
                     * Well, \\(A(cx)=c*A(x) = c * 0 = 0\\)
                 * QED  
-        + **rank of T**: dim image(T) = ...QUESTION: any other defs?   
+        + **rank of T**: dim image(T) = ...QUESTION: any other defs? yes, see lec 14 for longer discussion 
 
 - turns out that for linear operators \\(T: V \mapsto V\\) we also have defined invariants which are scalars of the field \\(\mathbb{F}\\)  
     + ex: **Trace**: \\(tr: L(V,V) \mapsto \mathbb{F}\\) is  
@@ -516,11 +516,11 @@ layout: default
     - \\(b \in F^{m}\\) is a given vector of right hand sides. 
     - \\(x \in F^{n}\\) is an unknown vector. 
 * we proved (QUESTION: where b?) that we can find invertible matrices
-    - \\( R \in Mat(mxm)(F) \\)   
-    - \\( C \in Mat(nxn)(F) \\)
+    - \\( R \in Mat(mxm)(F) \\)  - number of eqs
+    - \\( C \in Mat(nxn)(F) \\) - number of unkowns
     - such that after performing on A the row operation corresponding to R, and then the column operation corresponding to C we get the simplest possible matrix:
     - \\( \tilde{A} =  RAC =\\) ![block matrix](delpinolisette.github.io/img/blockmat1.png)
-        + where r = rank of matrix
+        + where r = rank of matrix (see discussion on rank below!!)
     - Using R and C we can simplify the system Ax=b. 
     - Left multiplying (Ax=b) by R gives an equivalient system 
         + \\(RAx = Rb <=> RACC^{-1}=Rb\\)
@@ -557,6 +557,7 @@ layout: default
             - with \\( \tilde{x}\_{r+1},...,\tilde{x}\_{n} \in \mathbb{F} \\) being free variables.\, and the whole column vector of solutions is multiplied by \\(C\\).
         + but this method is not constructive, we had to pick bases in \\(F^{n}, F^{m}\\) to fit with A. Row reduction algorithm solves the issue. 
             + the algo simplifies the system systematically, uses only row ops, done in simple steps, and allows us to get close enough to solve the system.  
+            + also they solve the systm in _finitely_ many steps!
 * **Elementary Row Operations**:  
     * note tjat Ax=b is the matrix equation for our equation \\(F(v) = b\\), once we choose a basis in the vector space V. 
     * If A is (mxn), the augmented matrix is (m x n+1). 
@@ -569,9 +570,20 @@ layout: default
             + Row operation 1: switch two rows: ![type 1](delpinolisette.github.io/img/type1.png)
             + Row operation 2: multiply a row by a scalar multiple: ![type 2](delpinolisette.github.io/img/type2.png)
             + Row operation 2: add a scalar multiple of a row to another row: ![type 3](delpinolisette.github.io/img/type3.png)
-        - another way of showing that a row operation does not change the solution set of a system, matrix equation style :)
-            + 
-
+        - another way of showing that a row operation does not change the solution set of a system, matrix equation style :) E is the elementary matrix representating a row operation.
+            + \\(Ax=b\\)
+            + \\(EAx = Eb\\) (implies any solution of this equation is a solution of the previous, because we multiplied them all by the same matrix)
+            + \\(E^{-1}EAx = E^{-1}Eb\\)
+            + \\(Ax = b\\), QED. 
+        - **claim**: the composition of row operations is also a row operation! 
+            + _proof_: if \\(p\_{1},...,p\_{s}: \mathbb{F}^{n} \mapsto \mathbb{F}^{n}\\) 
+* **Rank of a Matrix** : 
+    + recall that left multiplication by an mxn matrix \\(A\\) defines a linear map: 
+        - \\(T : \mathbb{F}^{n} \mapsto \mathbb{F}^{m}\\) :: \\(v \mapsto Av\\)
+    + the rank of the matrix A is then the rank of T. 
+        - rank(T) = dimension of the subspace \\(im(T) \subset \mathbb{F}^{m\\) of the codomain. 
+    * def: rank (A) = rank(T) = dim im(T)
+    *    
 
 
 
