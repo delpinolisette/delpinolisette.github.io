@@ -45,4 +45,10 @@ Outline:
     - **pointwise convergence** (def) : 
         + \\(N\\) is a metric space. A is a set. \\(f\_{k} : A \mapsto N\\) for \\(k = 1,2,3.....\\)
         + then the sequence of functions \\(f\_{k}\\) is said to converge pointwise/ converge simply to a function \\(f : A \mapsto N\\) if...
-            * for each \\(x \in A\\) 
+            * for each \\(x \in A\\), 
+            * \\(f\_{k}(x) \mapsto f(x)\\) (convergences to f(x) as a sequence in the metric space N) (QUESTION: revisit convergence in metric spaces)
+        + so the "point" f is the point of convergence of the sequence of "points" \\(f\_{k}(x)\\). 
+        + When does pointwise conv not help?
+            * f, the function the sequence converges to, does not need to be contunuous, even if the \\(f\_{k}\\) are cont. 
+                - ex: 
+                - ![example function](/gif/function1.gif)
