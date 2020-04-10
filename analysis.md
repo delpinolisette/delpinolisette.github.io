@@ -51,4 +51,11 @@ Outline:
             * f, the function the sequence converges to, does not need to be contunuous, even if the \\(f\_{k}\\) are cont. 
                 - ex: consider this function:
                 - ![example function](/gif/function1.gif)
-                - even though the limit function f
+                - so the limit function is defined as \\(f(x)\\) = \\( \begin{cases} 
+                1 & x=0 \\\
+                0 & x > 0 
+                \end{cases} \\), but this is discontinuous, even though each \\(f\_{k}(x)\\) is continuous. Here convergence relies on choice of x, we need bigger k for smaller x. 
+                - We ask then for uniformity of closeness, regardless of the x value. 
+* EXERCISE (5.1) (a): if \\(f\_{k} \mapsto f\\) (pointwise) and \\(g\_{k} \mapsto g\\) (pointwise), then prove that \\(f\_{k} + g\_{k} \mapsto f + g\\)(pointwise) for functions \\(f,g \in \\)
+* **uniformly continuous**
+
