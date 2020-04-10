@@ -5,6 +5,24 @@ layout: default
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+### Preliminaries:
+#### **Ring of Integers Mod m**
+*  :=   $$\mathbb{Z}/m\mathbb{Z}$$={$$0,1,2,......,m-1$$}
+    * Notice $$\mathbb{Z}/m\mathbb{Z}$$ is the quotient ring of $$\mathbb{Z}$$ by the _principal ideal_ $$/m\mathbb{Z}$$
+    * then $$0,1,2,......,m-1$$ are _coset representatives_ for the congruence classes that make up the elements of $$\mathbb{Z}/m\mathbb{Z}$$
+
+#### **Set of all units**
+* numbers that have inverses modulo m ($$a$$ has inverse mod $$m$$ iff gcd(a,m)=1) are units. 
+    * EXERCISE: Prove that the inverse of a mod m exists iff gcd(a,m) = 1
+    * (a colloquial way to think about $$\mathbb{Z}/m\mathbb{Z}^{*}$$ is the set of integers mod m without 0- since it can only include units)
+
+#### **Primitive Root Theorem**
+* Let p be prime. 
+* Then there is an element $$g \in \mathbb{F}_{p}^{*}$$ - multiplicative group
+...(to be continued)
+
+---
+
 ### Section 2.2 Public Key Cryptosystems:
 
 Diffie Hellman introduces public key cryptosystems and therefore:
@@ -29,32 +47,20 @@ Diffie Hellman introduces public key cryptosystems and therefore:
            +  very difficult to compute for someone who only knows public key (that's the point!)
 * actually very hard to prove whether true one way functions exist - we rely on the assumption that these problems are difficult (see P vs. NP unsolved problem)
 
-===============================================================================
-
+---
 #### **The Discrete Logarithm Problem:**
 * first construction is based on the DLP (Discrete Logarithm Problem) in $$\mathbb{F}_{p}$$ 
     * (the finite field with p elements, where p is prime!)
+* recall that the elements of \\(\mathbb{F}\_{p}^{*}\\) = \\(\\{ 1,g,g^{2},...,g^{p-2} \\}\\)
+  - because by FLT \\(g^{p-1} = 1\\)
+  - \\(g\\) is primitive root (g is a primitive root mod n if it is a generator for the same multiplicative group). 
+* **Discrete Logarithm Problem** (def): 
+  * g is a primitive root for \\(\mathbb{F}\_{p}\\), 
+  * \\(h\\) is nonzero element of \\(\mathbb{F}\\)
+  * DLP says find an \\(x\\) s.t. \\(g^{x} \equiv h (mod p)\\)
+  * \\(x\\) = "the discrete log of h to the base g" = \\(log\_{g}h\\)   
 
-first some definitions and an important theorem:
-
-#### **Ring of Integers Mod m**
-*  :=   $$\mathbb{Z}/m\mathbb{Z}$$={$$0,1,2,......,m-1$$}
-    * Notice $$\mathbb{Z}/m\mathbb{Z}$$ is the quotient ring of $$\mathbb{Z}$$ by the _principal ideal_ $$/m\mathbb{Z}$$
-    * then $$0,1,2,......,m-1$$ are _coset representatives_ for the congruence classes that make up the elements of $$\mathbb{Z}/m\mathbb{Z}$$
-
-#### **Set of all units**
-* numbers that have inverses modulo m ($$a$$ has inverse mod $$m$$ iff gcd(a,m)=1) are units. 
-    * EXERCISE: Prove that the inverse of a mod m exists iff gcd(a,m) = 1
-    * (a colloquial way to think about $$\mathbb{Z}/m\mathbb{Z}^{*}$$ is the set of integers mod m without 0- since it can only include units)
-
-#### **Primitive Root Theorem**
-* Let p be prime. 
-* Then there is an element $$g \in \mathbb{F}_{p}^{*}$$
-    - what is the difference between $$\mathbb{F}_{p}$$ and $$\mathbb{F}_{p}^{*}$$? 
-...(to be continued)
-
-===============================================================================
-
+---
 ### Quantifying the "Hardness" of Discrete Logarithm Problem 
 
 * $$Log_{a}b = x$$ <=> $$a^{x}=b$$
@@ -77,6 +83,17 @@ first some definitions and an important theorem:
 
   - Fast exponentiation method: [method](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/fast-modular-exponentiation)
   - 
+
+---
+### The Chinese Remainder Theorem: 
+* C.R.T descrobes solutions to system of linear congruences. 
+  + ex:  
+
+
+
+
+
+
 
 
 
