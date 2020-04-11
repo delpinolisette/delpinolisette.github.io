@@ -614,8 +614,35 @@ layout: default
         + there are no free variables 
         + the echelon form of the coefficient matrix has a pivot in each _column_, 
         + (note that this says nothing about the existence, only uniqueness of solution.)
-    - (2): \\(Ax = b\\) is consistent for all b \\(\iff\\) : 
-        +  
+        + QUESTION: how does this connect to rank, and the fact that rank(A) = dim column space of A?
+    - (2): \\(Ax = b\\) is consistent (has a solution) for all b \\(\iff\\) : 
+        + the echelon form of the _coefficient matrix_ has a pivot in each_row_
+        + note: this property makes sense considering if there is a pivot in each row of coefficint matrix, you can't have a pivot in the last column on the augmented matrix. => never inconsistent. 
+    - (3): Ax = b has a _unique solution_ (and it exists..) for all b iff \\(\iff\\):
+        + echelon form of the coefficient matrix \\(A\\) has a pivot in each row and each column. 
+* **remarks on inconsistency** (very cool)
+    - WTS: To be continued
+
+
+#### Section 2.7 : Fundamental Subspaces and Rank: 
+* four fundamental subspaces:
+    - Ker(A), Ran(A), row space(A), Left nullspace(A)
+    - need to study relationships between their dimensions. 
+* any linear transformation has subspaces : Ker(A), Range(A)
+    - **Ker(A)**, subset of domain \\(V\\) : 
+        + Ker(A) = Nullspace(A) := \\(\\{ v \in V : Av = 0 \\} \subset V\\)
+        + solution set of the homogenous equation Ax = 0
+        + Ker(\\(A^{T}\\)) = left null space. 
+    - **Ran(A)**, subset of codoamin \\(W\\) :
+        + Range(A) := \\(\\{w \in W : w = Av, v \in V\\}\\)
+        + set of all right sides \\(b \in W\\) for which \\(Ax = b\\) has a solution, "is consistent."
+        + Range(A) = column space(A)
+        + Range(\\(A^{T}\\)) = row space 
+    - **rank (A)** = dim Range(A) = dim Colspace(A)
+* Computing fundamental subspaces: 
+    - S1: reduce \\(A\\) to \\(A\_{e}\\) (echelon form of A). 
+    - S2: columns of \\(A\\) which becomes pivot columns of \\(A\_{e}\\) are a _basis_ in Range(A). 
+    - S3: 
 
 
 
