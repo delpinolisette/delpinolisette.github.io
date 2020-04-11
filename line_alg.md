@@ -9,6 +9,7 @@ layout: default
 * [Lectures 9-11](#lectures-9-11)
 * [Lectures 12-13](#lectures-12-13)
 * [Lecture 14](#lecture-14)
+* [Chapter 2](#chapter-2)
 
 ### Lectures 9-11   
 
@@ -594,11 +595,31 @@ layout: default
             - recall that each \\(e\_{i}\\) has a 1 in the ith spot, 0 everywhere else, so by definition of matrix multiplication (row by column), 
                 + \\(Ae\_{i}\\) = i-th column of A. 
         - Thus, im(T) = span(columns of A)
-    * 
+    * To be continued
+
+---
+
+### Chapter 2
+#### Section 2.3 : Analyzing the Pivots:
+* All questions about the existence of a solution + uniqueness of a solution of a system can be answered by : look at the _pivots_ in RREF form of the augmented matrix of the system. (needs to be \\(A^{rref}\\))!
+* **when is \\(Ax=b\\) inconsistent?**
+    - when it doesn't have a solution!
+    - (1) a system is **inconsistent** (<=>) (iff) 
+        + there is a pivot in the last row of the augmented matrix. 
+        + so it looks like (\\(0 0 0 0 : 1\\)) 
+            * this implies the last equation is \\(0x\_{1} + ... + 0x\_{n} = b, b\neq 0\\), 
+            * => no solution. 
+* **remarks on the coefficient matrix**: 
+    - (1): a solution, if it exists, is unique \\(\iff\\) : 
+        + there are no free variables 
+        + the echelon form of the coefficient matrix has a pivot in each _column_, 
+        + (note that this says nothing about the existence, only uniqueness of solution.)
+    - (2): \\(Ax = b\\) is consistent for all b \\(\iff\\) : 
+        +  
 
 
 
-
+---
 
 ### Extra notes/defs to categorize later   
 **Dual Spaces and Dual Basis**  

@@ -86,8 +86,20 @@ Diffie Hellman introduces public key cryptosystems and therefore:
 
 ---
 ### The Chinese Remainder Theorem: 
-* C.R.T descrobes solutions to system of linear congruences. 
-  + ex:  
+* C.R.T describes solutions to system of linear congruences. 
+* ex: \\(x \equiv a\\)(mod m) and \\(x \equiv b\\)(mod n) with \\(gcd(m,n) = 1\\), in this case the solution is unique and mod mn, (why)?
+* ex: solve for integer x. 
+  + \\(x \equiv 1\\)(mod 5) and \\(x \equiv 9\\)(mod 11)
+    - S1: substitute one congrunce into the other: 
+      * since \\(x \equiv 1\\) (mod 5), then
+      * (to be continued) [checkitout](https://brilliant.org/wiki/chinese-remainder-theorem/)
+
+
+---
+### 2.9 The Pohlig-Hellman Algorithm: 
+* recall that though the Chinese Remainder Theorem...
+  - if \\(m = m\_{1} \cdot m\_{2} \cdot ...m\_{t}\\) is the product of _pairwise relatively prime_ integers (ex: 7*6 is relatively prime, their only common divisor is 1). 
+    + then solving an equation (mod m) 
 
 
 
