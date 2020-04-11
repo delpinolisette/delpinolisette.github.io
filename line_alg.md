@@ -636,13 +636,28 @@ layout: default
     - **Ran(A)**, subset of codoamin \\(W\\) :
         + Range(A) := \\(\\{w \in W : w = Av, v \in V\\}\\)
         + set of all right sides \\(b \in W\\) for which \\(Ax = b\\) has a solution, "is consistent."
-        + Range(A) = column space(A)
-        + Range(\\(A^{T}\\)) = row space 
+        + Range(A) = column space(A) (a basis is pivot columns' originals)
+        + Range(\\(A^{T}\\)) = row space (a basis is pivot rows)
     - **rank (A)** = dim Range(A) = dim Colspace(A)
 * Computing fundamental subspaces: 
     - S1: reduce \\(A\\) to \\(A\_{e}\\) (echelon form of A). 
-    - S2: columns of \\(A\\) which becomes pivot columns of \\(A\_{e}\\) are a _basis_ in Range(A). 
-    - S3: 
+    - S2: _original_ columns of \\(A\\) which becomes pivot columns of \\(A\_{e}\\) are a _basis_ in Range(A). 
+    - S3: pivot rows of \\(A\_{e}\\) are a basis for rowspace(A)
+        + you can also transpose the row matrix and do row operations, but easier this way. 
+    - S4: basis for Ker(A) = nullspace(A) comes from solving homogenous \\(Ax = 0\\). 
+        +  Consider \\(A\\) and \\(A\_{e}\\):
+        +  A = \\(  \begin{bmatrix}
+                1 & 1 & 2 & 2 & 1\\\
+                2 & 2 & 1 & 1 & 1 \\\
+                3 & 3 & 3 & 3 & 2 \\\
+                1 & 1 & -1 & -1 & 0
+                \end{bmatrix}\\), \\(A\_{e}\\) = \\( \begin{bmatrix}
+                                                    1 & 1 & 2 & 2 & 1 \\\
+                                                    0 & 0 & -3 & -3 & -1 \\\
+                                                    0 & 0 & 0 & 0 & 0 \\\
+                                                    0 & 0 & 0 & 0 & 0
+                                                    \end{bmatrix}\\)
+        + 
 
 
 
