@@ -666,8 +666,11 @@ layout: default
                                     s \\\
                                     r
                                     \end{bmatrix} \\]
-        + or as \\(\begin{bmatrix} -1 \\\ 1 \\\ 0 \\\ 0 \\\ 0 \end{bmatrix}\\) t + \begin{bmatrix} 0 \\\ 0 \\\ -1 \\\ 1 \\\ 0 \end{bmatrix}s + \begin{bmatrix} -(1/3) \\\ 0 \\\ (1/3) \\\ 0 \\\ 1 \end{bmatrix}r. 
+        + or as \\(\begin{bmatrix} -1 \\\ 1 \\\ 0 \\\ 0 \\\ 0 \end{bmatrix}\\) t + \\(\begin{bmatrix} 0 \\\ 0 \\\ -1 \\\ 1 \\\ 0 \end{bmatrix}\\)s + \\(\begin{bmatrix} -(1/3) \\\ 0 \\\ (1/3) \\\ 0 \\\ 1 \end{bmatrix}\\)r. 
             + these are then the three basis vectors, and the dimension of the kernel is 3. 
+            + note that there is no shortcut for computing Ker(\\(A^{T}\\)), you need to solve \\(A^{T}x = 0\\) by hand. 
+* **Explanation for computing bases of fundamnetal subspaces**: why do these methods work ?
+    - 
 
 
 
