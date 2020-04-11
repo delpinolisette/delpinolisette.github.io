@@ -657,7 +657,9 @@ layout: default
                                                     0 & 0 & 0 & 0 & 0 \\\
                                                     0 & 0 & 0 & 0 & 0
                                                     \end{bmatrix}\\)
-        + 
+        + since columns \\(1,3\\) becomes pivot columns in \\(A\_{e}\\), then the columns 1 and 3 of \\(A\\) are a basis for colspace(A) = Ran(A). (notice that the dimension of the colspace/ran(A) is 2.)
+        + since rows \\(1,2\\) are pivot rows of \\(A\_{e}\\), they form a basis for rowspace(A), in their REF. (notice dim rowspace(A) = 2). 
+        + now, solving in REF, we get the solution set of A, which is the ba
 
 
 
