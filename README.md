@@ -1,3 +1,3 @@
-## Welcome to my site 
+## Welcome to my webstie: home for my notes on the things that I love most. 
 
-Navigate to [the site](https://delpinolisette.github.io/)
+[Here it is](https://delpinolisette.github.io/)
