@@ -15,7 +15,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
 * Outline:
     * Deep Dive ActiveRecords
 
-**Web Framekwork Pipeline:**
+#### **Web Framekwork Pipeline:**
 - Routes -> Parsing -> Controller -> View
     - Step 1: define routes inside `config/routes.rb`
     - Step 2:create the `controller` file, with class and methods 
@@ -27,7 +27,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
         + differences between `<%= >` and `<% %>`
         + TODO - when you find out difference )i think one is embedded html
   
-**The CRUD Pipeline:**
+#### **The CRUD Pipeline:**
 - There is a dual representation of the site/data: Ruby vs. Database
 - *Models* are ruby representation of databse records 
     + children classes of `ActiveRecord::Base`
@@ -44,7 +44,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
     + type `rails db:migrate` to start, can only be done once
 
  
-**Generating a Model**
+#### **Generating a Model**
 + To generate a Model, run in root folder:
     * `rails g model ModelName attr_name:attr_type`
     * ex: `rails g model Post tilte:string body:text`
@@ -52,7 +52,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
     * `rails destroy`
 
  
-**Generators for Migration**
+#### **Generators for Migration**
 - migration generators crete migration files which alter database record
 - `CreateXXXs` creates a table with table name `XXX` and specified columns
 - `AddXXXToYYYs` adds specified columns to table `YYY`
@@ -63,7 +63,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
     + adds Category column to Posts table
 
  
-**Commonly Used Data Types for models**
+#### **Commonly Used Data Types for models**
 * string 
 * text
 * integer, float, decimal
@@ -73,7 +73,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
     + creates reference to another table
 
   
-**Arel : Complex Query Methods for models**
+#### **Arel : Complex Query Methods for models**
 * SQL is powerful
 * ActiveRecord ORM is Ruby's method of writing SQL
 * ActiveRecord is built on top of Arel
@@ -81,7 +81,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
     - SQL Abstract Syntax Tree manager (AST)
 
   
-**Common Arels (Relational Algebra)**
+#### **Common Arels (Relational Algebra)**
 ```ruby
 User.where(name: 'Patrick')
 #=> sends out query for all users names Patrick
@@ -101,7 +101,7 @@ Post.where(view_count: >20).limit(5).order(id :desc)
 #=> in order from last to first
 ```
 
-**Validations: "Check before you commit!**
+#### **Validations: "Check before you commit!**
 * what are the differences between Client-side and Server-side validations?
     - validations guard against invalid data commiting to database
         + ex: blank fields, incoreect format, making sure there isnt another identical entry (uniqueness)
@@ -112,7 +112,7 @@ Post.where(view_count: >20).limit(5).order(id :desc)
     - validation code in model files:
     - you need to write it inside the model file
 
-**Simple Validations**
+#### **Simple Validations**
 * validations run right before save to db happens
 * `validates :column_name, criteria`
 * ex1: `presence` : field empty?
@@ -129,7 +129,7 @@ class Post < ActiveRecord:Base
 end
 ```
 
-**Errors Method**
+#### **Errors Method**
 * every model instance has `errors` method
 * if model did not pass a validation, `error` object added to model
     - model with non-empty (there's something in it!) `errors` field is invalid to the database
@@ -152,7 +152,7 @@ end
 <% end %>
 ```
 
-**Defining Custom Validations**
+#### **Defining Custom Validations**
 * Step 1: Define a method in the model file with this logic:
     - Step 1a: Check if the desired validation passes 
     - Step 1b: if it doesn't pass, 
@@ -171,7 +171,7 @@ class User < ActiveRecord::Base
 end
 ```
 
-**Association: Lvl 1- One to Many**
+#### **Association: Lvl 1- One to Many**
 * _One to Many Association_: when one model_A may logically have many model_B's, but the reverse is not true:
     - ex: a `Post` has many `Comments`, but not the other way around
     - ex: a `Book` has many `Chapters`, but not the other way around
@@ -179,7 +179,7 @@ end
     - ex: a `Teacher` has many `Students`, but the reverse is also true
     - ex: a `Shop` has many `Customers`, but the reverse is also true
     
-**Implementation in Database**
+#### **Implementation in Database**
 * Step 1: Initialize `Posts` table and `Comments` table
 * Step 2: Declare the association: 
     - `Comments` table has columnn that says which `Post` record the `Comment` redord belongs to
@@ -190,7 +190,7 @@ end
     - find all comments belonging to a post
     - find the post a comment belongs to
 
-**Dual Implementation in Ruby/Rails**
+#### **Dual Implementation in Ruby/Rails**
 * this is where associations implementations take place, abstracted away by ruby. 
 * through ActiveRecord ORM
     * Step 1: use generator for `Post` model (in previous ex)
@@ -227,25 +227,25 @@ end
 @post.comment.post == @post
 ```
 
-**Association Lvl2: Many to Many**
+#### **Association Lvl2: Many to Many**
 * happens when two models can be associated with multiple instances of each other
     - `Students` and `Courses`
     - `Houses` and `Owners`
 * A model can have many to many association with iteself!:
     - `Users` can have many `Users` as friends
 
-**Wrong Implementation in Database:**
+#### **Wrong Implementation in Database:**
 * Add _foreign keys_ to both tables
     - you run into a duplicate _primary key_ issue
     - you can fix with RID (ref id?), but still redundant !
     - ![example](delpinolisette.github.io/img/wrong_many_to_many.PNG)
 
-**Correct Implementation in Database**
+#### **Correct Implementation in Database**
 * Use three tables, the third one is to keep records
 * ![example](delpinolisette.github.io/img/right_many_to_many.PNG)
 * notice `course_id` is foreign key and `student_id` is reference?
 
-**Implementation of Many to Many in Ruby/Rails**
+#### **Implementation of Many to Many in Ruby/Rails**
 * Step 1: generate `Course` and `Student` model migration like above examples
     - no `reference` column this time!
 * Step 2: `rails g Model Registration Course:references Student:references`
@@ -257,7 +257,7 @@ end
     - `belongs_to :student`
     - `belongs_to :course`
 
-**Forms: Making POST Requests**
+#### **Forms: Making POST Requests**
 * `<form>`s are html elements that make POST requests for a bundle of data
 * Rails erb use `form_with` to create the HTML forms: make sure to include:
     - destination url 
@@ -295,7 +295,7 @@ end
         + whitelisting stops bad data from being commited to the databse. 
         + `params.require(:post).permit(:title, :content)`
 
-**Designing Forms: Log In Form**  
+#### **Designing Forms: Log In Form**  
 * making a login form, what do I need?
     - S1: need user email + user password 
         + this decides field name, type, and label. 
@@ -312,6 +312,7 @@ end
 }
 ```
 TODO: FINISH LEC 7
+
 ---
 
 ### **Lecture 8**
@@ -325,4 +326,23 @@ TODO: FINISH LEC 7
 
 #### **Scaffold Generator**: 
 * Basucally a buffed up model generator. 
+* What does the scaffold generator generate?
+    - model/migration file 
+    - controller file + its implementation
+    - entire view folder - all erbs are there!
+    - all RESTful routes
+        + wow this is a strong boy
+        + so purpose of HW2 was to practice routing, all of it can be done with this one line
+* How to use? check it out:
+``` ruby
+#=> to generate:
+rails g scaffold Post title:string content:text
+#=> to destroy:
+rails destroy scaffold Post
+```
+#### **Demo**
+* S1: navigate to your desired dir and rails new a new project 
+* `rails 5.2.4 new scaffold_blog`
+* cd into `scaffold_blog` and run `rails s -b 0.0.0.0` to boot server, `localhost:3000` is up. 
+* S2: use scaffold generator by `rails g scaffold Post title:string content:text`
 * 
