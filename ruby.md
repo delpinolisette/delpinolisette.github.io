@@ -333,6 +333,14 @@ TODO: FINISH LEC 7
     - all RESTful routes
         + wow this is a strong boy
         + so purpose of HW2 was to practice routing, all of it can be done with this one line
+            * there are differences:
+            * (1) instead of explicitly defining routes in `routes.rb`, only writes `resources: posts`, which are all CRUD resources/ seven RESTful CRUD routes. 
+            * (2) usage of before action in `posts_controller.rb`. 
+                - it just says, before running any method of `PostsController`, it will run `set_post` to find the post in question. 
+            * (3) usage of named routes/ route helper methods
+                - seen in `posts_controller.rb`, alias for RESTful routes used. 
+                - also in `inex.html.erb`, there are link-to's that are sent to the alias of the RESTful route. 
+                    + ex: instead of `link_to ... "/posts/#{post.id}/edit"`, it uses `link_to 'Edit', edit_post_path(post)`
 * How to use? check it out:
 ``` ruby
 #=> to generate:
@@ -345,4 +353,5 @@ rails destroy scaffold Post
 * `rails 5.2.4 new scaffold_blog`
 * cd into `scaffold_blog` and run `rails s -b 0.0.0.0` to boot server, `localhost:3000` is up. 
 * S2: use scaffold generator by `rails g scaffold Post title:string content:text`
-* 
+* S3: Run `rails db:migrate` 
+* S4: cd into `scaffold_blog` and run `rails s -b 0.0.0.0` to boot server, `localhost:3000/posts` is up.
