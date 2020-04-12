@@ -9,6 +9,7 @@ layout: default
 * [Lectures 9-11](#lectures-9-11)
 * [Lectures 12-13](#lectures-12-13)
 * [Lecture 14](#lecture-14)
+* [Chapter 1](#chapter-1)
 * [Chapter 2](#chapter-2)
 
 ### Lectures 9-11   
@@ -596,6 +597,11 @@ layout: default
                 + \\(Ae\_{i}\\) = i-th column of A. 
         - Thus, im(T) = span(columns of A)
     * To be continued
+
+---
+
+### Chapter 1
+
 
 ---
 

@@ -41,7 +41,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
 
  
 **Generating a Model**
-+ To generate a Mode, run in root folder:
++ To generate a Model, run in root folder:
     * `rails g model ModelName attr_name:attr_type`
     * ex: `rails g model Post tilte:string body:text`
 + to destroy, 
@@ -246,7 +246,8 @@ end
     - display name of fields
 - (field name, value) become key-val pairs
 * URL vs Model (form_with):
-* with a url becomes _url params_
+* `form_with` with a url becomes _url params_:
+
 ``` ruby
 <%= form_with url: '/login' do |form| &>
     <%= form.label :email %>
@@ -254,15 +255,40 @@ end
     <%= form.submit%>
 <& end &> 
 ```
-* with a model becomes _body params_
-* ``` ruby
+
+* `form_with` with a model becomes _body params_:
+
+``` ruby
 <%= form_with model: @user do |form| &>
     <%= form.label :email %>
     <%= form.text_field :email %>
     <%= form.submit%>
 <& end &> 
 ```
-* why bother making the distinction?
-    - _body params_ need to be `permitted` to prevent mass assignment attacks
-        + `form_with model` 
-    - _url params_ not so 
+
+* why bother making the distinction? 
+    - _body params_ need to be `permitted` to prevent mass assignment attacks.
+    - _url params_ do not need to `permitted`.
+* `form_with_model` are database critical 
+    - always check what data the form is sending! need to whiteliest certain fields
+        + whitelisting stops bad data from being commited to the databse. 
+        + `params.require(:post).permit(:title, :content)`
+
+**Designing FormsL Log In Form**  
+* making a login form, what do I need?
+    - S1: need user email + user password 
+        + this decides field name, type, and label. 
+    - S2: is the form associated with a model? 
+        + if yes: use `form_with model`
+        + if not: use `form_with url`
+    - what end point does this form `POST` to? 
+        + this posts to `/login` with the data:
+    
+``` ruby
+{
+    email: '[email_field_value]'
+    password: '[password_field_value]'
+}
+```
+
+
