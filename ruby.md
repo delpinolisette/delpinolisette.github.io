@@ -323,6 +323,6 @@ TODO: FINISH LEC 7
     - One to Many
     - Many to Many
 
-####**Scaffold Generator**: 
+#### **Scaffold Generator**: 
 * Basucally a buffed up model generator. 
 * 
