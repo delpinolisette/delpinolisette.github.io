@@ -7,7 +7,11 @@ layout: default
 
 Notice: These are personal notes for a course at my university on Web Development. I do not own any of this intellectual property, this is only used for personal education. 
 
-### **Lecture 7 :**
+### Table of Contents:
+* [Lecture 7](#lecture-7)
+* [Lecture 8](#lecture-8)
+
+### **Lecture 7**
 * Outline:
     * Deep Dive ActiveRecords
 
@@ -106,7 +110,7 @@ Post.where(view_count: >20).limit(5).order(id :desc)
         + what if client is malicious? (a hack trying to commit to db)?
     - _Server-side val_ done by Rails is useful because it is invariant with respect to the client 
     - validation code in model files:
-    - donde??? no los veo!
+    - you need to write it inside the model file
 
 **Simple Validations**
 * validations run right before save to db happens
@@ -114,6 +118,16 @@ Post.where(view_count: >20).limit(5).order(id :desc)
 * ex1: `presence` : field empty?
 * ex2: `uniqueness` : is this value unique- is there another like it in db
 * ex3: `length` : content length
+* note: these validations work only because each model has an errors method, when something doesnt pass a validation it gets added to the error method of the model. 
+
+``` ruby
+#=> simple validations inside Post model file
+class Post < ActiveRecord:Base
+    validates :name, prescence: true
+    validates :name, uniqueness: true
+    validates :content, lenth: {minimum: 5}
+end
+```
 
 **Errors Method**
 * every model instance has `errors` method
@@ -121,6 +135,9 @@ Post.where(view_count: >20).limit(5).order(id :desc)
     - model with non-empty (there's something in it!) `errors` field is invalid to the database
     - validations decide whether to add an `error` object to the `errors` field
 * view uses `errors` method and displays the `error.full_messages` for each `error`
+* note: when you create a model make sure that it saves successfully! if it doean't, it encountered some invalid data. 
+* this method below makes sure to describe the error message(in `form_html_erb` for hw2):
+ 
 ```ruby
 <% if @user.errors.any?%>
     <div id= "error_explanation">
@@ -143,6 +160,7 @@ Post.where(view_count: >20).limit(5).order(id :desc)
         + add the error message to the errors object
 * Step 2: Pass the method as a symbol to `validate`  ex:
 ```ruby
+#=> example of a custom validation in User model file
 class User < ActiveRecord::Base
     validate :penn_email
     def penn_email
@@ -173,14 +191,16 @@ end
     - find the post a comment belongs to
 
 **Dual Implementation in Ruby/Rails**
+* this is where associations implementations take place, abstracted away by ruby. 
 * through ActiveRecord ORM
     * Step 1: use generator for `Post` model (in previous ex)
     * Step 2: use generator for `Comments` model 
-        - add `post:references` as a column
+        - add `post:references` as a column (needs to be plural)
     * Step 3: `rails db:migrate`
     * Step 4: in `Comment.rb` model file, add `belong_to :user`
     * Step 5: in `Post.rb` model file under class declaration add `has_many :comments, dependent: destroy`
         - why add `dependent: destroy`?
+        - because when you destroy the post you will destroy all the comments associated with that post. 
 * new CRUD available: 
 
 ```ruby
@@ -223,16 +243,17 @@ end
 **Correct Implementation in Database**
 * Use three tables, the third one is to keep records
 * ![example](delpinolisette.github.io/img/right_many_to_many.PNG)
+* notice `course_id` is foreign key and `student_id` is reference?
 
 **Implementation of Many to Many in Ruby/Rails**
-* Step 1: generate `Course` and `Student` models like above examples
+* Step 1: generate `Course` and `Student` model migration like above examples
     - no `reference` column this time!
 * Step 2: `rails g Model Registration Course:references Student:references`
 * Step 3: in `Course.rb` model file, write 
     - `has_many :registrations, dependent: :destroy` #why do we write this?
     - `has_many :students, through: registrations`
 * Step 4: do the same for the `Student.rb` model file
-* Step 5: and in the `Registration.rb` model file
+* Step 5: and in the `Registration.rb` model file (join table)
     - `belongs_to :student`
     - `belongs_to :course`
 
@@ -274,7 +295,7 @@ end
         + whitelisting stops bad data from being commited to the databse. 
         + `params.require(:post).permit(:title, :content)`
 
-**Designing FormsL Log In Form**  
+**Designing Forms: Log In Form**  
 * making a login form, what do I need?
     - S1: need user email + user password 
         + this decides field name, type, and label. 
@@ -290,5 +311,18 @@ end
     password: '[password_field_value]'
 }
 ```
+TODO: FINISH LEC 7
+---
 
+### **Lecture 8**
+* Demo Lecture. 
+* Outline: 
+    - Scaffold Generator
+    - Arel
+    - Validation
+    - One to Many
+    - Many to Many
 
+####**Scaffold Generator**: 
+* Basucally a buffed up model generator. 
+* 
