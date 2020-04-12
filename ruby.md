@@ -33,6 +33,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
 - *Migrations* modify database schema
     + stored in `db/migrate`
     + [looks like this](delpinolisette.github.io/img/migration_file_peek.PNG)
+    + [looks like this for PenninTouch clone](delpinolisette.github.io/img/migration_file_peek2.PNG)
     + creates tables
     + adds and removes columns
     + generates/updates a schema.rb file, ![schema.rb](delpinolisette.github.io/img/schema_peek.PNG)
@@ -264,4 +265,4 @@ end
 * why bother making the distinction?
     - _body params_ need to be `permitted` to prevent mass assignment attacks
         + `form_with model` 
-    - _url params_ not so
+    - _url params_ not so 
