@@ -10,6 +10,7 @@ Notice: These are personal notes for a course at my university on Web Developmen
 ### Table of Contents:
 * [Lecture 7](#lecture-7)
 * [Lecture 8](#lecture-8)
+* [Lecture 9](#lecture-9)
 
 ### **Lecture 7**
 * Outline:
@@ -453,6 +454,31 @@ end
 * **Many to Many Association Sub-Demo**
 * nav to your directory, generate your models with appropriate generators. 
     - create `Students` and `Courses` models agnostic of each other, then create a `Registrations` object that connects them by holding references between them.
-    - `rails g scaffold Course title:string ` 
+    - `rails g scaffold Course title:string desc:test code:integer` 
+    - `rails g scaffold Student first_name:string last_name`
+        + default type is string, you can omit (nice). 
+    - `rails g scaffold Registrations course:references student:references`
+    - `rails db:migrate`
+* now further declare the associations between `STudent` and `Course` through the model files using `Registrations`. 
+    - S1: in `student.rb`:
+        + `has_many: registrations dependent:destroy`
+        + `has_many: courses, through :registration`
+    - S2: in `courses.rb`
+        + `has_many: registrations dependent:destroy`
+        + `has_many: students, through :registration`
+* how do you test this? boot up `rails c`
+    - create a course `@course = Course.create({title: "Ruby course", desc: "course on web dev", code:196})`
+    - create a student `@student = Student.create({first_name: "Patrick", last_name: "Puppy"})`
+    - shovel that `student` into the students array of `course`
+    - `@course.students << @student`
+    - test `@course.students` to see if Patrick is there. 
+    - test `@student.courses` to see if the course is there. 
 
 ---
+
+### Lecture 9 
+* Outline:
+    - Route Helpers
+    - Resources
+    - Nested Resources
+    - Form/FOrm Helpers
