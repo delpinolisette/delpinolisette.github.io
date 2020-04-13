@@ -348,10 +348,82 @@ rails g scaffold Post title:string content:text
 #=> to destroy:
 rails destroy scaffold Post
 ```
-#### **Demo**
+#### **Scaffold Generator Demo**
 * S1: navigate to your desired dir and rails new a new project 
 * `rails 5.2.4 new scaffold_blog`
 * cd into `scaffold_blog` and run `rails s -b 0.0.0.0` to boot server, `localhost:3000` is up. 
 * S2: use scaffold generator by `rails g scaffold Post title:string content:text`
 * S3: Run `rails db:migrate` 
 * S4: cd into `scaffold_blog` and run `rails s -b 0.0.0.0` to boot server, `localhost:3000/posts` is up.
+
+### **Arel Demo**
+* TODO
+
+### **Validations Demo**
+* here we generated a new project and scaffold generated `rails g scaffold User first_name:string last_name:string email:string`
+* in the model file, 
+    - makes sure `first_name, last_name` not blank: 
+    - `validates: first_name, :last_name, :presence: true`
+    - makes sure length of email is valid, it's unique, and it exists:
+    - `validates :email, presence: true, uniqueness: true, ;length: {minimum: 5}`
+* in the model file, let's make custom validations:
+    - begin with `private` keyword, see code: 
+    - use `validate` keyword for custom validations, `validates` for simple ones.
+    - after you are done, boot up the server and test to make sure your validations are working. 
+        + run `rails db:migrate` to apply changes. 
+        + play around to make sure error messages get added with invalid input
+```ruby
+Class User < ApplicationController
+  validates: first_name, :last_name, :presence: true
+  validates :email, presence: true, uniqueness: true, length: {minimum: 5}
+  validate :first_name_capitalized, :last_name_capitalized
+
+#=> custom validations:
+  private
+
+  def first_name_capitalized
+    errors.add(:first_name, "must be capitalized") if first_name && first_name.capitalize!
+    #=> first_name is boolean as to whether its there or blank
+    #=> first_name.capitalize is boolean true if capitalized
+  end
+
+  def last_name_capitalized
+    errors.add(:last_name, "must be capitalized") if last_name && last_name.capitalize!
+  end
+end 
+```
+### Associations Demo
+* Here I scaffold generate a Post model and Comment model, and establish the association that a Post has many Comments, but a Comment does not have many Posts. 
+* as always, generate your `Post` model
+    - `rails g scafold Post title:string content:text`
+* the one model is agnostic of the existence of many model. 
+    - however, when you generate comment, make sure to establish `post:references` to have a post column of type reference, since there are many comments to one post. 
+    - `rails g scaffold Comment content:string post:references`
+* but you are not done yet, need to edit model files. 
+    - S1: nav to `post.rb`
+    ``` ruby
+    class Post < ApplicationRecord
+      has_many :comments, dependent:destroy 
+      #=> dep destroy destroys all associated comments when the post is deleted
+    end 
+    ```
+    - S2: nav to `comment.rb`, make sure there is an appropriate `belong_to`
+* S2: Test your associations in `rails c`
+    - `rails c`
+    - create a new post
+    - `@post = Post.create(title : "hello", content: "first post!")`
+    - create a comment associated with the post:
+    - way 1: `@comment = Comment.new`
+        + `@comment.content = "great writing"`
+        + how to associate ?
+        + basic way : `@comment.post_id = @post.id`
+            - preffered rails method: `@comment.post = @post` 
+                + what's happening under the hood?
+                + the `.post` method is not a method of `Comment` model file. 
+                + but since we declared in scaffold generation, and verified in the model file, that we have a comment `belongs_to`, we can use that method. 
+        + check that `@comment.save` works. 
+    - way 2: `@comment = @post.comments.build`
+        + this is essentially the same as `@comment = Comment.new` except by default it is providing a post id for the current @post. 
+        + then just set content `@comment.content = "second comment"`
+        + `@comment.save`
+        + now check save by looking at `@post.comments`
