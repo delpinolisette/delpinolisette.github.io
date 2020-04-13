@@ -372,6 +372,7 @@ rails destroy scaffold Post
     - after you are done, boot up the server and test to make sure your validations are working. 
         + run `rails db:migrate` to apply changes. 
         + play around to make sure error messages get added with invalid input
+
 ```ruby
 Class User < ApplicationController
   validates: first_name, :last_name, :presence: true
@@ -392,7 +393,9 @@ Class User < ApplicationController
   end
 end 
 ```
-#### Associations Demo
+
+#### **Associations Demo**
+* **One to Many Association Sub-Demo**: 
 * Here I scaffold generate a Post model and Comment model, and establish the association that a Post has many Comments, but a Comment does not have many Posts. 
 * as always, generate your `Post` model
     - `rails g scafold Post title:string content:text`
@@ -427,5 +430,27 @@ end
     - way 2: `@comment = @post.comments.build`
         + this is essentially the same as `@comment = Comment.new` except by default it is providing a post id for the current `@post`
         + then just set content `@comment.content = "second comment"`
-        + `@comment.save`
-        + now check save by looking at `@post.comments`
+        + `@comment.save` should be true
+        + now check save by looking at `@post.comments` 
+        + check contents of comment by `@comment.post`
+    - way 3: how to do everything in one line?
+        + `@comment3 =  Comment.create({content: "comment3", post:@post})`
+        + check by `@post.comments`
+* the blog with posts and comments as we've built it currently requires nested resources to fully work - the routes in `routes.rb` are incorrect. 
+    - comments routes should be nested under posts routes. 
+* also in the controller, comments controller needs to find its post first 
+* should be something like:
+
+```ruby
+def create
+  @post = Post.find(...)
+  @comment  = Comment.new(...)
+end
+```
+
+* **Many to Many Association Sub-Demo**
+* nav to your directory, generate your models with appropriate generators. 
+    - create `Students` and `Courses` models agnostic of each other, then create a `Registrations` object that connects them by holding references between them.
+    - `rails g scaffold Course title:string ` 
+
+---
