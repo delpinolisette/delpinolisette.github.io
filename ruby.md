@@ -356,10 +356,10 @@ rails destroy scaffold Post
 * S3: Run `rails db:migrate` 
 * S4: cd into `scaffold_blog` and run `rails s -b 0.0.0.0` to boot server, `localhost:3000/posts` is up.
 
-### **Arel Demo**
+#### **Arel Demo**
 * TODO
 
-### **Validations Demo**
+#### **Validations Demo**
 * here we generated a new project and scaffold generated `rails g scaffold User first_name:string last_name:string email:string`
 * in the model file, 
     - makes sure `first_name, last_name` not blank: 
@@ -392,7 +392,7 @@ Class User < ApplicationController
   end
 end 
 ```
-### Associations Demo
+#### Associations Demo
 * Here I scaffold generate a Post model and Comment model, and establish the association that a Post has many Comments, but a Comment does not have many Posts. 
 * as always, generate your `Post` model
     - `rails g scafold Post title:string content:text`
@@ -401,12 +401,14 @@ end
     - `rails g scaffold Comment content:string post:references`
 * but you are not done yet, need to edit model files. 
     - S1: nav to `post.rb`
+    
     ``` ruby
     class Post < ApplicationRecord
       has_many :comments, dependent:destroy 
       #=> dep destroy destroys all associated comments when the post is deleted
     end 
     ```
+
     - S2: nav to `comment.rb`, make sure there is an appropriate `belong_to`
 * S2: Test your associations in `rails c`
     - `rails c`
@@ -423,7 +425,7 @@ end
                 + but since we declared in scaffold generation, and verified in the model file, that we have a comment `belongs_to`, we can use that method. 
         + check that `@comment.save` works. 
     - way 2: `@comment = @post.comments.build`
-        + this is essentially the same as `@comment = Comment.new` except by default it is providing a post id for the current @post. 
+        + this is essentially the same as `@comment = Comment.new` except by default it is providing a post id for the current `@post`
         + then just set content `@comment.content = "second comment"`
         + `@comment.save`
         + now check save by looking at `@post.comments`
