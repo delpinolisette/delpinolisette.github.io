@@ -342,12 +342,14 @@ TODO: FINISH LEC 7
                 - also in `inex.html.erb`, there are link-to's that are sent to the alias of the RESTful route. 
                     + ex: instead of `link_to ... "/posts/#{post.id}/edit"`, it uses `link_to 'Edit', edit_post_path(post)`
 * How to use? check it out:
+
 ``` ruby
 #=> to generate:
 rails g scaffold Post title:string content:text
 #=> to destroy:
 rails destroy scaffold Post
 ```
+
 #### **Scaffold Generator Demo**
 * S1: navigate to your desired dir and rails new a new project 
 * `rails 5.2.4 new scaffold_blog`
