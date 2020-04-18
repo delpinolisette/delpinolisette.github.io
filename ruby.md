@@ -366,7 +366,7 @@ rails destroy scaffold Post
 * here we generated a new project and scaffold generated `rails g scaffold User first_name:string last_name:string email:string`
 * in the model file, 
     - makes sure `first_name, last_name` not blank: 
-    - `validates: first_name, :last_name, :presence: true`
+    - `validates :first_name, :last_name, presence: true`
     - makes sure length of email is valid, it's unique, and it exists:
     - `validates :email, presence: true, uniqueness: true, ;length: {minimum: 5}`
 * in the model file, let's make custom validations:
@@ -461,11 +461,11 @@ end
     - `rails db:migrate`
 * now further declare the associations between `STudent` and `Course` through the model files using `Registrations`. 
     - S1: in `student.rb`:
-        + `has_many: registrations dependent:destroy`
-        + `has_many: courses, through :registration`
+        + `has_many :registrations dependent: :destroy`
+        + `has_many :courses, through: :registration`
     - S2: in `courses.rb`
-        + `has_many: registrations dependent:destroy`
-        + `has_many: students, through :registration`
+        + `has_many :registrations dependent: :destroy`
+        + `has_many :students, through: :registration`
 * how do you test this? boot up `rails c`
     - create a course `@course = Course.create({title: "Ruby course", desc: "course on web dev", code:196})`
     - create a student `@student = Student.create({first_name: "Patrick", last_name: "Puppy"})`
@@ -482,3 +482,28 @@ end
     - Resources
     - Nested Resources
     - Form/FOrm Helpers
+* Skipped ahead a bunch make sure to finish the lecture 
+#### **How Sessions Work**
+* HTTP requests are stateless 
+    - the server doesnt memorize the historic request information, not enough space. 
+* note: clients == web browser, user == a user record in the database
+    - so sessions associate a client and a user instance. 
+    - you can usually think of a clinet as a person, since people tend to use their personal browser. 
+* What are Sessions?
+    - Sessions are hash data structures the represent all the request info. 
+        + who is the user
+        + what time was the request made, etc. 
+    - server can only hold limited amount of sessions
+    - sessions stored in `session_store`
+    - the key for a session is a `session_id`
+        + cookies pass in a `session_id`
+        + cookies stored by the user browser. 
+* Coffeeshop Analogy:
+    - you order a lattee from a shop
+    - two days later, you come back and say you want to order the last item you ordered
+    - ...so what was it???
+    - with sessions: 
+        + order a latte from a coffe shop 
+        + shop keeps `uid: [last_order: latte]` on a peice of paper, and gives you the `uid`
+        + two days later, come back with the `uid` and say you want to order the last thing you ordered. 
+        + 

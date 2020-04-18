@@ -11,6 +11,7 @@ layout: default
 * [Lecture 14](#lecture-14)
 * [Chapter 1](#chapter-1)
 * [Chapter 2](#chapter-2)
+* [Chapter 8](#chapter-8-dual-spaces-and-tensors)
 
 ### Lectures 9-11   
 
@@ -320,8 +321,7 @@ layout: default
         + This shows that dim im(T) = \\(n-k\\) = dim V - dim ker(T). 
         + QED
 
-**Dual Spaces and isomorphisms:**   
-
+### **Dual Spaces and isomorphisms:**   
 * We can use the criteria for isomorphic spaces to uncover more truths about the relationship between \\(V \\) and \\(V^{v}\\)  
 * **Claim**: if V is a finite dimensional vector space over F, 
     - then (=>) \\(dimV^{v} = dim V\\)
@@ -413,7 +413,8 @@ layout: default
 * However, the first one is a isomorphism that depends on the choice of the basis, the second is a _canonical_ isomorphism.
 * To construct the first, we need to find a basis of V. 
 * To construct the second, there is a canonical isomorphism \\(ev: V \mapsto V^{vv}\\) which is deinfed only in terms of V and doesn't depend on a basis. 
-**Exercises:**
+
+** **Exercises:**
 * (Duality for Linear Maps): Let U, V, W be vector spaces over F
     - (1) Show that if \\(T: V \mapsto W\\) is a linear map, then the map \\(T^{v}: W^{v} \mapsto V^{v}\\) defined by \\(T^{v}(f) = f \circ T\\), for any linear function \\(f: W \mapsto F\\) is also linear. 
     - (2) Show that if \\(S: U \mapsto V\\), \\(T: V \mapsto W\\) are linear maps, then \\( (T \circ S)^{v}: S^{v} \circ T^{v}\\)
@@ -425,8 +426,8 @@ layout: default
     - Show that the matrix of \\(T^{v}: W^{v} \mapsto V^{v}\\) in the dual bases \\( F^{v} \subset W^{v} \\) and \\( E^{v} \subset V^{v} \\) is the matrix \\( A^{T} \in Mat(nxm)(F) \\)
     - (4) Prove that if \\(A \in Mat(nxm)(F)\\) and \\(B \in Mat(mxk)(F)\\)
         + then \\((AB)^{T} = B^{T}A^{T}\\). 
-
-
+        
+---
 
 
 ### Lectures 12-13
@@ -501,15 +502,15 @@ layout: default
                             - \\( tr: L(V,V) \mapsto \mathbb{F} \\)
                             - ENDED PG 7 REVISIT AFTER LEC 9-11
 
-### Lecture 14
+### Lecture 14: Row Reduction
 
-**Row Reduction:**
+**Outline:**:
 
 * Simplifying Linear Systems
 * Row Reduction and Echelon Forms
 * Solving Systems with Row Reduction
 * Corollaries
-* **Solving a Linear System**  
+* ####**Solving a Linear System**  
 * using row and column operations we can convert every linear system into a system in which all variables separate
     -  _row operation_: 
     -  _column operation_:
@@ -563,7 +564,7 @@ layout: default
         + but this method is not constructive, we had to pick bases in \\(F^{n}, F^{m}\\) to fit with A. We had actually construct R and C by choosing these bases, adopted to map T, or matrix of map A. Row reduction algorithm solves the issue. 
             + the algo simplifies the system systematically, uses only row ops, done in simple steps, and allows us to get close enough to solve the system.  
             + also they solve the systm in _finitely_ many steps!
-* **Elementary Row Operations**:  
+* ####**Elementary Row Operations**:  
     * note that Ax=b is the matrix equation for our equation \\(F(v) = b\\), once we choose a basis in the vector space V. 
     * If A is (mxn), the augmented matrix is (m x n+1). 
     * Elemtary Row Operations are just left multiplication by a specific elementary matrix. We called it R above. 
@@ -582,7 +583,7 @@ layout: default
             + \\(Ax = b\\), QED. 
         - **claim**: the composition of row operations is also a row operation! 
             + _proof_: if \\(p\_{1},...,p\_{s}: \mathbb{F}^{n} \mapsto \mathbb{F}^{n}\\) 
-* **Rank of a Matrix** : 
+* ####**Rank of a Matrix** : 
     + recall that left multiplication by an mxn matrix \\(A\\) defines a linear map: 
         - \\(T : \mathbb{F}^{n} \mapsto \mathbb{F}^{m}\\) :: \\(v \mapsto Av\\)
     + the rank of the matrix A is then the rank of T. 
@@ -679,6 +680,26 @@ layout: default
     - 
 
 
+---
+
+## Chapter 3
+
+---
+
+## Chapter 4: Spectral Theory
+
+---
+
+## Chapter 8: Dual Spaces and Tensors
+* all spaces here are finite dimensional
+* might wanna refer to [Dual Spaces and Isomorphisms](#dual-spaces-and-isomorphism)
+
+### Section 8.1 : Dual Spaces
+* **Definition: Linear Functional** :
+    - a special type of linear transformation on a vector space \\(V\\) that sends a vector from the vector space to a scalar in the field, \\(L: V \mapsto \mathbb{F}\\)
+* Examples?
+    - a velocity vector in a given direction (physical object) getting mapped to its magnitude (a scalar) - a linear measurement
+    - a force vector getting mapped to its magnitude
 
 ---
 
