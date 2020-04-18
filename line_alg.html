@@ -1521,10 +1521,9 @@ body .markdown-body
 <h3 id="dual-spaces-and-isomorphisms"><strong>Dual Spaces and isomorphisms:</strong><a class="headerlink" href="#dual-spaces-and-isomorphisms" title="Permanent link"></a></h3>
 <ul>
 <li>We can use the criteria for isomorphic spaces to uncover more truths about the relationship between \(V \) and \(V^{v}\)  </li>
-<li><strong>Claim</strong>: if V is a finite dimensional vector space over F, <ul>
-<li>then (=&gt;) \(dimV^{v} = dim V\)</li>
-</ul>
-</li>
+<li><strong>Dimension of \(V^{v}\) and \(V\) Claim</strong>: <ul>
+<li>if V is a finite dimensional vector space over F, </li>
+<li>then (=&gt;) \(dimV^{v} = dim V\)<ul>
 <li><em>proof</em>: Let \(E = \{e_{1},&hellip;,e_{n}\} \) be a basis of V. </li>
 <li>Then for all \(i\) consider this unique linear operator / function:<ul>
 <li>\({e_{i}}^{v}: V \mapsto \mathbb{F}\) (from the vector space to the field) s.t.</li>
@@ -1559,14 +1558,22 @@ $$ \begin{cases}
 </li>
 <li>Hence, \( \{ e_{1}^{v},&hellip;,e_{n}^{v} \}\) is linearly independent, thus they form a basis, since they are also spanning, of the dual space. </li>
 <li>Hence, \(dim V^{v} = n = dim V\)  </li>
-<li><strong>dual basis</strong> (def) : \(E^{v}= e_{1}^{v},&hellip;,e_{n}^{v} \), as defined above, is the dual bases of E (of V)</li>
+<li>QED</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Definition Dual Basis</strong>: (not complete lol)<ul>
+<li>\(E^{v}= e_{1}^{v},&hellip;,e_{n}^{v} \), as defined above, is the dual basis of E (of V)</li>
+</ul>
+</li>
 <li><em>note</em>: dual spaces allow us (only when V is finite dimensional!) to define an isomorphism \(T: V \mapsto V^{v}\). <ul>
 <li>T is defined as the unique linear map sending the basis E of V to the dual basis \(E^{v} of V^{v}\).</li>
 </ul>
 </li>
 <li>also works in opposite direction &hellip; </li>
 <li>
-<p><strong>Claim</strong>: V is a finite dim vector space over F, let</p>
+<p><strong>Dual Bases Claim</strong>: V is a finite dim vector space over F, let</p>
 <ul>
 <li>\( F = \{ f_{1},&hellip;,f_{n} \} \) be a basis of \(V^{v}\)</li>
 <li>Then there exists a unique basis \(E = \{ e_{1},&hellip;,e_{n} \}\) of V s.t.\(E^{v} = F\) </li>
@@ -1591,7 +1598,7 @@ $$ \begin{cases}
 <li><em>now a brief interruption for a lemma we need to prove to finish proving this claim</em>:</li>
 </ul>
 </li>
-<li><strong>Lemma:</strong> (the evaluation map is an isomorphism)<ul>
+<li><strong>Evaluation Map is an Isomorphism Lemma:</strong><ul>
 <li>For a finite dimensional vector space V over F the map \( ev: V \mapsto V^{vv} \) is an isomorphism. (a natural one!)</li>
 <li><em>proof</em>: Let \(\{ b_{1},..,b_{n} \}\) be a basis of \(V\). <ul>
 <li>let \(\{b_{1}^{v},&hellip;,b_{n}^{v}\}\) be a basis \(V^{v}\). </li>
@@ -1675,10 +1682,12 @@ $$ \begin{cases}
 <ul>
 <li>for every linear map \( T: V \mapsto W \)  </li>
 <li>we have two integers cpaturing information about T (transformation)  <ul>
-<li>
-<h5 id="nullity-of-t-dim-kernelt-dim-nullspacet-dim-of-the-solution-set-to-92ax092"><strong>nullity of T:</strong> = dim Kernel(T) = dim Nullspace(T) = dim of the solution set to \(Ax=0\)<a class="headerlink" href="#nullity-of-t-dim-kernelt-dim-nullspacet-dim-of-the-solution-set-to-92ax092" title="Permanent link"></a></h5>
-<ul>
-<li><strong>Nullspace (T)</strong>: set of all n-dimensional column vectors such that \(Ax=0\), the solution set of the homog linear system.  <ul>
+<li><strong>Definition: nullity of T:</strong> <ul>
+<li>dim Kernel(T) = dim Nullspace(T) = dim of the solution set to \(Ax=0\)  </li>
+</ul>
+</li>
+<li><strong>Definition: Nullspace(T)</strong>: <ul>
+<li>set of all n-dimensional column vectors such that \(Ax=0), the solution set of the homog linear system.  <ul>
 <li><strong><em>Theorem</em></strong>: The nullspace N(A) is a subspace of the vector space \(\mathbb{R^{n}}\)  </li>
 <li>proof: WTS: N(A) is nonempty, closed under addition, closed under scalar multiplication:  </li>
 <li>S1: the trivial solution is always in N(A)- so it&rsquo;s nonempty. \(\vec{x}=\vec{0}\)  </li>
@@ -1695,7 +1704,10 @@ $$ \begin{cases}
 </li>
 </ul>
 </li>
-<li><strong>rank of T</strong>: dim image(T) = &hellip;QUESTION: any other defs? yes, see lec 14 for longer discussion </li>
+<li><strong>Definition: rank of T</strong>: <ul>
+<li>dim image(T) = &hellip;QUESTION: any other defs? yes, see lec 14 for longer discussion </li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1703,7 +1715,9 @@ $$ \begin{cases}
 <li>
 <p>turns out that for linear operators \(T: V \mapsto V\) we also have defined invariants which are scalars of the field \(\mathbb{F}\)  </p>
 <ul>
-<li>ex: <strong>Trace</strong>: \(tr: L(V,V) \mapsto \mathbb{F}\) is  <ul>
+<li>example of invariants: </li>
+<li><strong>Definition: Trace</strong>: <ul>
+<li>\(tr: L(V,V) \mapsto \mathbb{F}\) is : </li>
 <li>the sum of elements on the main diagonal of a square matrix A  </li>
 <li>the sum of its complex eigenvalues  </li>
 <li>invariant with respect to change of basis  </li>
@@ -1728,8 +1742,8 @@ $$ \begin{cases}
 </ul>
 </li>
 <li>with this in mind we can form and prove the existence statement:</li>
-<li><strong><em>Lemma</em></strong>: <ul>
-<li>Suppose V is finite dim vector space over \(\mathbb{F}\)</li>
+<li><strong>Existence Lemma</strong>: <ul>
+<li>Suppose V is finite dimensional vector space over \(\mathbb{F}\)</li>
 <li>Then there exists a unique linear function:<ul>
 <li>\(tr: L(V,V) \mapsto \mathbb{F}\)</li>
 <li>such that for all \(v \in V\) and \(f \in V^{v}\)</li>
@@ -2052,7 +2066,7 @@ $$ \begin{cases}
 <h2 id="chapter-8-dual-spaces-and-tensors">Chapter 8: Dual Spaces and Tensors<a class="headerlink" href="#chapter-8-dual-spaces-and-tensors" title="Permanent link"></a></h2>
 <ul>
 <li>all spaces here are finite dimensional</li>
-<li>might wanna refer to <a href="#dual-spaces-and-isomorphism">Dual Spaces and Isomorphisms</a></li>
+<li>might wanna refer to <a href="#dual-spaces-and-isomorphisms">Dual Spaces and Isomorphisms</a></li>
 </ul>
 <h3 id="section-81-dual-spaces">Section 8.1 : Dual Spaces<a class="headerlink" href="#section-81-dual-spaces" title="Permanent link"></a></h3>
 <ul>

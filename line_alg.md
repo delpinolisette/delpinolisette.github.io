@@ -323,39 +323,42 @@ layout: default
 
 ### **Dual Spaces and isomorphisms:**   
 * We can use the criteria for isomorphic spaces to uncover more truths about the relationship between \\(V \\) and \\(V^{v}\\)  
-* **Claim**: if V is a finite dimensional vector space over F, 
+* **Dimension of \\(V^{v}\\) and \\(V\\) Claim**: 
+    - if V is a finite dimensional vector space over F, 
     - then (=>) \\(dimV^{v} = dim V\\)
-* _proof_: Let \\(E = \\{e\_{1},...,e\_{n}\\} \\) be a basis of V. 
-* Then for all \\(i\\) consider this unique linear operator / function:
-    - \\({e\_{i}}^{v}: V \mapsto \mathbb{F}\\) (from the vector space to the field) s.t.
-    - \\({e\_{i}}^{v}{e\_{j}}\\) = 
-    $$ \begin{cases} 
-    0 & j \neq 1 \\\
-    1 & j = i 
-    \end{cases} $$
-* we claim that the functions: \\(e\_{1}^{v},...,e\_{n}^{v} \in V^{v}\\) form a basis of the dual space \\(V^{v}\\) of \\(V\\) _how so you ask!_
-* well, let \\(f \in V^{v}\\) be any element in the dual space, so it is a linear functional that sends vectors in v to the field. 
-* the function \\(f: V \mapsto \mathbb{F}\\) is unqiely determined by its values on the spanning set E of V. 
-    - QUESTION: so the lemma works for spanning sets, not just bases?????
-* these values are: \\( f(e\_{1}),...,f(e\_{n}) \in \mathbb{F} \\). (recall they send vectors in v, in this case e, to a scalar in the field)
-* consider the linear function: 
-    - g = \\( f(e\_{1})e\_{1}^{v},...,f(e\_{n})e\_{n}^{v}\\) 
-    - \\(g(e\_{j}) = f(e\_{1})e\_{1}^{v}(e\_{j}) + ... + f(e\_{n})e\_{n}^{v}(e\_{j})\\) = \\(f(e\_{j})\\), because it becomes \\( f(1*e\_{j})\\) for all j. 
-    - Thus, \\(f : V \mapsto F\\) and \\(g : V \mapsto F\\), take the same values on the basis \\(e\_{1},...,e\_{n}\\)
-    - since linear transformations are characterized by what they do to a generating set, then \\(f = g\\) (remeber E is a spanning set of V)
-* This shows that \\(V^{v} =\\) span\\( (e\_{1}^{v}, ..., e\_{n}^{v}) \\)
-* Next, let scalars \\(c\_{1},...,c\_{n}\\) are such that \\(c\_{1}e\_{1}^{v},...,c\_{n}e\_{n}^{v} = 0 \in V^{v}\\)
-* so this \\(c\_{1}e\_{1}^{v},...,c\_{n}e\_{n}^{v} : V \mapsto F\\) is the zero function. 
-* Evaluate the function on \\( (e\_{j})\\), gives \\( c\_{1}e\_{1}^{v}(e\_{j}),...,c\_{n}e\_{n}^{v}(e\_{j}) \\)
-* but value of zero mapping on any vector just gives you zero back, so 
-    - \\( c\_{1} = ... = c\_{n} =0\\)
-* Hence, \\( \\{ e\_{1}^{v},...,e\_{n}^{v} \\}\\) is linearly independent, thus they form a basis, since they are also spanning, of the dual space. 
-* Hence, \\(dim V^{v} = n = dim V\\)  
-* **dual basis** (def) : \\(E^{v}= e\_{1}^{v},...,e\_{n}^{v} \\), as defined above, is the dual bases of E (of V)
+        * **_proof_**: Let \\(E = \\{e\_{1},...,e\_{n}\\} \\) be a basis of V. 
+        * Then for all \\(i\\) consider this unique linear operator / function:
+            - \\({e\_{i}}^{v}: V \mapsto \mathbb{F}\\) (from the vector space to the field) s.t.
+            - \\({e\_{i}}^{v}{e\_{j}}\\) = 
+            $$ \begin{cases} 
+            0 & j \neq 1 \\\
+            1 & j = i 
+            \end{cases} $$
+        * we claim that the functions: \\(e\_{1}^{v},...,e\_{n}^{v} \in V^{v}\\) form a basis of the dual space \\(V^{v}\\) of \\(V\\) _how so you ask!_
+        * well, let \\(f \in V^{v}\\) be any element in the dual space, so it is a linear functional that sends vectors in v to the field. 
+        * the function \\(f: V \mapsto \mathbb{F}\\) is unqiely determined by its values on the spanning set E of V. 
+            - QUESTION: so the lemma works for spanning sets, not just bases?????
+        * these values are: \\( f(e\_{1}),...,f(e\_{n}) \in \mathbb{F} \\). (recall they send vectors in v, in this case e, to a scalar in the field)
+        * consider the linear function: 
+            - g = \\( f(e\_{1})e\_{1}^{v},...,f(e\_{n})e\_{n}^{v}\\) 
+            - \\(g(e\_{j}) = f(e\_{1})e\_{1}^{v}(e\_{j}) + ... + f(e\_{n})e\_{n}^{v}(e\_{j})\\) = \\(f(e\_{j})\\), because it becomes \\( f(1*e\_{j})\\) for all j. 
+            - Thus, \\(f : V \mapsto F\\) and \\(g : V \mapsto F\\), take the same values on the basis \\(e\_{1},...,e\_{n}\\)
+            - since linear transformations are characterized by what they do to a generating set, then \\(f = g\\) (remeber E is a spanning set of V)
+        * This shows that \\(V^{v} =\\) span\\( (e\_{1}^{v}, ..., e\_{n}^{v}) \\)
+        * Next, let scalars \\(c\_{1},...,c\_{n}\\) are such that \\(c\_{1}e\_{1}^{v},...,c\_{n}e\_{n}^{v} = 0 \in V^{v}\\)
+        * so this \\(c\_{1}e\_{1}^{v},...,c\_{n}e\_{n}^{v} : V \mapsto F\\) is the zero function. 
+        * Evaluate the function on \\( (e\_{j})\\), gives \\( c\_{1}e\_{1}^{v}(e\_{j}),...,c\_{n}e\_{n}^{v}(e\_{j}) \\)
+        * but value of zero mapping on any vector just gives you zero back, so 
+            - \\( c\_{1} = ... = c\_{n} =0\\)
+        * Hence, \\( \\{ e\_{1}^{v},...,e\_{n}^{v} \\}\\) is linearly independent, thus they form a basis, since they are also spanning, of the dual space. 
+        * Hence, \\(dim V^{v} = n = dim V\\)  
+        * QED
+* **Definition Dual Basis**: (not complete lol)
+    - \\(E^{v}= e\_{1}^{v},...,e\_{n}^{v} \\), as defined above, is the dual basis of E (of V)
 * _note_: dual spaces allow us (only when V is finite dimensional!) to define an isomorphism \\(T: V \mapsto V^{v}\\). 
     - T is defined as the unique linear map sending the basis E of V to the dual basis \\(E^{v} of V^{v}\\).
 * also works in opposite direction ... 
-* **Claim**: V is a finite dim vector space over F, let
+* **Dual Bases Claim**: V is a finite dim vector space over F, let
     - \\( F = \\{ f\_{1},...,f\_{n} \\} \\) be a basis of \\(V^{v}\\)
     - Then there exists a unique basis \\(E = \\{ e\_{1},...,e\_{n} \\}\\) of V s.t.\\(E^{v} = F\\) 
     - (a basis for the dual space can always constructed from a basis for the space, so we can find the "origin" basis for any basis in \\(V^{v}\\))
@@ -371,7 +374,7 @@ layout: default
         * By the previous claim on \\(dim V^{vv} = dim V^{v} = n\\),
         * so \\(ev: V \mapsto V^{vv}\\) is a linear map between vector spaces of the same dimension. 
         * _now a brief interruption for a lemma we need to prove to finish proving this claim_:
-    * **Lemma:** (the evaluation map is an isomorphism)
+    * **Evaluation Map is an Isomorphism Lemma:**
         + For a finite dimensional vector space V over F the map \\( ev: V \mapsto V^{vv} \\) is an isomorphism. (a natural one!)
         + _proof_: Let \\(\\{ b\_{1},..,b\_{n} \\}\\) be a basis of \\(V\\). 
             * let \\(\\{b\_{1}^{v},...,b\_{n}^{v}\\}\\) be a basis \\(V^{v}\\). 
@@ -437,8 +440,10 @@ layout: default
 - we already have some discrete (= integer invariants)  
     + for every linear map \\( T: V \mapsto W \\)  
     + we have two integers cpaturing information about T (transformation)  
-        + ##### **nullity of T:** = dim Kernel(T) = dim Nullspace(T) = dim of the solution set to \\(Ax=0\\)  
-            + **Nullspace (T)**: set of all n-dimensional column vectors such that \\(Ax=0\\), the solution set of the homog linear system.  
+        + **Definition: nullity of T:** 
+            + dim Kernel(T) = dim Nullspace(T) = dim of the solution set to \\(Ax=0\\)  
+        + **Definition: Nullspace(T)**: 
+            + set of all n-dimensional column vectors such that \\(Ax=0\), the solution set of the homog linear system.  
                 * **_Theorem_**: The nullspace N(A) is a subspace of the vector space \\(\mathbb{R^{n}}\\)  
                 * proof: WTS: N(A) is nonempty, closed under addition, closed under scalar multiplication:  
                 * S1: the trivial solution is always in N(A)- so it's nonempty. \\(\vec{x}=\vec{0}\\)  
@@ -447,10 +452,13 @@ layout: default
                 * S3: \\(c \in \mathbb{R}, x \in N(A) => cx \in N(A)\\)  
                     * Well, \\(A(cx)=c*A(x) = c * 0 = 0\\)
                 * QED  
-        + **rank of T**: dim image(T) = ...QUESTION: any other defs? yes, see lec 14 for longer discussion 
+        + **Definition: rank of T**: 
+            + dim image(T) = ...QUESTION: any other defs? yes, see lec 14 for longer discussion 
 
 - turns out that for linear operators \\(T: V \mapsto V\\) we also have defined invariants which are scalars of the field \\(\mathbb{F}\\)  
-    + ex: **Trace**: \\(tr: L(V,V) \mapsto \mathbb{F}\\) is  
+    + example of invariants: 
+    + **Definition: Trace**: 
+        * \\(tr: L(V,V) \mapsto \mathbb{F}\\) is : 
         * the sum of elements on the main diagonal of a square matrix A  
         * the sum of its complex eigenvalues  
         * invariant with respect to change of basis  
@@ -467,8 +475,8 @@ layout: default
             * but given (f,v) we can also get a natural scalar: 
                 - \\( f(v)\in \mathbb{F} \\)
             * with this in mind we can form and prove the existence statement:
-            * **_Lemma_**: 
-                * Suppose V is finite dim vector space over \\(\mathbb{F}\\)
+            * **Existence Lemma**: 
+                * Suppose V is finite dimensional vector space over \\(\mathbb{F}\\)
                 * Then there exists a unique linear function:
                     - \\(tr: L(V,V) \mapsto \mathbb{F}\\)
                     - such that for all \\(v \in V\\) and \\(f \in V^{v}\\)
@@ -692,7 +700,7 @@ layout: default
 
 ## Chapter 8: Dual Spaces and Tensors
 * all spaces here are finite dimensional
-* might wanna refer to [Dual Spaces and Isomorphisms](#dual-spaces-and-isomorphism)
+* might wanna refer to [Dual Spaces and Isomorphisms](#dual-spaces-and-isomorphisms)
 
 ### Section 8.1 : Dual Spaces
 * **Definition: Linear Functional** :
