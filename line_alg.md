@@ -8,7 +8,7 @@ layout: default
 #### Table of Contents:
 * [Lectures 9-11](#lectures-9-11)
 * [Lectures 12-13](#lectures-12-13)
-* [Lecture 14](#lecture-14)
+* [Lecture 14](#lecture-14-row-reduction)
 * [Chapter 1](#chapter-1)
 * [Chapter 2](#chapter-2)
 * [Chapter 8](#chapter-8-dual-spaces-and-tensors)
@@ -432,12 +432,12 @@ layout: default
 
 ### Lectures 12-13
 
-**Traces**  
+- ####**Traces**:  
 - It is useful to have numerical invariants measuring the complexity of linear maps  
 - we already have some discrete (= integer invariants)  
     + for every linear map \\( T: V \mapsto W \\)  
     + we have two integers cpaturing information about T (transformation)  
-        + **nullity of T:** = dim Kernel(T) = dim Nullspace(T) = dim of the solution set to \\(Ax=0\\)  
+        + ##### **nullity of T:** = dim Kernel(T) = dim Nullspace(T) = dim of the solution set to \\(Ax=0\\)  
             + **Nullspace (T)**: set of all n-dimensional column vectors such that \\(Ax=0\\), the solution set of the homog linear system.  
                 * **_Theorem_**: The nullspace N(A) is a subspace of the vector space \\(\mathbb{R^{n}}\\)  
                 * proof: WTS: N(A) is nonempty, closed under addition, closed under scalar multiplication:  
@@ -504,7 +504,7 @@ layout: default
 
 ### Lecture 14: Row Reduction
 
-**Outline:**:
+**Outline:**
 
 * Simplifying Linear Systems
 * Row Reduction and Echelon Forms
