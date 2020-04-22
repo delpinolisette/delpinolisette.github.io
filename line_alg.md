@@ -11,6 +11,7 @@ layout: default
 * [Lecture 14](#lecture-14-row-reduction)
 * [Chapter 1](#chapter-1)
 * [Chapter 2](#chapter-2)
+* [Chapter 4](#chapter-4)
 * [Chapter 8](#chapter-8-dual-spaces-and-tensors)
 
 ### Lectures 9-11   
@@ -694,7 +695,48 @@ layout: default
 
 ---
 
-## Chapter 4: Spectral Theory
+## Chapter 4
+
+* Spectral Theory
+* ####notes for hw 10 - on spectral theory
+1. Eigenvectors are those vectors parallel to vector x,
+    * just means that Ax is some multiple of x , Ax = \\(\lamba\\)x
+    * lambda can be anything, negative, or even zero, just as long as it makes lamba x parallel to x. 
+    * eigenvectors are the vectors that dont get knowcked off their span in the space after the transformation is applied - their egeinvalues is how much they are stretcehd by the transformation (matrix multiplication)
+        * so Av, where v is eigenvector = lambda v, just says multiplying your special eigencector by a matrix A is the same effect as scalar multiplication on that matrix, it's just scaled
+        * scaling by \\(\lambda\\) is the same as having an Id matrix with only \\(\lambda\\) down the diagonal, this is lambda times the Id matrix times the eigenvector
+        * important for finding shortcuts to rotation matrices 
+        * another way to say this is that the vector x is in the ker(A-lambda I)
+            * now youve sset it up as a homogenous linear system to solve for the kernel, you only have two options: infintely many sols or the trivial sol, you're not interested in the trivial sol because you want to form an eigenbasis, so interested in when it has infinitely many sols
+            * RECALL: unique solution exists IFF full rank IFF M is invertible IFF det M nonzero
+                * so, there are infinitely many solutions IFF det M is zero
+                * thats why we solve for zero when taking eigenvalues, M = A-labdaI
+            * this determinant of M is the characteristic polynomial, its roots are eigenvalues of A
+            * to find the eigenbectors, plug into ker M. why? 
+        * the nullspace M + 0 vector = eigenspace
+        * the set of all eigenvalies of an operator or matrix A is called the spectrum of A, and denoted o(A)
+        * how to find the eigenvalues for an abstract operator A? 
+            - well just take an arbritary basis and compute eigenbalies of the abstract operator in the matrix of the operator wrt the basis,
+            - this works because it doesnt depend on choice of basis - see similar matrices explanation : characteristic polynomails of similar matrices coincide
+        * algebraic multiplicity of a root lambda - # of times it shows up in sol
+        * geometric multiplicity of the eigenvalue lambda = dimension of the eigenspace Ker(A-LI)
+            * dimension of eigenspace / geo multiplicity of eigenvalue cannot exceed its algebraic multiplicity
+        * **trace and det (new interpretations**: , L= \\(\lamda\\)
+            * trace(A): L1 + L2 + ... + Ln  
+            * det(A): L1L2...Ln
+        * **shortcut: eigenvalues of traingular matrices**: 
+            * eigenvalues of a triangular matrix are exactly the diagonal entries of the original matrix A
+            * => so entries of a diagonal matrix are its diagonal entries
+    ###Section 4.2:
+    * task of diagonalization: find a basis in which the matrix is diagonal
+    * not all matrices/operators are diagonalizable
+        * we only care because if matrices/operators are diagonalizable then their powers or functions on them are easy to compute
+        * necessary and sufficient condition for diagonalization:
+
+## Chapter 9 
+* **Cayley Hamilton Theorem**: (how to use it)
+    - plugging the original matrix A into the characteristic polynomial (def of A-lambdaxI determinant) gives you the zero matrix
+    - every matrix "solvss" / is a root of iits characteristic polynoamil. cool.  
 
 ---
 
@@ -735,3 +777,20 @@ layout: default
     - it is onto if:
         * range(T) = W
         * so take any vector in W and you can find some vector in V that maps to it
+
+
+### exercises 
+
+1. prove tr\\((AB)^{-1}\\) = \\(B^{-1}A^{-1}\\)
+2. prove inverse matrix is unique 
+    3. [here](https://www.youtube.com/watch?v=WJfODc-3wIE)
+4. [theorems in this vid](https://www.youtube.com/watch?v=ptZy9n7JmWY) 
+5. [exercises in this vid](https://www.youtube.com/watch?v=qyyfb0ey-HM)
+6. [exercises in this vid](https://www.youtube.com/watch?v=F2XsfzhSv2A)
+7. [vid](https://www.youtube.com/watch?v=Vmr6EAQQazA)
+8. [vid](https://www.youtube.com/watch?v=jNtiENbAcFM)
+9. [intersection of subspaces is a subspace, union?](https://www.youtube.com/watch?v=Rcj1-E3SAhs&list=PLwn184d0DusOyVm8Eh-gzRyVmf3nHJ68I&index=64&t=695s)
+10. [more info] (https://math.stackexchange.com/questions/1722921/injective-or-surjective-and-same-dimension-implies-vector-space-isomorphism)
+11. [do this] (https://math.stackexchange.com/questions/2521291/proof-that-f-is-an-isomorphism-if-and-only-if-f-carries-a-basis-to-a-basis)
+12. [look at this!](https://math.stackexchange.com/questions/170481/motivation-to-understand-double-dual-space) 
+13. [exericse of double dual](https://math.stackexchange.com/questions/292353/v-is-isomorphic-to-v-ast-ast-the-double-dual-space-of-v)
