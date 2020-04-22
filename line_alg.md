@@ -727,11 +727,18 @@ layout: default
         * **shortcut: eigenvalues of traingular matrices**: 
             * eigenvalues of a triangular matrix are exactly the diagonal entries of the original matrix A
             * => so entries of a diagonal matrix are its diagonal entries
+        * **similar matrices have the same eigenvalues, different vectors**
+        * of course, if matrices have the same eigenvals and same eigenv's theyre the same matrix
+        * proof: Similar matrix def: A, B similar if \\(B = M^{-1}AM\\)
+            * \\(Bx = M^{-1}AMx = \lambda x = MM^{-1}AMx = M\lambda x = A(Mx) = \lambda (Mx) \\)
+                * notice they have the same eigenvalues but different eigenvectors! \\(i.e: Mx vs x\\)
+        * smilar matrices represent same linear transformation in different bases. 
     ###Section 4.2:
     * task of diagonalization: find a basis in which the matrix is diagonal
     * not all matrices/operators are diagonalizable
         * we only care because if matrices/operators are diagonalizable then their powers or functions on them are easy to compute
         * necessary and sufficient condition for diagonalization:
+    
 
 ## Chapter 9 
 * **Cayley Hamilton Theorem**: (how to use it)
@@ -794,3 +801,4 @@ layout: default
 11. [do this] (https://math.stackexchange.com/questions/2521291/proof-that-f-is-an-isomorphism-if-and-only-if-f-carries-a-basis-to-a-basis)
 12. [look at this!](https://math.stackexchange.com/questions/170481/motivation-to-understand-double-dual-space) 
 13. [exericse of double dual](https://math.stackexchange.com/questions/292353/v-is-isomorphic-to-v-ast-ast-the-double-dual-space-of-v)
+14. [eigenvales and eigenvectors](https://www.youtube.com/watch?v=mVeuZzJdd1w&list=PLwn184d0DusOyVm8Eh-gzRyVmf3nHJ68I&index=58&t=0s)
