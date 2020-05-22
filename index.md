@@ -2,13 +2,16 @@
 layout: default
 ---
 
-====================================================
+---
 
 [My Journal](journal.md), [My Reading Log](reading.md)
 
 Hi! My name is Lisette and I'm a student at the University of Pennsylvania passionate about the intersection of Math and Computation. Some of my hobbies include coffee, space documentaries, and investigating new technologies.  
 
 Link to my slides from a recent presentation: [Cryptography](https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU)
+
+---
+
 
 # List of All Topics that I'm learning/interested in- grouped by subjects:
 
