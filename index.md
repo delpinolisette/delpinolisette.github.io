@@ -36,10 +36,11 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 
 ### 4. [Real Analysis](analysis.md)
 
-### 5. Graph Theory
+### 5. [Graph Theory](graph_theory.md)
 
 * Algorithms and Graphs
-* Krusal's Path-Finding Algorithm implementation (in Python...) (in progress)
+* Krusal's Algorithm implementation (in Python...) (in progress)
+* Outline in progress
 
 ### 6. Numerical/Scientific Computing and Analysis
 * The Magic of Floating Point and the IEEE
