@@ -11,4 +11,4 @@
 
 ### Why Floating Point?
 
-We want to write numbers stored in computers in binary double precision - and for that we need 
+We want to write numbers stored in computers in binary double precision - and for that we need - the sign number, the exponent that is shifted, and the 52-bit mantissa!

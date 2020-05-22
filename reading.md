@@ -6,7 +6,7 @@ layout: default
 
 1. Security and Cryptography: 
     * [How to Backdoor Diffie-Hellman](https://eprint.iacr.org/2016/644.pdf)
-    * [Authentication and Key Management Automation inDecentralized Secure Email and Messaging viaLow-Entropy Secret] (https://arxiv.org/pdf/2005.10787.pdf)
+    * [Authentication and Key Management Automation in Decentralized Secure Email and Messaging viaLow-Entropy Secret](https://arxiv.org/pdf/2005.10787.pdf)
     * [A Note on Cryptographic Algorithms for Private DataAnalysis in Contact Tracing Applications](https://arxiv.org/pdf/2005.10634.pdf)
     * [Efficient Slide Attacks](https://eprint.iacr.org/2016/1177.pdf)
 2. Linear Algebra: 
