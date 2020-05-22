@@ -8,6 +8,13 @@ layout: default
 Journal
 =============================================
 
+### 5.21.2020
+
+I was happy with how the semester turned out!
+Now I have my sights on sharpening my Data Structures skills, by practicing implementing algorithms from graph theory in several different languages. 
+
+I've also been thinking about how one can glean an incredible amount of mathematical or computational insight from trying to "break" something or testing really strange edge cases. In truth, this is what makes math and programming so fun to me. More thoughts coming soon. 
+
 ### 4.1.2020
 
 Today I finished a long problem set for Analysis. While investigating answers on Desmos and Wolfram, I found some subtleties that were hard to see through algebraic manipulations alone.
