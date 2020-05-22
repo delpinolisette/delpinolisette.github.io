@@ -12,6 +12,15 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 
 # List of All Topics that I'm learning/interested in- grouped by subjects:
 
+### [Graph Theory](graph_theory.md)
+
+* Algorithms and Graphs
+
+### [Numerical Computing and Analysis](num_anal.md)
+* The Magic of Floating Point and the IEEE
+* Why is NumPy any better than standard numerical packages? (hint: it runs like C if you vectorize!)
+* 
+
 ### [Mathematical Cryptography](mathematical_crypto.md)
 
 * Prime numbers, unique factorization, finite fields 
@@ -23,7 +32,7 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 * Euler's formula
 * Pseudoprimes 
 * RSA cryptosystem 
-* Primality Testing 
+* Primality Testing !!! So cool!
 
 ### [Advanced Linear Algebra](line_alg.md)
 
@@ -31,6 +40,7 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 * Subspaces : Examples and Proofs
 * Linear Combinations and Span
 * Dual Spaces
+* Jordan Canonical Form
 
 ### [Analysis](analysis.md)
 

@@ -733,10 +733,13 @@ layout: default
             * \\(Bx = M^{-1}AMx = \lambda x = MM^{-1}AMx = M\lambda x = A(Mx) = \lambda (Mx) \\)
                 * notice they have the same eigenvalues but different eigenvectors! \\(i.e: Mx vs x\\)
         * smilar matrices represent same linear transformation in different bases. 
-    ###Section 4.2:
+        * **a matrix relating two similar matrices (two matrices with same eigenval**
+        * is the eigenvector matrix
+        * **\\(A^{T}\\) is similar to \\(A\\)**
+    ** **Section 4.2:**
     * task of diagonalization: find a basis in which the matrix is diagonal
     * not all matrices/operators are diagonalizable
-        * we only care because if matrices/operators are diagonalizable then their powers or functions on them are easy to compute
+        * we only care because if matrices/operators are diagonalizable then their powers or functions on them are easy to compute. applications explained here: [diagonalizable applications](https://www.math.upenn.edu/~moose/240S2013/slides7-25.pdf)
         * necessary and sufficient condition for diagonalization:
     
 
@@ -786,6 +789,27 @@ layout: default
         * so take any vector in W and you can find some vector in V that maps to it
 
 
+## Determinants
+For an n×n matrix, each of the following is equivalent to the condition of the matrix having determinant 0
+
+* The columns of the matrix are dependent vectors in Rn
+
+* The rows of the matrix are dependent vectors in Rn
+
+* The matrix is not invertible.
+
+* The volume of the parallelepiped determined by the column vectors of the matrix is 0
+
+* The volume of the parallelepiped determined by the row vectors of the matrix is 0
+
+* The system of homogenous linear equations represented by the matrix has a non-trivial solution.
+
+* The determinant of the linear transformation determined by the matrix is 0
+
+The free coefficient in the characteristic polynomial of the matrix is 0
+Depending on the definition of the determinant you saw, proving each equivalence can be more or less hard.
+
+
 ### exercises 
 
 1. prove tr\\((AB)^{-1}\\) = \\(B^{-1}A^{-1}\\)
@@ -802,3 +826,6 @@ layout: default
 12. [look at this!](https://math.stackexchange.com/questions/170481/motivation-to-understand-double-dual-space) 
 13. [exericse of double dual](https://math.stackexchange.com/questions/292353/v-is-isomorphic-to-v-ast-ast-the-double-dual-space-of-v)
 14. [eigenvales and eigenvectors](https://www.youtube.com/watch?v=mVeuZzJdd1w&list=PLwn184d0DusOyVm8Eh-gzRyVmf3nHJ68I&index=58&t=0s)
+15. [similar matrices](https://www.youtube.com/watch?v=KUuxdk_V7To)
+16. [eigenspaces](https://yutsumura.com/determine-dimensions-of-eigenspaces-from-characteristic-polynomial-of-diagonalizable-matrix/)
+17. [interesting](https://math.stackexchange.com/questions/2676557/prove-that-t-is-diagonalizable-if-and-only-if-the-minimal-polynomial-of-t-has-no)
