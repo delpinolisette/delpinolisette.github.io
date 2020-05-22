@@ -12,9 +12,9 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 
 # List of All Topics that I'm learning/interested in- grouped by subjects:
 
-### [Ruby on Rails](ruby.md)
+### 1. [Ruby on Rails](ruby.md)
 
-### [Advanced Linear Algebra](line_alg.md)
+### 2. [Advanced Linear Algebra](line_alg.md)
 
 * Vector Spaces: Examples and Proofs
 * Subspaces : Examples and Proofs
@@ -22,7 +22,7 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 * Dual Spaces
 * Jordan Canonical Form
 
-### [Mathematical Cryptography](mathematical_crypto.md)
+### 3. [Mathematical Cryptography](mathematical_crypto.md)
 
 * Prime numbers, unique factorization, finite fields 
 * Discrete Log Problem 
@@ -35,15 +35,16 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 * RSA cryptosystem 
 * Primality Testing !!! So cool!
 
-### [Analysis](analysis.md)
+### 4. [Real Analysis](analysis.md)
 
-### Graph Theory
+### 5. Graph Theory
 
 * Algorithms and Graphs
 
-### Numerical Computing and Analysis
+### 6. Numerical/Scientific Computing and Analysis
 * The Magic of Floating Point and the IEEE
 * Why is NumPy any better than standard numerical packages? (hint: it runs like C if you vectorize!)
+* The Magic of Python
 
 
 

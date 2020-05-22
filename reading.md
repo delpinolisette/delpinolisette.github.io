@@ -8,7 +8,6 @@ layout: default
 2. Number Theory:
 3. Analysis:
 4. Graph Theory:
-5. 
 
 ## What problems am I working on?
 
