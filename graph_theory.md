@@ -2,4 +2,4 @@
 
 ## Graphs - Chapter 1
 
-* Graph Theory Isomoiphism 
+* Graph Theory Isomorphism 

@@ -12,14 +12,15 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 
 # List of All Topics that I'm learning/interested in- grouped by subjects:
 
-### [Graph Theory](graph_theory.md)
+### [Ruby on Rails](ruby.md)
 
-* Algorithms and Graphs
+### [Advanced Linear Algebra](line_alg.md)
 
-### [Numerical Computing and Analysis](num_anal.md)
-* The Magic of Floating Point and the IEEE
-* Why is NumPy any better than standard numerical packages? (hint: it runs like C if you vectorize!)
-* 
+* Vector Spaces: Examples and Proofs
+* Subspaces : Examples and Proofs
+* Linear Combinations and Span
+* Dual Spaces
+* Jordan Canonical Form
 
 ### [Mathematical Cryptography](mathematical_crypto.md)
 
@@ -34,17 +35,15 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 * RSA cryptosystem 
 * Primality Testing !!! So cool!
 
-### [Advanced Linear Algebra](line_alg.md)
-
-* Vector Spaces: Examples and Proofs
-* Subspaces : Examples and Proofs
-* Linear Combinations and Span
-* Dual Spaces
-* Jordan Canonical Form
-
 ### [Analysis](analysis.md)
 
-### [Ruby on Rails](ruby.md)
+### Graph Theory
+
+* Algorithms and Graphs
+
+### Numerical Computing and Analysis
+* The Magic of Floating Point and the IEEE
+* Why is NumPy any better than standard numerical packages? (hint: it runs like C if you vectorize!)
 
 
 
