@@ -7,6 +7,9 @@ layout: default
 
 Journal
 =============================================
+### 7.1.2020
+
+Happy July, Lisette. Today is a day of sharpening my Web Dev skills. I'm playing around with the styling of the site, and exploring Githib Pages' powerful connection with Ruby. I've installed ```bundler``` and now I'm off! 
 
 ### 5.21.2020
 
