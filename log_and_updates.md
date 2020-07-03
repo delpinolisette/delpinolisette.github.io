@@ -1,4 +1,6 @@
-# What changes did I make ? How did I make them ? What did I learn from building this site? 
+# Logs and Updates: 
+
+### What changes did I make ? How did I make them ? What did I learn from building this site? 
 
 2020-07-01 :
 
