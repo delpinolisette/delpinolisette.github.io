@@ -12,3 +12,10 @@
 3. wanted to timestamp these so I installed [TimeNow](https://packagecontrol.io/packages/Timenow). 
 
 4. Ok so Jekyll was not installed, somehow. I got the "jekyll gem missing" error after trying to run the server. After trying to install it, I ran into some issues. Turns out GCC and Make are missing. 
+
+2020-07-07 16:48
+
+1. Why does Github Pages support Jekyll, which is a static site generator (that is a Ruby gem) but not Ruby
+2. https://jekyllrb.com/docs/themes/#overriding-theme-defaults was an important link
+3. installed a nice color picker. 
+4. 

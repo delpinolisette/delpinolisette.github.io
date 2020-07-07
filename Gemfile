@@ -14,3 +14,4 @@ gem "jekyll"
 gem "minima"
 # gem "github-pages"
 # gem 'jekyll-feed'
+# gem 'jekyll-seo-tag'
