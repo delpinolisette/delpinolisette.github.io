@@ -9,6 +9,8 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 
 
-gem "jekyll", "~> 4.1"
+gem "jekyll"
 
 gem "minima"
+# gem "github-pages"
+# gem 'jekyll-feed'
