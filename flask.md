@@ -1,3 +1,7 @@
+---
+layout: default
+title: Python and Flash Quick Start
+---
 ### Getting a Python Web Application up and Runing with Flask
 
 These are instructions for getting a Python web app up and running quickly with Flask. **On Windows!!** On MacOS/ Linux, commands differ slightly but can be easily found online. 
