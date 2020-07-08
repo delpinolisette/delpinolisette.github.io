@@ -10,8 +10,6 @@ layout: default
 
 [Uniform Convergence](#chapter-5-uniform-convergence)
 
-
-
 ## Chapter 5 Uniform Convergence 
 Outline: 
 
