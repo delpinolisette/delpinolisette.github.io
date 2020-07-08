@@ -13,20 +13,6 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 
 ### 1. [Ruby on Rails](ruby.md)
 
-* ``test test``
-
-
-```ruby
-User.where(name: 'Patrick')
-#=> sends out query for all users names Patrick
-User.find_by(name: 'Patrick')
-#=> sends out query for ONE user named Patrick
-User.limit(2)
-#=> returns first two users, the order is ascending by id by default- first to last
-User.order(id :desc)
-#=> returns all users last to first
-```
-
 ### 2. [Advanced Linear Algebra](line_alg.md)
 
 * Vector Spaces: Examples and Proofs
