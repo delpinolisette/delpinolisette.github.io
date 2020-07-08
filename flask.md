@@ -45,5 +45,15 @@ if __name__== "__main__":
 
 ```
 
+9. make sure you're still in ``(env)`` and run your code with ``py MyApp.py``. 
+10. Navigate to ``localhost:5000`` to see your app. 
+11. Congratulations! You're up and running !
+
+### Customizing your app: 
+
+1. It's a good idea to use templates and html inheritance - Don't Repeat Yourself. Make a ``templates`` folder, and a ``static`` folder. 
+2. import ``render_template`` in ``MyApp.py``
+3. Once imported, you can go into the ``index()`` function and call ``render_template(index.html)`` from your templates folder. 
+4. 
 
 
