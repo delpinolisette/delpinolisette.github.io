@@ -11,14 +11,14 @@ Also it was writtein in 2010 by Armin Ronacher (at a very young age!).
 
 Steps: as of 2020-07-08 16:13:
 
-#### Setting Up Virtualenv and Installing Packages: 
+#### Step 1: Setting Up Virtualenv and Installing Packages: 
 1. make sure Python 3+ installed with ``python -V`` 
 2. install pip. with pip, ``pip3 install virtualenv``, so that your packages are installed locally rather than globally. This is better for portability and collaboration.
 3. make and environment with ``virtualenv env`` but name the env whatever you want.
 4. select source with ``env\Scripts\activate``, make sure you are running Powershell with admin priviliges! You should be inside ``env`` now. 
 5. ``pip3 install flask flask-sqlalchemy``
 
-#### Writing Your Application : 
+#### Step 2: Writing Your Application : 
 1. Make a .py file, ``MyApp.py``
 2. Inside ``MyApp.py``: 
 3. Import Flask
@@ -49,11 +49,11 @@ if __name__== "__main__":
 10. Navigate to ``localhost:5000`` to see your app. 
 11. Congratulations! You're up and running !
 
-### Customizing your app: 
+### Step 3: Customizing your app: 
 
 1. It's a good idea to use templates and html inheritance - Don't Repeat Yourself. Make a ``templates`` folder, and a ``static`` folder. 
 2. import ``render_template`` in ``MyApp.py``
-3. Once imported, you can go into the ``index()`` function and call ``render_template(index.html)`` from your templates folder. 
+3. Once imported, you can go into the ``index()`` function and call ``render_template('index.html')`` from your templates folder. After running your app, the homepage shold be updated. Now you know how to inject a template!
 4. 
 
 
