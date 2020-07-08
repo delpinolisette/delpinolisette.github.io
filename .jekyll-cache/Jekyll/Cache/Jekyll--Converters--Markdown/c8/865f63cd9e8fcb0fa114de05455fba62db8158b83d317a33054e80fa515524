@@ -1,4 +1,4 @@
-I"m	<p><a href="journal.md">My Journal</a>, <a href="reading.md">My Reading Log</a></p>
+I"`<p><a href="journal.md">My Journal</a>, <a href="reading.md">My Reading Log</a></p>
 
 <p>Hi! My name is Lisette and I’m a student at the University of Pennsylvania passionate about the intersection of Math and Computation. Some of my hobbies include coffee, space documentaries, and investigating new technologies.</p>
 
@@ -7,6 +7,20 @@
 <h1 id="list-of-all-topics-that-im-learninginterested-in--grouped-by-subjects">List of All Topics that I’m learning/interested in- grouped by subjects:</h1>
 
 <h3 id="1-ruby-on-rails">1. <a href="ruby.md">Ruby on Rails</a></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">test test</code></li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">User</span><span class="p">.</span><span class="nf">where</span><span class="p">(</span><span class="ss">name: </span><span class="s1">'Patrick'</span><span class="p">)</span>
+<span class="c1">#=&gt; sends out query for all users names Patrick</span>
+<span class="no">User</span><span class="p">.</span><span class="nf">find_by</span><span class="p">(</span><span class="ss">name: </span><span class="s1">'Patrick'</span><span class="p">)</span>
+<span class="c1">#=&gt; sends out query for ONE user named Patrick</span>
+<span class="no">User</span><span class="p">.</span><span class="nf">limit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">#=&gt; returns first two users, the order is ascending by id by default- first to last</span>
+<span class="no">User</span><span class="p">.</span><span class="nf">order</span><span class="p">(</span><span class="nb">id</span> <span class="ss">:desc</span><span class="p">)</span>
+<span class="c1">#=&gt; returns all users last to first</span>
+</code></pre></div></div>
 
 <h3 id="2-advanced-linear-algebra">2. <a href="line_alg.md">Advanced Linear Algebra</a></h3>
 

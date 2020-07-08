@@ -43,7 +43,7 @@ blockquote { color: #828282; border-left: 4px solid #e8e8e8; padding-left: 25px;
 blockquote > :last-child { margin-bottom: 0; }
 
 /** Code formatting */
-pre, code { font-size: 15px; border: 1px solid #e8e8e8; border-radius: 3px; background-color: #eef; }
+pre, code { font-size: 15px; border: 1px solid #e8e8e8; border-radius: 3px; background-color: #0000001c; }
 
 code { padding: 1px 5px; }
 
@@ -152,9 +152,9 @@ table td { border: 1px solid #e8e8e8; }
 @media screen and (max-width: 800px) { .post-content h4 { font-size: 18px; } }
 
 /** Syntax highlighting styles */
-.highlight { background: #fff; }
+.highlight { background: #0000001c; }
 
-.highlighter-rouge .highlight { background: #9465ba; }
+.highlighter-rouge .highlight { background: #2c2433; }
 
 .highlight .c { color: #998; font-style: italic; }
 
