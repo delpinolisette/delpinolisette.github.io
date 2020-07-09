@@ -57,7 +57,7 @@ if __name__== "__main__":
 
 ### Step 3b: HTML Inheritance :
 1. Let's make a template that is inherited by any other pages in the site we wish. Go to ``templates`` and make a ``base.html`` file 
-2. Now let's use Jinja2 syntax, full documentation [here](https://jinja.palletsprojects.com/en/2.11.x/), since Flask supports it and it's based off Django. 
-3. in ``base.html``, write some boilerplate HTML and then before the end of ``</head>``, write ``{}{}``
+2. Now let's use Jinja2 syntax, full documentation [here](https://jinja.palletsprojects.com/en/2.11.x/), since it's based off Django templating. (Also, it's the template engine for Flask!)
+3. in ``base.html``, write some boilerplate HTML and then before the end of ``</head>``, write ``{block head} {end block}``, and before the end of ``</body>``, write ``{block body} {end block}``. 
 
 
