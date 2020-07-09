@@ -53,8 +53,8 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 * The Fourier Series (NICE!)
 
 ### 8. Programming Tutorials I wrote :
-* Get a web app running ASAP with Flask and Python [here](flask.md)
-* 
+* Get a web app running ASAP with Flask and Python [here](flask_start.md)
+* Using Google Translation API to make a Python Web App that translates to another language. [here](flask_py_translate_api.md)
 
 
 

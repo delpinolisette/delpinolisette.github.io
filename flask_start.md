@@ -54,6 +54,10 @@ if __name__== "__main__":
 1. It's a good idea to use templates and html inheritance - Don't Repeat Yourself. Make a ``templates`` folder, and a ``static`` folder. 
 2. import ``render_template`` in ``MyApp.py``
 3. Once imported, you can go into the ``index()`` function and call ``render_template('index.html')`` from your templates folder. After running your app, the homepage shold be updated. Now you know how to inject a template!
-4. 
+
+### Step 3b: HTML Inheritance :
+1. Let's make a template that is inherited by any other pages in the site we wish. Go to ``templates`` and make a ``base.html`` file 
+2. Now let's use Jinja2 syntax, full documentation [here](https://jinja.palletsprojects.com/en/2.11.x/), since Flask supports it and it's based off Django. 
+3. in ``base.html``, write some boilerplate HTML and then before the end of ``</head>``, write ``{}{}``
 
 
