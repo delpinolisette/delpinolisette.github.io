@@ -59,6 +59,23 @@ if __name__== "__main__":
 1. Let's make a template that is inherited by any other pages in the site we wish. Go to ``templates`` and make a ``base.html`` file 
 2. Now let's use Jinja2 syntax, full documentation [here](https://jinja.palletsprojects.com/en/2.11.x/), since it's based off Django templating. (Also, it's the template engine for Flask!)
 3. in ``base.html``, write some boilerplate HTML and then before the end of ``</head>``, write ``{block head} {end block}``, and before the end of ``</body>``, write ``{block body} {end block}``. This will be where content is inserted. 
-4. Now navigate to 
+4. Now navigate to ... ... TBC
+
+### Step ??: HTTP Requests (TODO)
+1. to use HTTP requests, first learn the general structure of one....TBC
+
+### Step ??: Forms (TODO)
+1. To have forms on your web app, install Flask-WTF for forms. 
+2. in your ``env``, install by ``pip install flask-wtf``
+3. Now you need to store a `SECRET KEY`. :
+    * It's good practice to have a separate configuration page for all your variabled, but since this is presumably your first Flask app, go ahead and write it in ``MyApp.py`` for simplicity. 
+    * Under 
 
 
+
+
+### Sources : 
+1. [Forms](https://www.youtube.com/watch?v=-O9NMdvWmE8)
+2. [In-depth Forms](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms)
+2. [Flask](https://www.youtube.com/watch?v=Z1RJmh_OqeA)
+3. Knowledge of Dev stuff in my head...impossible to trace origins. 
