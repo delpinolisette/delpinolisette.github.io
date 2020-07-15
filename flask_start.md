@@ -79,7 +79,8 @@ if __name__== "__main__":
 </html>
 ```
 
-4. Now navigate to ... ... TBC
+3. Now navigate back to ``index.html`` and clear it so that you can inherit from ``base.html``. 
+4. 
 
 ### Step ??: HTTP Requests (TODO)
 1. to use HTTP requests, first learn the general structure of one....TBC
@@ -98,4 +99,4 @@ if __name__== "__main__":
 1. [Forms](https://www.youtube.com/watch?v=-O9NMdvWmE8)
 2. [In-depth Forms](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms)
 2. [Flask](https://www.youtube.com/watch?v=Z1RJmh_OqeA)
-3. Knowledge of Dev stuff in my head...impossible to trace origins. 
+3. My brain
