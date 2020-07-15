@@ -11,14 +11,14 @@ Also it was writtein in 2010 by Armin Ronacher (at a very young age!).
 
 Steps: as of 2020-07-08 16:13:
 
-#### Step 1: Setting Up Virtualenv and Installing Packages: 
+#### **Step 1: Setting Up Virtualenv and Installing Packages:**
 1. make sure Python 3+ installed with ``python -V`` 
 2. install pip. with pip, ``pip3 install virtualenv``, so that your packages are installed locally rather than globally. This is better for portability and collaboration.
 3. make and environment with ``virtualenv env`` but name the env whatever you want.
 4. select source with ``env\Scripts\activate``, make sure you are running Powershell with admin priviliges! You should be inside ``env`` now. 
 5. ``pip3 install flask flask-sqlalchemy``
 
-#### Step 2: Writing Your Application : 
+#### **Step 2: Writing Your Application :** 
 1. Make a .py file, ``MyApp.py``
 2. Inside ``MyApp.py``: 
 3. Import Flask
@@ -49,14 +49,14 @@ if __name__== "__main__":
 10. Navigate to ``localhost:5000`` to see your app. 
 11. Congratulations! You're up and running !
 
-### Step 3: Customizing your app: 
+### **Step 3: Customizing your app:**
 
 1. It's a good idea to use templates and html inheritance - Don't Repeat Yourself. Make a ``templates`` folder, and a ``static`` folder. 
     * Template will live in the former and css/static content will live in the latter. 
 2. import ``render_template`` in ``MyApp.py``
 3. Once imported, you can go into the ``index()`` function and call ``render_template('index.html')`` from your templates folder. After running your app, the homepage shold be updated. Now you know how to inject a template!
 
-### Step 3b: HTML Inheritance :
+### **Step 3b: HTML Inheritance :**
 1. Let's make a template that is inherited by any other pages in the site we wish:
     * Go to ``templates`` folder and make a ``base.html`` file. 
     * Write boilerplate html into your ``base.html``. Good source for this is: [html shell](http://htmlshell.com/)
@@ -66,7 +66,7 @@ if __name__== "__main__":
     * Between these, this will be where content is inserted. 
 2. Your ``base.html`` should now resemble this:
 
-``` python
+``` html
 <!DOCTYPE html>
 <html>
   <head>
@@ -80,12 +80,27 @@ if __name__== "__main__":
 ```
 
 3. Now navigate back to ``index.html`` and clear it so that you can inherit from ``base.html``. 
-4. 
+4.  Extend base by writing ``{% extends `base.html` %}`` (Don't forget single quotes.)
+5.  Next, inject your styling into base by writing ``{% block head %} <p> your content here</p> {% endblock %}`` and similarly, ``{% block body %} <p> your content here</p> {% endblock %}``
+6.  Now your ``index.html`` template should be: 
 
-### Step ??: HTTP Requests (TODO)
+``` html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    {% block bpdy %}{% endblock %}
+  </body>
+</html>
+```
+
+### **Step ??: HTTP Requests** (TODO)
 1. to use HTTP requests, first learn the general structure of one....TBC
 
-### Step ??: Forms (TODO)
+### **Step ??: Forms (TODO)**
 1. To have forms on your web app, install Flask-WTF for forms. 
 2. in your ``env``, install by ``pip install flask-wtf``
 3. Now you need to store a `SECRET KEY`. :
