@@ -52,13 +52,33 @@ if __name__== "__main__":
 ### Step 3: Customizing your app: 
 
 1. It's a good idea to use templates and html inheritance - Don't Repeat Yourself. Make a ``templates`` folder, and a ``static`` folder. 
+    * Template will live in the former and css/static content will live in the latter. 
 2. import ``render_template`` in ``MyApp.py``
 3. Once imported, you can go into the ``index()`` function and call ``render_template('index.html')`` from your templates folder. After running your app, the homepage shold be updated. Now you know how to inject a template!
 
 ### Step 3b: HTML Inheritance :
-1. Let's make a template that is inherited by any other pages in the site we wish. Go to ``templates`` and make a ``base.html`` file 
-2. Now let's use Jinja2 syntax, full documentation [here](https://jinja.palletsprojects.com/en/2.11.x/), since it's based off Django templating. (Also, it's the template engine for Flask!)
-3. in ``base.html``, write some boilerplate HTML and then before the end of ``</head>``, write ``{block head} {end block}``, and before the end of ``</body>``, write ``{block body} {end block}``. This will be where content is inserted. 
+1. Let's make a template that is inherited by any other pages in the site we wish:
+    * Go to ``templates`` folder and make a ``base.html`` file. 
+    * Write boilerplate html into your ``base.html``. Good source for this is: [html shell](http://htmlshell.com/)
+    * Now let's use Jinja2 syntax, full documentation [here](https://jinja.palletsprojects.com/en/2.11.x/), since it's based off Django templating. (Also, it's the template engine for Flask!)
+    * insert ``{% block head %}{% endblock %}`` before end of head tag.
+    * insert ``{% block body %}{% endblock %}`` before end of body tag.
+    * Between these, this will be where content is inserted. 
+2. Your ``base.html`` should now resemble this:
+
+``` python
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    {% block bpdy %}{% endblock %}
+  </body>
+</html>
+```
+
 4. Now navigate to ... ... TBC
 
 ### Step ??: HTTP Requests (TODO)
@@ -69,7 +89,7 @@ if __name__== "__main__":
 2. in your ``env``, install by ``pip install flask-wtf``
 3. Now you need to store a `SECRET KEY`. :
     * It's good practice to have a separate configuration page for all your variabled, but since this is presumably your first Flask app, go ahead and write it in ``MyApp.py`` for simplicity. 
-    * Under 
+    * Under ``MyApp = Flask(__name__)``, write ````
 
 
 
