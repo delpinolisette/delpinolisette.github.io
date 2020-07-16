@@ -86,19 +86,14 @@ if __name__== "__main__":
 
 ``` html
 {% extends `base.html`%}
-
 {% block head %}
-
 <h1>This is my head!</h1>
-
 {% endblock %}
-
 {% block body %}
-
 <p>And this is my body...</p>
-
 {% endblock %}
 ```
+
 &. Run your server and make sure the changes took effect. 
 
 ### **Step 4: Static Content and CSS :**
@@ -116,7 +111,7 @@ if __name__== "__main__":
 3. Now you need to store a `SECRET KEY`. :
     * It's good practice to have a separate configuration page for all your variabled, but since this is presumably your first Flask app, go ahead and write it in ``MyApp.py`` for simplicity. 
     * Under ``MyApp = Flask(__name__)``, write 
-4. latest. 
+4. 
 
 
 ### Sources : 
