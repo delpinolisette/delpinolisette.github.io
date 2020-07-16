@@ -99,6 +99,13 @@ if __name__== "__main__":
 
 {% endblock %}
 ```
+&. Run your server and make sure the changes took effect. 
+
+### **Step 4: Static Content and CSS :**
+1. To use Custom CSS, in the `static` folder, make a `css` subfolder and a `main.css` file. Write your css here. 
+2. To link this stylesheet with your web app, go to `base.html` and :
+    * in `<head></head>` before `{% block head.....}` syntax, insert `<link rel = "stylesheet" href="">`
+    * We can't exactly hardcode a path to the stylesheet, use `url_for` function by :
 
 ### **Step ??: HTTP Requests** (TODO)
 1. to use HTTP requests, first learn the general structure of one....TBC
