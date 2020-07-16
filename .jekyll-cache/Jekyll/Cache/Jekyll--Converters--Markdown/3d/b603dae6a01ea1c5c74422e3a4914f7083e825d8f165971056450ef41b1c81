@@ -1,0 +1,179 @@
+I"R<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h3 id="preliminaries">Preliminaries:</h3>
+<h4 id="ring-of-integers-mod-m"><strong>Ring of Integers Mod m</strong></h4>
+<ul>
+  <li>:=   \(\mathbb{Z}/m\mathbb{Z}\)={\(0,1,2,......,m-1\)}
+    <ul>
+      <li>Notice \(\mathbb{Z}/m\mathbb{Z}\) is the quotient ring of \(\mathbb{Z}\) by the <em>principal ideal</em> \(/m\mathbb{Z}\)</li>
+      <li>then \(0,1,2,......,m-1\) are <em>coset representatives</em> for the congruence classes that make up the elements of \(\mathbb{Z}/m\mathbb{Z}\)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="set-of-all-units"><strong>Set of all units</strong></h4>
+<ul>
+  <li>numbers that have inverses modulo m (\(a\) has inverse mod \(m\) iff gcd(a,m)=1) are units.
+    <ul>
+      <li>EXERCISE: Prove that the inverse of a mod m exists iff gcd(a,m) = 1</li>
+      <li>(a colloquial way to think about \(\mathbb{Z}/m\mathbb{Z}^{*}\) is the set of integers mod m without 0- since it can only include units)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="primitive-root-theorem"><strong>Primitive Root Theorem</strong></h4>
+<ul>
+  <li>Let p be prime.</li>
+  <li>Then there is an element \(g \in \mathbb{F}_{p}^{*}\) - multiplicative group
+…(to be continued)</li>
+</ul>
+
+<hr />
+
+<h3 id="section-22-public-key-cryptosystems">Section 2.2 Public Key Cryptosystems:</h3>
+
+<p>Diffie Hellman introduces public key cryptosystems and therefore:</p>
+<ul>
+  <li>one-way function:
+    <ul>
+      <li>an invertible function that is easy to compute but whose inverse is difficult to compute</li>
+      <li>meaning of “difficult to compute”: if any algorithm tries to compute the inverse in a reasonable amount of time, it will fail - (the age of the universe is an example of an unreasonable time).</li>
+    </ul>
+  </li>
+  <li>trapdoor information
+    <ul>
+      <li>a peice of trapdoor info is auxiliary info that lets you compute the inverse easily (Public key cryptsystems are built using one way functions that have a trapdoor)</li>
+    </ul>
+  </li>
+  <li>Public key cryptosystem = asymmetric cryptosystem
+    <ul>
+      <li>consists of:</li>
+      <li>a private key \(k_{priv}\)
+        <ul>
+          <li>sometimes called “trapdoor information”, without it very hard to compute inverse to \(e_{k_{pub}}\)</li>
+        </ul>
+      </li>
+      <li>a public key \(k_{pub}\)
+        <ul>
+          <li>often created by applying a key creation algorithm to \(k_{priv}\)</li>
+        </ul>
+      </li>
+      <li>for every pair (\(k_{priv}, k_{pub}\)) there exists a
+        <ul>
+          <li>\(e_{k_{pub}}\): encryption algorithm
+            <ul>
+              <li>is public knowledge and easy to compute</li>
+            </ul>
+          </li>
+          <li>\(d_{k_{priv}}\): decryption algorithm
+            <ul>
+              <li>easily computabe by someone who has private key $k_{priv}$</li>
+              <li>very difficult to compute for someone who only knows public key (that’s the point!)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>actually very hard to prove whether true one way functions exist - we rely on the assumption that these problems are difficult (see P vs. NP unsolved problem)</li>
+</ul>
+
+<hr />
+<h4 id="the-discrete-logarithm-problem"><strong>The Discrete Logarithm Problem:</strong></h4>
+<ul>
+  <li>first construction is based on the DLP (Discrete Logarithm Problem) in \(\mathbb{F}_{p}\)
+    <ul>
+      <li>(the finite field with p elements, where p is prime!)</li>
+    </ul>
+  </li>
+  <li>recall that the elements of \(\mathbb{F}_{p}^{*}\) = \(\{ 1,g,g^{2},…,g^{p-2} \}\)
+    <ul>
+      <li>because by FLT \(g^{p-1} = 1\)</li>
+      <li>\(g\) is primitive root (g is a primitive root mod n if it is a generator for the same multiplicative group).</li>
+    </ul>
+  </li>
+  <li><strong>Discrete Logarithm Problem</strong> (def):
+    <ul>
+      <li>g is a primitive root for \(\mathbb{F}_{p}\),</li>
+      <li>\(h\) is nonzero element of \(\mathbb{F}\)</li>
+      <li>DLP says find an \(x\) s.t. \(g^{x} \equiv h (mod p)\)</li>
+      <li>\(x\) = “the discrete log of h to the base g” = \(log_{g}h\)</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h3 id="quantifying-the-hardness-of-discrete-logarithm-problem">Quantifying the “Hardness” of Discrete Logarithm Problem</h3>
+
+<ul>
+  <li>
+    <p>\(Log_{a}b = x\) &lt;=&gt; \(a^{x}=b\)</p>
+  </li>
+  <li>What is D.L.P?
+    <ul>
+      <li>Given a group \(G\) and elements \(g,h \in G\),</li>
+      <li>find an exponent \(x\) such that</li>
+      <li>\(g^{x}=h\) , or (\(log_{g}h=x\))</li>
+    </ul>
+  </li>
+  <li>A way to ‘measure hardness’: how many operations do we need to solve this with the fastes method known?? Different methods:
+    <ul>
+      <li>Trial and error : \(g^{x}=h\), try x = 1, 2, 3,…. until we get \(h\)
+        <ul>
+          <li>def: <strong>order of group</strong>
+            <ul>
+              <li>smallest possible element n such that \(g^{n}=e\), where e is the identity element in the group.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Order_(group_theory)">more info on order</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>if \(g\) has order \(n\) (so we multiply \(g\) by itself \(n\) times to get \(e\))</li>
+      <li>then we are guaranteed using trial and error to find the solution in at most \(n\) steps/operations
+        <ul>
+          <li>if n is very large (ex: \(n \geq 2^{80}\)) - unfeasible</li>
+        </ul>
+      </li>
+      <li>Fast exponentiation method: <a href="https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/fast-modular-exponentiation">method</a></li>
+      <li></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h3 id="the-chinese-remainder-theorem">The Chinese Remainder Theorem:</h3>
+<ul>
+  <li>C.R.T describes solutions to system of linear congruences.</li>
+  <li>ex: \(x \equiv a\)(mod m) and \(x \equiv b\)(mod n) with \(gcd(m,n) = 1\), in this case the solution is unique and mod mn, (why)?</li>
+  <li>ex: solve for integer x.
+    <ul>
+      <li>\(x \equiv 1\)(mod 5) and \(x \equiv 9\)(mod 11)
+        <ul>
+          <li>S1: substitute one congrunce into the other:
+            <ul>
+              <li>since \(x \equiv 1\) (mod 5), then</li>
+              <li>(to be continued) <a href="https://brilliant.org/wiki/chinese-remainder-theorem/">checkitout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h3 id="29-the-pohlig-hellman-algorithm">2.9 The Pohlig-Hellman Algorithm:</h3>
+<ul>
+  <li>recall that though the Chinese Remainder Theorem…
+    <ul>
+      <li>if \(m = m_{1} \cdot m_{2} \cdot …m_{t}\) is the product of <em>pairwise relatively prime</em> integers (ex: 7*6 is relatively prime, their only common divisor is 1).
+        <ul>
+          <li>then solving an equation (mod m)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+:ET

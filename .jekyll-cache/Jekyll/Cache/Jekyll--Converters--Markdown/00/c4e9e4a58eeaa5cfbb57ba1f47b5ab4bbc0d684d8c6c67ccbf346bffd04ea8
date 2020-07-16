@@ -1,0 +1,68 @@
+I"[<p><a href="journal.md">My Journal</a>, <a href="reading.md">My Reading Log</a></p>
+
+<p>Hi! My name is Lisette and I’m a student at the University of Pennsylvania passionate about the intersection of Math and Computation. Some of my hobbies include coffee, space documentaries, and investigating new technologies.</p>
+
+<p><strong>Link to my slides from a recent presentation</strong>: <a href="https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU">Cryptography</a></p>
+
+<h2 id="list-of-all-topics-that-im-learninginterested-in--grouped-by-subjects">List of All Topics that I’m learning/interested in- grouped by subjects:</h2>
+
+<h3 id="1-ruby-on-rails">1. <a href="ruby.md">Ruby on Rails</a></h3>
+
+<h3 id="2-advanced-linear-algebra">2. <a href="line_alg.md">Advanced Linear Algebra</a></h3>
+
+<ul>
+  <li>Vector Spaces: Examples and Proofs</li>
+  <li>Subspaces : Examples and Proofs</li>
+  <li>Linear Combinations and Span</li>
+  <li>Dual Spaces</li>
+  <li>Jordan Canonical Form</li>
+</ul>
+
+<h3 id="3-mathematical-cryptography">3. <a href="mathematical_crypto.md">Mathematical Cryptography</a></h3>
+
+<ul>
+  <li>Prime numbers, unique factorization, finite fields</li>
+  <li>Discrete Log Problem</li>
+  <li>Diffie-Hellman key exhcange</li>
+  <li>Theory of Groups</li>
+  <li>Chinese Remainder Theorem and its proof</li>
+  <li>Rings, quotients, polynomials, and finite fields</li>
+  <li>Euler’s formula</li>
+  <li>Pseudoprimes</li>
+  <li>RSA cryptosystem</li>
+  <li>Primality Testing !!! So cool!</li>
+</ul>
+
+<h3 id="4-real-analysis">4. <a href="analysis.md">Real Analysis</a></h3>
+
+<h3 id="5-graph-theory">5. Graph Theory</h3>
+
+<ul>
+  <li>Algorithms and Graphs</li>
+  <li>Krusal’s Algorithm implementation (in Python…) (in progress)</li>
+  <li>Outline in progress</li>
+</ul>
+
+<h3 id="6-numericalscientific-computing-and-analysis">6. Numerical/Scientific Computing and Analysis</h3>
+<ul>
+  <li>The Magic of Floating Point and the IEEE</li>
+  <li>Why is NumPy any better than standard numerical packages? (hint: it runs like C if you vectorize!)</li>
+  <li>The Magic of Python</li>
+</ul>
+
+<h3 id="7-partial-differential-equations-">7. <a href="PDE.md">Partial Differential Equations</a> :</h3>
+<ul>
+  <li>Derivation of the Heat Equation</li>
+  <li>Seperation of Variables Technique</li>
+  <li>The Fourier Series (NICE!)</li>
+</ul>
+
+<h3 id="8-programming-tutorials-i-wrote-">8. Programming Tutorials I wrote :</h3>
+<ul>
+  <li>Get a web app running ASAP with Flask and Python <a href="flask_start.md">here</a></li>
+  <li>Using Google Translation API to make a Python Web App that translates to another language. <a href="flask_py_translate_api.md">here</a></li>
+  <li>x^n is even if n is even, and odd if n is odd. Here’s a nice gif I made on Desmos: 
+<img src="/gif/xn_gif.gif" alt="example function" /></li>
+</ul>
+
+:ET

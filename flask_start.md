@@ -2,6 +2,7 @@
 layout: default
 title: Python and Flash Quick Start
 ---
+{% raw %}
 ### Getting a Python Web Application up and Runing with Flask
 
 These are instructions for getting a Python web app up and running quickly with Flask. **On Windows!!** On MacOS/ Linux, commands differ slightly but can be easily found online. 
@@ -42,7 +43,6 @@ def index():
 
 if __name__== "__main__":
   MyApp.run(debug = True)
-
 ```
 
 9. make sure you're still in ``(env)`` and run your code with ``py MyApp.py``. 
@@ -66,7 +66,7 @@ if __name__== "__main__":
     * Between these, this will be where content is inserted. 
 2. Your ``base.html`` should now resemble this:
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -84,7 +84,7 @@ if __name__== "__main__":
 5.  Next, inject your styling into base by writing ``{% block head %} <p> your content here</p> {% endblock %}`` and similarly, ``{% block body %} <p> your content here</p> {% endblock %}``
 6.  Now your ``index.html`` template should be: 
 
-``` html
+```html
 {% extends `base.html`%}
 {% block head %}
 <h1>This is my head!</h1>
@@ -119,3 +119,7 @@ if __name__== "__main__":
 2. [In-depth Forms](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms)
 2. [Flask](https://www.youtube.com/watch?v=Z1RJmh_OqeA)
 3. My brain
+
+
+{% endraw %}
+
