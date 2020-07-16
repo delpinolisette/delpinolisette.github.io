@@ -66,7 +66,18 @@ if __name__== "__main__":
     * Between these, this will be where content is inserted. 
 2. Your ``base.html`` should now resemble this:
 
-
+``` html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    {% block body %}{% endblock %}
+  </body>
+</html>
+```
 
 3. Now navigate back to ``index.html`` and clear it so that you can inherit from ``base.html``. 
 4.  Extend base by writing ``{% extends `base.html` %}`` (Don't forget single quotes.)
