@@ -56,7 +56,7 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 * Get a web app running ASAP with Flask and Python [here](flask_start.md)
 * Using Google Translation API to make a Python Web App that translates to another language. [here](flask_py_translate_api.md)
 * x^n is even if n is even, and odd if n is odd. Here's a nice gif I made on Desmos: 
-* ![example function](/gif/xn_gif.gif)
+![example function](/gif/xn_gif.gif)
 
 
 
