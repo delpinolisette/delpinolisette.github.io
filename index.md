@@ -3,10 +3,7 @@ layout: default
 ---
 Hi! My name is Lisette and I'm a student at the University of Pennsylvania passionate about the intersection of Math and Computation. Some of my hobbies include coffee, space documentaries, and investigating new technologies.
 
-**Link to my slides from a recent presentation**: [Cryptography](https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU)
-
-
-## List of All Topics that I'm learning/interested in- grouped by subjects:
+### Notes grouped by subject (Click on any of them to see more!)
 
 ### 1. [Ruby on Rails](ruby.md)
 
@@ -30,6 +27,8 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 
 cool - x^n is even if n is even, and odd if n is odd. Here's a nice gif I made on Desmos:
 ![example function](/gif/xn_gif.gif)
+
+**Link to my slides from a recent presentation**: [Cryptography](https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU)
 
 [My Journal](journal.md), [My Reading Log](reading.md)
 
