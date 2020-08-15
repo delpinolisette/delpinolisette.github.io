@@ -12,14 +12,14 @@ Also it was writtein in 2010 by Armin Ronacher (at a very young age!).
 
 Steps: as of 2020-07-08 16:13:
 
-#### **Step 1: Setting Up Virtualenv and Installing Packages:**
+### **Step 1: Setting Up Virtualenv and Installing Packages:**
 1. make sure Python 3+ installed with ``python -V`` 
 2. install pip. with pip, ``pip3 install virtualenv``, so that your packages are installed locally rather than globally. This is better for portability and collaboration.
 3. make and environment with ``virtualenv env`` but name the env whatever you want.
 4. select source with ``env\Scripts\activate``, make sure you are running Powershell with admin priviliges! You should be inside ``env`` now. 
 5. ``pip3 install flask flask-sqlalchemy``
 
-#### **Step 2: Writing Your Application :** 
+### **Step 2: Writing Your Application :** 
 1. Make a .py file, ``MyApp.py``
 2. Inside ``MyApp.py``: 
 3. Import Flask
@@ -100,7 +100,7 @@ if __name__== "__main__":
 1. To use Custom CSS, in the `static` folder, make a `css` subfolder and a `main.css` file. Write your css here. 
 2. To link this stylesheet with your web app, go to `base.html` and :
     * in `<head></head>` before `{% block head.....}` syntax, insert `<link rel = "stylesheet" href="">`
-    * We can't exactly hardcode a path to the stylesheet, use `url_for` function by :
+    * We can't exactly hardcode a path to the stylesheet, use `url_for` function by : 
 
 ### **Step ??: HTTP Requests** (TODO)
 1. to use HTTP requests, first learn the general structure of one....TBC
@@ -115,10 +115,11 @@ if __name__== "__main__":
 
 
 ### Sources : 
-1. [Forms](https://www.youtube.com/watch?v=-O9NMdvWmE8)
-2. [In-depth Forms](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms)
-2. [Flask](https://www.youtube.com/watch?v=Z1RJmh_OqeA)
-3. My brain
+1. [In-depth Forms](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms)
+2. [Forms](https://www.youtube.com/watch?v=-O9NMdvWmE8)
+3. [Form data](https://www.youtube.com/watch?v=f8qvLBvrIFI)
+4. [Flask](https://www.youtube.com/watch?v=Z1RJmh_OqeA)
+5. My brain
 
 
 {% endraw %}
