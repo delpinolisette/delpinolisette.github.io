@@ -3,12 +3,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>GoogleAPI Translate, Python, and Flask Tutprial</title>
 <meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="GoogleAPI Translate, Python, and Flask Tutprial" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/reading.html" />
-<meta property="og:url" content="http://localhost:4000/reading.html" />
+<link rel="canonical" href="http://localhost:4000/myblog/flask_py_translate_api.html" />
+<meta property="og:url" content="http://localhost:4000/myblog/flask_py_translate_api.html" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"http://localhost:4000/reading.html","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/myblog/flask_py_translate_api.html","headline":"GoogleAPI Translate, Python, and Flask Tutprial","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
 <body><header class="site-header" role="banner">
@@ -28,36 +30,24 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <h2 id="what-am-i-reading">What am I reading?</h2>
+        <p>Here, I used the GoogleAPI translate function and Flask to make a Python web-app that translates from one language to another. I tried to make it as featureless and simple as possible.</p>
 
+<h3 id="step-0-understand-the-general-process-behind-http-requests">Step 0: Understand the general process behind HTTP requests</h3>
 <ol>
-  <li>Security and Cryptography:
-    <ul>
-      <li><a href="https://arxiv.org/pdf/1608.04644.pdf">Towards Evaluating the Robustnessof Neural Networks</a>
-        <ul>
-          <li>fascinating and highly-cited paper on the applications of Neural Networks to security applications. Defensive distillation increases security of nerual network.</li>
-        </ul>
-      </li>
-      <li><a href="https://eprint.iacr.org/2016/644.pdf">How to Backdoor Diffie-Hellman</a></li>
-      <li><a href="https://arxiv.org/pdf/2005.10787.pdf">Authentication and Key Management Automation in Decentralized Secure Email and Messaging viaLow-Entropy Secret</a></li>
-      <li><a href="https://arxiv.org/pdf/2005.10634.pdf">A Note on Cryptographic Algorithms for Private DataAnalysis in Contact Tracing Applications</a></li>
-      <li><a href="https://eprint.iacr.org/2016/1177.pdf">Efficient Slide Attacks</a></li>
-    </ul>
-  </li>
-  <li>Linear Algebra:</li>
-  <li>Number Theory:</li>
-  <li>Analysis:</li>
-  <li>Graph Theory:</li>
-  <li>Security and Cryptography:</li>
+  <li>Import a library that lets you make requests. In Python, do <code class="language-plaintext highlighter-rouge">import requests</code> after <code class="language-plaintext highlighter-rouge">pip install requests</code>.</li>
+  <li>save the URL in a variable, make a parameters dictionary variable.</li>
+  <li>send the request and specify the method. In Python, define <code class="language-plaintext highlighter-rouge">r = requests.get(url = URL_VAR, params = PARAMS)</code></li>
+  <li>parse the data as JSON. In Python, you define a variable <code class="language-plaintext highlighter-rouge">data = r.json()</code></li>
 </ol>
 
-<h2 id="what-problems-am-i-working-on">What problems am I working on?</h2>
+<h3 id="step-1-account-and-api-key-creation">Step 1: Account and API Key creation</h3>
 
 <ol>
-  <li>Numerical Analysis: Burns book</li>
-  <li>Number Theory</li>
-  <li>Graph Theory: “Graph Theory” by Ronald Gould</li>
-  <li>Real Analysis: “Elemetary Classical Analysis” by Marsden</li>
+  <li>If you don’t have a Google service account, make one!</li>
+  <li>Navigate to your homepage at remote.cloud.google.com</li>
+  <li>grab your API key and keep it in a safe place! Do this by going to APIS and Services tab, and navigating to Credentials. Select the JSON version to make life easier for yourself. Save the JSON key in your project folder.</li>
+  <li>After creating a virtual environment in Python in the shared project folder <a href="flask_start.md">tutorial here</a>, install the library.</li>
+  <li>You install the Google API Translate library with <code class="language-plaintext highlighter-rouge">pip install google-cloud-translate</code></li>
 </ol>
 
       </div>

@@ -25,7 +25,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/flask_py_translate_api.html">GoogleAPI Translate, Python, and Flask Tutprial</a><a class="page-link" href="/flask_start.html">Python and Flash Quick Start</a></div>
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/myblog/flask_py_translate_api.html">GoogleAPI Translate, Python, and Flask Tutprial</a><a class="page-link" href="/flask_py_translate_api.html">GoogleAPI Translate, Python, and Flask Tutprial</a><a class="page-link" href="/myblog/flask_start.html">Python and Flash Quick Start</a><a class="page-link" href="/flask_start.html">Python and Flash Quick Start</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -40,7 +40,7 @@ Also it was writtein in 2010 by Armin Ronacher (at a very young age!).</p>
 
 <p>Steps: as of 2020-07-08 16:13:</p>
 
-<h4 id="step-1-setting-up-virtualenv-and-installing-packages"><strong>Step 1: Setting Up Virtualenv and Installing Packages:</strong></h4>
+<h3 id="step-1-setting-up-virtualenv-and-installing-packages"><strong>Step 1: Setting Up Virtualenv and Installing Packages:</strong></h3>
 <ol>
   <li>make sure Python 3+ installed with <code class="language-plaintext highlighter-rouge">python -V</code></li>
   <li>install pip. with pip, <code class="language-plaintext highlighter-rouge">pip3 install virtualenv</code>, so that your packages are installed locally rather than globally. This is better for portability and collaboration.</li>
@@ -49,7 +49,7 @@ Also it was writtein in 2010 by Armin Ronacher (at a very young age!).</p>
   <li><code class="language-plaintext highlighter-rouge">pip3 install flask flask-sqlalchemy</code></li>
 </ol>
 
-<h4 id="step-2-writing-your-application-"><strong>Step 2: Writing Your Application :</strong></h4>
+<h3 id="step-2-writing-your-application-"><strong>Step 2: Writing Your Application :</strong></h3>
 <ol>
   <li>Make a .py file, <code class="language-plaintext highlighter-rouge">MyApp.py</code></li>
   <li>Inside <code class="language-plaintext highlighter-rouge">MyApp.py</code>:</li>
@@ -68,9 +68,9 @@ Also it was writtein in 2010 by Armin Ronacher (at a very young age!).</p>
 <span class="o">@</span><span class="n">MyApp</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/'</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-  <span class="k">return</span> <span class="s">"Hello World"</span> 
-  <span class="c1"># remember to be consistent with your spacing. 
-</span>  <span class="c1"># I chose 2 spaces. 
+  <span class="k">return</span> <span class="s">"Hello World"</span>
+  <span class="c1"># remember to be consistent with your spacing.
+</span>  <span class="c1"># I chose 2 spaces.
 </span>
 <span class="k">if</span> <span class="n">__name__</span><span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
   <span class="n">MyApp</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
@@ -162,16 +162,17 @@ Also it was writtein in 2010 by Armin Ronacher (at a very young age!).</p>
   <li>Now you need to store a <code class="language-plaintext highlighter-rouge">SECRET KEY</code>. :
     <ul>
       <li>It’s good practice to have a separate configuration page for all your variabled, but since this is presumably your first Flask app, go ahead and write it in <code class="language-plaintext highlighter-rouge">MyApp.py</code> for simplicity.</li>
-      <li>Under <code class="language-plaintext highlighter-rouge">MyApp = Flask(__name__)</code>, write</li>
+      <li>Under <code class="language-plaintext highlighter-rouge">MyApp = Flask(__name__)</code>, write
+4.</li>
     </ul>
   </li>
-  <li></li>
 </ol>
 
 <h3 id="sources-">Sources :</h3>
 <ol>
-  <li><a href="https://www.youtube.com/watch?v=-O9NMdvWmE8">Forms</a></li>
   <li><a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms">In-depth Forms</a></li>
+  <li><a href="https://www.youtube.com/watch?v=-O9NMdvWmE8">Forms</a></li>
+  <li><a href="https://www.youtube.com/watch?v=f8qvLBvrIFI">Form data</a></li>
   <li><a href="https://www.youtube.com/watch?v=Z1RJmh_OqeA">Flask</a></li>
   <li>My brain</li>
 </ol>
