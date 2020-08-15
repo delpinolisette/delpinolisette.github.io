@@ -5,7 +5,7 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 
 ### Notes grouped by subject (Click on any of them to see more!)
 
-### //[Ruby on Rails](ruby.md)
+### // [Ruby on Rails](ruby.md)
 
 ### // Programming Tutorials by me :
 * [Get a web app running ASAP with Flask and Python](flask_start.md)
