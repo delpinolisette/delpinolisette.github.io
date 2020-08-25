@@ -139,8 +139,39 @@ if __name__== "__main__":
     password = PasswordField('password')
     submit = SubmitField('Submit')
     ```
-5. Now that we've created a model class for the form, we need to render the HTML / view for it. 
-  * 
+5. Now that we've created a model class for the form, we need to render the HTML / view for it. Let's stick with our habit of seperating concerns and using HTML inheritance. 
+  * First, make a separate html file to handle the form. Call it, with an appropriate, corresponding, name!!, `myform.html`
+  * Next, inherit from the base html (or whatever you want to inherit from), and craft your form in your preffered way, using Jinja2 to render the strings with `{{...}}`by:
+  ```html
+  {% extends 'base.html' %}
+
+  {% block head %}
+
+  {% endblock %}
+
+  {% block body %}
+
+  <form action="" method="post">
+      <p>
+      {{form.username.label}}<br>
+      {{form.username(size=30)}}
+      </p>
+      <p>
+      {{form.password.label}}<br>
+      {{form.password(size=30)}}
+      </p>
+      <p>
+      {{form.submit()}}
+      </p>
+  </form>
+
+  {% endblock %}
+  ```
+6. Now that you've created the view, you actually want to render the template from your "controller". Head back to `MyApp.py`. 
+  * Here, create a route that takes you to your form. Use an appropriate name. ex:
+  ``` python
+  dfjl
+  ```
 
 
 ### **DATABASES!!!!!!! YESSSS!!!!**
