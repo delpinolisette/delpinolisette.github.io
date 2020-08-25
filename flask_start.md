@@ -3,7 +3,7 @@ layout: default
 title: Python and Flash Quick Start
 ---
 {% raw %}
-### Getting a Python Web Application up and Running with Flask
+### Full Stack Python Web Applications with Flask and SQLAlchemy by Lisette del Pino
 
 These are instructions for getting a Python web app up and running quickly with Flask. **On Windows!!** On MacOS/ Linux, commands differ slightly but can be easily found online.
 
@@ -98,21 +98,52 @@ if __name__== "__main__":
 &. Run your server and make sure the changes took effect.
 
 ### **Step 4: Static Content and CSS :**
-1. To use Custom CSS, in the `static` folder, make a `css` subfolder and a `main.css` file. Write your css here.
+1. To use Custom CSS, in the `static` folder, make a `css` subfolder and a `main.css` file inside the subfolder. Write your CSS here.(go wild!)
 2. To link this stylesheet with your web app, go to `base.html` and :
-    * in `<head></head>` before `{% block head.....}` syntax, insert `<link rel = "stylesheet" href="">`
+    * in `<head></head>` before `{% block head.....}` syntax, insert `<link rel = "stylesheet" href="">` and use `url_for` for the href argument. So: 
     * We can't exactly hardcode a path to the stylesheet, use `url_for` function by :
+      - importing `url_for` from Flask with `from flask import url_for`
+      - since we're looking for the `static` endpoint, we will use `url_for('static', filename = 'path for main css inside static')`, so we write ...
+    * `<link rel = "stylesheet" href="url_for('static', filename = 'css/main.css')">`
+3. For JavaScript files, it's the same protocol. 
 
-### **Step ??: HTTP Requests** (TODO)
-1. to use HTTP requests, first learn the general structure of one....TBC
+### **Step 5: HTTP Requests
+1. to use HTTP requests, first learn the general structure of one!
+  - skim [this](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+  - you will probably focus on using `GET`, `POST`, `PUT`, `DELETE`
+2. import requests
 
-### **Step ??: Forms (TODO)**
+
+### **Step 6: Forms**
 1. To have forms on your web app, install Flask-WTF for forms.
-2. in your ``env``, install by ``pip install flask-wtf``
+  * in order to do this, when inside your ``env``, install by ``pip3 install flask-wtf``
+  * _optional_ :if you have the time, read the source code, especially `form.py` - enlightening to see how the FlaskForm class was written! This step is completely optional. 
+  * _optional_: if you have the time, read the source code for `wtforms` as well, especially `\fields\core.py` for a look at how the fields `StringField, PasswordField`, etc, were created! Completely optional step, just for the nerds. 
 3. Now you need to store a `SECRET KEY`. :
-    * It's good practice to have a separate configuration page for all your variabled, but since this is presumably your first Flask app, go ahead and write it in ``MyApp.py`` for simplicity.
-    * Under ``MyApp = Flask(__name__)``, write
-4.
+    * It's good practice to have a separate configuration page for all your variables, but since this is presumably your first Flask app, and is probably not going into production, go ahead and write it in ``MyApp.py`` for simplicity. 
+    * Under ``MyApp = Flask(__name__)``, write: `app.config['SECRET KEY'] = 'veryGoodSecretHashOfYourChoice'`. If you can, generate it randomly!
+4. Form Creation: 
+  * You need a class representing the model for your form, so I reccomend creating a `forms.py` file/module.
+  * Remember my class and variable names are merely educational, do not name your variables/classes the same way - use descriptive, useful names. 
+  * In `forms.py`, :
+    - import flask-wtf and wtform fields with: 
+    ``` python
+    from flask_wtf import FlaskForm
+    from wtforms import StringField, PasswordField, SubmitField # put any field types you need here!
+    ```
+    - create a class form model by :
+    ``` python
+    class GoodNameForForm(FlaskForm):
+    # specify fields you need here! make sure you've imported them. 
+    username = StringField('username')
+    password = PasswordField('password')
+    submit = SubmitField('Submit')
+    ```
+5. Now that we've created a model class for the form, we need to render the HTML / view for it. 
+  * 
+
+
+### **DATABASES!!!!!!! YESSSS!!!!**
 
 
 ### Sources :
@@ -120,6 +151,7 @@ if __name__== "__main__":
 2. [Forms](https://www.youtube.com/watch?v=-O9NMdvWmE8)
 3. [Form data](https://www.youtube.com/watch?v=f8qvLBvrIFI)
 4. [Flask](https://www.youtube.com/watch?v=Z1RJmh_OqeA)
+5. [How does url_for even work?](https://stackoverflow.com/questions/25160134/how-does-flask-url-for-work)
 5. My brain
 
 
