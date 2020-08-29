@@ -142,6 +142,7 @@ if __name__== "__main__":
 5. Now that we've created a model class for the form, we need to render the HTML / view for it. Let's stick with our habit of separating concerns and using HTML inheritance.
   * First, make a separate HTML file to handle the form. Call it, with an appropriate, corresponding, name!!, `myform.html`
   * Next, inherit from the base html (or whatever you want to inherit from), and craft your form in your preferred way, using Jinja2 to render the strings with `{{...}}`by:
+
   ```html
   {% extends 'base.html' %}
 
@@ -192,6 +193,5 @@ if __name__== "__main__":
 5. [How does url_for even work?](https://stackoverflow.com/questions/25160134/how-does-flask-url-for-work)
 5. My brain
 
-https://www.youtube.com/watch?v=-O9NMdvWmE8&list=RDCMUCDD0bZ4NS6AayT-VLMmILHg&index=2 at 5:22
 {% endraw %}
 
