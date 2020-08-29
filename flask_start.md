@@ -100,12 +100,12 @@ if __name__== "__main__":
 ### **Step 4: Static Content and CSS :**
 1. To use Custom CSS, in the `static` folder, make a `css` subfolder and a `main.css` file inside the subfolder. Write your CSS here.(go wild!)
 2. To link this stylesheet with your web app, go to `base.html` and :
-    * in `<head></head>` before `{% block head.....}` syntax, insert `<link rel = "stylesheet" href="">` and use `url_for` for the href argument. So: 
+    * in `<head></head>` before `{% block head.....}` syntax, insert `<link rel = "stylesheet" href="">` and use `url_for` for the href argument. So:
     * We can't exactly hardcode a path to the stylesheet, use `url_for` function by :
       - importing `url_for` from Flask with `from flask import url_for`
       - since we're looking for the `static` endpoint, we will use `url_for('static', filename = 'path for main css inside static')`, so we write ...
     * `<link rel = "stylesheet" href="url_for('static', filename = 'css/main.css')">`
-3. For JavaScript files, it's the same protocol. 
+3. For JavaScript files, it's the same protocol.
 
 ### **Step 5: HTTP Requests
 1. to use HTTP requests, first learn the general structure of one!
@@ -117,16 +117,16 @@ if __name__== "__main__":
 ### **Step 6: Forms**
 1. To have forms on your web app, install Flask-WTF for forms.
   * in order to do this, when inside your ``env``, install by ``pip3 install flask-wtf``
-  * _optional_ :if you have the time, read the source code, especially `form.py` - enlightening to see how the FlaskForm class was written! This step is completely optional. 
-  * _optional_: if you have the time, read the source code for `wtforms` as well, especially `\fields\core.py` for a look at how the fields `StringField, PasswordField`, etc, were created! Completely optional step, just for the nerds. 
+  * _optional_ :if you have the time, read the source code, especially `form.py` - enlightening to see how the FlaskForm class was written! This step is completely optional.
+  * _optional_: if you have the time, read the source code for `wtforms` as well, especially `\fields\core.py` for a look at how the fields `StringField, PasswordField`, etc, were created! Completely optional step, just for the nerds.
 3. Now you need to store a `SECRET KEY`. :
-    * It's good practice to have a separate configuration page for all your variables, but since this is presumably your first Flask app, and is probably not going into production, go ahead and write it in ``MyApp.py`` for simplicity. 
+    * It's good practice to have a separate configuration page for all your variables, but since this is presumably your first Flask app, and is probably not going into production, go ahead and write it in ``MyApp.py`` for simplicity.
     * Under ``MyApp = Flask(__name__)``, write: `app.config['SECRET KEY'] = 'veryGoodSecretHashOfYourChoice'`. If you can, generate it randomly!
-4. Form Creation: 
-  * You need a class representing the model for your form, so I reccomend creating a `forms.py` file/module.
-  * Remember my class and variable names are merely educational, do not name your variables/classes the same way - use descriptive, useful names. 
+4. Form Creation:
+  * You need a class representing the model for your form, so I recommend creating a `forms.py` file/module.
+  * Remember my class and variable names are merely educational, do not name your variables/classes the same way - use descriptive, useful names.
   * In `forms.py`, :
-    - import flask-wtf and wtform fields with: 
+    - import flask-wtf and wtform fields with:
     ``` python
     from flask_wtf import FlaskForm
     from wtforms import StringField, PasswordField, SubmitField # put any field types you need here!
@@ -134,14 +134,14 @@ if __name__== "__main__":
     - create a class form model by :
     ``` python
     class GoodNameForForm(FlaskForm):
-    # specify fields you need here! make sure you've imported them. 
+    # specify fields you need here! make sure you've imported them.
     username = StringField('username')
     password = PasswordField('password')
     submit = SubmitField('Submit')
     ```
-5. Now that we've created a model class for the form, we need to render the HTML / view for it. Let's stick with our habit of seperating concerns and using HTML inheritance. 
-  * First, make a separate html file to handle the form. Call it, with an appropriate, corresponding, name!!, `myform.html`
-  * Next, inherit from the base html (or whatever you want to inherit from), and craft your form in your preffered way, using Jinja2 to render the strings with `{{...}}`by:
+5. Now that we've created a model class for the form, we need to render the HTML / view for it. Let's stick with our habit of separating concerns and using HTML inheritance.
+  * First, make a separate HTML file to handle the form. Call it, with an appropriate, corresponding, name!!, `myform.html`
+  * Next, inherit from the base html (or whatever you want to inherit from), and craft your form in your preferred way, using Jinja2 to render the strings with `{{...}}`by:
   ```html
   {% extends 'base.html' %}
 
@@ -167,12 +167,19 @@ if __name__== "__main__":
 
   {% endblock %}
   ```
-6. Now that you've created the view, you actually want to render the template from your "controller". Head back to `MyApp.py`. 
-  * Here, create a route that takes you to your form. Use an appropriate name. ex:
+6. Now that you've created the view, you actually want to render the template from your "controller". Head back to `MyApp.py`.
+  * First, import your module so you can use it with `from forms import  `
+  * Here in `MyApp.py`, create a route that takes you to your form. Use an appropriate name. ex:
   ``` python
-  dfjl
+  # creates the new route and defines the function to run
+  @app.route('/register')
+  # creates registration form
+  def register():
+    # creates a form objects using the class we created before!
+    form = GoodNameForForm()
+    # render our form HTML template
+    return render_template('myform.html', form=form)
   ```
-
 
 ### **DATABASES!!!!!!! YESSSS!!!!**
 
