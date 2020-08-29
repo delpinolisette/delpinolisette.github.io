@@ -3,7 +3,15 @@ layout: default
 ---
 Hi! My name is Lisette and I'm a student at the University of Pennsylvania passionate about the intersection of Math and Computation. Some of my hobbies include coffee, space documentaries, and investigating new technologies.
 
-### My Math and Computer Science Notes : 
+## My Programming Tutorials :
+
+#### // [Ruby on Rails](ruby.md)
+
+#### // [Full Stack Web Applications with Flask](flask_start.md)
+
+#### // [Using Google Translation API to make a Python Web App that translates to another language- In Progress!](flask_py_translate_api.md)
+
+## My Math and Computer Science Notes :
 
 #### // [Advanced Linear Algebra](line_alg.md)
 
@@ -16,14 +24,6 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 #### // Numerical/Scientific Computing and Analysis
 
 #### // [Partial Differential Equations](PDE.md) :
-
-## My Programming Tutorials :
-
-#### // [Ruby on Rails](ruby.md)
-
-#### // [Full Stack Web Applications with Flask](flask_start.md)
-
-#### // [Using Google Translation API to make a Python Web App that translates to another language](flask_py_translate_api.md)
 
 ## MISC:
 
