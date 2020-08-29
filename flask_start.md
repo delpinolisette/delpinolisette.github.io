@@ -185,6 +185,6 @@ if __name__== "__main__":
 5. [How does url_for even work?](https://stackoverflow.com/questions/25160134/how-does-flask-url-for-work)
 5. My brain
 
-
+https://www.youtube.com/watch?v=-O9NMdvWmE8&list=RDCMUCDD0bZ4NS6AayT-VLMmILHg&index=2 at 5:22
 {% endraw %}
 

@@ -3,27 +3,29 @@ layout: default
 ---
 Hi! My name is Lisette and I'm a student at the University of Pennsylvania passionate about the intersection of Math and Computation. Some of my hobbies include coffee, space documentaries, and investigating new technologies.
 
-### Notes grouped by subject (Click on any of them to see more!)
+### My Math and Computer Science Notes : 
 
-### // [Ruby on Rails](ruby.md)
+#### // [Advanced Linear Algebra](line_alg.md)
 
-### // Programming Tutorials by me :
-* [Full Stack Web Applications with Flask](flask_start.md)
-* [Using Google Translation API to make a Python Web App that translates to another language](flask_py_translate_api.md)
+#### // [Mathematical Cryptography](mathematical_crypto.md)
 
-### // [Advanced Linear Algebra](line_alg.md)
+#### // [Real Analysis](analysis.md)
 
-### // [Mathematical Cryptography](mathematical_crypto.md)
+#### // Graph Theory
 
-### // [Real Analysis](analysis.md)
+#### // Numerical/Scientific Computing and Analysis
 
-### // Graph Theory
+#### // [Partial Differential Equations](PDE.md) :
 
-### // Numerical/Scientific Computing and Analysis
+## My Programming Tutorials :
 
-### // [Partial Differential Equations](PDE.md) :
+#### // [Ruby on Rails](ruby.md)
 
-### MISC:
+#### // [Full Stack Web Applications with Flask](flask_start.md)
+
+#### // [Using Google Translation API to make a Python Web App that translates to another language](flask_py_translate_api.md)
+
+## MISC:
 
 cool - x^n is even if n is even, and odd if n is odd. Here's a nice gif I made on Desmos:
 ![example function](/gif/xn_gif.gif)
