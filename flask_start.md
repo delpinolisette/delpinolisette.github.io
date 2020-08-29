@@ -119,10 +119,10 @@ if __name__== "__main__":
   * in order to do this, when inside your ``env``, install by ``pip3 install flask-wtf``
   * _optional_ :if you have the time, read the source code, especially `form.py` - enlightening to see how the FlaskForm class was written! This step is completely optional.
   * _optional_: if you have the time, read the source code for `wtforms` as well, especially `\fields\core.py` for a look at how the fields `StringField, PasswordField`, etc, were created! Completely optional step, just for the nerds.
-3. Now you need to store a `SECRET KEY`. :
+2. Now you need to store a `SECRET KEY`. :
     * It's good practice to have a separate configuration page for all your variables, but since this is presumably your first Flask app, and is probably not going into production, go ahead and write it in ``MyApp.py`` for simplicity.
     * Under ``MyApp = Flask(__name__)``, write: `app.config['SECRET KEY'] = 'veryGoodSecretHashOfYourChoice'`. If you can, generate it randomly!
-4. Form Creation:
+3. Form Creation:
   * You need a class representing the model for your form, so I recommend creating a `forms.py` file/module.
   * Remember my class and variable names are merely educational, do not name your variables/classes the same way - use descriptive, useful names.
   * In `forms.py`, :
@@ -139,20 +139,23 @@ if __name__== "__main__":
     password = PasswordField('password')
     submit = SubmitField('Submit')
     ```
-5. Now that we've created a model class for the form, we need to render the HTML / view for it. Let's stick with our habit of separating concerns and using HTML inheritance.
+4. Now that we've created a model class for the form, we need to render the HTML / view for it. Let's stick with our habit of separating concerns and using HTML inheritance.
   * First, make a separate HTML file to handle the form. Call it, with an appropriate, corresponding, name!!, `myform.html`
-  * Next, inherit from the base html (or whatever you want to inherit from), and craft your form in your preferred way, using Jinja2 to render the strings with `{{...}}`by:
+  * Next, inherit from the base html (or whatever you want to inherit from), and craft your form in your preferred way, using Jinja2 to render the strings with `{{...}}` by:
+
+```html
+{% extends `base.html`%}
+{% block head %}
+<h1>This is my head!</h1>
+{% endblock %}
+{% block body %}
+<p>And this is my body...</p>
+{% endblock %}
+```
+  * on the same file, write:
 
   ``` html
-  {% extends 'base.html' %}
-
-  {% block head %}
-
-  {% endblock %}
-
-  {% block body %}
-
-  <form action="" method="post">
+    <form action="" method="post">
       <p>
       {{form.username.label}}<br>
       {{form.username(size=30)}}
@@ -169,7 +172,7 @@ if __name__== "__main__":
   {% endblock %}
   ```
 
-6. Now that you've created the view, you actually want to render the template from your "controller". Head back to `MyApp.py`.
+5. Now that you've created the view, you actually want to render the template from your "controller". Head back to `MyApp.py`.
   * First, import your module so you can use it with `from forms import  `
   * Here in `MyApp.py`, create a route that takes you to your form. Use an appropriate name. ex:
   ``` python
