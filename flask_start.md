@@ -169,13 +169,20 @@ if __name__== "__main__":
   def register():
     # creates a form objects using the class we created before!
     form = GoodNameForForm()
-    # render our form HTML template
+
+    # for step 6b - check if form is submitted
+    if form.is_submitted():
+      result = request.form
+      return render_template('viewImPostingTo.html', result=result)
+
+    # and for step 6, if form not submitted, render our form HTML template :
     return render_template('myform.html', form=form)
   ```
 
 ### **Step 6b: Working with Form Data : **
 1. In our `register()` function, let's extract form data.
-2. First, check if form was submitted, and that your methods inclde `POST`.
+2. First, check if form was submitted with `if form.is_submitted`
+3. and that your methods for the route include `POST`.
 3. Import `requests`
 4. here, render any templates or do any actions you might want to do.
 5. The data you are receiving from your forms is an immutable dictionary, so you can even iterate through it in your corresponding HTML view.
