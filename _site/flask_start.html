@@ -10,7 +10,7 @@
 <link rel="canonical" href="http://localhost:4000/flask_start.html" />
 <meta property="og:url" content="http://localhost:4000/flask_start.html" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"http://localhost:4000/flask_start.html","headline":"Python and Flash Quick Start","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Python and Flash Quick Start","url":"http://localhost:4000/flask_start.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
 <body><header class="site-header" role="banner">
@@ -25,28 +25,29 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/myblog/flask_py_translate_api.html">GoogleAPI Translate, Python, and Flask Tutprial</a><a class="page-link" href="/flask_py_translate_api.html">GoogleAPI Translate, Python, and Flask Tutprial</a><a class="page-link" href="/myblog/flask_start.html">Python and Flash Quick Start</a><a class="page-link" href="/flask_start.html">Python and Flash Quick Start</a></div>
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/flask_py_translate_api.html">GoogleAPI Translate, Python, and Flask Tutprial</a><a class="page-link" href="/myblog/flask_py_translate_api.html">GoogleAPI Translate, Python, and Flask Tutprial</a><a class="page-link" href="/myblog/flask_start.html">Python and Flash Quick Start</a><a class="page-link" href="/flask_start.html">Python and Flash Quick Start</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         
-<h3 id="getting-a-python-web-application-up-and-runing-with-flask">Getting a Python Web Application up and Runing with Flask</h3>
+<h3 id="full-stack-python-web-applications-with-flask-and-sqlalchemy-by-lisette-del-pino">Full Stack Python Web Applications with Flask and SQLAlchemy by Lisette del Pino</h3>
 
 <p>These are instructions for getting a Python web app up and running quickly with Flask. <strong>On Windows!!</strong> On MacOS/ Linux, commands differ slightly but can be easily found online.</p>
 
-<p>Why Flask? A micro web framework written in Python. It’s doesn’t have a databse abstraction layer or form validation, but it is quick and easy!
-Also it was writtein in 2010 by Armin Ronacher (at a very young age!).</p>
+<p>Why Flask? A micro web framework written in Python. It’s doesn’t have a database abstraction layer or form validation, but it is quick and easy!
+Also it was written in 2010 by Armin Ronacher (at a very young age!).</p>
 
 <p>Steps: as of 2020-07-08 16:13:</p>
 
 <h3 id="step-1-setting-up-virtualenv-and-installing-packages"><strong>Step 1: Setting Up Virtualenv and Installing Packages:</strong></h3>
 <ol>
   <li>make sure Python 3+ installed with <code class="language-plaintext highlighter-rouge">python -V</code></li>
-  <li>install pip. with pip, <code class="language-plaintext highlighter-rouge">pip3 install virtualenv</code>, so that your packages are installed locally rather than globally. This is better for portability and collaboration.</li>
-  <li>make and environment with <code class="language-plaintext highlighter-rouge">virtualenv env</code> but name the env whatever you want.</li>
-  <li>select source with <code class="language-plaintext highlighter-rouge">env\Scripts\activate</code>, make sure you are running Powershell with admin priviliges! You should be inside <code class="language-plaintext highlighter-rouge">env</code> now.</li>
-  <li><code class="language-plaintext highlighter-rouge">pip3 install flask flask-sqlalchemy</code></li>
+  <li>install <code class="language-plaintext highlighter-rouge">pip</code> if you don’t have it.</li>
+  <li>If you don’t have <code class="language-plaintext highlighter-rouge">virtualenv</code>, with pip, <code class="language-plaintext highlighter-rouge">pip3 install virtualenv</code>, so that your packages are installed locally, in your virtual environment, rather than globally. This is better for code portability and collaboration.</li>
+  <li>Make a virtual environment with <code class="language-plaintext highlighter-rouge">virtualenv env</code> (you can name the <code class="language-plaintext highlighter-rouge">env</code> whatever you want, but I stick with env)</li>
+  <li>Select source with <code class="language-plaintext highlighter-rouge">env\Scripts\activate</code>, make sure you are running Powershell\CMD\WSL with admin privileges! You should be inside <code class="language-plaintext highlighter-rouge">env</code> now.</li>
+  <li>Now, inside your virtual environment, you can start installing libraries. Go ahead and  <code class="language-plaintext highlighter-rouge">pip3 install flask flask-sqlalchemy</code></li>
 </ol>
 
 <h3 id="step-2-writing-your-application-"><strong>Step 2: Writing Your Application :</strong></h3>
@@ -141,32 +142,110 @@ Also it was writtein in 2010 by Armin Ronacher (at a very young age!).</p>
 
 <h3 id="step-4-static-content-and-css-"><strong>Step 4: Static Content and CSS :</strong></h3>
 <ol>
-  <li>To use Custom CSS, in the <code class="language-plaintext highlighter-rouge">static</code> folder, make a <code class="language-plaintext highlighter-rouge">css</code> subfolder and a <code class="language-plaintext highlighter-rouge">main.css</code> file. Write your css here.</li>
+  <li>To use Custom CSS, in the <code class="language-plaintext highlighter-rouge">static</code> folder, make a <code class="language-plaintext highlighter-rouge">css</code> subfolder and a <code class="language-plaintext highlighter-rouge">main.css</code> file inside the subfolder. Write your CSS here.(go wild!)</li>
   <li>To link this stylesheet with your web app, go to <code class="language-plaintext highlighter-rouge">base.html</code> and :
     <ul>
-      <li>in <code class="language-plaintext highlighter-rouge">&lt;head&gt;&lt;/head&gt;</code> before <code class="language-plaintext highlighter-rouge">{% block head.....}</code> syntax, insert <code class="language-plaintext highlighter-rouge">&lt;link rel = "stylesheet" href=""&gt;</code></li>
-      <li>We can’t exactly hardcode a path to the stylesheet, use <code class="language-plaintext highlighter-rouge">url_for</code> function by :</li>
+      <li>in <code class="language-plaintext highlighter-rouge">&lt;head&gt;&lt;/head&gt;</code> before <code class="language-plaintext highlighter-rouge">{% block head.....}</code> syntax, insert <code class="language-plaintext highlighter-rouge">&lt;link rel = "stylesheet" href=""&gt;</code> and use <code class="language-plaintext highlighter-rouge">url_for</code> for the href argument. So:</li>
+      <li>We can’t exactly hardcode a path to the stylesheet, use <code class="language-plaintext highlighter-rouge">url_for</code> function by :
+        <ul>
+          <li>importing <code class="language-plaintext highlighter-rouge">url_for</code> from Flask with <code class="language-plaintext highlighter-rouge">from flask import url_for</code></li>
+          <li>since we’re looking for the <code class="language-plaintext highlighter-rouge">static</code> endpoint, we will use <code class="language-plaintext highlighter-rouge">url_for('static', filename = 'path for main css inside static')</code>, so we write …</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;link rel = "stylesheet" href="url_for('static', filename = 'css/main.css')"&gt;</code></li>
     </ul>
   </li>
+  <li>For JavaScript files, it’s the same protocol.</li>
 </ol>
 
-<h3 id="step--http-requests-todo"><strong>Step ??: HTTP Requests</strong> (TODO)</h3>
+<h3 id="step-5-http-requests">**Step 5: HTTP Requests</h3>
 <ol>
-  <li>to use HTTP requests, first learn the general structure of one….TBC</li>
+  <li>to use HTTP requests, first learn the general structure of one!
+    <ul>
+      <li>skim <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">this</a></li>
+      <li>you will probably focus on using <code class="language-plaintext highlighter-rouge">GET</code>, <code class="language-plaintext highlighter-rouge">POST</code>, <code class="language-plaintext highlighter-rouge">PUT</code>, <code class="language-plaintext highlighter-rouge">DELETE</code></li>
+    </ul>
+  </li>
+  <li>import requests</li>
 </ol>
 
-<h3 id="step--forms-todo"><strong>Step ??: Forms (TODO)</strong></h3>
+<h3 id="step-6-forms"><strong>Step 6: Forms</strong></h3>
 <ol>
-  <li>To have forms on your web app, install Flask-WTF for forms.</li>
-  <li>in your <code class="language-plaintext highlighter-rouge">env</code>, install by <code class="language-plaintext highlighter-rouge">pip install flask-wtf</code></li>
+  <li>To have forms on your web app, install Flask-WTF for forms.
+    <ul>
+      <li>in order to do this, when inside your <code class="language-plaintext highlighter-rouge">env</code>, install by <code class="language-plaintext highlighter-rouge">pip3 install flask-wtf</code></li>
+      <li><em>optional</em> :if you have the time, read the source code, especially <code class="language-plaintext highlighter-rouge">form.py</code> - enlightening to see how the FlaskForm class was written! This step is completely optional.</li>
+      <li><em>optional</em>: if you have the time, read the source code for <code class="language-plaintext highlighter-rouge">wtforms</code> as well, especially <code class="language-plaintext highlighter-rouge">\fields\core.py</code> for a look at how the fields <code class="language-plaintext highlighter-rouge">StringField, PasswordField</code>, etc, were created! Completely optional step, just for the nerds.</li>
+    </ul>
+  </li>
   <li>Now you need to store a <code class="language-plaintext highlighter-rouge">SECRET KEY</code>. :
     <ul>
-      <li>It’s good practice to have a separate configuration page for all your variabled, but since this is presumably your first Flask app, go ahead and write it in <code class="language-plaintext highlighter-rouge">MyApp.py</code> for simplicity.</li>
-      <li>Under <code class="language-plaintext highlighter-rouge">MyApp = Flask(__name__)</code>, write
-4.</li>
+      <li>It’s good practice to have a separate configuration page for all your variables, but since this is presumably your first Flask app, and is probably not going into production, go ahead and write it in <code class="language-plaintext highlighter-rouge">MyApp.py</code> for simplicity.</li>
+      <li>Under <code class="language-plaintext highlighter-rouge">MyApp = Flask(__name__)</code>, write: <code class="language-plaintext highlighter-rouge">app.config['SECRET KEY'] = 'veryGoodSecretHashOfYourChoice'</code>. If you can, generate it randomly!</li>
+    </ul>
+  </li>
+  <li>Form Creation:
+    <ul>
+      <li>You need a class representing the model for your form, so I recommend creating a <code class="language-plaintext highlighter-rouge">forms.py</code> file/module.</li>
+      <li>Remember my class and variable names are merely educational, do not name your variables/classes the same way - use descriptive, useful names.</li>
+      <li>In <code class="language-plaintext highlighter-rouge">forms.py</code>, :</li>
+    </ul>
+    <ul>
+      <li>import flask-wtf and wtform fields with:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">from</span> <span class="nn">flask_wtf</span> <span class="kn">import</span> <span class="n">FlaskForm</span>
+ <span class="kn">from</span> <span class="nn">wtforms</span> <span class="kn">import</span> <span class="n">StringField</span><span class="p">,</span> <span class="n">PasswordField</span><span class="p">,</span> <span class="n">SubmitField</span> <span class="c1"># put any field types you need here!
+</span></code></pre></div>        </div>
+      </li>
+      <li>create a class form model by :
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">class</span> <span class="nc">GoodNameForForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
+ <span class="c1"># specify fields you need here! make sure you've imported them.
+</span> <span class="n">username</span> <span class="o">=</span> <span class="n">StringField</span><span class="p">(</span><span class="s">'username'</span><span class="p">)</span>
+ <span class="n">password</span> <span class="o">=</span> <span class="n">PasswordField</span><span class="p">(</span><span class="s">'password'</span><span class="p">)</span>
+ <span class="n">submit</span> <span class="o">=</span> <span class="n">SubmitField</span><span class="p">(</span><span class="s">'Submit'</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Now that we’ve created a model class for the form, we need to render the HTML / view for it. Let’s stick with our habit of separating concerns and using HTML inheritance.
+    <ul>
+      <li>First, make a separate HTML file to handle the form. Call it, with an appropriate, corresponding, name!!, <code class="language-plaintext highlighter-rouge">myform.html</code></li>
+      <li>Next, inherit from the base html (or whatever you want to inherit from), and craft your form in your preferred way, using Jinja2 to render the strings with <code class="language-plaintext highlighter-rouge">{{...}}</code> , and remembering to render head, render body, endblock, etc commands as above :</li>
+    </ul>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">method=</span><span class="s">"post"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;p&gt;</span>
+     {{form.username.label}}<span class="nt">&lt;br&gt;</span>
+     {{form.username(size=30)}}
+     <span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;p&gt;</span>
+     {{form.password.label}}<span class="nt">&lt;br&gt;</span>
+     {{form.password(size=30)}}
+     <span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;p&gt;</span>
+     {{form.submit()}}
+     <span class="nt">&lt;/p&gt;</span>
+ <span class="nt">&lt;/form&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Now that you’ve created the view, you actually want to render the template from your “controller”. Head back to <code class="language-plaintext highlighter-rouge">MyApp.py</code>.
+    <ul>
+      <li>First, import your module so you can use it with <code class="language-plaintext highlighter-rouge">from forms import  </code></li>
+      <li>Here in <code class="language-plaintext highlighter-rouge">MyApp.py</code>, create a route that takes you to your form. Use an appropriate name. ex:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># creates the new route and defines the function to run
+</span>  <span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/register'</span><span class="p">)</span>
+  <span class="c1"># creates registration form
+</span>  <span class="k">def</span> <span class="nf">register</span><span class="p">():</span>
+ <span class="c1"># creates a form objects using the class we created before!
+</span> <span class="n">form</span> <span class="o">=</span> <span class="n">GoodNameForForm</span><span class="p">()</span>
+ <span class="c1"># render our form HTML template
+</span> <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">'myform.html'</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
     </ul>
   </li>
 </ol>
+
+<h3 id="databases-yessss"><strong>DATABASES!!!!!!! YESSSS!!!!</strong></h3>
 
 <h3 id="sources-">Sources :</h3>
 <ol>
@@ -174,6 +253,7 @@ Also it was writtein in 2010 by Armin Ronacher (at a very young age!).</p>
   <li><a href="https://www.youtube.com/watch?v=-O9NMdvWmE8">Forms</a></li>
   <li><a href="https://www.youtube.com/watch?v=f8qvLBvrIFI">Form data</a></li>
   <li><a href="https://www.youtube.com/watch?v=Z1RJmh_OqeA">Flask</a></li>
+  <li><a href="https://stackoverflow.com/questions/25160134/how-does-flask-url-for-work">How does url_for even work?</a></li>
   <li>My brain</li>
 </ol>
 

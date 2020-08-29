@@ -1,0 +1,34 @@
+I"]<p>Hi! My name is Lisette and I’m a student at the University of Pennsylvania passionate about the intersection of Math and Computation. Some of my hobbies include coffee, space documentaries, and investigating new technologies.</p>
+
+<h2 id="my-programming-tutorials-">My Programming Tutorials :</h2>
+
+<h4 id="-ruby-on-rails">// <a href="ruby.md">Ruby on Rails</a></h4>
+
+<h4 id="-full-stack-web-applications-with-flask">// <a href="flask_start.md">Full Stack Web Applications with Flask</a></h4>
+
+<h4 id="-using-google-translation-api-to-make-a-python-web-app-that-translates-to-another-language--in-progress">// <a href="flask_py_translate_api.md">Using Google Translation API to make a Python Web App that translates to another language- In Progress!</a></h4>
+
+<h2 id="my-math-and-computer-science-notes-">My Math and Computer Science Notes :</h2>
+
+<h4 id="-advanced-linear-algebra">// <a href="line_alg.md">Advanced Linear Algebra</a></h4>
+
+<h4 id="-mathematical-cryptography">// <a href="mathematical_crypto.md">Mathematical Cryptography</a></h4>
+
+<h4 id="-real-analysis">// <a href="analysis.md">Real Analysis</a></h4>
+
+<h4 id="-graph-theory">// Graph Theory</h4>
+
+<h4 id="-numericalscientific-computing-and-analysis">// Numerical/Scientific Computing and Analysis</h4>
+
+<h4 id="-partial-differential-equations-">// <a href="PDE.md">Partial Differential Equations</a> :</h4>
+
+<h2 id="misc">MISC:</h2>
+
+<p>cool - x^n is even if n is even, and odd if n is odd. Here’s a nice gif I made on Desmos:
+<img src="/gif/xn_gif.gif" alt="example function" /></p>
+
+<p><strong>Link to my slides from a recent presentation</strong>: <a href="https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU">Cryptography</a></p>
+
+<p><a href="journal.md">My Journal</a>, <a href="reading.md">My Reading Log</a></p>
+
+:ET

@@ -141,36 +141,23 @@ if __name__== "__main__":
     ```
 4. Now that we've created a model class for the form, we need to render the HTML / view for it. Let's stick with our habit of separating concerns and using HTML inheritance.
   * First, make a separate HTML file to handle the form. Call it, with an appropriate, corresponding, name!!, `myform.html`
-  * Next, inherit from the base html (or whatever you want to inherit from), and craft your form in your preferred way, using Jinja2 to render the strings with `{{...}}` by:
+  * Next, inherit from the base html (or whatever you want to inherit from), and craft your form in your preferred way, using Jinja2 to render the strings with `{{...}}` , and remembering to render head, render body, endblock, etc commands as above :
 
-```html
-{% extends `base.html`%}
-{% block head %}
-<h1>This is my head!</h1>
-{% endblock %}
-{% block body %}
-<p>And this is my body...</p>
-{% endblock %}
-```
-  * on the same file, write:
-
-  ``` html
-    <form action="" method="post">
-      <p>
-      {{form.username.label}}<br>
-      {{form.username(size=30)}}
-      </p>
-      <p>
-      {{form.password.label}}<br>
-      {{form.password(size=30)}}
-      </p>
-      <p>
-      {{form.submit()}}
-      </p>
-  </form>
-
-  {% endblock %}
-  ```
+    ```html
+      <form action="" method="post">
+        <p>
+        {{form.username.label}}<br>
+        {{form.username(size=30)}}
+        </p>
+        <p>
+        {{form.password.label}}<br>
+        {{form.password(size=30)}}
+        </p>
+        <p>
+        {{form.submit()}}
+        </p>
+    </form>
+    ```
 
 5. Now that you've created the view, you actually want to render the template from your "controller". Head back to `MyApp.py`.
   * First, import your module so you can use it with `from forms import  `

@@ -1,0 +1,148 @@
+I"�(
+<h3 id="getting-a-python-web-application-up-and-runing-with-flask">Getting a Python Web Application up and Runing with Flask</h3>
+
+<p>These are instructions for getting a Python web app up and running quickly with Flask. <strong>On Windows!!</strong> On MacOS/ Linux, commands differ slightly but can be easily found online.</p>
+
+<p>Why Flask? A micro web framework written in Python. It’s doesn’t have a databse abstraction layer or form validation, but it is quick and easy!
+Also it was writtein in 2010 by Armin Ronacher (at a very young age!).</p>
+
+<p>Steps: as of 2020-07-08 16:13:</p>
+
+<h3 id="step-1-setting-up-virtualenv-and-installing-packages"><strong>Step 1: Setting Up Virtualenv and Installing Packages:</strong></h3>
+<ol>
+  <li>make sure Python 3+ installed with <code class="language-plaintext highlighter-rouge">python -V</code></li>
+  <li>install pip. with pip, <code class="language-plaintext highlighter-rouge">pip3 install virtualenv</code>, so that your packages are installed locally rather than globally. This is better for portability and collaboration.</li>
+  <li>make and environment with <code class="language-plaintext highlighter-rouge">virtualenv env</code> but name the env whatever you want.</li>
+  <li>select source with <code class="language-plaintext highlighter-rouge">env\Scripts\activate</code>, make sure you are running Powershell with admin priviliges! You should be inside <code class="language-plaintext highlighter-rouge">env</code> now.</li>
+  <li><code class="language-plaintext highlighter-rouge">pip3 install flask flask-sqlalchemy</code></li>
+</ol>
+
+<h3 id="step-2-writing-your-application-"><strong>Step 2: Writing Your Application :</strong></h3>
+<ol>
+  <li>Make a .py file, <code class="language-plaintext highlighter-rouge">MyApp.py</code></li>
+  <li>Inside <code class="language-plaintext highlighter-rouge">MyApp.py</code>:</li>
+  <li>Import Flask</li>
+  <li>refer to the app. with <code class="language-plaintext highlighter-rouge">MyApp = Flask(__name__)</code></li>
+  <li>Set up routes, first, the index.</li>
+  <li>Define the function for route. (Right now it’s just “Hello World”)</li>
+  <li>In development, set debug = true. This will show any errors.</li>
+  <li>Steps 2-7 are summarized here:</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">MyApp</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">MyApp</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/'</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+  <span class="k">return</span> <span class="s">"Hello World"</span>
+  <span class="c1"># remember to be consistent with your spacing.
+</span>  <span class="c1"># I chose 2 spaces.
+</span>
+<span class="k">if</span> <span class="n">__name__</span><span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+  <span class="n">MyApp</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ol>
+  <li>make sure you’re still in <code class="language-plaintext highlighter-rouge">(env)</code> and run your code with <code class="language-plaintext highlighter-rouge">py MyApp.py</code>.</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">localhost:5000</code> to see your app.</li>
+  <li>Congratulations! You’re up and running !</li>
+</ol>
+
+<h3 id="step-3-customizing-your-app"><strong>Step 3: Customizing your app:</strong></h3>
+
+<ol>
+  <li>It’s a good idea to use templates and html inheritance - Don’t Repeat Yourself. Make a <code class="language-plaintext highlighter-rouge">templates</code> folder, and a <code class="language-plaintext highlighter-rouge">static</code> folder.
+    <ul>
+      <li>Template will live in the former and css/static content will live in the latter.</li>
+    </ul>
+  </li>
+  <li>import <code class="language-plaintext highlighter-rouge">render_template</code> in <code class="language-plaintext highlighter-rouge">MyApp.py</code></li>
+  <li>Once imported, you can go into the <code class="language-plaintext highlighter-rouge">index()</code> function and call <code class="language-plaintext highlighter-rouge">render_template('index.html')</code> from your templates folder. After running your app, the homepage shold be updated. Now you know how to inject a template!</li>
+</ol>
+
+<h3 id="step-3b-html-inheritance-"><strong>Step 3b: HTML Inheritance :</strong></h3>
+<ol>
+  <li>Let’s make a template that is inherited by any other pages in the site we wish:
+    <ul>
+      <li>Go to <code class="language-plaintext highlighter-rouge">templates</code> folder and make a <code class="language-plaintext highlighter-rouge">base.html</code> file.</li>
+      <li>Write boilerplate html into your <code class="language-plaintext highlighter-rouge">base.html</code>. Good source for this is: <a href="http://htmlshell.com/">html shell</a></li>
+      <li>Now let’s use Jinja2 syntax, full documentation <a href="https://jinja.palletsprojects.com/en/2.11.x/">here</a>, since it’s based off Django templating. (Also, it’s the template engine for Flask!)</li>
+      <li>insert <code class="language-plaintext highlighter-rouge">{% block head %}{% endblock %}</code> before end of head tag.</li>
+      <li>insert <code class="language-plaintext highlighter-rouge">{% block body %}{% endblock %}</code> before end of body tag.</li>
+      <li>Between these, this will be where content is inserted.</li>
+    </ul>
+  </li>
+  <li>Your <code class="language-plaintext highlighter-rouge">base.html</code> should now resemble this:</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    {% block head %}{% endblock %}
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    {% block body %}{% endblock %}
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Now navigate back to <code class="language-plaintext highlighter-rouge">index.html</code> and clear it so that you can inherit from <code class="language-plaintext highlighter-rouge">base.html</code>.</li>
+  <li>Extend base by writing <code class="language-plaintext highlighter-rouge">{% extends `base.html` %}</code> (Don’t forget single quotes.)</li>
+  <li>Next, inject your styling into base by writing <code class="language-plaintext highlighter-rouge">{% block head %} &lt;p&gt; your content here&lt;/p&gt; {% endblock %}</code> and similarly, <code class="language-plaintext highlighter-rouge">{% block body %} &lt;p&gt; your content here&lt;/p&gt; {% endblock %}</code></li>
+  <li>Now your <code class="language-plaintext highlighter-rouge">index.html</code> template should be:</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% extends `base.html`%}
+{% block head %}
+<span class="nt">&lt;h1&gt;</span>This is my head!<span class="nt">&lt;/h1&gt;</span>
+{% endblock %}
+{% block body %}
+<span class="nt">&lt;p&gt;</span>And this is my body...<span class="nt">&lt;/p&gt;</span>
+{% endblock %}
+</code></pre></div></div>
+
+<p>&amp;. Run your server and make sure the changes took effect.</p>
+
+<h3 id="step-4-static-content-and-css-"><strong>Step 4: Static Content and CSS :</strong></h3>
+<ol>
+  <li>To use Custom CSS, in the <code class="language-plaintext highlighter-rouge">static</code> folder, make a <code class="language-plaintext highlighter-rouge">css</code> subfolder and a <code class="language-plaintext highlighter-rouge">main.css</code> file. Write your css here.</li>
+  <li>To link this stylesheet with your web app, go to <code class="language-plaintext highlighter-rouge">base.html</code> and :
+    <ul>
+      <li>in <code class="language-plaintext highlighter-rouge">&lt;head&gt;&lt;/head&gt;</code> before <code class="language-plaintext highlighter-rouge">{% block head.....}</code> syntax, insert <code class="language-plaintext highlighter-rouge">&lt;link rel = "stylesheet" href=""&gt;</code></li>
+      <li>We can’t exactly hardcode a path to the stylesheet, use <code class="language-plaintext highlighter-rouge">url_for</code> function by :</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="step--http-requests-todo"><strong>Step ??: HTTP Requests</strong> (TODO)</h3>
+<ol>
+  <li>to use HTTP requests, first learn the general structure of one….TBC</li>
+</ol>
+
+<h3 id="step--forms-todo"><strong>Step ??: Forms (TODO)</strong></h3>
+<ol>
+  <li>To have forms on your web app, install Flask-WTF for forms.</li>
+  <li>in your <code class="language-plaintext highlighter-rouge">env</code>, install by <code class="language-plaintext highlighter-rouge">pip install flask-wtf</code></li>
+  <li>Now you need to store a <code class="language-plaintext highlighter-rouge">SECRET KEY</code>. :
+    <ul>
+      <li>It’s good practice to have a separate configuration page for all your variabled, but since this is presumably your first Flask app, go ahead and write it in <code class="language-plaintext highlighter-rouge">MyApp.py</code> for simplicity.</li>
+      <li>Under <code class="language-plaintext highlighter-rouge">MyApp = Flask(__name__)</code>, write
+4.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="sources-">Sources :</h3>
+<ol>
+  <li><a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms">In-depth Forms</a></li>
+  <li><a href="https://www.youtube.com/watch?v=-O9NMdvWmE8">Forms</a></li>
+  <li><a href="https://www.youtube.com/watch?v=f8qvLBvrIFI">Form data</a></li>
+  <li><a href="https://www.youtube.com/watch?v=Z1RJmh_OqeA">Flask</a></li>
+  <li>My brain</li>
+</ol>
+
+:ET

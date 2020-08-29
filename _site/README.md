@@ -11,10 +11,14 @@ As well as notes from subjects that interest me that are not necessarily part of
 
 - Ruby on Rails
 - Mathematical Cryptography 
+- Programming Tutorials for Flask and general Web Development
 
-All LaTeX / MathJax formulas are rendered in JavaScript. 
+All LaTeX / MathJax formulas are rendered using JavaScript. 
+I'm using the Minima theme as a base, but I've modified it plenty. The custom CSS is available on this repo. 
 
-This site also hosts several "meta-learning" pages, where I track what I've learned in my other pursuits or while building this site. To see this, check out :
+![the website](/gif/web.gif)
+
+This site also hosts several "meta-learning" pages, where I track what I've learned in my other pursuits or while building this site. To see this, check out:
 
 - Journal
 - Reading Log
