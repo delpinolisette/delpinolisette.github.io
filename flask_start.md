@@ -172,6 +172,7 @@ if __name__== "__main__":
     # render our form HTML template
     return render_template('myform.html', form=form)
   ```
+
 ### **Step 6b: Working with Form Data : **
 1. In our `register()` function, let's extract form data.
 2. First, check if form was submitted, and that your methods inclde `POST`.
@@ -179,7 +180,7 @@ if __name__== "__main__":
 4. here, render any templates or do any actions you might want to do.
 5. The data you are receiving from your forms is an immutable dictionary, so you can even iterate through it in your corresponding HTML view.
 
-### **DATABASES!!!!!!! YESSSS!!!!**
+### **DATABASES!!!!!!! YESSSS!!!! Coming Up...**
 
 
 ### Sources :
