@@ -143,7 +143,7 @@ if __name__== "__main__":
   * First, make a separate HTML file to handle the form. Call it, with an appropriate, corresponding, name!!, `myform.html`
   * Next, inherit from the base html (or whatever you want to inherit from), and craft your form in your preferred way, using Jinja2 to render the strings with `{{...}}`by:
 
-  ```html
+  ``` html
   {% extends 'base.html' %}
 
   {% block head %}
@@ -168,6 +168,7 @@ if __name__== "__main__":
 
   {% endblock %}
   ```
+
 6. Now that you've created the view, you actually want to render the template from your "controller". Head back to `MyApp.py`.
   * First, import your module so you can use it with `from forms import  `
   * Here in `MyApp.py`, create a route that takes you to your form. Use an appropriate name. ex:
