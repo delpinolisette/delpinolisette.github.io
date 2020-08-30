@@ -23,7 +23,11 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 
 #### // Numerical/Scientific Computing and Analysis
 
-#### // [Partial Differential Equations](PDE.md) :
+#### // Partial Differential Equations :
+- [My Notes](https://github.com/delpinolisette/partial-differential-equations/blob/master/01 Heat Eq.ipynb)
+- [Resource Links](PDE.md)
+
+#### // [Data Structures and Algorithms](https://github.com/delpinolisette/data-structures-and-algos-reference/blob/master/Data Structures and Algorithms Notes.ipynb)
 
 ## MISC:
 

@@ -196,6 +196,7 @@ if __name__== "__main__":
 3. [Form data](https://www.youtube.com/watch?v=f8qvLBvrIFI)
 4. [Flask](https://www.youtube.com/watch?v=Z1RJmh_OqeA)
 5. [How does url_for even work?](https://stackoverflow.com/questions/25160134/how-does-flask-url-for-work)
+6. [For Loops in HTML Views with JINJA2](https://www.geeksforgeeks.org/python-using-for-loop-in-flask/)
 5. My brain
 
 {% endraw %}
