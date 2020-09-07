@@ -1,9 +1,12 @@
-Rails Active Storage File Upload
-
+---
+layout: default
+title: Rails Active Storage File Upload
+---
+# Upload Files To Rails App Using Active Storage
 by: Lisette del Pino
 
 ## Intro: Local Storage for Development:
-*Note*: This is a tutorial for Ruby Active Storage file upload for development and testing purposes. Once your Rails app goes into production, use [Amazon, Google, or Azure services](#amazon-S3-azure-google-cloud)
+*Note*: This is a tutorial for Ruby Active Storage file upload for development and testing purposes. Once your Rails app goes into production, use [Amazon, Google, or Azure services](#amazon-S3-azure-google-cloud:)
 
 *Note*: As always, I encourage you to read/explore as much as you can with each command. In this tutorial, I include the output location corresponding to the command you just wrote so that you can see what the commands are doing to your Rails app. Get familiar with the structure of your app, and all future Rails endeavors will feel 100x easier!
 
