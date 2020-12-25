@@ -10,7 +10,7 @@ by: Lisette del Pino
 
 *Note*: As always, I encourage you to read/explore as much as you can with each command. In this tutorial, I include the output location corresponding to the command you just wrote so that you can see what the commands are doing to your Rails app. Get familiar with the structure of your app, and all future Rails endeavors will feel 100x easier!
 
-## Step 1 :
+## *Step 1 :*
 Make sure that in `config/storage.yml` you have (setting storage configuration to local Disk):
 ```ruby
 local:
@@ -18,26 +18,26 @@ local:
   root: <%= Rails.root.join("storage") %>
 ```
 
-## Step 2:
+## *Step 2:*
 Make sure that in `config\environments\development.rb` you have the development configuration set to store files locally!
 ```ruby
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 ```
 
-## Step 3:
+## *Step 3:*
 To set up the database for active storage, in your terminal for the project, write `rails active_storage:install`
     - This creates a migration file that you can look at under : `db\migrate`, look for the migration with a similar command name. Take a peek!
     - Notice we are storing some file meta-data, and NOT the file information itself. Why?
 
-## Step 4:
+## *Step 4:*
 
 If you haven't set up your relationship already, head to `app\models` and edit your ruby file corresponding to the model you are setting up file upload for. So, if users are getting a single profile picture, go into `user.rb` and:
 
 ```ruby
 has_one_attached :profile_img
 ```
-## Step 5 :
+## *Step 5 :*
 Head into your controller to define behavior now, in `app\controllers\users_controller.rb` , or whichever controller corresponds to the model file you just edited. Under `private`, under `user_params` def, `.permit` a `profile_img`. So, it should look something like (but it should have other permitted fields, according to your app):
 ``` ruby
  # Only allow a list of trusted parameters through.
@@ -45,7 +45,7 @@ Head into your controller to define behavior now, in `app\controllers\users_cont
       params.require(:leaf).permit(:cover_img)
     end
 ```
-## Step 6:
+## *Step 6:*
 Modify your creation forms to support uploading by
 
 ## Amazon S3, Azure, Google Cloud:
