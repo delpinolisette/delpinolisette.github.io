@@ -75,7 +75,7 @@ table th { border: 1px solid #dedede; border-bottom-color: #c9c9c9; }
 
 table td { border: 1px solid #e8e8e8; }
 */
-table, tbody, tr, th, td{
+table, tbody, tr, table th, th, table td, td{
     background-color: rgba(0, 0, 0, 0.0) !important;
 }
 
