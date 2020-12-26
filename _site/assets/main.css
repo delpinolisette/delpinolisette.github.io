@@ -66,14 +66,18 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .social-media-list li + li { padding-top: 5px; }
 
-/** Tables */
+/** Tables 
 table { margin-bottom: 50px; width: 100%; text-align: left; color: white; border-collapse: collapse; border: 1px solid #e8e8e8; }
 
-table th, table td { padding: 16.6666666667px 25px; }
+table th, table td { background-color: rgba(0,0,0,0) padding: 16.6666666667px 25px; }
 
 table th { border: 1px solid #dedede; border-bottom-color: #c9c9c9; }
 
 table td { border: 1px solid #e8e8e8; }
+*/
+table, tbody, tr, th, td{
+    background-color: rgba(0, 0, 0, 0.0) !important;
+}
 
 /** Site header */
 .site-header { border-top: 5px solid #424242; border-bottom: 1px solid #e8e8e8; min-height: 93.25px; position: relative; }
