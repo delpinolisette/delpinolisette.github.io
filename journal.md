@@ -7,6 +7,25 @@ layout: default
 
 Journal
 =============================================
+### 01.02.2020
+
+Taking advantage of the couple hours I have before a flight to learn some Javascript from a lovely book. It's 6am and everyone is wearing their masks here. 
+
+### 01.01.2021
+
+Happy New Year, Liz! 
+
+This morning, I learned some UX Design Principles and wireframing in Figma, but it all seems rather foreign to me. I feel that the next big thing for me to understand is Web / App Design. 
+
+Why is it so unintuitive to make a new component? My goal is to design on paper and pencil and then recreate the prototype in Figma. 
+
+My goal today is to clean up my place before traveling, read, take notes on, and solve problems on Logic in Real Analysis, and just enjoy the first day of the new year. :)
+
+Sometimes, when reading math that is new to me (today I was covering a part of Measure Theory I've never seen before), my eyes tend to gloss over some facts, even after four years in the math major. 
+
+The solution to this problem is, without fail, to take out a pencil and write the theory out carefully in the margins or on a separate piece of paper. It's amazing how it's the little things that work the best. 
+
+Journal
 ### 7.1.2020
 
 Happy July, Lisette. Today is a day of sharpening my Web Dev skills. I'm playing around with the styling of the site, and exploring Githib Pages' powerful connection with Ruby. I've installed ```bundler``` and now I'm off! 

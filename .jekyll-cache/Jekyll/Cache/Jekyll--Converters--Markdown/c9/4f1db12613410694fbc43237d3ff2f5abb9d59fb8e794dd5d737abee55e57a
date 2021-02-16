@@ -1,8 +1,0 @@
-I"�<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-<h3 id="introduction-and-problem">Introduction and Problem:</h3>
-
-<p>This project required the construction of a Hermite Interpolating Polynomial, given the data : \(x_{0}, …, x_{n}\) , \(f(x_{0}, …, f(x_{n}))\), and derivatives \(\)<br />
-We can construct a Hermite Polynomial using the divided differences procedure, by finding</p>
-:ET

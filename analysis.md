@@ -10,10 +10,11 @@ layout: default
 
 [Uniform Convergence](#chapter-5-uniform-convergence)
 
-## Chapter 5 Uniform Convergence 
+# Uniform Convergence
+
 Outline: 
 
-* intro 
+* Intro and Motivation 
 * Pointwise and Uniform convergence
 * Weistrass M Test
 * Integration and Differentiation of Series
@@ -27,7 +28,7 @@ Outline:
 * Examples and Exercises (end of chapter). 
 
 * **intro**: 
-    -  some functions are defined using infinite sequences or infinite series. We need specific tests to study the uniform convergence of such functions. Some helpful tests are : Weistrass M Test for series and the Cauchy criterion, everything else is more specialized. 
+    -  many important functions are defined using infinite sequences or infinite series. We need specific tests to study the uniform convergence of such functions. Some helpful tests are : Weistrass M Test for series and the Cauchy criterion, everything else is more specialized. 
     -  for uniform convergence we deal with the vector space of continuous functions.
         + here the "vectors" or "points" are cts functions. 
         + here the convergence of a sequence \\( == \\) uniform convergence of these cts functions. 
