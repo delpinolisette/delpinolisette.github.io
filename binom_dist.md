@@ -62,5 +62,16 @@ def binomial_pdf(n,x,p):
 
 This one is probably better form after you've tried implementing the binomial distribution from scratch. 
 
+This is the method for a non-cumulative distribution, functions documented [here](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html):
+
+```python
+from scipy.stats import binom
+
+def pb(x,n,p):
+  return binom(n,p)
+
+```
+And this is the method for a cumulative binomial distribution :
+
 ```python
 ```
