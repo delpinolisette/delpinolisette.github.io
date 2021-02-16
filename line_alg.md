@@ -746,7 +746,7 @@ layout: default
 ## Chapter 9 
 * **Cayley Hamilton Theorem**: (how to use it)
     - plugging the original matrix A into the characteristic polynomial (def of A-lambdaxI determinant) gives you the zero matrix
-    - every matrix "solvss" / is a root of iits characteristic polynoamil. cool.  
+    - every matrix "solves" / is a root of its characteristic polynomial. cool.  
 
 ---
 

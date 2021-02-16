@@ -2,10 +2,9 @@
 layout: default
 title: On the Binomial Distribution
 ---
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-
 
 
 The Binomial Distribution, in simplest terms, describes the probabilities of getting $x$ successes in $n$ trials. 
@@ -20,4 +19,16 @@ In this post I show two ways that I implement the Binomial Distribution, even th
 
 Recall that the formula for the Binomial Distribution is ...
 
-## Method 1 - Write your
+$$
+P
+$$
+
+## Method 1 - Implement the formula from scratch 
+
+`warning` : (requires lots of helper methods)
+
+the pseudocode for an implementation like this is :
+
+```
+
+```
