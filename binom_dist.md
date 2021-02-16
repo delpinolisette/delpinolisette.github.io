@@ -1,12 +1,12 @@
 ---
 layout: default
+title: On the Binomial Distribution
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 
-# On the Binomial Distribution
 
 The Binomial Distribution, in simplest terms, describes the probabilities of getting $x$ successes in $n$ trials. 
 
