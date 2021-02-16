@@ -1,3 +1,11 @@
+---
+layout: default
+date : 2-16-2021
+---
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 
 # On the Binomial Distribution
 
