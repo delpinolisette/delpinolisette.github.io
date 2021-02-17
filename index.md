@@ -3,6 +3,7 @@ layout: default
 ---
 Hi! My name is Lisette and I'm a student at the University of Pennsylvania passionate about the intersection of Math and Computation. Some of my hobbies include coffee, space documentaries, LOTR, and investigating new technologies.
 
+- [Maximum Likelihood Estimate](MLE.md)
 
 - [Two (Python) approaches to the Binomial Distribution](binom_dist.md)
 

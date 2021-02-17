@@ -1,6 +1,6 @@
 ---
 layout: default
-title: On the Binomial Distribution
+title: Two (Python) approaches to the Binomial Distribution
 ---
 <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
