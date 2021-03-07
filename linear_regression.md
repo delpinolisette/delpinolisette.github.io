@@ -9,7 +9,7 @@ Some thoughts on linear regression :
 
 ## Simple Linear Regression 
 
-I really prefer the method of using `scipy.optimize.lsq_linear` for this task. You need to create a **Design Matrix**, defined [here](). This method lets you peek a little bit better under the hood (`polyfit` is cool but it does more work for you). 
+I really prefer the method of using `scipy.optimize.lsq_linear` for this task. You need to create a **Design Matrix**, defined [here](https://en.wikipedia.org/wiki/Design_matrix). This method lets you peek a little bit better under the hood (`polyfit` is cool but it does more work for you). 
 
 For this task, you need to take formal uncertainties into account - so the steps to create such a matrix look like :
 
@@ -20,3 +20,7 @@ Step 2 : make an empty matrix with n rows and 2 columns. The number of columns g
 Step 3: populate the first column with your (predictor / sigma) and populate the second column with 1 / sigma. 
 
 Then you simply plug the design matrix into the first argument of the `lsq_linear` function, and the second argument is your target vector. 
+
+## Coming Up Soon...
+
+I want to post some code walking you through every step in order to create and visualize a linear model using `scipy.optimize.lsq_linear`. It's one thing to talk about something, another thing to implement it from scratch. 
