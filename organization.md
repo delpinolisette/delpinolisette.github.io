@@ -1,3 +1,5 @@
+03-07-2021
+
 My white whale is the perfect information organization and presentation system. None of them are perfect. 
 
 When I tried to cram an entire textbook's worth of information on one markdown file for this blog (hello advanced linear algebra page), I ran into the issue of how to separate topics from each other when they're so closely related. 
