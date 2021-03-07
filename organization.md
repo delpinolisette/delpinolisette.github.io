@@ -7,6 +7,6 @@ When I tried to cram an entire textbook's worth of information on one markdown f
 I thought I solved this issue by writing shorter posts which are a bit more conversational, but then I risk writing too little about a topic. 
 
 
-The closest I've gotten to a perfect organizational system is a folder on my laptop, containing subfolders full of pictures, note scans, textbook pdfs, code snippets, etc. I want to see if I can bring this system + a guide on how to read it to a website.  
+The closest I've gotten to a perfect organizational system is a folder on my laptop, containing subfolders full of pictures, note scans, textbook pdfs, code snippets, etc. **I want to see if I can bring this system + a guide on how to read it to a website**. I might be able to do this with Rails.....hmmm.....  
 
 For now I will have to accept that I trade information for readability when writing on a blog. 
