@@ -11,6 +11,8 @@ title: Maximum Likelihood Estimate
 - The goal of ML (max likelihood) is to find the optimal way to fit a **distribution to your data**. 
 - MLE is the answer to the question "what does my underlying model look like?"
 - when we estimate values we think in terms of maximum likelihood estimates for parameters that we care about, such as the mean $$\mu$$, or the maximum likelihood estimation for the standard deviation $$\sqrt{\sigma}$$
-- 
+
+
+- A useful example, for me at least is the role MLE in **Logistic Regression** (makes the most visual sense). 
 
 
