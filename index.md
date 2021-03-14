@@ -34,6 +34,13 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 - [Data Structures and Algorithms Notes](https://github.com/delpinolisette/data-structures-and-algos-reference/blob/master/Data Structures and Algorithms Notes.ipynb)
 
 
+- **Link to my slides from a recent presentation**: [Cryptography](https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU)
+
+- [My Journal](journal.md), 
+
+- [My Reading Log](reading.md)
+
+
 # Shorter Posts....
 
 <ol>
@@ -43,14 +50,6 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
   </li>
   {% endfor %}
 </ol>
-
-
-- **Link to my slides from a recent presentation**: [Cryptography](https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU)
-
-- [My Journal](journal.md), 
-
-- [My Reading Log](reading.md)
-
 
 
 
