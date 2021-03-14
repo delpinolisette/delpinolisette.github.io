@@ -43,13 +43,13 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 
 # Shorter Posts....
 
-<ol>
+<ul>
   {% for post in site.posts %}
-  <li>
+    <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
+    </li>
   {% endfor %}
-</ol>
+</ul>
 
 
 
