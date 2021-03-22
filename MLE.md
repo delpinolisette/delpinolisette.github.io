@@ -15,4 +15,7 @@ title: Maximum Likelihood Estimate
 
 - A useful example, for me at least is the role MLE in **Logistic Regression** (makes the most visual sense). 
 
+Note from 03-22-2021...
+
+A longer writeup is coming up soon, but in the case where you only have to classes in your classification (ex. hotdog or not a hotdog (haha....)) the MLE simplifies to a different, simpler sum. And by simpler I mean a sum that doesn't cause numerical underflow in Python by avoiding the case of `log(0) = -inf`. 
 
