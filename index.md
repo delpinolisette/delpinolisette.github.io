@@ -3,6 +3,21 @@ layout: default
 ---
 Hi! My name is Lisette and I'm a student at the University of Pennsylvania passionate about the intersection of Math and Computation. Some of my hobbies include coffee, space documentaries, LOTR, and investigating new technologies.
 
+# Short Posts
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <br>
+    </li>
+  {% endfor %}
+</ul>
+
+
+# Notes and Tutorials
+
+
 - [Thoughts on Technical Info Organization](organization.md)
 
 - [Linear Regression Thoughts](linear_regression.md)
@@ -41,15 +56,7 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
 - [My Reading Log](reading.md)
 
 
-# Shorter Posts....
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
 
 
 
