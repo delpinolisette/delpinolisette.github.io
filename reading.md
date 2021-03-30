@@ -22,4 +22,4 @@ layout: default
 1. Numerical Analysis: Burns book
 2. Number Theory
 3. Graph Theory: "Graph Theory" by Ronald Gould
-4. Real Analysis: "Elemetary Classical Analysis" by Marsden
+4. Real Analysis: "Elementary Classical Analysis" by Marsden
