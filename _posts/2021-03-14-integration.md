@@ -1,5 +1,7 @@
 ---
 title: "Integration Thoughts"
+author: Lisette del Pino
+
 ---
 
 there's some tricky assumptions about integration that need to be addressed
