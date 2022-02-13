@@ -1,0 +1,118 @@
+---
+---
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+    .container {
+        max-width: 75%;
+        margin: auto;
+        /* font-family: 'Open Sans', sans-serif; */
+    }
+
+    a,
+    p,
+    ul li,
+    ol li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    a,
+    p,
+    ul li,
+    ol li {
+        font-size: large;
+    }
+
+    /* Style the navigation menu */
+    .topnav {
+        overflow: hidden;
+        background-color: whitesmoke;
+        position: relative;
+    }
+
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+        display: none;
+    }
+
+    /* Style navigation menu links */
+    .topnav a {
+        color: black;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background: whitesmoke;
+        color: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: whitesmoke;
+        color: black;
+    }
+
+</style>
+
+<!-- navbar stuff -->
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+    <a href="/index.html" class="active">Home</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        Menu
+    </a>
+</div>
+
+
+<div class="container">
+    {{content}}
+
+</div>
+
+<!-- Implement this later! -->
+<!-- <footer>
+    {%-include footer.html -%}
+</footer> -->
+
+<script>
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>

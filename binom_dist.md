@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Two (Python) approaches to the Binomial Distribution
 ---
 <script type="text/javascript"
@@ -33,7 +33,6 @@ $$
 
 ## Method 1 - Implement the formula from scratch 
 
-`warning` : (requires lots of helper methods)
 
 the pseudocode for an implementation like this is :
 

@@ -1,6 +1,12 @@
-# Logs and Updates: 
+---
+layout: default
+---
+# Site Updates: 
 
-### What changes did I make ? How did I make them ? What did I learn from building this site? 
+2022-02-13:
+
+The process for previewing and building the site locally are much easier than they were two years ago. I followed this tutorial: 
+[Testing Your Github Pages Site Locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
 
 2020-07-01 :
 
@@ -15,7 +21,6 @@
 
 2020-07-07 16:48
 
-1. Why does Github Pages support Jekyll, which is a static site generator (that is a Ruby gem) but not Ruby
 2. https://jekyllrb.com/docs/themes/#overriding-theme-defaults was an important link
 3. installed a nice color picker. 
 4. 
