@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-Hi! My name is Lisette and I'm a student at the University of Pennsylvania passionate about the intersection of Math and Computation. Some of my hobbies include coffee, space documentaries, LOTR, and investigating new technologies.
+Hi! My name is Lisette and I'm interested in the intersection of math and computation. 
+
+I graduated UPenn in 2021 with a degree in Math and have been working as an analytics manager for a research and consulting company ever since. This blog serves as the account of my personal explorations into problems from math and computer science.
 
 # Short Posts
 
@@ -14,9 +16,7 @@ Hi! My name is Lisette and I'm a student at the University of Pennsylvania passi
   {% endfor %}
 </ul>
 
-
 # Notes and Tutorials
-
 
 - [Thoughts on Technical Info Organization](organization.md)
 - [Linear Regression Thoughts](linear_regression.md)

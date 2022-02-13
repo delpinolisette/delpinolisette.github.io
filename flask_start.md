@@ -3,7 +3,8 @@ layout: default
 title: Python and Flash Quick Start
 ---
 {% raw %}
-### Full Stack Python Web Applications with Flask and SQLAlchemy by Lisette del Pino
+
+### Full Stack Python Web Applications with Flask and SQLAlchemy
 
 These are instructions for getting a Python web app up and running quickly with Flask. **On Windows!!** On MacOS/ Linux, commands differ slightly but can be easily found online.
 
