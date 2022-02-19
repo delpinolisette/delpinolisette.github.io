@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 ---
 Hi! My name is Lisette and I'm interested in the intersection of math and computation. 
 
