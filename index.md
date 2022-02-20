@@ -3,7 +3,9 @@ layout: home
 ---
 Hi! My name is Lisette and I'm interested in the intersection of math and computation. 
 
-I graduated UPenn in 2021 with a degree in Math and have been working as an analytics manager for a research and consulting company ever since. This blog serves as the account of my personal explorations into problems from math and computer science.
+I graduated UPenn in 2021 with a degree in Math and have been working as an analytics manager for a research and consulting firm ever since. 
+
+This blog serves as the account of my personal explorations into problems from math and computer science.
 
 # Posts
 
