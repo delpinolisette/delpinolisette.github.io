@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 ---
 Hi! My name is Lisette and I'm interested in the intersection of math and computation. 
 
@@ -34,7 +34,7 @@ This blog serves as the account of my personal explorations into problems from m
 - [Partial Differential Equations Notebook](https://github.com/delpinolisette/partial-differential-equations/blob/master/01 Heat Eq.ipynb)
 - [Data Structures and Algorithms Notes](https://github.com/delpinolisette/data-structures-and-algos-reference/blob/master/Data Structures and Algorithms Notes.ipynb)
 
-- **Link to my slides from a presentation**: [Cryptography](https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU)
+- **Directed Reading Program Slides**: [Cryptography](https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU)
 - [My Journal](journal.md), 
 - [My Reading Log](reading.md)
 
