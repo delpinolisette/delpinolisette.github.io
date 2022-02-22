@@ -12,3 +12,4 @@ I'm using the Minima theme as a base, but I've modified it plenty. The custom CS
 # TODO 
 
 - [ ] change navbars on all of these pages, not posts. 
+- [ ] finish draft on probability problem
