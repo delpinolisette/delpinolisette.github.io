@@ -1,4 +1,13 @@
+
+
 theme: minima
+
+minima:
+  skin: solarized-dark
+
+header_pages:
+  - index.md
+
 markdown: kramdown
 # plugins:
   # - jekyll-seo-tag

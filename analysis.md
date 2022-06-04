@@ -1,5 +1,6 @@
 ---
 layout: page 
+title: Real Analysis Notes
 ---
 # Real Analysis Notes
 
