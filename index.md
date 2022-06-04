@@ -1,15 +1,13 @@
 ---
 layout: default
 ---
-Hi! My name is Lisette and I'm interested in the intersection of math and computation. 
+Hi! My name is Lisette and I'm interested in the intersection of Math and Computer Science. 
 
 I graduated UPenn in 2021 with a degree in Math and have been working as an analytics manager for a research and consulting firm ever since. 
 
 This blog serves as the account of my personal explorations into problems from math and computer science.
 
-# Posts
-
-<ul>
+ <ul>
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
@@ -18,8 +16,7 @@ This blog serves as the account of my personal explorations into problems from m
   {% endfor %}
 </ul>
 
-# Pages (Longer Notes)
-
+- [Stochastic Differential Equations Summary and Thoughts](https://github.com/delpinolisette/stochastic-differential-equations)
 - [Thoughts on Technical Info Organization](/organization.html)
 - [Linear Regression Thoughts](/linear_regression.html)
 - [Maximum Likelihood Estimate](/MLE.html)
@@ -34,7 +31,7 @@ This blog serves as the account of my personal explorations into problems from m
 - [Partial Differential Equations Notebook](https://github.com/delpinolisette/partial-differential-equations/blob/master/01 Heat Eq.ipynb)
 - [Data Structures and Algorithms Notes](https://github.com/delpinolisette/data-structures-and-algos-reference/blob/master/Data Structures and Algorithms Notes.ipynb)
 
-- **Directed Reading Program Slides**: [Cryptography](https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU)
+- Directed Reading Program Slides: [Cryptography](https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU)
 - [My Journal](journal.md), 
 - [My Reading Log](reading.md)
 
