@@ -5,22 +5,32 @@ layout: default
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-#### Table of Contents:
-* [Lectures 9-11](#lectures-9-11)
-* [Lectures 12-13](#lectures-12-13)
-* [Lecture 14](#lecture-14-row-reduction)
-* [Chapter 1](#chapter-1)
-* [Chapter 2](#chapter-2)
-* [Chapter 4](#chapter-4)
-* [Chapter 8](#chapter-8-dual-spaces-and-tensors)
+*June 2022 edits: I wrote this page 2 years during my Advanced Linear Algebra course at Penn ago and gave gotten much better at math, exposition, and math typesetting since then. I am slowly working through it to make it more readable*
 
-### Lectures 9-11   
+- [Composition of Linear Maps](#composition-of-linear-maps)
+  - [Properties of Compsition of Linear Maps](#properties-of-compsition-of-linear-maps)
+- [Dual Spaces and Isomorphism](#dual-spaces-and-isomorphism)
+    - [Lectures 12-13](#lectures-12-13)
+    - [Lecture 14: Row Reduction](#lecture-14-row-reduction)
+    - [Chapter 1](#chapter-1)
+    - [Chapter 2](#chapter-2)
+      - [Section 2.3 : Analyzing the Pivots:](#section-23--analyzing-the-pivots)
+      - [Section 2.7 : Fundamental Subspaces and Rank:](#section-27--fundamental-subspaces-and-rank)
+  - [Chapter 3](#chapter-3)
+  - [Chapter 4](#chapter-4)
+  - [Chapter 9](#chapter-9)
+  - [Chapter 8: Dual Spaces and Tensors](#chapter-8-dual-spaces-and-tensors)
+    - [Section 8.1 : Dual Spaces](#section-81--dual-spaces)
+    - [Extra notes/defs to categorize later](#extra-notesdefs-to-categorize-later)
+  - [Determinants](#determinants)
+    - [exercises](#exercises)
 
-**Composition of Linear Maps**   
+# Composition of Linear Maps
 
-- Recall that if X,Y,Z are all sets, and \\( f: X \mapsto Y \\) and \\( g: Y \mapsto Z \\) _if we have a mapping f from X to Y and a mapping g from Y to Z_
-- we can form a composite map:
-    + \\( g \circ f : X \mapsto Z\\) that is defined by \\( g \circ f = g(f(x)) \\) for all \\( x \in X \\)
+Recall that if $X,Y,Z$ are all sets, and $f: X \mapsto Y$ and $g: Y \mapsto Z $ if we have a mapping $f$ from $X$ to $Y$ and a mapping $g$ from $Y$ to $Z$, we can form a composite map:
+
++ $(g \circ f): X \mapsto Z$ that is defined by $g \circ f = g(f(x)) \\) for all \\( x \in X \\)
+
 - we already used the notion of composition to define invertible/bijective maps of sets. 
 - composition also preserves the property of maps being linear!! _verycool_ we state it formally and prove it:
 - **_Claim_**: The composition of two linear maps is also linear. Let U, V, W be \\( \mathbb{F} \\) vector spaces. 
@@ -109,7 +119,8 @@ layout: default
                         \\)
     * EXERCISE: Compute the matrix of the reflection over the line L with respect to the line L: y =7x in the standard basis of \\(R^{2}\\)
 
-**Properties of the Composition of Linear Maps:**   
+
+## Properties of Compsition of Linear Maps
 
 * (1): if 
     - \\( T \in L(V,W)\\)
@@ -322,8 +333,10 @@ layout: default
         + This shows that dim im(T) = \\(n-k\\) = dim V - dim ker(T). 
         + QED
 
-### **Dual Spaces and isomorphisms:**   
-* We can use the criteria for isomorphic spaces to uncover more truths about the relationship between \\(V \\) and \\(V^{v}\\)  
+# Dual Spaces and Isomorphism
+
+We can use the criteria for isomorphic spaces to uncover more truths about the relationship between \\(V \\) and \\(V^{v}\\)  
+
 * **Dimension of \\(V^{v}\\) and \\(V\\) Claim**: 
     - if V is a finite dimensional vector space over F, 
     - then (=>) \\(dimV^{v} = dim V\\)
