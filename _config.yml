@@ -1,5 +1,4 @@
 
-
 theme: minima
 
 minima:
@@ -15,3 +14,4 @@ markdown: kramdown
 assets:
   features:
     liquid: false
+
