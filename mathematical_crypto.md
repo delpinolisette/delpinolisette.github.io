@@ -5,6 +5,16 @@ layout: default
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+Below are some rough notes on mathematical cryptography - these are always in progress.
+
+# Key Issues 
+
+Factoring numbers intro prime factors is *hard*. The fastest known algorithms are exponential in the number of bits of the number. 
+
+Primality testing is easy. 
+
+This contrast allows secure encryption to exist. 
+
 ### Preliminaries:
 #### **Ring of Integers Mod m**
 *  :=   $$\mathbb{Z}/m\mathbb{Z}$$={$$0,1,2,......,m-1$$}
@@ -23,7 +33,7 @@ layout: default
 
 ---
 
-### Section 2.2 Public Key Cryptosystems:
+### Public Key Cryptosystems:
 
 Diffie Hellman introduces public key cryptosystems and therefore:
 * one-way function: 
