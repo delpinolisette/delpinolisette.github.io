@@ -30,4 +30,4 @@ So, the group $$G = D_{2n}$$ looks like the set of these two symmetires:
 
 <!-- ![](/assets/2022-10-12-20-21-28.png) -->
 
-![d2]({{ site.url }}/assets/image.png)
+![d2]({{ site.url }}/assets/2022-10-12-20-21-28.png)
