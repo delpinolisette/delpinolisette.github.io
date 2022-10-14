@@ -5,6 +5,10 @@ layout: post
 # date: 2022-10-12
 ---
 
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 Do you like group theory?
 
 I'd like to start a series of expository blog posts that "climb up the chain" of the dihedral groups of order $$2n$$ (as in, what do these groups visually look like as we vary $$n$$ from $$1$$ to $$n$$) in way more detail than what I've found in textbooks and other online resources. 
