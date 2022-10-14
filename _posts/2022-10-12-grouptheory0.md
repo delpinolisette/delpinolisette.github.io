@@ -24,13 +24,13 @@ Let's start.
 
 ## $$D_2$$ - Dihedral Group of Order 2
 
-Here we start with the case that $$n=1$$, so $$D_2n$$ = $$D_2$$. 
+Here we start with the case that $$n=1$$, so $$D_{2n}$$ = $$D_2$$. 
 
 This the group of the symmetries of the $$1$$-sided polygon in Euclidian Space, under the operations of reflection or rotation. 
 
 The only possible move here is to "switch the vertices", or reflect across the midpoint of the polygon. 
 
-So, the group $$G = D_{2n}$$ looks like the set of these two symmetires:
+So, the group $$G = D_{2n} $$ looks like the set of these two symmetries:
 
 <!-- ![](/assets/2022-10-12-20-21-28.png) -->
 
