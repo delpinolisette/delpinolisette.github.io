@@ -11,13 +11,13 @@ layout: post
 
 Let's continue our journey on the Dihedral groups of order $$2n$$.
 
-First, let's establish
-
+First, let's establish a few things:
 
 ## A Note On Symmetry
 
-As we go through these groups, we're playing the game, what motions of the polygon leave the polygon looking the same (what are its symmetries0)?
+As we go through these groups, we're playing the game, what motions of the polygon leave the polygon looking the same (what are its symmetries)?
 
-Reconsider "symmetry" as a manipulation of the plane. Then you can rephrase the game of looking for symmetries as looking for isometries of the plane. 
+Reconsider "symmetry" as a manipulation of the plane. Then you can rephrase the game of looking for symmetries as looking for *isometries* of the plane. 
+
 
 
