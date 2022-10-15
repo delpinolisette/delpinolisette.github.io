@@ -39,11 +39,11 @@ So, the group $$G = D_{2n} $$ looks like the set of these two symmetries:
 
 And the binary operations of this group are reflection/rotation as described above, and identity (leaving the $$1$$-sided polygon as is).
 
-They also call $D_{2}$ the symmetry group of the line segment. Some sources may call it $$D_1$$ in favor of the geometric convention. 
+They also call $$D_{2}$$ the symmetry group of the line segment. Some sources may call it $$D_1$$ in favor of the geometric convention. 
 
 ## What About Subgroups?
 
-By Langrage's Theorem, we have that the order of any possible subgroups must divide the order of the group. So the only possible subgroups have orders $1,2$.
+By Langrage's Theorem, we have that the order of any possible subgroups must divide the order of the group. So the only possible subgroups have orders $$1,2$$.
 
 <!-- Trivial subgroup of identity -->
 
