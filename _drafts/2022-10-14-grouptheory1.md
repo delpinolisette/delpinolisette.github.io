@@ -1,5 +1,5 @@
 ---
-title: Group Theory 0 - Dihedral Group of Order 2n
+title: Group Theory 1 - Dihedral Group of Order 2n
 author: Lisette del Pino
 layout: post
 # date: 2022-10-12
