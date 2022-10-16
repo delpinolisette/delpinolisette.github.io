@@ -55,13 +55,20 @@ But as we will see, this presentation also holds for $$n=1,2$$.
 
 The Cayley Table of $$D_1$$ is:
 
-<!-- insert cayley table here -->
+<!-- ![](/c:/Users/345li/Documents/delpinolisette.github.io/_posts/assets/images/2022-10-16-19-14-59.png) -->
+
+![cayleytableD1]({{ site.url }}/assets/2022-10-16-19-14-59.png){: width="250" }
+
+where $$r$$ is rotation by $$108$$ degrees.
+
+The the group is Abelian and isomorphic to all groups of order $$2$$. 
 
 ## What About Subgroups?
 
 By Langrage's Theorem, we have that the order of any possible subgroups must divide the order of the group. So the only possible subgroups have orders $$1,2$$.
 
-<!-- Trivial subgroup of identity -->
+Then we have the trivial subgroup $$G = {e}$$ and the group itself.
+
 
 ## A Note on the $1$ sided polygon
 
@@ -69,6 +76,6 @@ In Artin's *Algebra*, he describes the 1-gon as a single node with a loop. Like 
 
 <!-- ![Need to draw this a little nicer...](assets/2022-10-15-11-01-15.png) -->
 
-![D1]({{ site.url }}/assets/2022-10-15-11-01-15.png)
+![D1]({{ site.url }}/assets/2022-10-15-11-01-15.png){: width="250" }
 
-I found it difficult to represent the symmetries with this visualization of the polygon, so I used to vertices inst
+I found it difficult to represent the symmetries with this visualization of the polygon, so I went with the two vertex drawing. They both represent $$D_1$$.

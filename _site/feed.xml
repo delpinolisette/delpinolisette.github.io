@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-16T19:05:46-04:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Group Theory 1 - Dihedral Group of Order 2n</title><link href="http://localhost:4000/2022/10/14/grouptheory1.html" rel="alternate" type="text/html" title="Group Theory 1 - Dihedral Group of Order 2n" /><published>2022-10-14T00:00:00-04:00</published><updated>2022-10-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/10/14/grouptheory1</id><content type="html" xml:base="http://localhost:4000/2022/10/14/grouptheory1.html"><![CDATA[<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-16T19:23:09-04:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Group Theory 1 - Dihedral Group of Order 2n</title><link href="http://localhost:4000/2022/10/14/grouptheory1.html" rel="alternate" type="text/html" title="Group Theory 1 - Dihedral Group of Order 2n" /><published>2022-10-14T00:00:00-04:00</published><updated>2022-10-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/10/14/grouptheory1</id><content type="html" xml:base="http://localhost:4000/2022/10/14/grouptheory1.html"><![CDATA[<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 <p>Let’s continue our journey on the Dihedral groups of order \(2n\).</p>
@@ -70,13 +70,19 @@
 
 <p>The Cayley Table of \(D_1\) is:</p>
 
-<!-- insert cayley table here -->
+<!-- ![](/c:/Users/345li/Documents/delpinolisette.github.io/_posts/assets/images/2022-10-16-19-14-59.png) -->
+
+<p><img src="http://localhost:4000/assets/2022-10-16-19-14-59.png" alt="cayleytableD1" width="250" /></p>
+
+<p>where \(r\) is rotation by \(108\) degrees.</p>
+
+<p>The the group is Abelian and isomorphic to all groups of order \(2\).</p>
 
 <h2 id="what-about-subgroups">What About Subgroups?</h2>
 
 <p>By Langrage’s Theorem, we have that the order of any possible subgroups must divide the order of the group. So the only possible subgroups have orders \(1,2\).</p>
 
-<!-- Trivial subgroup of identity -->
+<p>Then we have the trivial subgroup \(G = {e}\) and the group itself.</p>
 
 <h2 id="a-note-on-the-1-sided-polygon">A Note on the $1$ sided polygon</h2>
 
@@ -84,9 +90,9 @@
 
 <!-- ![Need to draw this a little nicer...](assets/2022-10-15-11-01-15.png) -->
 
-<p><img src="http://localhost:4000/assets/2022-10-15-11-01-15.png" alt="D1" /></p>
+<p><img src="http://localhost:4000/assets/2022-10-15-11-01-15.png" alt="D1" width="250" /></p>
 
-<p>I found it difficult to represent the symmetries with this visualization of the polygon, so I used to vertices inst</p>]]></content><author><name>Lisette del Pino</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Batch Normalization Notes</title><link href="http://localhost:4000/2021/04/22/thoughts.html" rel="alternate" type="text/html" title="Batch Normalization Notes" /><published>2021-04-22T00:00:00-04:00</published><updated>2021-04-22T00:00:00-04:00</updated><id>http://localhost:4000/2021/04/22/thoughts</id><content type="html" xml:base="http://localhost:4000/2021/04/22/thoughts.html"><![CDATA[<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+<p>I found it difficult to represent the symmetries with this visualization of the polygon, so I went with the two vertex drawing. They both represent \(D_1\).</p>]]></content><author><name>Lisette del Pino</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Batch Normalization Notes</title><link href="http://localhost:4000/2021/04/22/thoughts.html" rel="alternate" type="text/html" title="Batch Normalization Notes" /><published>2021-04-22T00:00:00-04:00</published><updated>2021-04-22T00:00:00-04:00</updated><id>http://localhost:4000/2021/04/22/thoughts</id><content type="html" xml:base="http://localhost:4000/2021/04/22/thoughts.html"><![CDATA[<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 <p>(Post still in progress. If I find any subtleties in the future I will update this post accordingly)</p>
