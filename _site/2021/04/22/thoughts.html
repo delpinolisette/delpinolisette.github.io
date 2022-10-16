@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Batch Normalization Notes</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Batch Normalization Notes" />
+<meta name="author" content="Lisette del Pino" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/2021/04/22/thoughts.html" />
+<meta property="og:url" content="http://localhost:4000/2021/04/22/thoughts.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-22T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Batch Normalization Notes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lisette del Pino"},"dateModified":"2021-04-22T00:00:00-04:00","datePublished":"2021-04-22T00:00:00-04:00","headline":"Batch Normalization Notes","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2021/04/22/thoughts.html"},"url":"http://localhost:4000/2021/04/22/thoughts.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Batch Normalization Notes</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-04-22T00:00:00-04:00" itemprop="datePublished">Apr 22, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Lisette del Pino</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<p>(Post still in progress. If I find any subtleties in the future I will update this post accordingly)</p>
+
+<h2 id="what-is-it">What is it?</h2>
+<ul>
+  <li>Method for (supposedly) increasing the performance of your neural network:
+    <ul>
+      <li>In particular helps with the issue of <strong>internal covariate shift</strong></li>
+      <li>the input data means and variances change in the internal layers during neural network training.
+        <ul>
+          <li>you can see how this is a huge issue in deep neural networks - small changes in initial hidden layers get propogated and grow during training, affecting the deeper hidden layers later on!</li>
+          <li>at each step, the <em>distribution</em> of your input data will change without BatchNormalization.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-do-i-use-it">How do I Use It?</h2>
+<ul>
+  <li>In your neural network, add a layer where you do the Batch Norm Transform:
+    <ul>
+      <li>in practice, use <code class="language-plaintext highlighter-rouge">keras</code> for building this BatchNormalization layer.
+        <ul>
+          <li><a href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/BatchNormalization">keras BatchNormalization Docs</a></li>
+          <li>so if you’re using <code class="language-plaintext highlighter-rouge">keras</code> - doing a batch norm transform is quite simply just adding a BatchNormalization layer to your model :
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">model.add(keras.layers.BatchNormalization())</code></li>
+              <li>if course you can tweak some parameters if you wish - see the docs for more information.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>if you’re interested in the math and implementing it yourself (which I’m always a big fan of), that’s coming up soon.
+        <ul>
+          <li>for now, know that the Batch Norm Transform normalizes your data to have a $\mu = 0$ and $\sigma = 1$.</li>
+          <li>also the actual normalization <strong>per feature</strong> for a feature $x$ in a “mini-batch” (call it $B$) looks like :
+            <ul>
+              <li>
+\[\hat{x}_B^{(p)}  \leftarrow \frac{x_B{ ^{(p)} } –  \mu_B^{(p)}}{\sqrt{ \sigma^2{ _B^{(p)} } + \epsilon}}\]
+              </li>
+              <li>where $p$ represents the p^th feature.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="any-drawbacks">Any Drawbacks?</h2>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Vanishing_gradient_problem">Gradient Explosion</a> in deep neural networks.
+    <ul>
+      <li>this Wikipedia page needs a lot of work, wow. Don’t look at me!</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="any-funky-things-i-should-know">Any Funky Things I Should Know?</h2>
+<ul>
+  <li>Ok, apparently there’s a lot of debate regarding whether Batch Norm directly reduces the internal covariate shift phenomenon.
+    <ul>
+      <li>A lot of scientists who are smarter than I am and know much more about Deep Learning say that what Batch Norm actually does is smooth the optimization function which is being solved for during training.
+        <ul>
+          <li>this smoothness supposedly (I want to prove it / see a proof) allows for larger ranges of the learning rate and faster convergence.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="liz-give-us-an-example">Liz! Give Us An Example!</h2>
+<ul>
+  <li>Here is how I initialized a neural network with BatchNormalization layers (two of em!):</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># initialize my model 
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+
+<span class="c1"># now we stack the layers using .add()
+</span>
+<span class="c1"># layer 1 - dense layer with 8 nodes
+# notice keras lets us do this without defining an input layer 
+</span><span class="n">model</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># layer 2 - batch norm time! 
+</span><span class="n">model</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">BatchNormalization</span><span class="p">())</span>
+
+<span class="c1"># and so forth...
+</span>
+</code></pre></div></div>
+
+<h1 id="references-and-more-reading-">References and More Reading :</h1>
+
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Batch_normalization">Wikipedia</a></li>
+  <li><a href="https://www.machinecurve.com/index.php/2020/01/15/how-to-use-batch-normalization-with-keras/#recap-about-batch-normalization">How To Use Batch Normalization With Keras?</a></li>
+  <li><a href="https://faroit.com/keras-docs/1.2.0/">Easy To Read Keras Docs</a></li>
+  <li><a href="https://keras.io/api/">More Keras Docs (API)</a></li>
+</ol>
+
+  </div><a class="u-url" href="/2021/04/22/thoughts.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

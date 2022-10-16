@@ -25,8 +25,11 @@ This group is the case when $$n=2$$, then the total order of the group is $$4$$.
 
 It is important to note that this $$2$$-gon has 2 vertices and 2 edges, meaning the two vertices do NOT share an edge, unlike the $$1$$-sided polygon. While I draw them as curved edges, this is only a representation of otherwise very close straight lines. 
 
-This group is isomorphic to the Klein 4-group.
-<!-- establish isomorphism -->
+This group is isomorphic to the Klein 4-group, this also means that the group is isomorphic to the cyclic group of order 2 :) 
+
+<!-- establish isomorphism for klein 4 group-->
+
+<!-- establish isomorphism for cyclic group of order 2 -->
 
 
 

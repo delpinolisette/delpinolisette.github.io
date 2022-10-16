@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Two (Python) approaches to the Binomial Distribution</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Two (Python) approaches to the Binomial Distribution" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/binom_dist.html" />
+<meta property="og:url" content="http://localhost:4000/binom_dist.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Two (Python) approaches to the Binomial Distribution" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Two (Python) approaches to the Binomial Distribution","url":"http://localhost:4000/binom_dist.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Two (Python) approaches to the Binomial Distribution</h1>
+  </header>
+
+  <div class="post-content">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<p>The Binomial Distribution, in simplest terms, describes the probabilities of getting $x$ successes in $n$ trials.</p>
+
+<p>For example, what is the probability of getting \(4\) heads if i flip a <em>fair</em> coin \(6\) times? Also, what is the probability of getting \(4\) heads if I flip an <em>unfair</em> coin \(6\) times? These questions can be answered with the Binomial Distribution!</p>
+
+<p>Notice that the Binomial distribution is a <strong>discrete</strong> distribution. That means that for any expected values of the parent distribution, you should evaluate using sums, not integrals.</p>
+
+<p>The Binomial Distribution is also called a Bernoulli Distribution, since a single Bernoulli trial measures the probability of binary success in a single trial.</p>
+
+<p>In this post I show two ways that I implement the Binomial Distribution, even though in practice you should use the one that relies on <code class="language-plaintext highlighter-rouge">scipy</code>, especially in professional settings.</p>
+
+<p>Recall that the formula for the Binomial Distribution is …</p>
+
+\[P_x = {n \choose x} p^{x} (1-p)^{n-x}\]
+
+<p>But since \({n \choose x} = \frac{n!}{x! (n-x)!}\)</p>
+
+<p>We also have :
+\(P_x = {\frac{n!}{x! (n-x)!}} p^{x} (1-p)^{n-x}\)</p>
+
+<h2 id="method-1---implement-the-formula-from-scratch">Method 1 - Implement the formula from scratch</h2>
+
+<p>the pseudocode for an implementation like this is :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># a recursive factorial defn. 
+</span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">factorial</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">1</span>
+
+<span class="c1"># returns n choose x
+</span><span class="k">def</span> <span class="nf">choose</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1"># returns binomial PMF
+</span><span class="k">def</span> <span class="nf">binomial_pdf</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
+  <span class="n">n_choose_x</span> <span class="o">=</span> <span class="n">choose</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">n_choose_x</span> <span class="o">*</span> <span class="p">(</span><span class="n">p</span><span class="o">**</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+
+</code></pre></div></div>
+
+<h2 id="method-2">Method 2</h2>
+
+<p>This one is probably better form after you’ve tried implementing the binomial distribution from scratch.</p>
+
+<p>This is the method for a non-cumulative distribution, functions documented <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html">here</a>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">binom</span>
+
+<span class="k">def</span> <span class="nf">pb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">binom</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">)</span>
+
+</code></pre></div></div>
+<p>And this is the method for a cumulative binomial distribution :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

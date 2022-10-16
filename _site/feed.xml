@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-16T19:05:46-04:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Group Theory 1 - Dihedral Group of Order 2n</title><link href="http://localhost:4000/2022/10/14/grouptheory1.html" rel="alternate" type="text/html" title="Group Theory 1 - Dihedral Group of Order 2n" /><published>2022-10-14T00:00:00-04:00</published><updated>2022-10-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/10/14/grouptheory1</id><content type="html" xml:base="http://localhost:4000/2022/10/14/grouptheory1.html"><![CDATA[<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<p>Let’s continue our journey on the Dihedral groups of order \(2n\).</p>
+
+<p>First, let’s establish a few things:</p>
+
+<h2 id="a-note-on-symmetry---just-isometry">A Note On Symmetry - Just Isometry</h2>
+
+<p>As we go through these groups, we’re playing the game, what motions of the polygon leave the polygon looking the same (what are its symmetries)?</p>
+
+<p>Reconsider “symmetry” as a manipulation of the plane. Then you can rephrase the game of looking for symmetries as looking for <em>isometries</em> of the plane.</p>
+
+<h2 id="d_4-the-2-sided-polygon">\(D_4\), the \(2\)-sided polygon</h2>
+
+<p>This group is the case when \(n=2\), then the total order of the group is \(4\). The operations are still identity, reflection, and rotation.</p>
+
+<p>It is important to note that this \(2\)-gon has 2 vertices and 2 edges, meaning the two vertices do NOT share an edge, unlike the \(1\)-sided polygon. While I draw them as curved edges, this is only a representation of otherwise very close straight lines.</p>
+
+<p>This group is isomorphic to the Klein 4-group, this also means that the group is isomorphic to the cyclic group of order 2 :)</p>
+
+<!-- establish isomorphism for klein 4 group-->
+
+<!-- establish isomorphism for cyclic group of order 2 -->]]></content><author><name>Lisette del Pino</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Group Theory 0 - Dihedral Group of Order 2n</title><link href="http://localhost:4000/2022/10/12/grouptheory0.html" rel="alternate" type="text/html" title="Group Theory 0 - Dihedral Group of Order 2n" /><published>2022-10-12T00:00:00-04:00</published><updated>2022-10-12T00:00:00-04:00</updated><id>http://localhost:4000/2022/10/12/grouptheory0</id><content type="html" xml:base="http://localhost:4000/2022/10/12/grouptheory0.html"><![CDATA[<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<p>Do you like group theory?</p>
+
+<p>I’d like to start a series of expository blog posts that “climb up the chain” of the dihedral groups of order \(2n\) (as in, what do these groups visually look like as we vary \(n\) from \(1\) to \(n\)) in way more detail than what I’ve found in textbooks and other online resources.</p>
+
+<p>A danger to this is some readers will find this exercise uninteresting since the dihedral group (in particular \(D_8\), the group of symmetries of the square under reflection \(s\) and rotation \(r\)) is one of the first examples of groups in a ton of textbooks, but I have yet to find a comprehensive walkthrough of the first few \(n\) for \(D_{2n}\) (this is because in almost all references, \(D_{2n}\) is defined for \(n\geq 3\), but the presentation still holds for lower group orders).</p>
+
+<p>First, let’s name names: When I say \(D_{2n}\) I mean the group of symmetries of the \(n\)-gon in Euclidian space under the operations of translation and reflection, for \(n \geq 3\). For \(n=1,2\), I will call them \(D_1\) and \(D_2\), respectively (in the geometric convention). For \(n \geq 3\), I will call the dihedral groups \(D_{2n}\).</p>
+
+<p>I’m sure we’ve all been presented with pictures of polygons as children and been asked to count its symmetries. Well, the formal exploration of these groups is just like that, except we’re going to find additional sub-structure on these symmetries in the form of subgroups.</p>
+
+<p>That’s what the interesting question here is: Given a dihedral group, what are its subgroups?</p>
+
+<p>I hope to build up to this fairly quickly, at least as fast as I’m presenting them.</p>
+
+<p>Let’s start.</p>
+
+<h2 id="d_1---dihedral-group-of-order-2">\(D_1\) - Dihedral Group of Order 2</h2>
+
+<p>Here we start with the case that \(n=1\), the \(1\)-sided polygon. This group is called \(D_1\).</p>
+
+<p>This the group of the symmetries of the \(1\)-sided polygon in Euclidian Space, under the operations of reflection \(s\) or rotation \(r\).</p>
+
+<p>The only possible move here is to “switch the vertices”, or reflect across the midpoint of the polygon. Equivalently, you can rotate the line \(180\) degrees about the midpoint and get the same symmetry. In either case, let’s call the operation “switching the vertices”.</p>
+
+<p>So, \(D_1\) looks like the set of these two symmetries:</p>
+
+<!-- ![](/assets/2022-10-12-20-21-28.png) -->
+
+<p><img src="http://localhost:4000/assets/2022-10-12-20-21-28.png" alt="d2ord1" /></p>
+
+<p>We have identity \(e\) (leaving the \(1\)-sided polygon as is), and the image of \(s\) about the midpoint or \(r\) by \(180\) degrees.</p>
+
+<p>Intuitively, \(D_{1}\) is also called the symmetry group of the line segment.</p>
+
+<h3 id="presentation-of-d_1">Presentation of \(D_1\)</h3>
+
+<p>In general, the presentation of \(D_{2n}\) for \(n \geq 3\) is:</p>
+
+\[D_{2n} = &lt;r,s | r^n = s^2 = 1, rs = sr^{-1}&gt;\]
+
+<p>so that rotation \(r\) and reflection \(s\) are the two <em>generators</em>, and we have the <em>relations</em> listed on the right side of the pipe.</p>
+
+<p>But as we will see, this presentation also holds for \(n=1,2\).</p>
+
+<p>The Cayley Table of \(D_1\) is:</p>
+
+<!-- insert cayley table here -->
+
+<h2 id="what-about-subgroups">What About Subgroups?</h2>
+
+<p>By Langrage’s Theorem, we have that the order of any possible subgroups must divide the order of the group. So the only possible subgroups have orders \(1,2\).</p>
+
+<!-- Trivial subgroup of identity -->
+
+<h2 id="a-note-on-the-1-sided-polygon">A Note on the $1$ sided polygon</h2>
+
+<p>In Artin’s <em>Algebra</em>, he describes the 1-gon as a single node with a loop. Like so,</p>
+
+<!-- ![Need to draw this a little nicer...](assets/2022-10-15-11-01-15.png) -->
+
+<p><img src="http://localhost:4000/assets/2022-10-15-11-01-15.png" alt="D1" /></p>
+
+<p>I found it difficult to represent the symmetries with this visualization of the polygon, so I used to vertices inst</p>]]></content><author><name>Lisette del Pino</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Batch Normalization Notes</title><link href="http://localhost:4000/2021/04/22/thoughts.html" rel="alternate" type="text/html" title="Batch Normalization Notes" /><published>2021-04-22T00:00:00-04:00</published><updated>2021-04-22T00:00:00-04:00</updated><id>http://localhost:4000/2021/04/22/thoughts</id><content type="html" xml:base="http://localhost:4000/2021/04/22/thoughts.html"><![CDATA[<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<p>(Post still in progress. If I find any subtleties in the future I will update this post accordingly)</p>
+
+<h2 id="what-is-it">What is it?</h2>
+<ul>
+  <li>Method for (supposedly) increasing the performance of your neural network:
+    <ul>
+      <li>In particular helps with the issue of <strong>internal covariate shift</strong></li>
+      <li>the input data means and variances change in the internal layers during neural network training.
+        <ul>
+          <li>you can see how this is a huge issue in deep neural networks - small changes in initial hidden layers get propogated and grow during training, affecting the deeper hidden layers later on!</li>
+          <li>at each step, the <em>distribution</em> of your input data will change without BatchNormalization.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-do-i-use-it">How do I Use It?</h2>
+<ul>
+  <li>In your neural network, add a layer where you do the Batch Norm Transform:
+    <ul>
+      <li>in practice, use <code class="language-plaintext highlighter-rouge">keras</code> for building this BatchNormalization layer.
+        <ul>
+          <li><a href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/BatchNormalization">keras BatchNormalization Docs</a></li>
+          <li>so if you’re using <code class="language-plaintext highlighter-rouge">keras</code> - doing a batch norm transform is quite simply just adding a BatchNormalization layer to your model :
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">model.add(keras.layers.BatchNormalization())</code></li>
+              <li>if course you can tweak some parameters if you wish - see the docs for more information.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>if you’re interested in the math and implementing it yourself (which I’m always a big fan of), that’s coming up soon.
+        <ul>
+          <li>for now, know that the Batch Norm Transform normalizes your data to have a $\mu = 0$ and $\sigma = 1$.</li>
+          <li>also the actual normalization <strong>per feature</strong> for a feature $x$ in a “mini-batch” (call it $B$) looks like :
+            <ul>
+              <li>
+\[\hat{x}_B^{(p)}  \leftarrow \frac{x_B{ ^{(p)} } –  \mu_B^{(p)}}{\sqrt{ \sigma^2{ _B^{(p)} } + \epsilon}}\]
+              </li>
+              <li>where $p$ represents the p^th feature.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="any-drawbacks">Any Drawbacks?</h2>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Vanishing_gradient_problem">Gradient Explosion</a> in deep neural networks.
+    <ul>
+      <li>this Wikipedia page needs a lot of work, wow. Don’t look at me!</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="any-funky-things-i-should-know">Any Funky Things I Should Know?</h2>
+<ul>
+  <li>Ok, apparently there’s a lot of debate regarding whether Batch Norm directly reduces the internal covariate shift phenomenon.
+    <ul>
+      <li>A lot of scientists who are smarter than I am and know much more about Deep Learning say that what Batch Norm actually does is smooth the optimization function which is being solved for during training.
+        <ul>
+          <li>this smoothness supposedly (I want to prove it / see a proof) allows for larger ranges of the learning rate and faster convergence.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="liz-give-us-an-example">Liz! Give Us An Example!</h2>
+<ul>
+  <li>Here is how I initialized a neural network with BatchNormalization layers (two of em!):</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># initialize my model 
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+
+<span class="c1"># now we stack the layers using .add()
+</span>
+<span class="c1"># layer 1 - dense layer with 8 nodes
+# notice keras lets us do this without defining an input layer 
+</span><span class="n">model</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># layer 2 - batch norm time! 
+</span><span class="n">model</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">BatchNormalization</span><span class="p">())</span>
+
+<span class="c1"># and so forth...
+</span>
+</code></pre></div></div>
+
+<h1 id="references-and-more-reading-">References and More Reading :</h1>
+
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Batch_normalization">Wikipedia</a></li>
+  <li><a href="https://www.machinecurve.com/index.php/2020/01/15/how-to-use-batch-normalization-with-keras/#recap-about-batch-normalization">How To Use Batch Normalization With Keras?</a></li>
+  <li><a href="https://faroit.com/keras-docs/1.2.0/">Easy To Read Keras Docs</a></li>
+  <li><a href="https://keras.io/api/">More Keras Docs (API)</a></li>
+</ol>]]></content><author><name>Lisette del Pino</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">ISLR and notation for Linear Discriminant Analysis</title><link href="http://localhost:4000/2021/03/24/thoughts.html" rel="alternate" type="text/html" title="ISLR and notation for Linear Discriminant Analysis" /><published>2021-03-24T00:00:00-04:00</published><updated>2021-03-24T00:00:00-04:00</updated><id>http://localhost:4000/2021/03/24/thoughts</id><content type="html" xml:base="http://localhost:4000/2021/03/24/thoughts.html"><![CDATA[<p>Some thoughts on mathematical notation coming up….</p>
+
+<p>I am not a huge fan of how ISLR presents the LDA classifier. It’s nice because you can still implement it from scratch but tracking down what each part of the notation means is not an awesome experience…..</p>
+
+<p>Should all math textbooks have a little summary at the beginning of the chapter explaining each bit of notation? I think if I were every to write a book I would do something like that.</p>
+
+<p>(no more mathematical notation obfuscation)</p>]]></content><author><name>Lisette del Pino</name></author><summary type="html"><![CDATA[Some thoughts on mathematical notation coming up….]]></summary></entry><entry><title type="html">Elements of Statistical Inference</title><link href="http://localhost:4000/2021/03/22/thoughts.html" rel="alternate" type="text/html" title="Elements of Statistical Inference" /><published>2021-03-22T00:00:00-04:00</published><updated>2021-03-22T00:00:00-04:00</updated><id>http://localhost:4000/2021/03/22/thoughts</id><content type="html" xml:base="http://localhost:4000/2021/03/22/thoughts.html"><![CDATA[<p>It’s always incredible to see how some simple algebraic manipulation can make your work easier when building models in Machine Learning. For example, the Maximum Likelihood Estimate reduces to a lovely sum in the case of two classifiers. More discussion coming soon, but I’ve been reading about this across several papers and technical blogs:</p>
+
+<ul>
+  <li>Elements of Statistical Inference (my Bible)</li>
+  <li><a href="https://web.stanford.edu/class/archive/cs/cs109/cs109.1178/lectureHandouts/220-logistic-regression.pdf">Logistic Regression Handout from Stanford CS 109</a></li>
+  <li><a href="https://www.stat.cmu.edu/~cshalizi/uADA/12/lectures/ch12.pdf">CMU Stat Dept handout</a></li>
+  <li><a href="https://czep.net/stat/mlelr.pdf">CZep’s Paper</a></li>
+  <li><a href="https://www.stat.rutgers.edu/home/pingli/papers/Logit.pdf">Rutgers Slides on Logit</a></li>
+</ul>
+
+<p>I hope these links ride forever on the endless highway of the internet, shiny and chrome (please don’t be broken in a year)</p>]]></content><author><name>Lisette del Pino</name></author><summary type="html"><![CDATA[It’s always incredible to see how some simple algebraic manipulation can make your work easier when building models in Machine Learning. For example, the Maximum Likelihood Estimate reduces to a lovely sum in the case of two classifiers. More discussion coming soon, but I’ve been reading about this across several papers and technical blogs:]]></summary></entry><entry><title type="html">Integration Thoughts</title><link href="http://localhost:4000/2021/03/14/integration.html" rel="alternate" type="text/html" title="Integration Thoughts" /><published>2021-03-14T00:00:00-05:00</published><updated>2021-03-14T00:00:00-05:00</updated><id>http://localhost:4000/2021/03/14/integration</id><content type="html" xml:base="http://localhost:4000/2021/03/14/integration.html"><![CDATA[<h1 id="integration-thoughts">Integration Thoughts</h1>
+
+<p>There are some tricky assumptions about integration that need to be addressed:</p>
+
+<p>We know this from optimization theory - we need to be careful about integrating a function using usual methods - it could be the case in higher dimensions that a function is <strong>not</strong> integrable.</p>
+
+<p>To prove that it is indeed Riemann integrable, we need to show that the measure of the boundary of the region has volume zero . This is also equivalent to showing:</p>
+
+<ul>
+  <li>the region is a Jordan region <a href="https://math.stackexchange.com/questions/1251627/jordan-region-problem">(what’s that?)</a>, or that</li>
+  <li>the set to integrate over is admissible, or that</li>
+  <li>the boundary of the volume to integrate is zero</li>
+</ul>
+
+<p>Also… happy pi day!!!</p>]]></content><author><name>Lisette del Pino</name></author><summary type="html"><![CDATA[Integration Thoughts]]></summary></entry></feed>

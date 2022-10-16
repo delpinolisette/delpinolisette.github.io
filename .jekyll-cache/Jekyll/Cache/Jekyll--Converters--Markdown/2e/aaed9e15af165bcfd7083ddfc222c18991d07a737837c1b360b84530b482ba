@@ -1,0 +1,105 @@
+I"/<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<p>(Post still in progress. If I find any subtleties in the future I will update this post accordingly)</p>
+
+<h2 id="what-is-it">What is it?</h2>
+<ul>
+  <li>Method for (supposedly) increasing the performance of your neural network:
+    <ul>
+      <li>In particular helps with the issue of <strong>internal covariate shift</strong></li>
+      <li>the input data means and variances change in the internal layers during neural network training.
+        <ul>
+          <li>you can see how this is a huge issue in deep neural networks - small changes in initial hidden layers get propogated and grow during training, affecting the deeper hidden layers later on!</li>
+          <li>at each step, the <em>distribution</em> of your input data will change without BatchNormalization.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-do-i-use-it">How do I Use It?</h2>
+<ul>
+  <li>In your neural network, add a layer where you do the Batch Norm Transform:
+    <ul>
+      <li>in practice, use <code class="language-plaintext highlighter-rouge">keras</code> for building this BatchNormalization layer.
+        <ul>
+          <li><a href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/BatchNormalization">keras BatchNormalization Docs</a></li>
+          <li>so if you’re using <code class="language-plaintext highlighter-rouge">keras</code> - doing a batch norm transform is quite simply just adding a BatchNormalization layer to your model :
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">model.add(keras.layers.BatchNormalization())</code></li>
+              <li>if course you can tweak some parameters if you wish - see the docs for more information.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>if you’re interested in the math and implementing it yourself (which I’m always a big fan of), that’s coming up soon.
+        <ul>
+          <li>for now, know that the Batch Norm Transform normalizes your data to have a $\mu = 0$ and $\sigma = 1$.</li>
+          <li>also the actual normalization <strong>per feature</strong> for a feature $x$ in a “mini-batch” (call it $B$) looks like :
+            <ul>
+              <li>
+\[\hat{x}_B^{(p)}  \leftarrow \frac{x_B{ ^{(p)} } –  \mu_B^{(p)}}{\sqrt{ \sigma^2{ _B^{(p)} } + \epsilon}}\]
+              </li>
+              <li>where $p$ represents the p^th feature.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="any-drawbacks">Any Drawbacks?</h2>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Vanishing_gradient_problem">Gradient Explosion</a> in deep neural networks.
+    <ul>
+      <li>this Wikipedia page needs a lot of work, wow. Don’t look at me!</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="any-funky-things-i-should-know">Any Funky Things I Should Know?</h2>
+<ul>
+  <li>Ok, apparently there’s a lot of debate regarding whether Batch Norm directly reduces the internal covariate shift phenomenon.
+    <ul>
+      <li>A lot of scientists who are smarter than I am and know much more about Deep Learning say that what Batch Norm actually does is smooth the optimization function which is being solved for during training.
+        <ul>
+          <li>this smoothness supposedly (I want to prove it / see a proof) allows for larger ranges of the learning rate and faster convergence.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="liz-give-us-an-example">Liz! Give Us An Example!</h2>
+<ul>
+  <li>Here is how I initialized a neural network with BatchNormalization layers (two of em!):</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># initialize my model 
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+
+<span class="c1"># now we stack the layers using .add()
+</span>
+<span class="c1"># layer 1 - dense layer with 8 nodes
+# notice keras lets us do this without defining an input layer 
+</span><span class="n">model</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># layer 2 - batch norm time! 
+</span><span class="n">model</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">BatchNormalization</span><span class="p">())</span>
+
+<span class="c1"># and so forth...
+</span>
+</code></pre></div></div>
+
+<h1 id="references-and-more-reading-">References and More Reading :</h1>
+
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Batch_normalization">Wikipedia</a></li>
+  <li><a href="https://www.machinecurve.com/index.php/2020/01/15/how-to-use-batch-normalization-with-keras/#recap-about-batch-normalization">How To Use Batch Normalization With Keras?</a></li>
+  <li><a href="https://faroit.com/keras-docs/1.2.0/">Easy To Read Keras Docs</a></li>
+  <li><a href="https://keras.io/api/">More Keras Docs (API)</a></li>
+</ol>
+:ET

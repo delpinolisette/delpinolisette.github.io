@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Group Theory 0 - Dihedral Group of Order 2n</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Group Theory 0 - Dihedral Group of Order 2n" />
+<meta name="author" content="Lisette del Pino" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/2022/10/12/grouptheory0.html" />
+<meta property="og:url" content="http://localhost:4000/2022/10/12/grouptheory0.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-12T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Group Theory 0 - Dihedral Group of Order 2n" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lisette del Pino"},"dateModified":"2022-10-12T00:00:00-04:00","datePublished":"2022-10-12T00:00:00-04:00","headline":"Group Theory 0 - Dihedral Group of Order 2n","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2022/10/12/grouptheory0.html"},"url":"http://localhost:4000/2022/10/12/grouptheory0.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Group Theory 0 - Dihedral Group of Order 2n</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-10-12T00:00:00-04:00" itemprop="datePublished">Oct 12, 2022
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Lisette del Pino</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<p>Do you like group theory?</p>
+
+<p>I’d like to start a series of expository blog posts that “climb up the chain” of the dihedral groups of order \(2n\) (as in, what do these groups visually look like as we vary \(n\) from \(1\) to \(n\)) in way more detail than what I’ve found in textbooks and other online resources.</p>
+
+<p>A danger to this is some readers will find this exercise uninteresting since the dihedral group (in particular \(D_8\), the group of symmetries of the square under reflection \(s\) and rotation \(r\)) is one of the first examples of groups in a ton of textbooks, but I have yet to find a comprehensive walkthrough of the first few \(n\) for \(D_{2n}\) (this is because in almost all references, \(D_{2n}\) is defined for \(n\geq 3\), but the presentation still holds for lower group orders).</p>
+
+<p>First, let’s name names: When I say \(D_{2n}\) I mean the group of symmetries of the \(n\)-gon in Euclidian space under the operations of translation and reflection, for \(n \geq 3\). For \(n=1,2\), I will call them \(D_1\) and \(D_2\), respectively (in the geometric convention). For \(n \geq 3\), I will call the dihedral groups \(D_{2n}\).</p>
+
+<p>I’m sure we’ve all been presented with pictures of polygons as children and been asked to count its symmetries. Well, the formal exploration of these groups is just like that, except we’re going to find additional sub-structure on these symmetries in the form of subgroups.</p>
+
+<p>That’s what the interesting question here is: Given a dihedral group, what are its subgroups?</p>
+
+<p>I hope to build up to this fairly quickly, at least as fast as I’m presenting them.</p>
+
+<p>Let’s start.</p>
+
+<h2 id="d_1---dihedral-group-of-order-2">\(D_1\) - Dihedral Group of Order 2</h2>
+
+<p>Here we start with the case that \(n=1\), the \(1\)-sided polygon. This group is called \(D_1\).</p>
+
+<p>This the group of the symmetries of the \(1\)-sided polygon in Euclidian Space, under the operations of reflection \(s\) or rotation \(r\).</p>
+
+<p>The only possible move here is to “switch the vertices”, or reflect across the midpoint of the polygon. Equivalently, you can rotate the line \(180\) degrees about the midpoint and get the same symmetry. In either case, let’s call the operation “switching the vertices”.</p>
+
+<p>So, \(D_1\) looks like the set of these two symmetries:</p>
+
+<!-- ![](/assets/2022-10-12-20-21-28.png) -->
+
+<p><img src="http://localhost:4000/assets/2022-10-12-20-21-28.png" alt="d2ord1" /></p>
+
+<p>We have identity \(e\) (leaving the \(1\)-sided polygon as is), and the image of \(s\) about the midpoint or \(r\) by \(180\) degrees.</p>
+
+<p>Intuitively, \(D_{1}\) is also called the symmetry group of the line segment.</p>
+
+<h3 id="presentation-of-d_1">Presentation of \(D_1\)</h3>
+
+<p>In general, the presentation of \(D_{2n}\) for \(n \geq 3\) is:</p>
+
+\[D_{2n} = &lt;r,s | r^n = s^2 = 1, rs = sr^{-1}&gt;\]
+
+<p>so that rotation \(r\) and reflection \(s\) are the two <em>generators</em>, and we have the <em>relations</em> listed on the right side of the pipe.</p>
+
+<p>But as we will see, this presentation also holds for \(n=1,2\).</p>
+
+<p>The Cayley Table of \(D_1\) is:</p>
+
+<!-- insert cayley table here -->
+
+<h2 id="what-about-subgroups">What About Subgroups?</h2>
+
+<p>By Langrage’s Theorem, we have that the order of any possible subgroups must divide the order of the group. So the only possible subgroups have orders \(1,2\).</p>
+
+<!-- Trivial subgroup of identity -->
+
+<h2 id="a-note-on-the-1-sided-polygon">A Note on the $1$ sided polygon</h2>
+
+<p>In Artin’s <em>Algebra</em>, he describes the 1-gon as a single node with a loop. Like so,</p>
+
+<!-- ![Need to draw this a little nicer...](assets/2022-10-15-11-01-15.png) -->
+
+<p><img src="http://localhost:4000/assets/2022-10-15-11-01-15.png" alt="D1" /></p>
+
+<p>I found it difficult to represent the symmetries with this visualization of the polygon, so I used to vertices inst</p>
+
+  </div><a class="u-url" href="/2022/10/12/grouptheory0.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

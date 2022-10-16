@@ -1,0 +1,33 @@
+I"D<h1 id="site-updates">Site Updates:</h1>
+
+<p>2022-02-13:</p>
+
+<p>The process for previewing and building the site locally are much easier than they were two years ago. I followed this tutorial: 
+<a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll">Testing Your Github Pages Site Locally with Jekyll</a></p>
+
+<p>2020-07-01 :</p>
+
+<ol>
+  <li>
+    <p>I wanted to preview the site before uploading so i could play with the css,</p>
+  </li>
+  <li>
+    <p>after making assets/styles/style.css, I made sure that jekyll was installed, ruby was installed, then installed bundler in the source repo by
+<code class="language-plaintext highlighter-rouge">gem install bundler</code> , then I <code class="language-plaintext highlighter-rouge">bundle init</code> , then <code class="language-plaintext highlighter-rouge">gem update</code> all from the Git Bash. After this, I ran <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> to run the server.</p>
+  </li>
+  <li>
+    <p>wanted to timestamp these so I installed <a href="https://packagecontrol.io/packages/Timenow">TimeNow</a>.</p>
+  </li>
+  <li>
+    <p>Ok so Jekyll was not installed, somehow. I got the “jekyll gem missing” error after trying to run the server. After trying to install it, I ran into some issues. Turns out GCC and Make are missing.</p>
+  </li>
+</ol>
+
+<p>2020-07-07 16:48</p>
+
+<ol>
+  <li>https://jekyllrb.com/docs/themes/#overriding-theme-defaults was an important link</li>
+  <li>installed a nice color picker.</li>
+</ol>
+
+:ET

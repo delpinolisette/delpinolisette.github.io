@@ -23,4 +23,5 @@ The process for previewing and building the site locally are much easier than th
 
 2. https://jekyllrb.com/docs/themes/#overriding-theme-defaults was an important link
 3. installed a nice color picker. 
-4. 
+
+

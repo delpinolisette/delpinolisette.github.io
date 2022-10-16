@@ -1,0 +1,52 @@
+I"M<h1 id="upload-files-to-rails-app-using-active-storage">Upload Files To Rails App Using Active Storage</h1>
+<p>by: Lisette del Pino</p>
+
+<h2 id="intro-local-storage-for-development">Intro: Local Storage for Development:</h2>
+<p><em>Note</em>: This is a tutorial for Ruby Active Storage file upload for development and testing purposes. Once your Rails app goes into production, use <a href="#amazon-S3-azure-google-cloud:">Amazon, Google, or Azure services</a></p>
+
+<p><em>Note</em>: I encourage you to read/explore as much as you can with each command. In this tutorial, I include the output location corresponding to the command you just wrote so that you can see what the commands are doing to your Rails app. Get familiar with the structure of your app, and all future Rails endeavors will feel 100x easier!</p>
+
+<h2 id="step-1-"><em>Step 1 :</em></h2>
+<p>Make sure that in <code class="language-plaintext highlighter-rouge">config/storage.yml</code> you have (setting storage configuration to local Disk):</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">local:
+  service: </span><span class="no">Disk</span>
+  <span class="ss">root: </span><span class="o">&lt;</span><span class="sx">%= Rails.root.join("storage") %&gt;
+</span></code></pre></div></div>
+
+<h2 id="step-2"><em>Step 2:</em></h2>
+<p>Make sure that in <code class="language-plaintext highlighter-rouge">config\environments\development.rb</code> you have the development configuration set to store files locally!</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># Store uploaded files on the local file system (see config/storage.yml for options)</span>
+  <span class="n">config</span><span class="p">.</span><span class="nf">active_storage</span><span class="p">.</span><span class="nf">service</span> <span class="o">=</span> <span class="ss">:local</span>
+</code></pre></div></div>
+
+<h2 id="step-3"><em>Step 3:</em></h2>
+<p>To set up the database for active storage, in your terminal for the project, write <code class="language-plaintext highlighter-rouge">rails active_storage:install</code>
+    - This creates a migration file that you can look at under : <code class="language-plaintext highlighter-rouge">db\migrate</code>, look for the migration with a similar command name. Take a peek!
+    - Notice we are storing some file meta-data, and NOT the file information itself. Why?</p>
+
+<h2 id="step-4"><em>Step 4:</em></h2>
+
+<p>If you haven’t set up your relationship already, head to <code class="language-plaintext highlighter-rouge">app\models</code> and edit your ruby file corresponding to the model you are setting up file upload for. So, if users are getting a single profile picture, go into <code class="language-plaintext highlighter-rouge">user.rb</code> and:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">has_one_attached</span> <span class="ss">:profile_img</span>
+</code></pre></div></div>
+<h2 id="step-5-"><em>Step 5 :</em></h2>
+<p>Head into your controller to define behavior now, in <code class="language-plaintext highlighter-rouge">app\controllers\users_controller.rb</code> , or whichever controller corresponds to the model file you just edited. Under <code class="language-plaintext highlighter-rouge">private</code>, under <code class="language-plaintext highlighter-rouge">user_params</code> def, <code class="language-plaintext highlighter-rouge">.permit</code> a <code class="language-plaintext highlighter-rouge">profile_img</code>. So, it should look something like (but it should have other permitted fields, according to your app):</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Only allow a list of trusted parameters through.</span>
+    <span class="k">def</span> <span class="nf">user_params</span>
+      <span class="n">params</span><span class="p">.</span><span class="nf">require</span><span class="p">(</span><span class="ss">:leaf</span><span class="p">).</span><span class="nf">permit</span><span class="p">(</span><span class="ss">:cover_img</span><span class="p">)</span>
+    <span class="k">end</span>
+</code></pre></div></div>
+<h2 id="step-6"><em>Step 6:</em></h2>
+<p>Modify your creation forms to support uploading by</p>
+
+<h2 id="amazon-s3-azure-google-cloud">Amazon S3, Azure, Google Cloud:</h2>
+<p>These services are better used in production. Why? In production, if several VMs are running the same Rails App, you keep creating the same files over and over in local storage. This upload style takes up unnecessary space and doesn’t allow for <em>horizontal</em> growth. By uploading files to another service, you can access the same file in one place across several VMs.</p>
+
+<h2 id="sources-and-additional-resources">Sources and Additional Resources:</h2>
+<ol>
+  <li><a href="https://edgeguides.rubyonrails.org/index.html">Official Rails Active Storage Guide</a></li>
+  <li><a href="https://www.youtube.com/watch?v=V2eaE29Zoms">A video explaining Active storage upload</a></li>
+</ol>
+
+:ET
