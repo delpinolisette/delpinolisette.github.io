@@ -31,5 +31,5 @@ This group is isomorphic to the Klein 4-group, this also means that the group is
 
 <!-- establish isomorphism for cyclic group of order 2 -->
 
-
+![](assets/images/2022-10-17-09-55-54.png)
 

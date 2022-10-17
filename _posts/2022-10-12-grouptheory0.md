@@ -69,8 +69,7 @@ By Langrage's Theorem, we have that the order of any possible subgroups must div
 
 Then we have the trivial subgroup $$G = {e}$$ and the group itself.
 
-
-## A Note on the $1$ sided polygon
+## A Note on the $$1$$ sided polygon
 
 In Artin's *Algebra*, he describes the 1-gon as a single node with a loop. Like so, 
 
