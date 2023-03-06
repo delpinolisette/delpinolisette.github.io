@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: post
+title: Advanced Linear Algebra Notes
 ---
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -27,7 +28,7 @@ layout: default
 
 # Composition of Linear Maps
 
-Recall that if $X,Y,Z$ are all sets, and $f: X \mapsto Y$ and $g: Y \mapsto Z $ if we have a mapping $f$ from $X$ to $Y$ and a mapping $g$ from $Y$ to $Z$, we can form a composite map:
+Recall that if $$X,Y,Z$$ are all sets, and $$f: X \mapsto Y$$ and $$g: Y \mapsto Z $$ if we have a mapping $$f$$ from $$X$$ to $$Y$$ and a mapping $g$ from $Y$ to $Z$, we can form a composite map:
 
 + $(g \circ f): X \mapsto Z$ that is defined by $g \circ f = g(f(x)) \\) for all \\( x \in X \\)
 
@@ -109,7 +110,7 @@ Recall that if $X,Y,Z$ are all sets, and $f: X \mapsto Y$ and $g: Y \mapsto Z $ 
                         -sin(\theta) & cos(\theta)  \\\
                         \end{bmatrix}  
                         \\)
-            + \\(A\_{s}\\) = reflection over x axis matrix 
+QUESTION            + \\(A\_{s}\\) = reflection over x axis matrix 
             + EXERCISE: derive these matrices 
             + and so \\(A\_{s\_{L}}\\) = multiplication/composition of the three: = \\(
                         \begin{bmatrix}
@@ -122,13 +123,11 @@ Recall that if $X,Y,Z$ are all sets, and $f: X \mapsto Y$ and $g: Y \mapsto Z $ 
 
 ## Properties of Compsition of Linear Maps
 
-* (1): if 
-    - \\( T \in L(V,W)\\)
-    - \\( S \in L(U,V)\\)
-    - then \\(T \circ S \in L(U,W)\\)
+(1): if $$ T \in L(V,W)$$ and $$ S \in L(U,V)$$
+    - then $$T \circ S \in L(U,W)$$
 * (2) Composition is a linear map in each argument. if
     - \\( S \in L(U,V) \\) 
-    - then the map \\( S \circ (-): L(V,W) \mapsto L(U,W) \\) (no entiendo? QUESTION) is a linear map between the two vector spaces L(V,W), L(U,V)
+    - then the map \\( S \circ (-): L(V,W) \mapsto L(U,W) \\)  is a linear map between the two vector spaces L(V,W), L(U,V)
     - _example_: if \\(a, b \in \mathbb{F}\\), \\(T\_{1}, T\_{2} \in L(V,W)\\)
     - then \\(S \circ (aT\_{a} + b\_{T\_{2}})\\)
     - = \\( aS \circ T\_{1} + bS \circ T\_{2} \\). 
