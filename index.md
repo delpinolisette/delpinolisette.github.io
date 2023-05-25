@@ -28,7 +28,7 @@ This blog serves as the account of my personal explorations into theory and prob
 ## Meta
 - [Thoughts on Technical Info Organization](/organization.html)
 
-## Programming and Tools
+## Software Engineering and Tools
 - [General Ruby on Rails Reference](/ruby.html)
 - [Uploading Files to your Rails application: A Step-by-Step Tutorial](/rails_active_store_file_upload.html)
 - [Using Google Translation API to make a Python Web App that translates to another language- In Progress!](/flask_py_translate_api.html)
