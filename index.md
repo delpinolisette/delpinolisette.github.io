@@ -7,19 +7,10 @@ layout: default
 # Hello! My name is Lisette 
 and I'm interested in Math $$\cup$$ Computer Science (and a ton of other subjects). 
 
-I am currently working on my Master of Science in Computer Science from Georgia Tech while working full-time as an analytics manager for a research and consulting firm. In 2021, I graduated UPenn in with a degree in Math, where I did independent reading and research on Mathematical Cryptography. 
+I am currently working on my Master of Science in Computer Science from Georgia Tech while working full-time as a research associate and analytics manager for a research and consulting firm. In 2021, I graduated UPenn in with a degree in Math, where I did independent reading and research on Mathematical Cryptography.
 
 This blog serves as the account of my personal explorations into theory and problems from Math and Computer Science. I also write about the tools of the trade - programming languages, frameworks, and tools I find interesting or use frequently.
 
-## Posts
- <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <br>
-    </li>
-  {% endfor %}
-</ul>
 
 ## Math
 - [Stochastic Differential Equations Summary and Thoughts](https://github.com/delpinolisette/stochastic-differential-equations)
@@ -45,8 +36,20 @@ This blog serves as the account of my personal explorations into theory and prob
 - [Full Stack Web Applications with Flask](/flask_start.html)
 - [Data Structures and Algorithms Notes](https://github.com/delpinolisette/data-structures-and-algos-reference/blob/master/Data Structures and Algorithms Notes.ipynb)
 
-<!-- ### Programming and Tools: Automated Software Testing -->
+### Programming and Tools: Automated Software Testing
 
+- Coming Soon: Automated Software Testing using KLEE
+- Coming Soon: Writing LLVM Passes to optimize your C++ code
+
+## Posts
+ <ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <br>
+    </li>
+  {% endfor %}
+</ul>
 
 <!-- - [My Journal](journal.md),  -->
 <!-- - [My Reading Log](reading.md) -->
