@@ -11,7 +11,6 @@ I am currently working on my Master of Science in Computer Science from Georgia 
 
 This blog serves as the account of my personal explorations into theory and problems from Math and Computer Science. I also write about the tools of the trade - programming languages, frameworks, and tools I find interesting or use frequently.
 
-
 ## Math
 - [Stochastic Differential Equations Summary and Thoughts](https://github.com/delpinolisette/stochastic-differential-equations)
 - [Mathematical Cryptography](/mathematical_crypto.html)
