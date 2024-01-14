@@ -1,0 +1,27 @@
+---
+layout: post 
+title: Bases and Change of Bases
+---
+
+# Span and Linear Dependence 
+
+
+## Linear Combinations
+
+- a linear combination  (or linear span) of a list of vectors, $(v_1, \dots v_m)$, is **itself a vector** of the form $a_1v_1 + \dots, + a_mv_m$ where $a_1, \dots, a_m$ are in the field $F$.
+<!-- 
+```python
+v_1 = [1.5,4.0]
+v_2 = []
+v_3 = 
+vectors = [v_1, v_2, v_3]
+scalars = [a_1, a_2, a_3]
+``` -->
+
+### How Can I Tell if $v$ is a linear combination of $u$ and $w$?
+
+How can I tell if a vector is a linear combination of another list of vectors?
+
+>Determine if the system of equations representing the vectors has a solution
+
+(Post in progress)
