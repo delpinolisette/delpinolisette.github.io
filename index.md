@@ -62,7 +62,7 @@ This site serves as my technical knowledge base, research log, and as an account
 
 ## Physics and Material Science
 
-- [Metals, Ductile Metals, Ceramics, and Polymers](physics\materials\materials_engineering_notes.md)
+- [Metals, Ductile Metals, Ceramics, and Polymers](physics\materials\materials_engineering_notes.html)
 
 # Get in Touch :)
 Do you find any of these posts interesting? Feel free to reach out to me at [delpinolisette "at" gmail dot com] with any questions or corrections!
