@@ -13,6 +13,7 @@ This site serves as my technical knowledge base, research log, and as an account
 <!-- This blog serves as the account of my personal explorations into theory and problems from Math and Computer Science. I also write about the tools of the trade - programming languages, frameworks, and tools I find interesting or use frequently. -->
 
 ## Math
+- [Span and Linear Dependence](/math/linear-algebra/span-and-linear-independence.html)
 - [Stochastic Differential Equations](https://github.com/delpinolisette/stochastic-differential-equations)
 - [Mathematical Cryptography](/mathematical_crypto.html)
 - [Real Analysis](math/real-analysis/uniform-convergence.html)
@@ -20,12 +21,12 @@ This site serves as my technical knowledge base, research log, and as an account
 - [Linear Regression Thoughts](/linear_regression.html)
 - [Maximum Likelihood Estimate](/MLE.html)
 - [Two (Python) approaches to the Binomial Distribution](/binom_dist.html)
-- Directed Reading Program Slides: [Cryptography](https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU)
+- Mathematical Cryptography Presentation Slides: [Cryptography](https://drive.google.com/file/d/1MdGkOsmxy2CyUJRVHIdzjVyykqI3To42/view?fbclid=IwAR3VM03FceUloxVeDge2JDqKOYtu4hkWEx-uqhDgS_nINv2S9eHKC78kZdU)
 
-### Math: Linear Algebra
+<!-- ### Math: Linear Algebra -->
 - [Advanced Linear Algebra](/line_alg.html)
 - [Change of Basis Matrices](/math/linear-algebra/change-of-basis.html)
-- [Span and Linear Dependence](/math/linear-algebra/span-and-linear-independence.html)
+<!-- - [Span and Linear Dependence](/math/linear-algebra/span-and-linear-independence.html) -->
 
 ## Quantum Computing
 

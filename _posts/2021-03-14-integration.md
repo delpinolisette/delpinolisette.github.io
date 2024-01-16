@@ -4,6 +4,8 @@ author: Lisette del Pino
 layout: post
 ---
 
+{{ page.last_modified_at }}
+
 # Integration Thoughts
 
 There are some tricky assumptions about integration that need to be addressed:
