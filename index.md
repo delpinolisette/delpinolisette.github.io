@@ -17,7 +17,8 @@ This site serves as my technical knowledge base, research log, and as an account
 - [Stochastic Differential Equations](https://github.com/delpinolisette/stochastic-differential-equations)
 - [Mathematical Cryptography](/mathematical_crypto.html)
 - [Real Analysis](math/real-analysis/uniform-convergence.html)
-- [Partial Differential Equations Notebook](https://github.com/delpinolisette/partial-differential-equations/blob/master/01 Heat Eq.ipynb)
+- [Integration and Jordan Region Thoughts](_posts\2021-03-14-integration.html)
+- [Partial Differential Equations Notebook](https://github.com/delpinolisette/partial-differential-equations/blob/master/01%20Heat%20Eq.ipynb)
 - [Linear Regression Thoughts](/linear_regression.html)
 - [Maximum Likelihood Estimate](/MLE.html)
 - [Two (Python) approaches to the Binomial Distribution](/binom_dist.html)
@@ -47,7 +48,7 @@ This site serves as my technical knowledge base, research log, and as an account
 - Coming Soon: Automated Software Testing using KLEE
 - Coming Soon: Writing LLVM Passes to optimize your C++ code
 
-## Posts
+<!-- ## Posts
  <ul>
   {% for post in site.posts %}
     <li>
@@ -55,7 +56,7 @@ This site serves as my technical knowledge base, research log, and as an account
       <br>
     </li>
   {% endfor %}
-</ul>
+</ul> -->
 
 <!-- - [My Journal](journal.md),  -->
 <!-- - [My Reading Log](reading.md) -->

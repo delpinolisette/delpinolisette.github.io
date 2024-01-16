@@ -4,8 +4,6 @@ author: Lisette del Pino
 layout: post
 ---
 
-{{ page.last_modified_at }}
-
 # Integration Thoughts
 
 There are some tricky assumptions about integration that need to be addressed:
@@ -17,6 +15,5 @@ To prove that it is indeed Riemann integrable, we need to show that the measure 
 - the region is a Jordan region [(what's that?)](https://math.stackexchange.com/questions/1251627/jordan-region-problem), or that
 - the set to integrate over is admissible, or that
 - the boundary of the volume to integrate is zero
-
 
 Also... happy pi day!!! 

@@ -1,7 +1,19 @@
 ---
 layout: post 
-title: Bases and Change of Bases
+title: Span and Linear Dependence
 ---
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
 
 # Span and Linear Dependence
 
@@ -62,8 +74,7 @@ For example, note that from the definition, you can form linear combinations of 
 
 ![](../linear-algebra/assets/images/2024-01-15-18-49-08.png)
 
-Since $$x^3, x^2, x, 1$$
-are all polynomials, this is **also a linear combination** of polynomials.  
+Since $x^3, x^2, x, 1$ are all polynomials, this is **also a linear combination** of polynomials.  
 
 ### Can I Tell if $v$ is a linear combination of $u$ and $w$?
 
@@ -75,12 +86,17 @@ Then the question becomes: can you specify an algorithm for this? Can we write i
 
 You can "cheat" at first and just tell whether a vector is a linear combination of other vectors with some mental math. 
 
-You need a general way to do this however, and the way to do this pops out at you as the matrix formed by the equation $$
+You need a general way to do this however, and the way to do this pops out at you as the matrix formed by the equation $
 v = au + bw
-$$
+$
 
 
-![](../linear-algebra/assets/images/2024-01-15-18-40-55.png)
+![](../linear-algebra/assets/images/2024-01-15-20-12-48.png)
 
-Then the task is easy. If the system has no solutions, $$v$$ is not a linear combination of $$u,w$$. 
+Then the task is easy. If the system has no solutions, $v$ is not a linear combination of $u,w$. 
 
+## Span 
+
+Then the definition of span becomes straightforward. 
+
+The span of set of vectors is the set of **all linear combinations of those vectors**. 
