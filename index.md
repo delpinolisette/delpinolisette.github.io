@@ -18,6 +18,7 @@ This site serves as my technical knowledge base, research log, and as an account
 - [Mathematical Cryptography](/mathematical_crypto.html)
 - [Real Analysis](math/real-analysis/uniform-convergence.html)
 - [Integration and Jordan Region Thoughts](_posts\2021-03-14-integration.html)
+- [Group Theory - Dihedral Group of Order 0](_posts\2022-10-12-grouptheory0.md)
 - [Partial Differential Equations Notebook](https://github.com/delpinolisette/partial-differential-equations/blob/master/01%20Heat%20Eq.ipynb)
 - [Linear Regression Thoughts](/linear_regression.html)
 - [Maximum Likelihood Estimate](/MLE.html)
@@ -31,6 +32,7 @@ This site serves as my technical knowledge base, research log, and as an account
 
 ## Quantum Computing
 
+- [Acceptance into MIT iQuHack]()
 - [Neutral Atom Computing]()
 
 ## Meta
