@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Span and Linear Dependence</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Span and Linear Dependence" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/math/linear-algebra/span-and-linear-independence.html" />
+<meta property="og:url" content="http://localhost:4000/math/linear-algebra/span-and-linear-independence.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Span and Linear Dependence" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Span and Linear Dependence","url":"http://localhost:4000/math/linear-algebra/span-and-linear-independence.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Span and Linear Dependence</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="" itemprop="datePublished">
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+<h1 id="span-and-linear-dependence">Span and Linear Dependence</h1>
+
+<p>Understanding span and linear dependence are foundational to a mastery of linear algebra and finite dimensional vector spaces.</p>
+
+<p>To build up to these notions I will first define what a linear combination in in math language and in Python to provide an <strong>unambiguous example</strong>.</p>
+
+<h2 id="linear-combinations">Linear Combinations</h2>
+
+<h3 id="what-does-the-mathematical-definition-say">What does the mathematical definition say?</h3>
+
+<ul>
+  <li>a linear combination  (or linear span) of a list of vectors, $(v_1, \dots v_m)$, is <strong>itself a vector</strong> of the form $a_1v_1 + \dots, + a_mv_m$ where $a_1, \dots, a_m$ are in the field $F$.</li>
+</ul>
+
+<h3 id="specify-an-example-using-python-logic">Specify an example using Python logic:</h3>
+
+<p>If I wanted to express the same idea in Python with a finite example, I would write:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span> 
+<span class="kn">import</span> <span class="nn">pdb</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="c1"># three vectors from R**2
+</span><span class="n">v_1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="n">v_2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+
+<span class="c1"># v_2 = [5,7]
+# print(v_2 * 7)
+# Look out - don't do this (don't set )! will just make multiple copies of your list. 
+</span>
+<span class="n">v_3</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">])</span>
+
+<span class="c1"># three scalars from R
+</span><span class="n">a_1</span><span class="p">,</span> <span class="n">a_2</span><span class="p">,</span> <span class="n">a_3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span>
+
+<span class="n">vectors</span> <span class="o">=</span> <span class="p">[</span><span class="n">v_1</span><span class="p">,</span> <span class="n">v_2</span><span class="p">,</span> <span class="n">v_3</span><span class="p">]</span>
+<span class="n">scalars</span> <span class="o">=</span> <span class="p">[</span><span class="n">a_1</span><span class="p">,</span> <span class="n">a_2</span><span class="p">,</span> <span class="n">a_3</span><span class="p">]</span>
+
+<span class="n">linear_combination_terms</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">vec_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vectors</span><span class="p">)):</span>
+    <span class="n">linear_combination_terms</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">vectors</span><span class="p">[</span><span class="n">vec_index</span><span class="p">]</span> <span class="o">*</span> <span class="n">scalars</span><span class="p">[</span><span class="n">vec_index</span><span class="p">])</span> <span class="c1"># compute terms in order
+</span>
+<span class="c1"># then a linear combination of v_1, v_2, v_3 with a_1, a_2, and a_3 is:
+</span><span class="n">linear_combination</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">linear_combination_terms</span><span class="p">)</span> <span class="c1"># add them all together
+</span>
+<span class="c1"># this could have been done in the for loop but better for clarity done here 
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">linear_combination</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="generalization">Generalization</h3>
+
+<p>You can generalize the definition of a linear combination to vectors of any vector space.</p>
+
+<p>For example, note that from the definition, you can form linear combinations of polynomials and matrices, like so:</p>
+
+<p><img src="../linear-algebra/assets/images/2024-01-15-18-49-08.png" alt="" /></p>
+
+<p>Since $x^3, x^2, x, 1$ are all polynomials, this is <strong>also a linear combination</strong> of polynomials.</p>
+
+<h3 id="can-i-tell-if-v-is-a-linear-combination-of-u-and-w">Can I Tell if $v$ is a linear combination of $u$ and $w$?</h3>
+
+<p>How can I tell if a vector is a linear combination of another list of vectors?</p>
+
+<blockquote>
+  <p>Determine if the system of equations representing the vectors has a solution</p>
+</blockquote>
+
+<p>Then the question becomes: can you specify an algorithm for this? Can we write it down? In mathematical language? What about in code?</p>
+
+<p>You can “cheat” at first and just tell whether a vector is a linear combination of other vectors with some mental math.</p>
+
+<p>You need a general way to do this however, and the way to do this pops out at you as the matrix formed by the equation $
+v = au + bw
+$</p>
+
+<p><img src="../linear-algebra/assets/images/2024-01-15-20-12-48.png" alt="" /></p>
+
+<p>Then the task is easy. If the system has no solutions, $v$ is not a linear combination of $u,w$.</p>
+
+<h2 id="span">Span</h2>
+
+<p>Then the definition of span becomes straightforward.</p>
+
+<p>The span of set of vectors is the set of <strong>all linear combinations of those vectors</strong>.</p>
+
+  </div><a class="u-url" href="/math/linear-algebra/span-and-linear-independence.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

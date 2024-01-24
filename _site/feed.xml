@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-06T15:33:29-05:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Group Theory 1 - Dihedral Group of Order 2n</title><link href="http://localhost:4000/2022/10/14/grouptheory1.html" rel="alternate" type="text/html" title="Group Theory 1 - Dihedral Group of Order 2n" /><published>2022-10-14T00:00:00-04:00</published><updated>2022-10-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/10/14/grouptheory1</id><content type="html" xml:base="http://localhost:4000/2022/10/14/grouptheory1.html">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-24T12:49:35-05:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Group Theory 1 - Dihedral Group of Order 2n</title><link href="http://localhost:4000/2022/10/14/grouptheory1.html" rel="alternate" type="text/html" title="Group Theory 1 - Dihedral Group of Order 2n" /><published>2022-10-14T00:00:00-04:00</published><updated>2022-10-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/10/14/grouptheory1</id><content type="html" xml:base="http://localhost:4000/2022/10/14/grouptheory1.html">&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
 &lt;/script&gt;
 
 &lt;p&gt;Let’s continue our journey on the Dihedral groups of order \(2n\).&lt;/p&gt;
@@ -101,7 +101,7 @@
 
 &lt;h2 id=&quot;what-is-it&quot;&gt;What is it?&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Method for (supposedly) increasing the performance of your neural network:
+  &lt;li&gt;Method for (in theory) increasing the performance of your neural network:
     &lt;ul&gt;
       &lt;li&gt;In particular helps with the issue of &lt;strong&gt;internal covariate shift&lt;/strong&gt;&lt;/li&gt;
       &lt;li&gt;the input data means and variances change in the internal layers during neural network training.
@@ -168,9 +168,9 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;liz-give-us-an-example&quot;&gt;Liz! Give Us An Example!&lt;/h2&gt;
+&lt;h2 id=&quot;give-us-an-example&quot;&gt;Give Us An Example!&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Here is how I initialized a neural network with BatchNormalization layers (two of em!):&lt;/li&gt;
+  &lt;li&gt;Here is how I initialized a neural network with BatchNormalization layers (two of them):&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
@@ -201,9 +201,7 @@
 
 &lt;p&gt;I am not a huge fan of how ISLR presents the LDA classifier. It’s nice because you can still implement it from scratch but tracking down what each part of the notation means is not an awesome experience…..&lt;/p&gt;
 
-&lt;p&gt;Should all math textbooks have a little summary at the beginning of the chapter explaining each bit of notation? I think if I were every to write a book I would do something like that.&lt;/p&gt;
-
-&lt;p&gt;(no more mathematical notation obfuscation)&lt;/p&gt;</content><author><name>Lisette del Pino</name></author><summary type="html">Some thoughts on mathematical notation coming up….</summary></entry><entry><title type="html">Elements of Statistical Inference</title><link href="http://localhost:4000/2021/03/22/thoughts.html" rel="alternate" type="text/html" title="Elements of Statistical Inference" /><published>2021-03-22T00:00:00-04:00</published><updated>2021-03-22T00:00:00-04:00</updated><id>http://localhost:4000/2021/03/22/thoughts</id><content type="html" xml:base="http://localhost:4000/2021/03/22/thoughts.html">&lt;p&gt;It’s always incredible to see how some simple algebraic manipulation can make your work easier when building models in Machine Learning. For example, the Maximum Likelihood Estimate reduces to a lovely sum in the case of two classifiers. More discussion coming soon, but I’ve been reading about this across several papers and technical blogs:&lt;/p&gt;
+&lt;p&gt;Should all math textbooks have a little summary at the beginning of the chapter explaining each bit of notation? I think if I were every to write a book I would do something like that.&lt;/p&gt;</content><author><name>Lisette del Pino</name></author><summary type="html">Some thoughts on mathematical notation coming up….</summary></entry><entry><title type="html">Elements of Statistical Inference</title><link href="http://localhost:4000/2021/03/22/thoughts.html" rel="alternate" type="text/html" title="Elements of Statistical Inference" /><published>2021-03-22T00:00:00-04:00</published><updated>2021-03-22T00:00:00-04:00</updated><id>http://localhost:4000/2021/03/22/thoughts</id><content type="html" xml:base="http://localhost:4000/2021/03/22/thoughts.html">&lt;p&gt;It’s always incredible to see how some simple algebraic manipulation can make your work easier when building models in Machine Learning. For example, the Maximum Likelihood Estimate reduces to a lovely sum in the case of two classifiers. More discussion coming soon, but I’ve been reading about this across several papers and technical blogs:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Elements of Statistical Inference (my Bible)&lt;/li&gt;
@@ -213,7 +211,7 @@
   &lt;li&gt;&lt;a href=&quot;https://www.stat.rutgers.edu/home/pingli/papers/Logit.pdf&quot;&gt;Rutgers Slides on Logit&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I hope these links ride forever on the endless highway of the internet, shiny and chrome (please don’t be broken in a year)&lt;/p&gt;</content><author><name>Lisette del Pino</name></author><summary type="html">It’s always incredible to see how some simple algebraic manipulation can make your work easier when building models in Machine Learning. For example, the Maximum Likelihood Estimate reduces to a lovely sum in the case of two classifiers. More discussion coming soon, but I’ve been reading about this across several papers and technical blogs:</summary></entry><entry><title type="html">Integration Thoughts</title><link href="http://localhost:4000/2021/03/14/integration.html" rel="alternate" type="text/html" title="Integration Thoughts" /><published>2021-03-14T00:00:00-05:00</published><updated>2021-03-14T00:00:00-05:00</updated><id>http://localhost:4000/2021/03/14/integration</id><content type="html" xml:base="http://localhost:4000/2021/03/14/integration.html">&lt;h1 id=&quot;integration-thoughts&quot;&gt;Integration Thoughts&lt;/h1&gt;
+&lt;!-- I hope these links ride forever on the endless highway of the internet, shiny and chrome (please don&apos;t be broken in a year) --&gt;</content><author><name>Lisette del Pino</name></author><summary type="html">It’s always incredible to see how some simple algebraic manipulation can make your work easier when building models in Machine Learning. For example, the Maximum Likelihood Estimate reduces to a lovely sum in the case of two classifiers. More discussion coming soon, but I’ve been reading about this across several papers and technical blogs:</summary></entry><entry><title type="html">Integration Thoughts</title><link href="http://localhost:4000/2021/03/14/integration.html" rel="alternate" type="text/html" title="Integration Thoughts" /><published>2021-03-14T00:00:00-05:00</published><updated>2021-03-14T00:00:00-05:00</updated><id>http://localhost:4000/2021/03/14/integration</id><content type="html" xml:base="http://localhost:4000/2021/03/14/integration.html">&lt;h1 id=&quot;integration-thoughts&quot;&gt;Integration Thoughts&lt;/h1&gt;
 
 &lt;p&gt;There are some tricky assumptions about integration that need to be addressed:&lt;/p&gt;
 
